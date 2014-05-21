@@ -565,6 +565,34 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/Isra-Yvette/Isra-Yvette_Banters.d~
 END
 
+// Adrian-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~rh#isr.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Isra...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Isra/Adrian-Isra_Banters.d~
+END
+
+// Dace-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~t#dace.dlg~ AND FILE_EXISTS_IN_GAME ~rh#isr.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Isra...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-Isra/Dace-Isra_Banters.d~
+END
+
+// Isra-Nephele Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#neph.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Nephele...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-Nephele/Isra-Nephele_Banters.d~
+END
+
+// Isra-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-Ninde/Isra-Ninde_Banters.d~
+END
+
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
 
@@ -1025,6 +1053,27 @@ ACTION_IF FILE_EXISTS_IN_GAME ~rh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~YxYv25B.dlg
 THEN BEGIN
   PRINT ~Adding ToB banters between Isra and Yvette...~
   COMPILE ~CrossmodBG2/ToB/Banters/Isra-Yvette/Isra-Yvette_Banters.d~
+END
+
+// Adrian-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~rh#is25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Adrian and Isra...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-Isra/Adrian-Isra_Banters.d~
+END
+
+// Dace-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~t#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~rh#is25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Isra...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-Isra/Dace-Isra_Banters.d~
+END
+
+// Isra-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~lk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-Ninde/Isra-Ninde_Banters.d~
 END
 
 // *******************************
