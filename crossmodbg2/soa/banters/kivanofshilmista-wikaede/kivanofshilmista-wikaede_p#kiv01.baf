@@ -1,0 +1,25 @@
+IF
+    InParty("Wikaede")
+    See("Wikaede")
+    !Dead("Wikaede")
+    !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+    !StateCheck("Wikaede",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    OR(2)
+      AreaCheck("AR1800")
+      AreaCheck("AR2600")
+    Global("G#XB.KivanWikaedeBanter1","GLOBAL",1)
+    Global("G#XB.KivanWikaedeBanter2","GLOBAL",4)
+    Global("G#XB.KivanWikaedeBanter3","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.KivanWikaedeBanter3","GLOBAL",1)
+    Interact("Wikaede")
+END
+
+IF
+    Global("G#XB.KivanWikaedeBanter2","GLOBAL",3)
+THEN
+  RESPONSE #100
+    Interact("Wikaede")
+END

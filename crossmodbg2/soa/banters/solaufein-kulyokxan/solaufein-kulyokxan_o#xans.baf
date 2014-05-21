@@ -1,0 +1,29 @@
+IF
+InParty(Myself)
+InParty("Sola")
+See("Sola")
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+!StateCheck("Sola",CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(2)
+Global("O#XanRomanceActive","GLOBAL",2)
+Global("O#XanRT15","GLOBAL",2)
+GlobalGT("EllesimeDream1","GLOBAL",0)
+Global("G#XB.SolaufeinXanBanter1","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.SolaufeinXanBanter1","GLOBAL",1)
+END
+
+IF
+Global("G#XB.SolaufeinXanBanter1","GLOBAL",1)
+InParty(Myself)
+InParty("Sola")
+See("Sola")
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+!StateCheck("Sola",CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+Interact("Sola")
+END

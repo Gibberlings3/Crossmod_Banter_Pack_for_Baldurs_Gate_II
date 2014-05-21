@@ -1,0 +1,16 @@
+IF
+    InParty("P#Kivan")
+    See("P#Kivan")
+    !StateCheck("M#Amber",CD_STATE_NOTVALID)
+    !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    Global("G#XB.AmberKivanBanter6","GLOBAL",0)
+    AreaType(CITY)
+    See([0.0.0.INNOCENT])
+    NumCreatureVsPartyGT([NEUTRAL],4)
+    !Dead("m#maxtg")
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.AmberKivanBanter6","GLOBAL",1)
+    StartDialogueNoSet("P#Kivan")
+END

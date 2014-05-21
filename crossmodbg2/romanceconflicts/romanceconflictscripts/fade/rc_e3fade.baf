@@ -1,0 +1,42 @@
+// Name: Fade
+// SoA Script: E3FADE
+// ToB Script: E3FADE25 (she's just SoA at the moment, of
+// course, but that's the one we'll be using for ToB)
+// Romance is serious number: 2
+// Romance kill number: 3
+// For female?: 0
+// For male?: 1
+// Can kill other romances?: 1
+// Can be killed by other romances?: 1
+// Romance Variable: E3FADEROMANCEACTIVE
+
+/* EXTEND_TOP of E3FADE.bcs and E3FADE25.bcs */
+IF
+  !Global("E3FADEROMANCEACTIVE","GLOBAL",0)
+  !Global("E3FADEROMANCEACTIVE","GLOBAL",3)
+  OR(10)
+    Global("ImoenRomanceActive","GLOBAL",2)       //Mirrabo's Imoen
+    Global("NaliaRomanceActive","GLOBAL",2)       //Arnel's Nalia
+    Global("PGNaliaRomanceActive","GLOBAL",2)     //Pocket Plane Group's Nalia
+    Global("NathRomanceActive","GLOBAL",2)        //Nathaniel
+    Global("LK#NindeRomanceActive","GLOBAL",2)    //Ninde
+    Global("SaerilethRomanceActive","GLOBAL",2)   //Saerileth
+    Global("SimeRomanceActive","GLOBAL",2)        //Sime
+    GlobalGT("SolaTalk","GLOBAL",14)              //Solaufein
+    Global("TashiaRomanceActive","GLOBAL",2)      //Tashia
+    Global("G#TF.TyrisRomanceActive","GLOBAL",2)  //Tyris Flare
+THEN
+  RESPONSE #100
+    SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)
+END
+
+IF
+  !Global("E3FADEROMANCEACTIVE","GLOBAL",0)
+  !Global("E3FADEROMANCEACTIVE","GLOBAL",3)
+  Global("M#AmberRomanceActive","GLOBAL",2)       //Amber
+  !Global("M#AmberMatch","GLOBAL",0)              //No Player2 romance
+  !Global("M#AmberMatch","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)
+END

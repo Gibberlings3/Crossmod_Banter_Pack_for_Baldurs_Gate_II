@@ -1,0 +1,19 @@
+IF
+	  InParty(Myself)
+	  InParty("Sola")
+	  See("Sola")
+	  !Dead("Sola")
+	  !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+	  !StateCheck("Sola",CD_STATE_NOTVALID)
+	  CombatCounter(0)
+	  AreaType(FOREST)
+	  OR(2)
+	  	   Global("G#XB.KoSSolaBanter3","GLOBAL",1)
+	  	   Global("G#XB.KoSSolaToBBanter3","GLOBAL",1)
+	  Global("G#XB.KoSSolaBanter4","GLOBAL",0)
+	  Global("G#XB.KoSSolaToBBanter4","GLOBAL",0)
+THEN
+    	  RESPONSE #100
+          	   SetGlobal("G#XB.KoSSolaBanter4","GLOBAL",1)
+          	   Interact("Sola")
+END

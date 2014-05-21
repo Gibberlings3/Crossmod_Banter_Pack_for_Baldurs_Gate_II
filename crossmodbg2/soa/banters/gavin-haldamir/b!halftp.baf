@@ -1,0 +1,19 @@
+
+// b!halftp.baf - prep for fight between Gavin and Haldamir 
+
+IF
+True()
+THEN
+RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride("B!Gavin2",ApplySpell(Myself,CLERIC_HEAL))
+    ActionOverride("B!Haldamir",ApplySpell(Myself,CLERIC_HEAL))
+    ActionOverride("B!Gavin2",DropInventory()) 
+    ActionOverride("B!Haldamir",DropInventory()) 
+    ActionOverride("B!Gavin2",FaceObject("B!Haldamir"))
+    ActionOverride("B!Haldamir",FaceObject("B!Gavin2"))
+    MultiPlayerSync()
+    MoveViewObject("B!Gavin2",INSTANT)
+    StartCutScene("b!halfgt") 
+END
+

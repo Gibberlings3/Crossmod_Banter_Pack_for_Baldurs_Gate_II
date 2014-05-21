@@ -1,0 +1,22 @@
+
+// b!halfgt.baf - Gavin and Haldamir fight 
+
+IF
+  HPPercentGT("B!Gavin2",74)
+  HPPercentGT("B!Haldamir",74)
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride("B!Haldamir",Attack("B!Gavin2"))
+    ActionOverride("B!Gavin2",Attack("B!Haldamir"))
+END
+
+IF
+  OR(2) 
+    HPPercentLT("B!Haldamir",75)
+    HPPercentLT("B!Gavin2",75)
+THEN
+  RESPONSE #100
+  CutSceneId(Player1)
+  ActionOverride("B!Gavin2",StartDialogueNoSet("B!Haldamir"))
+END

@@ -1,0 +1,32 @@
+IF
+InParty("O#Xan")
+InParty("J#Kelsey")
+AreaCheck("AR4500")
+See("J#Kelsey")
+!Dead("BOTSMITH")
+See("BOTSMITH")
+!StateCheck("J#Kelsey",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+!StateCheck("BOTSMITH",CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("G#XB.KelseyXanToBBanter1","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.KelseyXanToBBanter1","GLOBAL",1)
+END
+
+IF
+Global("G#XB.KelseyXanToBBanter1","GLOBAL",1)
+InParty("O#Xan")
+InParty("J#Kelsey")
+!Dead("BOTSMITH")
+!StateCheck("J#Kelsey",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+!StateCheck("BOTSMITH",CD_STATE_NOTVALID)
+See("J#Kelsey")
+See("BOTSMITH")
+THEN
+RESPONSE #100
+Interact("J#Kelsey")
+END

@@ -1,0 +1,33 @@
+// Name: Valygar Corthala
+// SoA Script: VALYGAR.BCS
+// ToB Script: VALY25.BCS
+// Romance is serious number: 2
+// Romance kill number: 3
+// For female?: 1
+// For male?: 0
+// Can kill other romances?: Only if Global("H#ValygarLover","GLOBAL",1) in addition to RA=2
+// Can be killed by other romances?: Yes
+// Romance Variable: H#ValygarRomanceActive
+
+/* EXTEND_TOP of VALYGAR.bcs and VALY25.bcs */
+IF
+  !Global("H#ValygarRomanceActive","GLOBAL",0)
+  !Global("H#ValygarRomanceActive","GLOBAL",3)
+  OR(13)
+    Global("C#AjantisRomanceActive","GLOBAL",2)   //Ajantis
+    Global("ADAngelRomanceActive","GLOBAL",2)     //Angelo
+    Global("ChloeRomanceActiveCR","GLOBAL",2)     //Chloe
+    Global("T1DarRomanceActive","GLOBAL",2)       //Darian
+    Global("B!GavRA","GLOBAL",2)                  //Gavin
+    Global("ImoenRomanceActive","GLOBAL",2)       //Mirabo's Imoen
+    Global("B!KeldornRA","GLOBAL",2)              //Keldorn
+    Global("J#KelseyRomanceActive","GLOBAL",2)    //Kelsey
+    Global("SK#NehtRomanceActive","GLOBAL",2)     //Neh'taniel
+    Global("SarahRomanceActive","GLOBAL",3)       //Sarah
+    GlobalGT("SolaTalk","GLOBAL",14)              //Solaufein
+    Global("TsujathaRomanceActive","GLOBAL",2)    //Tsujatha
+    Global("O#XanRomanceActive","GLOBAL",2)       //Xan
+THEN
+  RESPONSE #100
+    SetGlobal("H#ValygarRomanceActive","GLOBAL",3)
+END

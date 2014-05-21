@@ -1,0 +1,55 @@
+IF
+    InParty("P#Kivan")
+    See("P#Kivan")
+    !Dead("P#Kivan")
+    !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+    !StateCheck("Wikaede",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    HPPercentLT("P#Kivan",25)
+    Global("G#XB.KivanWikaedeBanter1","GLOBAL",1)
+    Global("G#XB.KivanWikaedeBanter2","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.KivanWikaedeBanter2","GLOBAL",1)
+    Interact("Wikaede")
+END
+
+IF
+    Global("G#XB.KivanWikaedeBanter2","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ReallyForceSpell("P#Kivan",CLERIC_CURE_LIGHT_WOUNDS)
+    SetGlobal("G#XB.KivanWikaedeBanter2","GLOBAL",3)
+END
+
+IF
+    InParty("P#Kivan")
+    See("P#Kivan")
+    !Dead("P#Kivan")
+    !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+    !StateCheck("Wikaede",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    PartyHasItem("P#TAHE")
+    Global("G#XB.KivanWikaedeBanter4","GLOBAL",0)
+    Global("G#XB.KivanWikaedeCheck","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.KivanWikaedeCheck","GLOBAL",1)
+    SetGlobalTimer("G#XB.KivanWikaedeTimer","GLOBAL",500)
+END
+
+IF 
+    InParty("P#Kivan")
+    See("P#Kivan")
+    !Dead("P#Kivan")
+    !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+    !StateCheck("Wikaede",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    PartyHasItem("P#TAHE")
+    Global("G#XB.KivanWikaedeBanter4","GLOBAL",0)
+    Global("G#XB.KivanWikaedeCheck","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.KivanWikaedeBanter4","GLOBAL",1)
+    Interact("Wikaede")
+END

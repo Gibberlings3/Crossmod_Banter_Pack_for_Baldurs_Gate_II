@@ -1,0 +1,19 @@
+IF
+  Global("G#XB.AmberKetoBanter1","GLOBAL",0)
+  InParty("Keto")
+  InParty(Myself)
+  See("Keto")
+  !StateCheck("Keto",CD_STATE_NOTVALID)
+  !StateCheck(Myself,CD_STATE_NOTVALID)
+  OR(6)
+	AreaCheck("AR1100")
+	AreaCheck("AR1400")
+	AreaCheck("AR1401")
+	AreaCheck("AR1700")
+	AreaCheck("AR1800")
+	AreaCheck("AR2600")
+THEN
+  RESPONSE #100
+	SetGlobal("G#XB.AmberKetoBanter1","GLOBAL",1)
+	Interact("Keto")
+END

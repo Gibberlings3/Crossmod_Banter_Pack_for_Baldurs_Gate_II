@@ -1,0 +1,40 @@
+IF
+InParty("ADAngel")
+InParty("O#Xan")
+Global("O#XanRomanceActive","GLOBAL",1)
+Global("ADAngelRomanceActive","GLOBAL",1)
+Global("G#XB.AngeloXanBanter3","GLOBAL",0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("G#XB.AngeloXanTimer2","GLOBAL",5000)
+SetGlobal("G#XB.AngeloXanBanter3","GLOBAL",1)
+END
+
+IF
+InParty("ADAngel")
+InParty("O#Xan")
+RealGlobalTimerExpired("G#XB.AngeloXanTimer2","GLOBAL")
+Global("O#XanRomanceActive","GLOBAL",1)
+Global("ADAngelRomanceActive","GLOBAL",1)
+CombatCounter(0)
+!See([ENEMY])
+!StateCheck("ADAngel",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("ADAngel")
+Global("G#XB.AngeloXanBanter3","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.AngeloXanBanter3","GLOBAL",2)
+END
+
+IF
+Global("G#XB.AngeloXanBanter3","GLOBAL",2)
+InParty("ADAngel")
+InParty("O#Xan")
+!StateCheck("ADAngel",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("ADAngel")
+THEN
+RESPONSE #100
+Interact("ADAngel")
+END

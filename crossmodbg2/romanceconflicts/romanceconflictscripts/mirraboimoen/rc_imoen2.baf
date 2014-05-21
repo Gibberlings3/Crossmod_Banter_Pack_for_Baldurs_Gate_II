@@ -1,0 +1,65 @@
+// Name: Lord Mirrabbo's Imoen
+// SoA Script: imoen2
+// ToB Script: imoe25
+// Romance is serious number: 2
+// Romance kill number: 4
+// For female?: 1
+// For male?: 1
+// Can kill other romances?: 1
+// Can be killed by other romances?: 1
+// Romance Variable: ImoenRomanceActive
+// SoA Check: imdream.cre
+// ToB Check: No ToB yet
+
+/* EXTEND_TOP of imoen2.bcs */
+IF
+  !Global("ImoenRomanceActive","GLOBAL",0)
+  !Global("ImoenRomanceActive","GLOBAL",4)
+  OR(21)
+    Global("C#AjantisRomanceActive","GLOBAL",2)   //Ajantis
+    Global("ADAngelRomanceActive","GLOBAL",2)     //Angelo
+    Global("ChloeRomanceActiveCR","GLOBAL",2)     //Chloe
+    Global("T1DarRomanceActive","GLOBAL",2)       //Darian
+    Global("E3FADEROMANCEACTIVE","GLOBAL",2)      //Fade
+    Global("B!GavRA","GLOBAL",2)                  //Gavin
+    Global("B!KeldornRA","GLOBAL",2)              //Keldorn
+    Global("J#KelseyRomanceActive","GLOBAL",2)    //Kelsey
+    Global("NaliaRomanceActive","GLOBAL",2)       //Arnel's Nalia
+    Global("PGNaliaRomanceActive","GLOBAL",2)     //Pocket Plane Group's Nalia
+    Global("NathRomanceActive","GLOBAL",2)        //Nathaniel
+    Global("SK#NehtRomanceActive","GLOBAL",2)     //Neh'taniel
+    Global("LK#NindeRomanceActive","GLOBAL",2)    //Ninde
+    Global("SaerilethRomanceActive","GLOBAL",2)   //Saerileth
+    Global("SarahRomanceActive","GLOBAL",2)       //Sarah
+    Global("SimeRomanceActive","GLOBAL",2)        //Sime
+    GlobalGT("SolaTalk","GLOBAL",14)              //Solaufein
+    Global("TashiaRomanceActive","GLOBAL",2)      //Tashia
+    Global("TsujathaRomanceActive","GLOBAL",2)    //Tsujatha
+    Global("G#TF.TyrisRomanceActive","GLOBAL",2)  //Tyris Flare
+    Global("O#XanRomanceActive","GLOBAL",2)       //Xan
+THEN
+  RESPONSE #100
+    SetGlobal("ImoenRomanceActive","GLOBAL",4)
+END
+
+IF
+  !Global("ImoenRomanceActive","GLOBAL",0)
+  !Global("ImoenRomanceActive","GLOBAL",4)
+  Global("M#AmberRomanceActive","GLOBAL",2)       //Amber
+  !Global("M#AmberMatch","GLOBAL",0)              //No Player2 romance
+  !Global("M#AmberMatch","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("ImoenRomanceActive","GLOBAL",4)
+END
+
+
+IF
+  !Global("ImoenRomanceActive","GLOBAL",0)
+  !Global("ImoenRomanceActive","GLOBAL",4)
+  Global("H#ValygarRomanceActive","GLOBAL",2)   //Valygar
+  Global("H#ValygarLover","GLOBAL",1)           //Additional romance kill condition
+THEN
+  RESPONSE #100
+    SetGlobal("ImoenRomanceActive","GLOBAL",4)
+END

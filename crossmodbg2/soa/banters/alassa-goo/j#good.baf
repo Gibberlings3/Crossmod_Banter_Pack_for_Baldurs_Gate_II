@@ -1,0 +1,14 @@
+IF
+	  InParty(Myself)
+	  InParty("D0Alassa")
+	  See("D0Alassa")
+	  !Dead("D0Alassa")
+	  !StateCheck("Gozaloth",CD_STATE_NOTVALID)
+	  !StateCheck("D0Alassa",CD_STATE_NOTVALID)
+	  Global("G#XB.EasterEggs","GLOBAL",1)
+	  Global("G#XB.AlassaGooEgg","GLOBAL",0)
+THEN
+    	  RESPONSE #100
+          	   SetGlobal("G#XB.AlassaGooEgg","GLOBAL",1)
+          	   Interact("D0Alassa")
+END

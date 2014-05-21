@@ -1,0 +1,9 @@
+
+IF 
+    Global("B!HBGavinSail","GLOBAL",1) 
+    Global("B!HBSetSail","GLOBAL",1) 
+THEN 
+    RESPONSE #100 
+        MoveGlobal("AR0902","B!Gavin2",[805.1053])  //Gavin goes to the Temple of Lathander 
+        SetGlobal("B!HBGavinSail","GLOBAL",2) 
+END 

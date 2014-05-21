@@ -1,0 +1,32 @@
+IF
+	  InParty(Myself)
+	  InParty("Sola")
+	  See("Sola")
+	  !Dead("Sola")
+	  !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+	  !StateCheck("Sola",CD_STATE_NOTVALID)
+	  CombatCounter(0)
+	  AreaType(FOREST)
+	  Global("G#XB.KoSSolaBanter3","GLOBAL",1)
+	  Global("G#XB.KoSSolaBanter4","GLOBAL",0)
+THEN
+    	  RESPONSE #100
+          	   SetGlobal("G#XB.KoSSolaBanter4","GLOBAL",1)
+          	   Interact("Sola")
+END
+
+IF
+	  InParty(Myself)
+	  InParty("Sola")
+	  See("Sola")
+	  !Dead("Sola")
+	  !StateCheck("P#Kivan",CD_STATE_NOTVALID)
+	  !StateCheck("Sola",CD_STATE_NOTVALID)
+	  CombatCounter(0)
+	  Global("SolaSpiderSpawn","GLOBAL",4)
+          Global("G#XB.KoSSolaBanter6","GLOBAL",0)
+THEN
+    	  RESPONSE #100
+          	   SetGlobal("G#XB.KoSSolaBanter6","GLOBAL",1)
+          	   Interact("Sola")
+END

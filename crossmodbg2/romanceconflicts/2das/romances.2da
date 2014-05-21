@@ -1,0 +1,17 @@
+ 2DA V1.0
+ NONE
+             		SOA_SCRIPT       TOB_SCRIPT      SERIOUS_NUM      KILL_NUM       FOR_FEMALE      FOR_MALE        CAN_KILL        CAN_BE_KILLED   ROM_VAR                     SOA_CHECK       TOB_CHECK           SOA_INSTALLED   TOB_INSTALLED
+AMBER                   m#amber          NOT_REAL        2                3              0               1               1               1               M#AmberRomanceActive        m#amber.bcs     NOT_REAL.bcs        0               0
+ARNEL_NALIA             nalia            nali25          2                3              0               1               1               1               NaliaRomanceActive          badbad01.cre    NOT_REAL.bcs        0               0
+CHLOE                   chloe            chloe25         2                3              1               0               1               1               ChloeRomanceActiveCR        chloe.bcs       chloe25.bcs         0               0
+CORTHALA_ROMANTIQUE     valygar          valy25          2                3              1               0               1               1               H#ValygarRomanceActive      h#leon.cre      p#madel.cre         0               0
+FADE                    e3fade           e3fade25        2                3              0               1               1               1               E3FadeRomanceActive         e3fade.bcs      e3fade25.bcs        0               0
+KELSEY       		j#klsy           j#klsy25        2                3              1               0               1               1               J#KelseyRomanceActive       j#klsy.bcs      j#klsy25.bcs        0               0
+KULYOK_XAN              o#xans           NOT_REAL        2                3              1               0               1               1               O#XanRomanceActive          o#xans.bcs      NOT_REAL.bcs        0               0
+LORD_MIRRABBO_IMOEN     imoen2           imoe25          2                4              1               1               1               1               ImoenRomanceActive          imdream.cre     NOT_REAL.bcs        0               0
+NATHANIEL               fhnat            fhnat25         2                3              0               1               1               1               NathRomanceActive           fhnat.bcs       fhnat25.bcs         0               0
+SAERILETH    		saerilet         saeril25        2                3              0               1               1               1               SaerilethRomanceActive      saerilet.bcs    saeril25.bcs        0               0
+TASHIA       		tashia           tash25          2                3              0               1               1               1               TashiaRomanceActive         tashia.bcs      tash25.bcs          0               0
+TORTURED_SOULS_SIME     sime             sime25          2                3              1               1               1               1               SimeRomanceActive           sime.bcs        sime25.bcs          0               0
+TSUJATHA     		tsujath          tsujat25        2                3              1               0               1               1               TsujathaRomanceActive       tsujath.bcs     tsujat25.bcs        0               0
+WEIMER_SOLAUFEIN    	sola             sola            14               -1             1               1               1               0               SolaTalk                    sola.bcs        sola.bcs            0               0

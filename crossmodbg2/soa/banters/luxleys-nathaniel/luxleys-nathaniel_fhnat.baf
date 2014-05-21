@@ -1,0 +1,99 @@
+IF 
+    InParty(Myself) 
+    InParty("FHLSEB") 
+    Global("FHNathRomance","GLOBAL",1) 
+    Global("NathRomanceActive","GLOBAL",1) 
+    GlobalGT("FHLSebFlirt","GLOBAL",4) 
+    Global("FHLNathJealousTimer","GLOBAL",0) 
+    Global("FHLSebJustFriends","GLOBAL",0) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("FHLNathJealousTimer","GLOBAL",1) 
+        RealSetGlobalTimer("FHLNathJealousTime","GLOBAL",350) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("FHLSEB") 
+    !StateCheck("FHLSEB",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    GlobalGT("FHLSebFlirt","GLOBAL",4) 
+    !AreaCheck("AR2100") 
+    !AreaCheck("AR2101") 
+    !AreaCheck("AR2102") 
+    !AreaCheck("AR2200") 
+    !AreaCheck("AR2201") 
+    !AreaCheck("AR2202") 
+    !AreaCheck("AR2203") 
+    !AreaCheck("AR2204") 
+    !AreaCheck("AR2205") 
+    !AreaCheck("AR2206") 
+    !AreaCheck("AR2207") 
+    !AreaCheck("AR2208") 
+    !AreaCheck("AR2209") 
+    !AreaCheck("AR2210") 
+    !AreaCheck("AR2400") 
+    !AreaCheck("AR2401") 
+    !AreaCheck("AR2402") 
+    Global("FHLNathJealousTimer","GLOBAL",1) 
+    Global("FHLNathJealous","GLOBAL",0) 
+    Global("FHNathRomance","GLOBAL",1) 
+    Global("NathRomanceActive","GLOBAL",1) 
+    Global("FHLSebJustFriends","GLOBAL",0) 
+    GlobalTimerExpired("FHLNathJealousTime","GLOBAL") 
+    CombatCounter(0) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("FHLNathJealous","GLOBAL",1) 
+        StartDialogueNoSet(Player1) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("FHLSEB") 
+    GlobalGT("FHLSebFlirt","GLOBAL",4) 
+    Global("FHLSebJustFriends","GLOBAL",0) 
+    OR(2) 
+        Global("NathRomanceActive","GLOBAL",2)
+        Global("FHLNathJealous","GLOBAL",2) 
+    Global("FHLNathJealousTimer2","GLOBAL",0) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("FHLNathJealousTimer2","GLOBAL",1) 
+        SetGlobalTimer("FHLNathJealousTime","GLOBAL",TWO_DAYS) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("FHLSEB") 
+    !StateCheck("FHLSEB",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !AreaCheck("AR2100") 
+    !AreaCheck("AR2101") 
+    !AreaCheck("AR2102") 
+    !AreaCheck("AR2200") 
+    !AreaCheck("AR2201") 
+    !AreaCheck("AR2202") 
+    !AreaCheck("AR2203") 
+    !AreaCheck("AR2204") 
+    !AreaCheck("AR2205") 
+    !AreaCheck("AR2206") 
+    !AreaCheck("AR2207") 
+    !AreaCheck("AR2208") 
+    !AreaCheck("AR2209") 
+    !AreaCheck("AR2210") 
+    !AreaCheck("AR2400") 
+    !AreaCheck("AR2401") 
+    !AreaCheck("AR2402") 
+    Global("FHLNathJealousTimer2","GLOBAL",1) 
+    OR(2) 
+        Global("FHLNathJealous","GLOBAL",2) 
+        Global("NathRomanceActive","GLOBAL",2) 
+    Global("FHLSebJustFriends","GLOBAL",0) 
+    GlobalTimerExpired("FHLNathJealousTime","GLOBAL") 
+    CombatCounter(0) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("FHLNathJealous","GLOBAL",3) 
+        StartDialogueNoSet(Player1) 
+END

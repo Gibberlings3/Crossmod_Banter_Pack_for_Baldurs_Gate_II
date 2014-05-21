@@ -1,0 +1,40 @@
+IF
+InParty("J#Kelsey")
+InParty("O#Xan")
+Global("O#XanRomanceActive","GLOBAL",1)
+Global("J#KelseyRomanceActive","GLOBAL",1)
+Global("G#XB.KelseyXanBanter2","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.KelseyXanBanter2","GLOBAL",1)
+RealSetGlobalTimer("G#XB.KelseyXanTimer2","GLOBAL",7000)
+END
+
+IF
+RealGlobalTimerExpired("G#XB.KelseyXanTimer2","GLOBAL")
+InParty("J#Kelsey")
+InParty("O#Xan")
+Global("O#XanRomanceActive","GLOBAL",1)
+Global("J#KelseyRomanceActive","GLOBAL",1)
+!StateCheck("J#Kelsey",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("O#Xan")
+CombatCounter(0)
+!See([ENEMY])
+Global("G#XB.KelseyXanBanter2","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.KelseyXanBanter2","GLOBAL",2)
+END
+
+IF
+Global("G#XB.KelseyXanBanter2","GLOBAL",2)
+InParty("J#Kelsey")
+InParty("O#Xan")
+!StateCheck("J#Kelsey",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("O#Xan")
+THEN
+RESPONSE #100
+Interact("O#Xan")
+END

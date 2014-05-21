@@ -1,0 +1,40 @@
+IF
+InParty("M#Amber")
+InParty("O#Xan")
+AreaCheck("AR0300")
+GlobalLT("Chapter","GLOBAL",4)
+Global("G#XB.AmberXanBanter4","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.AmberXanBanter4","GLOBAL",1)
+RealSetGlobalTimer("G#XB.AmberXanTimer4","GLOBAL",50)
+END
+
+IF
+RealGlobalTimerExpired("G#XB.AmberXanTimer4","GLOBAL")
+GlobalLT("Chapter","GLOBAL",4)
+InParty("M#Amber")
+InParty("O#Xan")
+AreaCheck("AR0300")
+!StateCheck("M#Amber",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("O#Xan")
+CombatCounter(0)
+!See([ENEMY])
+Global("G#XB.AmberXanBanter4","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.AmberXanBanter4","GLOBAL",2)
+END
+
+IF
+Global("G#XB.AmberXanBanter4","GLOBAL",2)
+InParty("M#Amber")
+InParty("O#Xan")
+!StateCheck("M#Amber",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("O#Xan")
+THEN
+RESPONSE #100
+Interact("O#Xan")
+END

@@ -1,0 +1,42 @@
+// Name: Ajantis
+// SoA Script: c#ajan
+// ToB Script: c#ajan25
+// Romance is serious number: 2
+// Romance kill number: 3
+// For female?: 1
+// For male?: 0
+// Can kill other romances?: 1
+// Can be killed by other romances?: 1
+// Romance Variable: C#AjantisRomanceActive
+
+/* EXTEND_TOP of c#ajan.bcs and c#ajan25.bcs */
+IF
+  !Global("C#AjantisRomanceActive","GLOBAL",0)
+  !Global("C#AjantisRomanceActive","GLOBAL",3)
+  OR(12)
+    Global("ADAngelRomanceActive","GLOBAL",2)     //Angelo
+    Global("ChloeRomanceActiveCR","GLOBAL",2)     //Chloe
+    Global("T1DarRomanceActive","GLOBAL",2)       //Darian
+    Global("B!GavRA","GLOBAL",2)                  //Gavin
+    Global("ImoenRomanceActive","GLOBAL",2)       //Imoen
+    Global("B!KeldornRA","GLOBAL",2)              //Keldorn
+    Global("J#KelseyRomanceActive","GLOBAL",2)    //Kelsey
+    Global("SK#NehtRomanceActive","GLOBAL",2)     //Neh'taniel
+    Global("SarahRomanceActive","GLOBAL",2)       //Sarah
+    GlobalGT("SolaTalk","GLOBAL",14)              //Solaufein
+    Global("TsujathaRomanceActive","GLOBAL",2)    //Tsujatha
+    Global("O#XanRomanceActive","GLOBAL",2)       //Xan 
+THEN
+  RESPONSE #100
+    SetGlobal("C#AjantisRomanceActive","GLOBAL",3)
+END
+
+IF
+  !Global("C#AjantisRomanceActive","GLOBAL",0)
+  !Global("C#AjantisRomanceActive","GLOBAL",3)
+  Global("H#ValygarRomanceActive","GLOBAL",2)   //Valygar
+  Global("H#ValygarLover","GLOBAL",1)           //Additional romance kill condition
+THEN
+  RESPONSE #100
+    SetGlobal("C#AjantisRomanceActive","GLOBAL",3)
+END

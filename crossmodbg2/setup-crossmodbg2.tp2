@@ -1,0 +1,1307 @@
+BACKUP ~crossmodbg2\backup~
+AUTHOR ~grim@gibberlings3.net, kae@spellholdstudios.net, bererlinde@gmail.net~
+
+/* backwards compatibility is a PITA, but necessary */
+NO_IF_EVAL_BUG 
+
+VERSION ~v14~
+
+README ~CrossmodBG2/readme-crossmodbg2.html~
+
+// ****************************
+// * SHADOWS OF AMN COMPONENT *
+// ****************************
+
+BEGIN ~Crossmod Banter Pack for Shadows of Amn~
+REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~fw0100.are~ ~You can't have BG1Tutu installed to install this component.~
+
+// IDS FILES
+
+APPEND ~state.ids~ ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+// BANTERS
+// These files contain normal and scripted banters between the two NPCs
+
+// Giving Solaufein a banter file
+ACTION_IF FILE_EXISTS_IN_GAME ~sola.dlg~
+THEN BEGIN
+  APPEND ~interdia.2da~ ~SOLA        BSOLA
+SOLAUFEIN   BSOLA~
+    UNLESS ~SOLAUFEIN~
+    UNLESS ~25FILE~
+  APPEND ~interdia.2da~ ~SOLA        BSOLA    BSOLA25
+SOLAUFEIN   BSOLA        BSOLA25~
+    UNLESS ~SOLAUFEIN~
+    IF ~25FILE~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sola.dlg~ AND NOT FILE_EXISTS_IN_GAME ~bsola.dlg~
+THEN BEGIN
+  PRINT ~Adding Solaufein's SoA banter file...~
+<<<<<<<< CrossmodBG2/Inlined/BSOLA.d
+BEGIN BSOLA
+>>>>>>>>
+  COMPILE ~CrossmodBG2/Inlined/BSOLA.d~
+END
+
+// Giving Wikaede an SoA Override Script
+ACTION_IF FILE_EXISTS_IN_GAME ~MGWIKA.cre~ AND NOT FILE_EXISTS_IN_GAME ~MGWIKA.bcs~
+THEN BEGIN
+  PRINT ~Adding Wikaede's override script...~
+  
+  COPY_EXISTING ~MGWIKA.cre~ ~override/MGWIKA.cre~
+    WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~MGWIKA~ #8
+    
+<<<<<<<< CrossmodBG2/Inlined/MGWIKA.baf
+// Start of Wikaede's override script
+>>>>>>>>
+  COMPILE ~CrossmodBG2/Inlined/MGWIKA.baf~
+END
+    
+// Jastey's Ajantis-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajanb.dlg~ AND FILE_EXISTS_IN_GAME ~o#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Jastey's Ajantis and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/JasteyAjantis-KulyokCoran/JasteyAjantis-KulyokCoran_Banters.d~
+END
+
+// Jastey's Ajantis-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajanb.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Jastey's Ajantis and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/JasteyAjantis-KulyokXan/JasteyAjantis-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~o#xans.bcs~ ~CrossmodBG2/SoA/Banters/JasteyAjantis-KulyokXan/JasteyAjantis-KulyokXan_O#XanS.baf~
+  EXTEND_BOTTOM ~c#ajan.bcs~ ~CrossmodBG2/SoA/Banters/JasteyAjantis-KulyokXan/JasteyAjantis-KulyokXan_C#Ajan.baf~
+END
+
+// Alassa-Goo Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bd0alas.dlg~ AND FILE_EXISTS_IN_GAME ~bj#goo.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Alassa and Goo...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Alassa-Goo/Alassa-Goo_Banters.d~
+  EXTEND_BOTTOM ~j#good.bcs~ ~CrossmodBG2/SoA/Banters/Alassa-Goo/j#good.baf~
+END
+
+// Amber-Auren Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bm#amber.dlg~ AND FILE_EXISTS_IN_GAME ~k#aurenb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Amber and Auren...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Amber-Auren/Amber-Auren_Banters.d~
+END
+
+// Amber-Kelsey Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bm#amber.dlg~ AND FILE_EXISTS_IN_GAME ~bj#klsy.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Amber and Kelsey...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Amber-Kelsey/Amber-Kelsey_Banters.d~
+END
+
+// Amber-Keto
+ACTION_IF FILE_EXISTS_IN_GAME ~bm#amber.dlg~ AND FILE_EXISTS_IN_GAME ~fwketo.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Amber and Keto...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Amber-Keto/Amber-Keto_Banters.d~
+  EXTEND_BOTTOM ~m#amber.bcs~ ~CrossmodBG2/SoA/Banters/Amber-Keto/Amber-Keto_M#Amber.baf~
+  EXTEND_BOTTOM ~fwketo.bcs~ ~CrossmodBG2/SoA/Banters/Amber-Keto/Amber-Keto_fwketo.baf~
+
+  COPY_EXISTING ~BEARBL.cre~ ~override~
+  WRITE_ASCII 0x280 ~BEARBL~ #32 // death variable
+  BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~BEARBL01.cre~ ~override~
+  WRITE_ASCII 0x280 ~BEARBL01~ #32 // death variable
+  BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~BEARBR.cre~ ~override~
+  WRITE_ASCII 0x280 ~BEARBR~ #32 // death variable
+  BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~BEARBR01.cre~ ~override~
+  WRITE_ASCII 0x280 ~BEARBR01~ #32 // death variable
+  BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~BEARGR.cre~ ~override~
+  WRITE_ASCII 0x280 ~BEARGR~ #32 // death variable
+  BUT_ONLY_IF_IT_CHANGES
+
+END
+
+// Amber-Kivan of Shilmista
+ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.dlg~ AND FILE_EXISTS_IN_GAME ~p#kivan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Amber and Kivan of Shilmista...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Amber-KivanOfShilmista/Amber-KivanOfShilmista_Banters.d~
+  EXTEND_BOTTOM ~m#amber.bcs~ ~CrossmodBG2/SoA/Banters/Amber-KivanOfShilmista/Amber-KivanOfShilmista_m#amber.baf~
+END
+
+// Amber-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Amber and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Amber-KulyokXan/Amber-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~m#amber.bcs~ ~CrossmodBG2/SoA/Banters/Amber-KulyokXan/Amber-KulyokXan_M#Amber.baf~
+END
+
+// Amber-Nathaniel Material
+ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.dlg~ AND FILE_EXISTS_IN_GAME ~fhnath.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Amber and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Amber-Nathaniel/Amber-Nathaniel_Banters.d~
+END 
+
+// Angelo-Tiax Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~adangel.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tiax.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Angelo and Tiax...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokTiax/SisterVigilanteAngelo-KulyokTiax_banters.d~ 
+END 
+
+// Angelo-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~adangel.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between SisterVigilante's Angelo and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~o#xans.bcs~ ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_O#XanS.baf~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/adang901.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/adang902.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/adang903.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/adang904.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/adang905.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/adang906.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_AudioUninstall.sh~
+  END
+END 
+
+// Auren-Gavin Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~k#aurenb.dlg~ AND FILE_EXISTS_IN_GAME ~b!gavj~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Auren and Gavin...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Auren-Gavin/Auren-Gavin_Banters.d~ 
+  EXTEND_TOP ~k#auren.bcs~ ~CrossmodBG2/SoA/Banters/Auren-Gavin/Auren-Gavin_k#auren.baf~ 
+END 
+
+// Auren-Kivan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~k#aurenb.dlg~ AND FILE_EXISTS_IN_GAME ~p#kiv.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Auren and Kivan of Shilmista...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Auren-KivanOfShilmista/Auren-KivanOfShilmista_Banters.d~
+END
+
+// Auren-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~k#aurenb.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Auren and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Auren-KulyokXan/Auren-KulyokXan_Banters.d~
+END
+
+// Kulyok's Coran-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~O#coran.dlg~ AND FILE_EXISTS_IN_GAME ~o#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Coran and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokCoran-KulyokTiax/KulyokCoran-KulyokTiax_Banters.d~
+END
+
+// Kulyok's Coran-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~O#coran.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Coran and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokCoran-KulyokXan/KulyokCoran-KulyokXan_Banters.d~
+END
+
+// Fade-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~be3fade.dlg~ AND FILE_EXISTS_IN_GAME ~btsujat.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Fade and Tsujatha...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Fade-Tsujatha/Fade-Tsujatha_Banters.d~
+END 
+
+// Gavin-Haldamir Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~b!halj.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Gavin and Haldamir...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Gavin-Haldamir/Gavin-Haldamir_Banters.d~ 
+  EXTEND_TOP ~b!hals.bcs~ ~CrossmodBG2/SoA/Banters/Gavin-Haldamir/Gavin-Haldamir_b!hals.baf~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Gavin-Haldamir/b!halftp.baf~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Gavin-Haldamir/b!halfgt.baf~ 
+END 
+
+// Gavin-Neh'taniel Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~sk#neht.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Gavin and Neh'taniel...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Gavin-Nehtaniel/Gavin-Nehtaniel_Banters.d~ 
+END 
+
+// Gavin-Sarah Material
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~k#sarah.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Gavin and Sarah...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Gavin-Sarah/gavin-sarah_banters.d~ 
+END 
+
+// Haldamir-Kivan of Shilmista Material 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!halj.dlg~ AND FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Haldamir and Kivan of Shilmista...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Haldamir-KivanOfShilmista/Haldamir-KivanOfShilmista_banters.d~ 
+END 
+
+// Haldamir-Neh'taniel Material 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!halj.dlg~ AND FILE_EXISTS_IN_GAME ~sk#neht.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Haldamir and Neh'taniel...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Haldamir-Nehtaniel/Haldamir-Nehtaniel_banters.d~ 
+END 
+
+// Hubelpot-Kari Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~bmgkari.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Kari...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-Kari/Hubelpot-Kari_Banters.d~
+  EXTEND_BOTTOM ~BMGKariD.bcs~ ~CrossmodBG2/SoA/Banters/Hubelpot-Kari/Hubelpot-Kari_BMGKariD.baf~
+END
+
+// Hubelpot-Kitanya Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~r#kityb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Kitanya...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-Kitanya/Hubelpot-Kitanya_Banters.d~
+END
+
+// Hubelpot-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-KulyokXan/Hubelpot-KulyokXan_Banters.d~
+END
+
+// Hubelpot-Laufey's Edwin Romance
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~lichring.itm~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Laufey's Edwin Romance...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-LaufeyEdwinRomance/Hubelpot-EdwinRom_Banters.d~
+END
+
+// Hubelpot-Neh'Taniel-Relic-Lilarcor
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~sk#neht.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot, Neh'Taniel, Relic and Lilarcor...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-NehTaniel/Hubelpot-Nehtaniel_Banters.d~ 
+  EXTEND_TOP ~sc#hubd.bcs~ ~CrossmodBG2/SoA/Banters/Hubelpot-NehTaniel/Hubelpot-NehTaniel_sc#hubd.baf~ 
+END
+
+// Hubelpot-Saerileth Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~bsaerile.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Saerileth...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-Saerileth/Hubelpot-Saerileth_Banters.d~
+END
+
+// Hubelpot-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~btsujat.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Tsujatha...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-Tsujatha/Hubelpot-Tsujatha_Banters.d~
+END
+
+// Hubelpot-Willie Bruce Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~bwillyb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Hubelpot and Willie Bruce...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Hubelpot-WillieBruce/Hubelpot-WillieBruce_Banters.d~
+END
+
+// Kelsey-Kivan of Shilmista Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~bj#klsy.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kelsey and Kivan of Shilmista...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Kelsey-KivanOfShilmista/Kelsey-KivanOfShilmista_Banters.d~
+END
+
+// Kelsey-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~j#klsy.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kelsey and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~o#xans.bcs~ ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_O#XanS.baf~
+  EXTEND_BOTTOM ~j#klsy.bcs~ ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_J#Klsy.baf~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/o#xan906.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/o#xan907.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/o#xan908.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/o#xan909.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_AudioUninstall.sh~
+  END
+
+END
+
+// Keto-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~fwketo.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Keto and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/Keto-KulyokXan_Banters.d~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/o#xan903.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/o#xan904.ogg~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/o#xan905.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/Keto-KulyokXan_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/Keto-KulyokXan_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/Keto-KulyokXan_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/Keto-KulyokXan/Keto-KulyokXan_AudioUninstall.sh~
+  END
+
+END
+
+// Kido-Kindrek Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bkido.dlg~ AND FILE_EXISTS_IN_GAME ~bkindrek.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kido and Kindrek...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Kido-Kindrek/Kido-Kindrek_Banters.d~
+END
+
+// Kido-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bkido.dlg~ AND FILE_EXISTS_IN_GAME ~btsujat.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kido and Tsujatha...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Kido-Tsujatha/Kido-Tsujatha_Banters.d~
+END
+
+// Kindrek-Saerileth Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bkindrek.dlg~ AND FILE_EXISTS_IN_GAME ~bsaerile.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kindrek and Saerileth...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Kindrek-Saerileth/Kindrek-Saerileth_Banters.d~
+END
+
+// Kindrek-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bkindrek.dlg~ AND FILE_EXISTS_IN_GAME ~byasraen.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kindrek and Tasraena...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Kindrek-Yasraena/Kindrek-Yasraena_Banters.d~
+END
+
+// Kivan of Shilmista-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-KulyokCoran/KivanOfShilmista-KulyokCoran_Banters.d~
+END
+
+// Kivan of Shilmista-Solaufein Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~bsola.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Solaufein...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Solaufein/KivanOfShilmista-Solaufein_Banters.d~
+  EXTEND_BOTTOM ~p#kivd.bcs~ ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Solaufein/KivanOfShilmista-Solaufein_P#KivD.baf~
+END
+
+
+// Kivan of Shilmista-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-KulyokTiax/KivanOfShilmista-KulyokTiax_Banters.d~
+END
+
+
+// Kivan of Shilmista-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~btsujat.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Tsujatha...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Tsujatha/KivanOfShilmista-Tsujatha_Banters.d~
+END
+
+// Kivan of Shilmista-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-KulyokXan/KivanOfShilmista-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~p#kiv01.bcs~ ~CrossmodBG2/SoA/Banters/KivanOfShilmista-KulyokXan/KivanOfShilmista-KulyokXan_P#Kiv01.baf~
+  EXTEND_BOTTOM ~o#xans.bcs~ ~CrossmodBG2/SoA/Banters/KivanOfShilmista-KulyokXan/KivanOfShilmista-KulyokXan_O#XanS.baf~
+END
+
+// Kivan of Shilmista-Xulaye Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~blk#xul.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Xulaye...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Xulaye/KivanOfShilmista-Xulaye_Banters.d~ 
+END 
+
+// Kivan of Shilmista-Wikaede Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~bmgwika.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Wikaede...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Wikaede/KivanOfShilmista-Wikaede_Banters.d~
+  EXTEND_BOTTOM ~bmgwika.bcs~ ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Wikaede/KivanOfShilmista-Wikaede_MGWIKA.baf~
+  EXTEND_BOTTOM ~p#kiv01.bcs~ ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Wikaede/KivanOfShilmista-Wikaede_P#KIV01.baf~
+END
+
+// Kivan of Shilmista-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~byasraen.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Yasraena...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Yasraena/KivanOfShilmista-Yasraena_Banters.d~
+END
+
+// Kulyok's Tiax-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~O#tiax25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Tiax and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXan_Banters.d~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/SoA/Banters/KulyokTiax-KulyokXan/o#xan901.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/SoA/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXan_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXan_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/SoA/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXan_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/SoA/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXan_AudioUninstall.sh~
+  END
+
+END
+
+// Luxleys-Nathaniel Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~BFHLSEB.dlg~ AND FILE_EXISTS_IN_GAME ~BFHNAT.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding SoA banters between the Luxleys and Nathaniel...~ 
+  COMPILE ~CrossmodBG2/SoA/Banters/Luxleys-Nathaniel/Luxleys-Nathaniel_Banters.d~ 
+  EXTEND_BOTTOM ~fhnat.bcs~ ~CrossmodBG2/SoA/Banters/Luxleys-Nathaniel/Luxleys-Nathaniel_fhnat.baf~ 
+END 
+
+// Saerileth-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsaerile.dlg~ AND FILE_EXISTS_IN_GAME ~btsujat.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Saerileth and Tsujatha...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Saerileth-Tsujatha/Saerileth-Tsujatha_Banters.d~
+END
+
+// Saerileth-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsaerile.dlg~ AND FILE_EXISTS_IN_GAME ~byasraen.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Saerileth and Yasraena...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Saerileth-Yasraena/Saerileth-Yasraena_Banters.d~
+END
+
+// Sarah-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~k#sarahb.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Sarah and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Sarah-KulyokXan/Sarah-KulyokXan_Banters.d~
+END
+
+// Solaufein-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsola.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Solaufein and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Solaufein-KulyokXan/Solaufein-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~o#xans.bcs~ ~CrossmodBG2/SoA/Banters/Solaufein-KulyokXan/Solaufein-KulyokXan_O#XanS.baf~
+END
+
+// Tsujatha-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~btsujat.dlg~ AND FILE_EXISTS_IN_GAME ~byasraen.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Tsujatha and Yasraena...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Tsujatha-Yasraena/Tsujatha-Yasraena_Banters.d~
+END
+
+// INTERJECTIONS
+// Note these files contain interjections into the respective mod, not from that mod
+
+// Amber
+
+ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.dlg~
+THEN BEGIN
+
+  PRINT ~Defining Amber joining state~
+  OUTER_SET actual_joining_state = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
+  PRINT ~Defining Amber kidnapping state~
+  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
+  PRINT ~Completed... moving on~
+
+  // Auren interjections into Amber
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~k#aurenj.dlg~
+  THEN BEGIN
+    PRINT ~Adding Auren injections into Amber's dialogues...~
+    COPY - ~CrossmodBG2/SoA/Interjections/Amber/Auren/Auren_Interjections.d~ ~CrossmodBG2/SoA/Interjections/Amber/Auren/Auren_Interjections.d~
+      REPLACE_TEXTUALLY ~temp_joining_state~ ~%actual_joining_state%~
+      REPLACE_TEXTUALLY ~temp_kidnapping_state~ ~%actual_kidnapping_state%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/Amber/Auren/Auren_Interjections.d~
+    EXTEND_TOP ~k#auren.bcs~  ~CrossmodBG2/SoA/Interjections/Amber/Auren/Interject_k#auren.baf~
+  END
+   
+  // Kelsey interjections into Amber
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~j#klsyj.dlg~
+  THEN BEGIN
+    PRINT ~Adding Kelsey injections into Amber's dialogues...~
+    COPY - ~CrossmodBG2/SoA/Interjections/Amber/Kelsey/Kelsey_Interjections.d~ ~CrossmodBG2/SoA/Interjections/Amber/Kelsey/Kelsey_Interjections.d~
+      REPLACE_TEXTUALLY ~temp_joining_state~ ~%actual_joining_state%~
+      REPLACE_TEXTUALLY ~temp_kidnapping_state~ ~%actual_kidnapping_state%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/Amber/Kelsey/Kelsey_Interjections.d~
+    EXTEND_TOP ~j#klsy.bcs~  ~CrossmodBG2/SoA/Interjections/Amber/Kelsey/Interject_j#klsy.baf~
+  END
+  
+  // Keto interjections into Amber
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~fwketoj.dlg~
+  THEN BEGIN
+    PRINT ~Adding Keto injections into Amber's dialogues...~
+    COPY - ~CrossmodBG2/SoA/Interjections/Amber/Keto/Keto_Interjections.d~ ~CrossmodBG2/SoA/Interjections/Amber/Keto/Keto_Interjections.d~
+      REPLACE_TEXTUALLY ~temp_joining_state~ ~%actual_joining_state%~
+      REPLACE_TEXTUALLY ~temp_kidnapping_state~ ~%actual_kidnapping_state%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/Amber/Keto/Keto_Interjections.d~
+    EXTEND_TOP ~fwketo.bcs~  ~CrossmodBG2/SoA/Interjections/Amber/Keto/Interject_fwketo.baf~
+  END
+
+  // Kivan of Shilmista interjections into Amber
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~p#kivj.dlg~
+  THEN BEGIN
+    PRINT ~Adding Kivan of Shilmista injections into Amber's dialogues...~
+    COPY - ~CrossmodBG2/SoA/Interjections/Amber/KivanOfShilmista/Kivan_Interjections.d~ ~CrossmodBG2/SoA/Interjections/Amber/KivanOfShilmista/Kivan_Interjections.d~
+      REPLACE_TEXTUALLY ~temp_joining_state~ ~%actual_joining_state%~
+      REPLACE_TEXTUALLY ~temp_kidnapping_state~ ~%actual_kidnapping_state%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/Amber/KivanOfShilmista/Kivan_Interjections.d~
+    EXTEND_TOP ~p#kiv01.bcs~  ~CrossmodBG2/SoA/Interjections/Amber/KivanOfShilmista/Interject_p#kiv01.baf~
+  END
+
+  // Kulyok's Xan interjections into Amber
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~o#xans.bcs~
+  THEN BEGIN
+    PRINT ~Adding Kulyok's Xan injections into Amber's dialogues...~
+    COPY - ~CrossmodBG2/SoA/Interjections/Amber/KulyokXan/Xan_Interjections.d~ ~CrossmodBG2/SoA/Interjections/Amber/KulyokXan/Xan_Interjections.d~
+      REPLACE_TEXTUALLY ~temp_joining_state~ ~%actual_joining_state%~
+      REPLACE_TEXTUALLY ~temp_kidnapping_state~ ~%actual_kidnapping_state%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/Amber/KulyokXan/Xan_Interjections.d~
+    EXTEND_TOP ~o#xans.bcs~  ~CrossmodBG2/SoA/Interjections/Amber/KulyokXan/Interject_o#xans.baf~
+  END
+
+END 
+
+// Neh'taniel 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sk#neht.dlg~
+THEN BEGIN
+
+  PRINT ~Defining Neh'taniel joining state 1~
+  OUTER_SET actual_joining_state_1 = (STATE_WHICH_SAYS 0 IN ~Neh'taniel/%s/sk#neht.tra~ FROM ~sk#neht~)
+  PRINT ~Completed... moving on~
+
+  PRINT ~Defining Neh'taniel joining state 2~
+  OUTER_SET actual_joining_state_2 = (STATE_WHICH_SAYS 27 IN ~Neh'taniel/%s/sk#neht.tra~ FROM ~sk#neht~)
+  PRINT ~Completed... moving on~ 
+    
+  // Gavin interjections into Neh'taniel 
+  ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ 
+  THEN BEGIN 
+  PRINT ~Adding Gavin's injections into Neh'taniel's dialogue...~
+    COPY - ~CrossmodBG2/SoA/Interjections/Nehtaniel/Gavin/gavin-nehtaniel_interjections.d~ ~CrossmodBG2/SoA/Interjections/Nehtaniel/Gavin/gavin-nehtaniel_interjections.d~
+      REPLACE_TEXTUALLY ~temp_joining_state_1~ ~%actual_joining_state_1%~
+      REPLACE_TEXTUALLY ~temp_joining_state_2~ ~%actual_joining_state_2%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/Nehtaniel/Gavin/gavin-nehtaniel_interjections.d~
+    EXTEND_TOP    ~b!gavs.bcs~ ~CrossmodBG2/SoA/Interjections/Nehtaniel/Gavin/nehtaniel-interject_b!gavj.baf~ 
+    COMPILE ~CrossmodBG2/SoA/Interjections/Nehtaniel/Gavin/g#gavneh.baf~ 
+  END 
+END 
+
+// QUESTS AND OTHERS 
+
+// Homeward Bound 
+
+  //Gavin  
+  ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~b!ruby.dlg~ 
+  THEN BEGIN 
+    PRINT ~Adding Gavin to Homeward Bound...~ 
+    COMPILE ~CrossmodBG2/SoA/Interjections/Homeward_Bound/gavin-hb.d~ 
+    EXTEND_BOTTOM ~ar1600.bcs~ ~CrossmodBG2/SoA/Interjections/Homeward_Bound/gavin_ar1600.baf~ 
+    EXTEND_BOTTOM ~ar2100.bcs~ ~CrossmodBG2/SoA/Interjections/Homeward_Bound/gavin_ar2100.baf~ 
+  END     
+
+// Tales of the Deep Gardens 
+ACTION_IF FILE_EXISTS_IN_GAME ~0x1DG.bcs~ 
+THEN BEGIN 
+
+    PRINT ~Defining Mysterious Wizard interjection state 1~
+    OUTER_SET actual_interject_state_1 = (STATE_WHICH_SAYS 39 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
+    PRINT ~Completed... moving on~
+    
+    PRINT ~Defining Mysterious Wizard interjection state 2~
+    OUTER_SET actual_interject_state_2 = (STATE_WHICH_SAYS 37 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
+    PRINT ~Completed... moving on~
+
+  // Gavin 
+  ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ 
+  THEN BEGIN 
+    COMPILE ~CrossmodBG2/SoA/Interjections/ToDG/Gavin/gavin-todg_interjections.d~  
+    EXTEND_TOP ~b!gavs.bcs~ ~CrossmodBG2/SoA/Interjections/ToDG/Gavin/todg_b!gavs.baf~ 
+  END 
+  
+  // Haldamir 
+  ACTION_IF FILE_EXISTS_IN_GAME ~b!hals.bcs~ 
+  THEN BEGIN 
+    PRINT ~Adding Haldamir's injection into the Mysterious Wizard's dialogue...~
+    COPY - ~CrossmodBG2/SoA/Interjections/ToDG/Haldamir/haldamir-todg_interjections.d~ ~CrossmodBG2/SoA/Interjections/ToDG/Haldamir/haldamir-todg_interjections.d~
+      REPLACE_TEXTUALLY ~temp_interject_state_2~ ~%actual_interject_state_2%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/ToDG/Haldamir/haldamir-todg_interjections.d~
+    EXTEND_TOP    ~b!hals.bcs~ ~CrossmodBG2/SoA/Interjections/ToDG/Haldamir/todg_b!hals.baf~ 
+  END 
+  
+  // Neh'taniel 
+  ACTION_IF FILE_EXISTS_IN_GAME ~sk#neht.dlg~ 
+  THEN BEGIN 
+    PRINT ~Adding Neh'taniel's injection into the Mysterious Wizard's dialogue...~
+    COPY - ~CrossmodBG2/SoA/Interjections/ToDG/Nehtaniel/nehtaniel-todg_interjections.d~ ~CrossmodBG2/SoA/Interjections/ToDG/Nehtaniel/nehtaniel-todg_interjections.d~
+      REPLACE_TEXTUALLY ~temp_interject_state_1~ ~%actual_interject_state_1%~
+    COMPILE ~CrossmodBG2/SoA/Interjections/ToDG/Nehtaniel/nehtaniel-todg_interjections.d~
+    EXTEND_TOP    ~sk#nehtb.bcs~ ~CrossmodBG2/SoA/Interjections/ToDG/Nehtaniel/todg_sk#nehtb.baf~ 
+  END
+END     
+  
+// *****************************
+// * THRONE OF BHAAL COMPONENT *
+// *****************************
+
+BEGIN ~Crossmod Banter Pack for Throne of Bhaal~
+REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~fw0100.are~ ~You can't have BG1Tutu installed to install this component.~
+REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~baldur25.bcs~ ~You must have Throne of Bhaal installed to install this component.~
+
+// IDS FILES
+
+APPEND ~state.ids~ ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+// BANTER
+// These files contain normal and scripted banters between the two NPCs
+
+// Giving Solaufein a banter file
+ACTION_IF FILE_EXISTS_IN_GAME ~sola.dlg~ AND NOT FILE_EXISTS_IN_GAME ~bsola25.dlg~
+THEN BEGIN
+  PRINT ~Adding Solaufein's ToB banter file...~
+<<<<<<<< CrossmodBG2/Inlined/BSOLA25.d
+BEGIN BSOLA25
+>>>>>>>>
+  COMPILE ~CrossmodBG2/Inlined/BSOLA25.d~
+END
+
+// Angelo-Iylos Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~adang25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#iyl.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding ToB banters between SisterVigilante's Angelo and Iylos...~ 
+  COMPILE ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-Iylos/SisterVigilanteAngelo-Iylos_Banters.d~ 
+END 
+  
+
+// Angelo-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~adang25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between SisterVigilante's Angelo and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXan_Banters.d~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/adang907.ogg~ ~override~
+  COPY ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/adang908.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXanToB_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXanToB_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXanToB_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/ToB/Banters/SisterVigilanteAngelo-KulyokXan/SisterVigilanteAngelo-KulyokXanToB_AudioUninstall.sh~
+  END
+END
+
+// Kulyok's Coran-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#cor25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Coran and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokCoran-KulyokTiax/KulyokCoran-KulyokTiax_Banters.d~
+END
+
+// Kulyok's Coran-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#cor25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Coran and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokCoran-KulyokXan/KulyokCoran-KulyokXan_Banters.d~
+END
+
+// Hubelpot-Iylos Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hu25.dlg~ AND FILE_EXISTS_IN_GAME ~lk#iylo.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Hubelpot and Iylos...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Hubelpot-Iylos/Hubelpot-Iylos_Banters.d~
+END
+
+// Hubelpot-Kari Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hub.dlg~ AND FILE_EXISTS_IN_GAME ~bmgka25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Hubelpot and Kari...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Hubelpot-Kari/Hubelpot-Kari_Banters.d~
+  EXTEND_BOTTOM ~sc#hubD.bcs~ ~CrossmodBG2/ToB/Banters/Hubelpot-Kari/Hubelpot-Kari_sc#hubD.bcs~
+END
+
+// Hubelpot-Saerileth Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hu25.dlg~ AND FILE_EXISTS_IN_GAME ~saeril25.dlg.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Hubelpot and Saerileth...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Hubelpot-Saerileth/Hubelpot-Saerileth_Banters.d~
+END
+
+// Hubelpot-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsc#hu25.dlg~ AND FILE_EXISTS_IN_GAME ~btsuja25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Hubelpot and Tsujatha...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Hubelpot-Tsujatha/Hubelpot-Tsujatha_Banters.d~
+END
+
+// Iylos-Kelsey Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~j#klsy25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Kelsey...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-Kelsey/Iylos-Kelsey_Banters.d~
+END
+
+// Iylos-Kivan of Shilmista Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Kivan of Shilmista...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-KivanOfShilmista/Iylos-KivanOfShilmista_Banters.d~
+END
+
+// Iylos-Saerileth Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~saeril25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Saerileth...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-Saerileth/Iylos-Saerileth_Banters.d~
+END
+
+// Iylos-Solaufein Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~bsola25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Solaufein...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-Solaufein/Iylos-Solaufein_Banters.d~
+END
+
+// Iylos-Tashia Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~tashi25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Tashia...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-Tashia/Iylos-Tashia_Banters.d~
+END
+
+// Iylos-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~o#tiax25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-KulyokTiax/Iylos-KulyokTiax_Banters.d~
+END
+
+// Iylos-Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~lk#iylo.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Iylos and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Iylos-KulyokXan/Iylos-KulyokXan_Banters.d~
+END
+
+// Kelsey-Kivan of Shilmista Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~bj#klsy.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kelsey and Kivan of Shilmista...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Kelsey-KivanOfShilmista/Kelsey-KivanOfShilmista_Banters.d~
+END
+
+// Kelsey-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~j#klsy25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kelsey and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~o#xan25s.bcs~ ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/Kelsey-KulyokXan_o#xan25s.baf~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/o#xan910.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/Kelsey-KulyokXanToB_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/Kelsey-KulyokXanToB_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/Kelsey-KulyokXanToB_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/ToB/Banters/Kelsey-KulyokXan/Kelsey-KulyokXanToB_AudioUninstall.sh~
+  END
+END
+
+// Kido-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bkido25.dlg~ AND FILE_EXISTS_IN_GAME ~btsuja25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kido and Tsujatha...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Kido-Tsujatha/Kido-Tsujatha_Banters.d~
+END
+
+// Kindrek-Saerileth Material
+ACTION_IF FILE_EXISTS_IN_GAME ~kindre25.dlg~ AND FILE_EXISTS_IN_GAME ~saeril25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kindrek and Saerileth...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Kindrek-Saerileth/Kindrek-Saerileth_Banters.d~
+END
+
+// Kindrek-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bkindr25.dlg~ AND FILE_EXISTS_IN_GAME ~byasra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kindrek and Yasraena...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Kindrek-Yasraena/Kindrek-Yasraena_Banters.d~
+END
+
+// Kivan of Shilmista-Solaufein Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ AND FILE_EXISTS_IN_GAME ~bsola25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kivan of Shilmista and Solaufein...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KivanOfShilmista-Solaufein/KivanOfShilmista-Solaufein_Banters.d~
+  EXTEND_BOTTOM ~p#ki25d.bcs~ ~CrossmodBG2/ToB/Banters/KivanOfShilmista-Solaufein/KivanOfShilmista-Solaufein_P#Ki25D.baf~
+END
+
+// Kivan-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ AND FILE_EXISTS_IN_GAME ~O#tiax25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kivan of Shilmista and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KivanOfShilmista-KulyokTiax/KivanOfShilmista-KulyokTiax_Banters.d~
+END
+
+// Kivan of Shilmista-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kivan of Shilmista and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KivanOfShilmista-KulyokXan/KivanOfShilmista-KulyokXan_Banters.d~
+  EXTEND_BOTTOM ~o#xan25s.bcs~ ~CrossmodBG2/ToB/Banters/KivanOfShilmista-KulyokXan/KivanOfShilmista-KulyokXan_o#xan25s.baf~
+END
+
+// Kivan of Shilmista-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ AND FILE_EXISTS_IN_GAME ~byasra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kivan of Shilmista and Yasraena...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Yasraena/KivanOfShilmista-Yasraena_Banters.d~
+END
+
+// Kulyok's Tiax-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#tiax25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Tiax and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXan_Banters.d~
+  COPY ~CrossmodBG2/oggdec.exe~ ~override~
+  COPY ~CrossmodBG2/ToB/Banters/KulyokTiax-KulyokXan/o#xan902.ogg~ ~override~
+
+  ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+    AT_NOW ~CrossmodBG2/ToB/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXanToB_Audio.bat~
+    AT_UNINSTALL ~CrossmodBG2/ToB/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXanToB_AudioUninstall.bat~
+  END ELSE BEGIN // if OS X or Linux
+    AT_NOW ~CrossmodBG2/ToB/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXanToB_Audio.sh~
+    AT_UNINSTALL ~CrossmodBG2/ToB/Banters/KulyokTiax-KulyokXan/KulyokTiax-KulyokXanToB_AudioUninstall.sh~
+  END
+END
+
+// Saerileth-Tsujatha Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsaeri25.dlg~ AND FILE_EXISTS_IN_GAME ~btsuja25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Saerileth and Tsujatha...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Saerileth-Tsujatha/Saerileth-Tsujatha_Banters.d~
+END
+
+// Saerileth-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsaeri25.dlg~ AND FILE_EXISTS_IN_GAME ~byasra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Saerileth and Yasraena...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Saerileth-Yasraena/Saerileth-Yasraena_Banters.d~
+END
+
+// Solaufein-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsola25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Solaufein and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Solaufein-KulyokXan/Solaufein-KulyokXan_Banters.d~
+END
+
+// Tsujatha-Yasraena Material
+ACTION_IF FILE_EXISTS_IN_GAME ~btsuja25.dlg~ AND FILE_EXISTS_IN_GAME ~byasra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Tsujatha and Yasraena...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Tsujatha-Yasraena/Tsujatha-Yasraena_Banters.d~
+END
+
+// *******************************
+// * ROMANCE CONFLICTS COMPONENT *
+// *******************************
+
+BEGIN ~Crossmod Romance Conflicts~
+
+//INCLUDE ~CrossmodBG2/RomanceConflicts/TPHs/romance_corrections.tph~
+
+//COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//  COUNT_2DA_ROWS 12 "rows"
+//  FOR (index = 0 ; index < rows ; index = index + 1) BEGIN
+//    READ_2DA_ENTRY %index% 10 14 NPC1_SOA_CHECK
+//    READ_2DA_ENTRY %index% 11 14 NPC1_TOB_CHECK
+//    SET_2DA_ENTRY  %index% 12 14 ~0~
+//    SET_2DA_ENTRY  %index% 13 14 ~0~
+//    INNER_ACTION BEGIN
+
+//      ACTION_IF FILE_EXISTS ~override/%NPC1_SOA_CHECK%~ THEN BEGIN
+//        COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//          SET_2DA_ENTRY %index% 12 14 ~1~
+//      END
+
+//      ACTION_IF FILE_EXISTS ~override/%NPC1_TOB_CHECK%~ THEN BEGIN
+//        COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//          SET_2DA_ENTRY %index% 13 14 ~1~
+//      END
+
+//    END
+//  END
+  
+//COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//  FOR (index = 0 ; index < rows ; index = index + 1) BEGIN
+//    READ_2DA_ENTRY %index%  7 14 NPC1_CAN_KILL
+//    READ_2DA_ENTRY %index% 12 14 NPC1_SOA_CHECK
+//    READ_2DA_ENTRY %index% 13 14 NPC1_TOB_CHECK
+//    PATCH_IF (("%NPC1_CAN_KILL%" = 1) AND (("%NPC1_SOA_CHECK%" = 1) OR ("%NPC1_TOB_CHECK%" = 1))) BEGIN
+//      READ_2DA_ENTRY %index% 0 14 NPC1_NAME
+//      READ_2DA_ENTRY %index% 1 14 NPC1_SOA_SCRIPT
+//      READ_2DA_ENTRY %index% 2 14 NPC1_TOB_SCRIPT
+//      READ_2DA_ENTRY %index% 3 14 NPC1_SERIOUS_NUM
+//      READ_2DA_ENTRY %index% 5 14 NPC1_FOR_FEMALE
+//      READ_2DA_ENTRY %index% 6 14 NPC1_FOR_MALE
+//      READ_2DA_ENTRY %index% 9 14 NPC1_ROM_VAR
+//      // For loop for second NPC
+//      FOR (index2 = 0 ; index2 < rows ; index2 = index2 + 1) BEGIN
+//        // Read data for second NPC
+//        READ_2DA_ENTRY %index2% 0  14 NPC2_NAME
+//        READ_2DA_ENTRY %index2% 5  14 NPC2_FOR_FEMALE
+//        READ_2DA_ENTRY %index2% 6  14 NPC2_FOR_MALE
+//        READ_2DA_ENTRY %index2% 8  14 NPC2_CAN_BE_KILLED
+//        READ_2DA_ENTRY %index2% 12 14 NPC2_SOA_CHECK
+//        READ_2DA_ENTRY %index2% 13 14 NPC2_TOB_CHECK
+        // If second NPC has been installed and is a valid romance killee for first NPC
+//        PATCH_IF ((~%NPC1_NAME%~ STRING_COMPARE ~%NPC2_NAME%~ != 0)
+//              AND (~%NPC2_CAN_BE_KILLED%~ = 1)
+//              AND (((~%NPC1_FOR_FEMALE%~ = 1) AND (~%NPC2_FOR_FEMALE%~ = 1 )) OR ((~%NPC1_FOR_MALE%~ = 1) AND (~%NPC2_FOR_MALE%~ = 1)))
+//              AND ((("%NPC1_SOA_CHECK%" = 1) AND ("%NPC2_SOA_CHECK%" = 1)) OR (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1)))) BEGIN
+//          READ_2DA_ENTRY %index2% 1 14 NPC2_SOA_SCRIPT
+//          READ_2DA_ENTRY %index2% 2 14 NPC2_TOB_SCRIPT
+//          READ_2DA_ENTRY %index2% 4 14 NPC2_KILL_NUM
+//          READ_2DA_ENTRY %index2% 9 14 NPC2_ROM_VAR
+          
+// Template inline file
+//INNER_ACTION BEGIN
+//<<<<<<<< CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf
+//IF
+//  InParty(Myself)
+//  !Global("G#XB.NoRomanceConflicts","GLOBAL",1)
+//  Global("%NPC1_ROM_VAR%","GLOBAL",%NPC1_SERIOUS_NUM%)
+//  !Global("%NPC2_ROM_VAR%","GLOBAL",0)
+//  !Global("%NPC2_ROM_VAR%","GLOBAL",%NPC2_KILL_NUM%)
+//THEN
+//  RESPONSE #100
+//    SetGlobal("%NPC2_ROM_VAR%","GLOBAL",%NPC2_KILL_NUM%)
+//END
+//>>>>>>>>
+//END
+
+          // Run various correction MACROs
+//          LAUNCH_PATCH_MACRO ~amber_corrections~
+//          LAUNCH_PATCH_MACRO ~corthala_romantique_corrections~
+//          LAUNCH_PATCH_MACRO ~weimer_solaufein_corrections~
+          // Adding script blocks to first NPC's scripts
+ //         PATCH_IF (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1))
+                // WEIMER_SOLAUFEIN killing KELSEY not needed
+//                AND NOT ( ( ~%NPC1_NAME%~ STRING_COMPARE ~WEIMER_SOLAUFEIN~ = 0 ) AND ( ~%NPC2_NAME%~ STRING_COMPARE ~KELSEY~ = 0 ) ) BEGIN
+//            INNER_ACTION BEGIN
+
+//              PRINT ~Adding killscripts for %NPC1_NAME% killing %NPC2_NAME%'s romance in SoA...~
+//              EXTEND_BOTTOM ~%NPC1_SOA_SCRIPT%.bcs~ ~CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf~
+//                EVALUATE_BUFFER
+
+//            END
+//          END
+          // Adding script blocks to first NPC's scripts
+//          PATCH_IF (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1))
+                // WEIMER_SOLAUFEIN killing KELSEY not needed
+//                AND NOT ( ( ~%NPC1_NAME%~ STRING_COMPARE ~WEIMER_SOLAUFEIN~ = 0 ) AND ( ~%NPC2_NAME%~ STRING_COMPARE ~KELSEY~ = 0 ) ) BEGIN
+//            INNER_ACTION BEGIN
+
+//              PRINT ~Adding killscripts for %NPC1_NAME% killing %NPC2_NAME%'s romance in ToB...~
+//              EXTEND_BOTTOM ~%NPC1_TOB_SCRIPT%.bcs~ ~CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf~
+//                EVALUATE_BUFFER
+
+//            END
+//          END
+//        END
+//      END
+//    END
+//  END
+
+/* Jastey's Ajantis romance conflict */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajan.bcs~ 
+THEN BEGIN 
+  PRINT ~Extending Ajantis's SoA script...~
+  EXTEND_TOP ~c#ajan.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/jastey_ajantis/rc_c#ajantis.baf~ 
+END 
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajan25.bcs~ 
+
+THEN BEGIN 
+  PRINT ~Extending Ajantis's SoA script...~
+  EXTEND_TOP ~c#ajan25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/jastey_ajantis/rc_c#ajantis.baf~ 
+END 
+
+/* Amber romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.bcs~
+THEN BEGIN
+  PRINT ~Extending Amber's SoA script...~
+  EXTEND_TOP ~m#amber.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Amber/RC_m#amber.baf~
+END 
+
+/* Angelo romance conflict */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~adangel.bcs~ 
+THEN BEGIN 
+  PRINT ~Extending Angelo's SoA script...~ 
+  EXTEND_TOP ~ADANGEL.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Angelo/rc_adangel.baf~ 
+END 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~adang25.bcs~ 
+THEN BEGIN 
+  PRINT ~Extending Angelo's ToB script...~ 
+  EXTEND_TOP ~ADANG25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Angelo/rc_adangel.baf~ 
+END 
+
+/* Chloe romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~CHLOE.bcs~
+THEN BEGIN
+  PRINT ~Extending Chloe's SoA script...~
+  EXTEND_TOP ~CHLOE.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Chloe/RC_CHLOE.baf~
+END
+
+/* Darian romance conflict */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~T1Dar.bcs~ 
+THEN BEGIN 
+  PRINT ~Extending Darian's SoA script...~ 
+  EXTEND_TOP ~T1Dar.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~ 
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~T1Dar25.bcs~ 
+THEN BEGIN 
+  PRINT ~Extending Darian's ToB script...~ 
+  EXTEND_TOP ~T1Dar25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~ 
+END
+
+
+/* Fade romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~E3FADE.bcs~
+THEN BEGIN
+  PRINT ~Extending Fade's SoA script...~
+  EXTEND_TOP ~E3FADE.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Fade/RC_E3FADE.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~E3FADE25.bcs~
+THEN BEGIN
+  PRINT ~Extending Fade's ToB script...~
+  EXTEND_TOP ~E3FADE25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Fade/RC_E3FADE.baf~
+END
+
+/* Gavin romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavs.bcs~
+THEN BEGIN
+  PRINT ~Extending Gavin's SoA script...~
+  EXTEND_TOP ~b!gavs.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Gavin/rc_b!gavs.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gav25s.bcs~
+THEN BEGIN
+  PRINT ~Extending Gavin's ToB script...~
+  EXTEND_TOP ~b!gav25s.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Gavin/rc_b!gavs.baf~
+END
+
+/* Lord Mirrabo's Imoen romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~imdream.cre~
+THEN BEGIN
+  PRINT ~Extending Imoen's SoA script...~
+  EXTEND_TOP ~imoen2.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/MirraboImoen/RC_imoen2.baf~
+END
+
+/* berelinde's Keldorn romance conflict */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~b!kring.itm~ 
+THEN BEGIN
+  PRINT ~Extending Keldorn's SoA script...~ 
+  EXTEND_TOP ~keldorn.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Keldorn/rc_keldorn.baf~ 
+END 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!kring.itm~ AND FILE_EXISTS_IN_GAME ~keld25.bcs~ 
+THEN BEGIN
+  PRINT ~Extending Keldorn's ToB script...~ 
+  EXTEND_TOP ~keld25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Keldorn/rc_keldorn.baf~ 
+END 
+
+/* Kelsey romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~J#klsy.bcs~
+THEN BEGIN
+  PRINT ~Extending Kelsey's SoA script...~
+  EXTEND_TOP ~J#klsy.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Kelsey/RC_J#klsy.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~J#klsy25.bcs~
+THEN BEGIN
+  PRINT ~Extending Kelsey's ToB script...~
+  EXTEND_TOP ~J#klsy25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Kelsey/RC_J#klsy.baf~
+END
+
+/* Arnel's Nalia romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~nalbdy.itm~
+THEN BEGIN
+  PRINT ~Extending Nalia's SoA script...~
+  EXTEND_TOP ~nalia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/ArnelNalia/RC_ArnelNalia.baf~
+END
+
+/* Pocket Plane Group's Nalia romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~PGNalBeg.cre~
+THEN BEGIN
+  PRINT ~Extending Nalia's SoA script...~
+  EXTEND_TOP ~nalia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/PG_Nalia/RC_PGNalia.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~PGNalBeg.cre~ AND FILE_EXISTS_IN_GAME ~baldur25.bcs~
+THEN BEGIN
+  PRINT ~Extending Nalia's ToB script...~
+  EXTEND_TOP ~nalia25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/PG_Nalia/RC_PGNalia.baf~
+END
+
+/* Nathaniel romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~FHNAT.bcs~
+THEN BEGIN
+  PRINT ~Extending Nathaniel's SoA script...~
+  EXTEND_TOP ~FHNAT.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Nathaniel/RC_FHNAT.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~FHNAT25.bcs~
+THEN BEGIN
+  PRINT ~Extending Nathaniel's ToB script...~
+  EXTEND_TOP ~FHNAT25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Nathaniel/RC_FHNAT.baf~
+END
+
+/* Saerileth romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~SAERILET.bcs~
+THEN BEGIN
+  PRINT ~Extending Saerileth's SoA script...~
+  EXTEND_TOP ~SAERILET.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Saerileth/RC_SAERILET.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~SAERIL25.bcs~
+THEN BEGIN
+  PRINT ~Extending Saerileth's ToB script...~
+  EXTEND_TOP ~SAERIL25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Saerileth/RC_SAERILET.baf~
+END
+
+/* Sarah romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~K#Sarah.bcs~
+THEN BEGIN
+  PRINT ~Extending Sarah's SoA script...~
+  EXTEND_TOP ~K#Sarah.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Sarah/RC_K#Sarah.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~K#Sara25.bcs~
+THEN BEGIN
+  PRINT ~Extending Sarah's ToB script...~
+  EXTEND_TOP ~K#Sara25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Sarah/RC_K#Sarah.baf~
+END
+
+/* Tortured Souls' Sime romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~sime.bcs~
+THEN BEGIN
+  PRINT ~Extending Sime's SoA script...~
+  EXTEND_TOP ~sime.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/TS_Sime/RC_sime.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sime25.bcs~
+THEN BEGIN
+  PRINT ~Extending Sime's ToB script...~
+  EXTEND_TOP ~sime25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/TS_Sime/RC_sime.baf~
+END
+
+/* Tashia romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~TASHIA.bcs~
+THEN BEGIN
+  PRINT ~Extending Tashia's SoA script...~
+  EXTEND_TOP ~TASHIA.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tashia/RC_TASHIA.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TASH25.bcs~
+THEN BEGIN
+  PRINT ~Extending Tashia's ToB script...~
+  EXTEND_TOP ~TASH25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tashia/RC_TASHIA.baf~
+END
+
+/* Tsujatha romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~TSUJATH.bcs~
+THEN BEGIN
+  PRINT ~Extending Tsujatha's SoA script...~
+  EXTEND_TOP ~TSUJATH.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tsujatha/RC_TSUJATH.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~TSUJAT25.bcs~
+THEN BEGIN
+  PRINT ~Extending Tsujatha's ToB script...~
+  EXTEND_TOP ~TSUJAT25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tsujatha/RC_TSUJATH.baf~
+END
+
+/* Tyris Flare romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~g#tyris.bcs~
+THEN BEGIN
+  PRINT ~Extending Tyris Flare's SoA script...~
+  EXTEND_TOP ~g#tyris.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tyris/rc_g#tyris.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~g#tyrs25.bcs~
+THEN BEGIN
+  PRINT ~Extending Tyris Flare's ToB script...~
+  EXTEND_TOP ~g#tyrs25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tyris/rc_g#tyris.baf~
+END
+
+/* Valygar romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~H#LEON.dlg~
+THEN BEGIN
+  PRINT ~Extending Valygar's SoA script...~
+  EXTEND_TOP ~VALYGAR.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/CR_Valygar/RC_VALYGAR.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~H#LEON.dlg~ AND FILE_EXISTS_IN_GAME ~baldur25.bcs~
+THEN BEGIN
+  PRINT ~Extending Valygar's ToB script...~
+  EXTEND_TOP ~VALY25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/CR_Valygar/RC_VALYGAR.baf~
+END
+
+/* Xan romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~O#XanS.bcs~
+THEN BEGIN
+  PRINT ~Extending Xan's SoA script...~
+  EXTEND_TOP ~O#XanS.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Xan/RC_O#XanS.baf~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~O#Xan25S.bcs~
+THEN BEGIN
+  PRINT ~Extending Xan's ToB script...~
+  EXTEND_TOP ~O#Xan25S.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Xan/RC_O#XanS.baf~
+END

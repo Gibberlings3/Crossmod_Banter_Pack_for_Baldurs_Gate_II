@@ -1,0 +1,85 @@
+
+// b!gav_neht_crossmod.baf 
+
+IF 
+    InParty("SK#Neht") 
+    InParty(Myself) 
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("SK#Neht",CD_STATE_NOTVALID)
+    Global("B!GavNehtJoined","LOCALS",0) 
+    Global("GavinNehtJoining1","GLOBAL",1) 
+    CombatCounter(0)
+    !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("B!GavNehtJoined","LOCALS",1)
+END
+
+IF
+  InParty(Myself)
+  InParty("SK#Neht")
+  !StateCheck(Myself,CD_STATE_NOTVALID)
+  !StateCheck("SK#Neht",CD_STATE_NOTVALID)
+  Global("B!GavNehtJoined","LOCALS",1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    StartDialogueNoSet(Player1)
+END
+
+IF 
+    InParty("SK#Neht") 
+    InParty(Myself) 
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("SK#Neht",CD_STATE_NOTVALID) 
+    !AreaCheck("AR0408") 
+    Global("B!NehtGavJoined","LOCALS",0) 
+    Global("GavinNehtJoining1","GLOBAL",0) 
+    CombatCounter(0)
+    !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("B!NehtGavJoined","LOCALS",1)
+END
+
+IF
+  InParty(Myself)
+  InParty("SK#Neht")
+  !StateCheck(Myself,CD_STATE_NOTVALID)
+  !StateCheck("SK#Neht",CD_STATE_NOTVALID)
+  Global("B!NehtGavJoined","LOCALS",1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    StartDialogueNoSet(Player1)
+END
+
+
+IF 
+    InParty("SK#Neht") 
+    InParty(Myself) 
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("SK#Neht",CD_STATE_NOTVALID)
+    GlobalGT("SK#NehtDrowSpider","GLOBAL",1) 
+    Global("G#GavinNehtSpider","LOCALS",0) 
+    CombatCounter(0)
+    !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("G#GavinNehtSpider","LOCALS",1)
+END
+
+IF
+  InParty(Myself)
+  InParty("SK#Neht")
+  !StateCheck(Myself,CD_STATE_NOTVALID)
+  !StateCheck("SK#Neht",CD_STATE_NOTVALID)
+  Global("G#GavinNehtSpider","LOCALS",1)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    StartDialogueNoSet(Player1)
+END

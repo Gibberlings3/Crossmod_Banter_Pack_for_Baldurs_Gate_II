@@ -1,0 +1,196 @@
+
+IF 
+    InParty(Myself) 
+    PartyHasItem("DGxSCR") 
+    !AreaCheck("AR1000") 
+    !Global("B!GavDGRiddleScroll","LOCALS",2) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGRiddleScroll","LOCALS",9) 
+END 
+
+IF 
+    InParty(Myself) 
+    PartyHasItem("DGxQ4") 
+    !AreaCheck("AR0400") 
+    !Global("B!GavDGScalp","LOCALS",2) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGScalp","LOCALS",9) 
+END 
+
+IF 
+    InParty(Myself) 
+    PartyHasItem("DGxSCR") 
+    AreaCheck("AR1000") 
+    Global("B!GavDGRiddleScroll","LOCALS",0) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGRiddleScroll","LOCALS",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    Global("B!GavDGRiddleScroll","LOCALS",1) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet(Player1)  
+END 
+
+IF 
+    InParty(Myself) 
+    PartyHasItem("DGxQ4") 
+    AreaCheck("AR0400") 
+    Global("B!GavDGScalp","LOCALS",0) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGScalp","LOCALS",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    Global("B!GavDGScalp","LOCALS",1) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet(Player1)  
+END 
+
+IF 
+    InParty(Myself) 
+    Global("DGYellowPlot","GLOBAL",1) 
+    Global("B!GavDGYellow","LOCALS",0) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGYellow","LOCALS",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    Global("B!GavDGYellow","LOCALS",1) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet(Player1)  
+END 
+
+IF 
+    InParty(Myself) 
+    PartyHasItem("DGIYell") 
+    Global("B!GavDGYellow","LOCALS",2) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGYellow","LOCALS",3) 
+END 
+
+IF 
+    InParty(Myself) 
+    Global("B!GavDGYellow","LOCALS",3) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet(Player1)  
+END 
+
+IF 
+    InParty(Myself) 
+    PartyHasItem("DGIBlac") 
+    Global("B!GavDGBlack","LOCALS",0) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGBlack","LOCALS",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    Global("B!GavDGBlack","LOCALS",1) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet(Player1)  
+END 
+
+IF 
+    InParty(Myself) 
+    OR(2) 
+        GlobalGT("DGGentleChoice","GLOBAL",5) 
+        GlobalGT("DGTemperChoice","GLOBAL",5) 
+    Global("B!GavDGAmber","LOCALS",0) 
+    OR(2) 
+        Global("B!GavRA","GLOBAL",1) 
+        Global("B!GavRA","GLOBAL",2) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!GavDGAmber","LOCALS",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    Global("B!GavDGAmber","LOCALS",1) 
+    OR(2) 
+        Global("B!GavRA","GLOBAL",1) 
+        Global("B!GavRA","GLOBAL",2) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    !StateCheck(Player1,CD_STATE_NOTVALID) 
+    !Global("B!GavLessInterject","GLOBAL",1) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet(Player1)  
+END 

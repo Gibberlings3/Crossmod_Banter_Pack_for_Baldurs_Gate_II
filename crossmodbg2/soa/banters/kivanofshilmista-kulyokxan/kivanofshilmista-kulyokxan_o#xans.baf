@@ -1,0 +1,40 @@
+IF
+InParty("P#Kivan")
+InParty("O#Xan")
+Global("O#XanRomanceActive","GLOBAL",1)
+GlobalGT("P#KivanLove","GLOBAL",3)
+Global("G#XB.KivanXanBanter2","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.KivanXanBanter2","GLOBAL",1)
+RealSetGlobalTimer("G#XB.KivanXanTimer2","GLOBAL",5000)
+END
+
+IF
+RealGlobalTimerExpired("G#XB.KivanXanTimer2","GLOBAL")
+InParty("P#Kivan")
+InParty("O#Xan")
+Global("O#XanRomanceActive","GLOBAL",1)
+GlobalGT("P#KivanLove","GLOBAL",3)
+!StateCheck("P#Kivan",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("P#Kivan")
+CombatCounter(0)
+!See([ENEMY])
+Global("G#XB.KivanXanBanter2","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.KivanXanBanter2","GLOBAL",2)
+END
+
+IF
+Global("G#XB.KivanXanBanter2","GLOBAL",2)
+InParty("P#Kivan")
+InParty("O#Xan")
+!StateCheck("P#Kivan",CD_STATE_NOTVALID)
+!StateCheck("O#Xan",CD_STATE_NOTVALID)
+See("P#Kivan")
+THEN
+RESPONSE #100
+Interact("P#Kivan")
+END

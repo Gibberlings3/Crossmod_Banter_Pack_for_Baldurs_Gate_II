@@ -1,0 +1,15 @@
+IF
+  Global("G#XB.HubelKariToBBanter1","GLOBAL",0)
+  InParty("Kari")
+  See("Kari")
+  !StateCheck(Myself,CD_STATE_NOTVALID)
+  !StateCheck("Kari",CD_STATE_NOTVALID)
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #50
+	NoAction()
+  RESPONSE #50
+	SetGlobal("G#XB.HubelKariToBBanter2","GLOBAL",1)
+	Interact("Kari")
+END

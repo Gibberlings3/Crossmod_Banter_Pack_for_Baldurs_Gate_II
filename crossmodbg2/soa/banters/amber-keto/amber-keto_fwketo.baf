@@ -1,0 +1,33 @@
+IF
+    InParty("M#Amber")
+    See("M#Amber")
+    !Dead("M#Amber")
+    !StateCheck("M#Amber",CD_STATE_NOTVALID)
+    !StateCheck("Keto",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    AreaCheck("AR1602")
+    !GlobalGT("AsylumPlot","GLOBAL",50)
+    Global("G#XB.AmberKetoBanter2.2","GLOBAL",0)
+    Global("G#XB.AmberKetoBanter2.1","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.AmberKetoBanter2.1","GLOBAL",1)
+    Interact("M#Amber")
+END
+
+IF
+    InParty("M#Amber")
+    See("M#Amber")
+    !Dead("M#Amber")
+    !StateCheck("M#Amber",CD_STATE_NOTVALID)
+    !StateCheck("Keto",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    AreaCheck("AR1602")
+    GlobalGT("AsylumPlot","GLOBAL",50)
+    Global("G#XB.AmberKetoBanter2.2","GLOBAL",0)
+    Global("G#XB.AmberKetoBanter2.1","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("G#XB.AmberKetoBanter2.2","GLOBAL",1)
+    Interact("M#Amber")
+END

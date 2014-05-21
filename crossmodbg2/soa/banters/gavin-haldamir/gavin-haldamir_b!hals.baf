@@ -1,0 +1,219 @@
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA1Comment","GLOBAL",0) 
+    Global("B!GavRA","GLOBAL",1) 
+    GlobalGT("B!GavTalk","GLOBAL",6)
+    Race(Player1,ELF) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        RealSetGlobalTimer("B!GavHalT","GLOBAL",7200) 
+        SetGlobal("B!HalGavRA1Comment","GLOBAL",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    RealGlobalTimerExpired("B!GavHalT","GLOBAL") 
+    Global("B!HalGavRA1Comment","GLOBAL",1) 
+    Global("B!GavRA","GLOBAL",1) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!HalGavRA1Comment","GLOBAL",2) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA1Comment","GLOBAL",2) 
+    Global("B!GavRA","GLOBAL",1) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet("B!Gavin2") 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA2Comment","GLOBAL",0) 
+    Global("B!GavRA","GLOBAL",2) 
+    GlobalGT("B!GavTalk","GLOBAL",2) 
+    Race(Player1,ELF) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        RealSetGlobalTimer("B!GavHalT","GLOBAL",4000) 
+        SetGlobal("B!HalGavRA2Comment","GLOBAL",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    RealGlobalTimerExpired("B!GavHalT","GLOBAL") 
+    Global("B!HalGavRA2Comment","GLOBAL",1) 
+    Global("B!GavRA","GLOBAL",2) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!HalGavRA2Comment","GLOBAL",2) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA2Comment","GLOBAL",2) 
+    Global("B!GavRA","GLOBAL",2) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet("B!Gavin2") 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA4Comment","GLOBAL",0) 
+    !Global("B!HalGavRA3Comment","GLOBAL",3) 
+    Global("B!GavRA","GLOBAL",4) 
+    GlobalGT("B!GavTalk","GLOBAL",2) 
+    Race(Player1,ELF) 
+    Global("B!GavSex","GLOBAL",1) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        RealSetGlobalTimer("B!GavHalT","GLOBAL",4000) 
+        SetGlobal("B!HalGavRA4Comment","GLOBAL",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    RealGlobalTimerExpired("B!GavHalT","GLOBAL") 
+    Global("B!HalGavRA4Comment","GLOBAL",1) 
+    Global("B!GavRA","GLOBAL",4) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!HalGavRA4Comment","GLOBAL",2) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA4Comment","GLOBAL",2) 
+    Global("B!GavRA","GLOBAL",4) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet("B!Gavin2") 
+END 
+
+IF 
+    GlobalGT("B!HalGavRA4Comment","GLOBAL",0) 
+    !Global("B!HalGavRA3Comment","GLOBAL",3) 
+    Global("B!GavRA","GLOBAL",4) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!HalGavRA3Comment","GLOBAL",9) 
+END 
+
+
+IF 
+    GlobalGT("B!HalGavRA4Comment","GLOBAL",0) 
+    !Global("B!HalGavRA3Comment","GLOBAL",3) 
+    Global("B!GavRA","GLOBAL",3) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!HalGavRA4Comment","GLOBAL",9) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA3Comment","GLOBAL",0) 
+    !Global("B!HalGavRA4Comment","GLOBAL",3) 
+    Global("B!GavRA","GLOBAL",3) 
+    Global("B!GavSex","GLOBAL",1) 
+    GlobalGT("B!GavTalk","GLOBAL",2) 
+    Race(Player1,ELF) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        RealSetGlobalTimer("B!GavHalT","GLOBAL",4000) 
+        SetGlobal("B!HalGavRA3Comment","GLOBAL",1) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    RealGlobalTimerExpired("B!GavHalT","GLOBAL") 
+    Global("B!HalGavRA3Comment","GLOBAL",1) 
+    Global("B!GavRA","GLOBAL",3) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("B!HalGavRA3Comment","GLOBAL",2) 
+END 
+
+IF 
+    InParty(Myself) 
+    InParty("B!Gavin2") 
+    Global("B!HalGavRA3Comment","GLOBAL",2) 
+    Global("B!GavRA","GLOBAL",3) 
+    !AreaType(DUNGEON) 
+    !StateCheck("B!Gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !See([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet("B!Gavin2") 
+END 

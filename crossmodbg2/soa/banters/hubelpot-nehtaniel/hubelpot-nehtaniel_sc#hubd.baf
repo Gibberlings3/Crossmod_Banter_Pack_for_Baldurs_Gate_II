@@ -1,0 +1,25 @@
+
+IF 
+    InParty(Myself) 
+    InParty("SK#Neht") 
+    !StateCheck("Hubelpot",CD_STATE_NOTVALID)
+    !StateCheck("SK#Neht",CD_STATE_NOTVALID)
+    InMyArea("SK#Neht")
+    HasItemEquipedReal("sw2host","SK#Neht")
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("G#XB.LilRelHub","Global",0)
+    OR(6)
+        HasItemEquiped("SW2H14",Player1)
+        HasItemEquiped("SW2H14",Player2)
+        HasItemEquiped("SW2H14",Player3)
+        HasItemEquiped("SW2H14",Player4)
+        HasItemEquiped("SW2H14",Player5)
+        HasItemEquiped("SW2H14",Player6) 
+THEN 
+    RESPONSE #100 
+        CreateCreatureObject("SW2HOST","SK#Neht",0,0,0)
+        CreateCreatureObject("SK#LILA",Player1,0,0,0) 
+        SetGlobal("G#XB.LilRelHub","GLOBAL",1) 
+        Interact("SK#Neht") 
+END 
