@@ -530,6 +530,27 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/JasteyAjantis-KulyokBranwen/JasteyAjantis-KulyokBranwen_Banters.d~
 END
 
+// Kulyok's Branwen-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokCoran/KulyokBranwen-KulyokCoran_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokTiax/KulyokBranwen-KulyokTiax_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokXan/KulyokBranwen-KulyokXan_Banters.d~
+END
+
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
 
@@ -971,6 +992,28 @@ THEN BEGIN
   PRINT ~Adding ToB banters between Jastey's Ajantis and Kulyok's Branwen...~
   COMPILE ~CrossmodBG2/ToB/Banters/JasteyAjantis-KulyokBranwen/JasteyAjantis-KulyokBranwen_Banters.d~
 END
+
+// Kulyok's Branwen-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbra25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#cor25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Branwen and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokCoran/KulyokBranwen-KulyokCoran_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbra25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Branwen and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokTiax/KulyokBranwen-KulyokTiax_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbra25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Branwen and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokXan/KulyokBranwen-KulyokXan_Banters.d~
+END
+
 
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
