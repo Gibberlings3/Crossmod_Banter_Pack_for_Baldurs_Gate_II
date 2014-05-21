@@ -523,6 +523,13 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/Tsujatha-Yasraena/Tsujatha-Yasraena_Banters.d~
 END
 
+// Kivan of Shilmista-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/SoA/Banters/kivanofshilmista-kulyokbranwen/kivanofshilmista-kulyokbranwen_banters.d~
+END
+
 // Jastey's Ajantis-Kulyok's Branwen Material
 ACTION_IF FILE_EXISTS_IN_GAME ~c#ajanb.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbran.dlg~
 THEN BEGIN
@@ -549,6 +556,13 @@ ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan.dlg~
 THEN BEGIN
   PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Xan...~
   COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokXan/KulyokBranwen-KulyokXan_Banters.d~
+END
+
+// Isra-Yvette Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~YxYveB.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Yvette...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-Yvette/Isra-Yvette_Banters.d~
 END
 
 // INTERJECTIONS
@@ -706,14 +720,6 @@ THEN BEGIN
   END
 END     
 
-// Kivan of Shilmista-Kulyok's Branwen Material
-ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbran.dlg~
-THEN BEGIN
-  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Branwen...~
-  COMPILE ~CrossmodBG2/SoA/Banters/kivanofshilmista-kulyokbranwen/kivanofshilmista-kulyokbranwen_banters.d~
-END
-
-  
 // *****************************
 // * THRONE OF BHAAL COMPONENT *
 // *****************************
@@ -1014,6 +1020,12 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokXan/KulyokBranwen-KulyokXan_Banters.d~
 END
 
+// Isra-Yvette Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~YxYv25B.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Yvette...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-Yvette/Isra-Yvette_Banters.d~
+END
 
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
