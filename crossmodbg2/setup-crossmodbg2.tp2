@@ -679,6 +679,14 @@ THEN BEGIN
     EXTEND_TOP    ~sk#nehtb.bcs~ ~CrossmodBG2/SoA/Interjections/ToDG/Nehtaniel/todg_sk#nehtb.baf~ 
   END
 END     
+
+// Kivan of Shilmista-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/SoA/Banters/kivanofshilmista-kulyokbranwen/kivanofshilmista-kulyokbranwen_banters.d~
+END
+
   
 // *****************************
 // * THRONE OF BHAAL COMPONENT *
@@ -943,6 +951,13 @@ ACTION_IF FILE_EXISTS_IN_GAME ~btsuja25.dlg~ AND FILE_EXISTS_IN_GAME ~byasra25.d
 THEN BEGIN
   PRINT ~Adding ToB banters between Tsujatha and Yasraena...~
   COMPILE ~CrossmodBG2/ToB/Banters/Tsujatha-Yasraena/Tsujatha-Yasraena_Banters.d~
+END
+
+// Kivan of Shilmista-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ AND FILE_EXISTS_IN_GAME ~O#bbra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kivan of Shilmista and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/ToB/Banters/kivanofshilmista-kulyokbranwen/kivanofshilmista-kulyokbranwen_banters.d~
 END
 
 // *******************************
