@@ -13,7 +13,7 @@
 IF
   !Global("O#XanRomanceActive","GLOBAL",0)
   !Global("O#XanRomanceActive","GLOBAL",3)
-  OR(10)
+  OR(12)
     Global("C#AjantisRomanceActive","GLOBAL",2)   //Ajantis
     Global("ADAngelRomanceActive","GLOBAL",2)     //Angelo
     Global("ChloeRomanceActiveCR","GLOBAL",2)     //Chloe
