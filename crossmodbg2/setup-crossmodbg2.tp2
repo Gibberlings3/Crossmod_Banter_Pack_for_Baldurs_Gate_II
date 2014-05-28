@@ -614,6 +614,28 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/Isra-KulyokXan/Isra-KulyokXan_Banters.d~
 END
 
+// Dace-Kulyok's Coran
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dace.dlg~ AND FILE_EXISTS_IN_GAME ~bo#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokCoran/Dace-KulyokCoran_Banters.d~
+END
+
+// Dace-Kulyok's Tiax
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dace.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokTiax/Dace-KulyokTiax_Banters.d~
+END
+
+// Dace-Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dace.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokXan/Dace-KulyokXan_Banters.d~
+END
+
+
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
 
@@ -1118,6 +1140,26 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/ToB/Banters/Isra-KulyokXan/Isra-KulyokXan_Banters.d~
 END
 
+// Dace-Kulyok's Coran
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#cor25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokCoran/Dace-KulyokCoran_Banters.d~
+END
+
+// Dace-Kulyok's Tiax
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokTiax/Dace-KulyokTiax_Banters.d~
+END
+
+// Dace-Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokXan/Dace-KulyokXan_Banters.d~
+END
 
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
