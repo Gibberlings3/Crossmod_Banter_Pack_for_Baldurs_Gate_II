@@ -635,6 +635,26 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokXan/Dace-KulyokXan_Banters.d~
 END
 
+// Kulyok's Coran-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#coran.dlg~ AND FILE_EXISTS_IN_GAME ~blk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Coran and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokCoran-Ninde/KulyokCoran-Ninde_Banters.d~
+END
+
+// Kulyok's Tiax-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#tiax.dlg~ AND FILE_EXISTS_IN_GAME ~blk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Tiax and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokTiax-Ninde/KulyokTiax-Ninde_Banters.d~
+END
+
+// Kulyok's Xan-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#xan.dlg~ AND FILE_EXISTS_IN_GAME ~blk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Xan and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokXan-Ninde/KulyokXan-Ninde_Banters.d~
+END
 
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
@@ -1182,6 +1202,26 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/ToB/Banters/KulyokXan-LongerRoad/KulyokXan-LongerRoad_Banters.d~
 END
 
+// Kulyok's Coran-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#cor25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Coran and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokCoran-Ninde/KulyokCoran-Ninde_Banters.d~
+END
+
+// Kulyok's Tiax-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#tia25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Tiax and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokTiax-Ninde/KulyokTiax-Ninde_Banters.d~
+END
+
+// Kulyok's Xan-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#xan25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Xan and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokXan-Ninde/KulyokXan-Ninde_Banters.d~
+END
 
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
