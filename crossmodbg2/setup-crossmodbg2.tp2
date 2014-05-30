@@ -1161,6 +1161,28 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokXan/Dace-KulyokXan_Banters.d~
 END
 
+// Kulyok's Coran-Longer Road Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#cor25.dlg~ AND FILE_EXISTS_IN_GAME ~bjonel25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Coran and the Longer Road...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokCoran-LongerRoad/KulyokCoran-LongerRoad_Banters.d~
+END
+
+// Kulyok's Tiax-Longer Road Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#tia25.dlg~ AND FILE_EXISTS_IN_GAME ~bjonel25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Tiax and the Longer Road...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokTiax-LongerRoad/KulyokTiax-LongerRoad_Banters.d~
+END
+
+// Kulyok's Xan-Longer Road Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#xan25.dlg~ AND FILE_EXISTS_IN_GAME ~bjonel25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Xan and the Longer Road...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokXan-LongerRoad/KulyokXan-LongerRoad_Banters.d~
+END
+
+
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
 // *******************************
