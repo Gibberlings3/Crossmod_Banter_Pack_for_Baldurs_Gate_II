@@ -415,14 +415,12 @@ THEN BEGIN
   EXTEND_BOTTOM ~p#kivd.bcs~ ~CrossmodBG2/SoA/Banters/KivanOfShilmista-Solaufein/KivanOfShilmista-Solaufein_P#KivD.baf~
 END
 
-
 // Kivan of Shilmista-Kulyok's Tiax Material
 ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#tiax.dlg~
 THEN BEGIN
   PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Tiax...~
   COMPILE ~CrossmodBG2/SoA/Banters/KivanOfShilmista-KulyokTiax/KivanOfShilmista-KulyokTiax_Banters.d~
 END
-
 
 // Kivan of Shilmista-Tsujatha Material
 ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~btsujat.dlg~
@@ -523,6 +521,139 @@ ACTION_IF FILE_EXISTS_IN_GAME ~btsujat.dlg~ AND FILE_EXISTS_IN_GAME ~byasraen.dl
 THEN BEGIN
   PRINT ~Adding SoA banters between Tsujatha and Yasraena...~
   COMPILE ~CrossmodBG2/SoA/Banters/Tsujatha-Yasraena/Tsujatha-Yasraena_Banters.d~
+END
+
+// Kivan of Shilmista-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/SoA/Banters/kivanofshilmista-kulyokbranwen/kivanofshilmista-kulyokbranwen_banters.d~
+END
+
+// Jastey's Ajantis-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajanb.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Jastey's Ajantis and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/SoA/Banters/JasteyAjantis-KulyokBranwen/JasteyAjantis-KulyokBranwen_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokCoran/KulyokBranwen-KulyokCoran_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokTiax/KulyokBranwen-KulyokTiax_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbran.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Branwen and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokBranwen-KulyokXan/KulyokBranwen-KulyokXan_Banters.d~
+END
+
+// Isra-Yvette Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~YxYveB.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Yvette...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-Yvette/Isra-Yvette_Banters.d~
+END
+
+// Adrian-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~rh#isr.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Isra...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Isra/Adrian-Isra_Banters.d~
+END
+
+// Dace-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~t#dace.dlg~ AND FILE_EXISTS_IN_GAME ~rh#isr.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Isra...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-Isra/Dace-Isra_Banters.d~
+END
+
+// Isra-Nephele Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#neph.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Nephele...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-Nephele/Isra-Nephele_Banters.d~
+END
+
+// Isra-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-Ninde/Isra-Ninde_Banters.d~
+END
+
+// Isra-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~bo#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-KulyokCoran/Isra-KulyokCoran_Banters.d~
+END
+
+// Isra-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-KulyokTiax/Isra-KulyokTiax_Banters.d~
+END
+
+// Isra-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Isra and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Isra-KulyokXan/Isra-KulyokXan_Banters.d~
+END
+
+// Dace-Kulyok's Coran
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dace.dlg~ AND FILE_EXISTS_IN_GAME ~bo#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokCoran/Dace-KulyokCoran_Banters.d~
+END
+
+// Dace-Kulyok's Tiax
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dace.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokTiax/Dace-KulyokTiax_Banters.d~
+END
+
+// Dace-Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dace.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Dace and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Dace-KulyokXan/Dace-KulyokXan_Banters.d~
+END
+
+// Kulyok's Coran-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#coran.dlg~ AND FILE_EXISTS_IN_GAME ~blk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Coran and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokCoran-Ninde/KulyokCoran-Ninde_Banters.d~
+END
+
+// Kulyok's Tiax-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#tiax.dlg~ AND FILE_EXISTS_IN_GAME ~blk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Tiax and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokTiax-Ninde/KulyokTiax-Ninde_Banters.d~
+END
+
+// Kulyok's Xan-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#xan.dlg~ AND FILE_EXISTS_IN_GAME ~blk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kulyok's Xan and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/KulyokXan-Ninde/KulyokXan-Ninde_Banters.d~
 END
 
 // INTERJECTIONS
@@ -679,7 +810,7 @@ THEN BEGIN
     EXTEND_TOP    ~sk#nehtb.bcs~ ~CrossmodBG2/SoA/Interjections/ToDG/Nehtaniel/todg_sk#nehtb.baf~ 
   END
 END     
-  
+
 // *****************************
 // * THRONE OF BHAAL COMPONENT *
 // *****************************
@@ -943,6 +1074,153 @@ ACTION_IF FILE_EXISTS_IN_GAME ~btsuja25.dlg~ AND FILE_EXISTS_IN_GAME ~byasra25.d
 THEN BEGIN
   PRINT ~Adding ToB banters between Tsujatha and Yasraena...~
   COMPILE ~CrossmodBG2/ToB/Banters/Tsujatha-Yasraena/Tsujatha-Yasraena_Banters.d~
+END
+
+// Kivan of Shilmista-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ AND FILE_EXISTS_IN_GAME ~O#bbra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kivan of Shilmista and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/ToB/Banters/kivanofshilmista-kulyokbranwen/kivanofshilmista-kulyokbranwen_banters.d~
+END
+
+// Jastey's Ajantis-Kulyok's Branwen Material
+ACTION_IF FILE_EXISTS_IN_GAME ~c#aja25b.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbra25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Jastey's Ajantis and Kulyok's Branwen...~
+  COMPILE ~CrossmodBG2/ToB/Banters/JasteyAjantis-KulyokBranwen/JasteyAjantis-KulyokBranwen_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbra25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#cor25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Branwen and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokCoran/KulyokBranwen-KulyokCoran_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbra25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Branwen and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokTiax/KulyokBranwen-KulyokTiax_Banters.d~
+END
+
+// Kulyok's Branwen-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~o#bbra25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Branwen and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokBranwen-KulyokXan/KulyokBranwen-KulyokXan_Banters.d~
+END
+
+// Isra-Yvette Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~YxYv25B.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Yvette...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-Yvette/Isra-Yvette_Banters.d~
+END
+
+// Adrian-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~rh#is25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Adrian and Isra...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-Isra/Adrian-Isra_Banters.d~
+END
+
+// Dace-Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~t#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~rh#is25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Isra...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-Isra/Dace-Isra_Banters.d~
+END
+
+// Isra-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~lk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-Ninde/Isra-Ninde_Banters.d~
+END
+
+// Isra-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#cor25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-KulyokCoran/Isra-KulyokCoran_Banters.d~
+END
+
+// Isra-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-KulyokTiax/Isra-KulyokTiax_Banters.d~
+END
+
+// Isra-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#is25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Isra and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Isra-KulyokXan/Isra-KulyokXan_Banters.d~
+END
+
+// Dace-Kulyok's Coran
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#cor25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokCoran/Dace-KulyokCoran_Banters.d~
+END
+
+// Dace-Kulyok's Tiax
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokTiax/Dace-KulyokTiax_Banters.d~
+END
+
+// Dace-Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~bt#dac25.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Dace and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Dace-KulyokXan/Dace-KulyokXan_Banters.d~
+END
+
+// Kulyok's Coran-Longer Road Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#cor25.dlg~ AND FILE_EXISTS_IN_GAME ~bjonel25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Coran and the Longer Road...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokCoran-LongerRoad/KulyokCoran-LongerRoad_Banters.d~
+END
+
+// Kulyok's Tiax-Longer Road Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#tia25.dlg~ AND FILE_EXISTS_IN_GAME ~bjonel25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Tiax and the Longer Road...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokTiax-LongerRoad/KulyokTiax-LongerRoad_Banters.d~
+END
+
+// Kulyok's Xan-Longer Road Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#xan25.dlg~ AND FILE_EXISTS_IN_GAME ~bjonel25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Xan and the Longer Road...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokXan-LongerRoad/KulyokXan-LongerRoad_Banters.d~
+END
+
+// Kulyok's Coran-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#cor25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Coran and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokCoran-Ninde/KulyokCoran-Ninde_Banters.d~
+END
+
+// Kulyok's Tiax-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#tia25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Tiax and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokTiax-Ninde/KulyokTiax-Ninde_Banters.d~
+END
+
+// Kulyok's Xan-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bo#xan25.dlg~ AND FILE_EXISTS_IN_GAME ~blk#ni25.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Kulyok's Xan and Ninde...~
+  COMPILE ~CrossmodBG2/ToB/Banters/KulyokXan-Ninde/KulyokXan-Ninde_Banters.d~
 END
 
 // *******************************
