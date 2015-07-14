@@ -4,7 +4,7 @@ AUTHOR ~grim@gibberlings3.net, kae@spellholdstudios.net, bererlinde@gmail.net~
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG 
 
-VERSION ~v14~
+VERSION ~v14 beta to 15~
 
 README ~CrossmodBG2/readme-crossmodbg2.html~
 
