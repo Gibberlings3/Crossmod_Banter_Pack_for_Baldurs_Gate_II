@@ -12,7 +12,7 @@ DO ~SetGlobal("c-ninde3aran","GLOBAL",1)~
 == C-ARN25B ~[ARAN] Oh, hells. Fine. I'll blighted carry it for you.~
 == BLK#NI25 ~[NINDE] About time. If I revealed much more, I might have no modesty left at all.~
 == C-ARN25B ~[ARAN] Sune's Left Breast!~
-== BLK#NIN25 ~[NINDE] Oh, I am sure they are not as good as a Goddesses. Then again, I have never had the chance to compare.~
+== BLK#NI25 ~[NINDE] Oh, I am sure they are not as good as a Goddesses. Then again, I have never had the chance to compare.~
 == C-ARN25B ~[ARAN] Hells, I feel a right fool.~
 == BLK#NI25 ~[NINDE] Oh, don't take it so hard, Aran. You are not that big of a fool. I simply refuse to play fairly.~
 EXIT
