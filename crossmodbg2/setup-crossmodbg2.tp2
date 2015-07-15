@@ -656,8 +656,80 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/KulyokXan-Ninde/KulyokXan-Ninde_Banters.d~
 END
 
+// Adrian and Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~brh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-adrian/aranw-adrian_banters.d~
+END
+
+// Angelo - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~badangel.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Angelo and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-adrian/aranw-adrian_banters.d~
+END
+
+// Kivan of Shilmista - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bp#kiv.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Kivan of Shilmista and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-kivanofshilmista/aranw-kivanofshilmista_banters.d~
+END
+
+// Saerileth - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~bsaerile.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Saerileth and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-saerileth/aranw-saerileth_banters.d~
+END
+
+// Tashia - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~btashia.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Tashia and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-tashia/aranw-tashia_banters.d~
+END
+
+// Tsujatha - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~btsujat.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Tsujatha and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-tsujatha/aranw-tsujatha_banters.d~
+END
+
+// Solaufein - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~SOLA.DLG~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Solaufein and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-solaufein/aranw-solaufein_banters.d~
+END
+
+// Gavin - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Gavin and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-gavin/aranw-gavin_banters.d~
+  EXTEND_TOP ~c-aran.bcs~ ~CrossmodBG2/SoA/Banters/aranw-gavin/aranw-gavin_soa.baf~
+END
+
+// Ninde - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~blk#nind.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Ninde and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-ninde/aranw-ninde_banters.d~
+END
+
+
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
+
+// Gavin - Aran Whitehand into UHKID01 3 /* Kids that want swords and ale */
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding Gavin and Aran Whitehand interjection into UHKID01 state 3...~
+  COMPILE ~CrossmodBG2/SoA/Interjections/aranw_gavin/aranw-gavin_interjection.d~
+END
 
 // Amber
 
@@ -1223,6 +1295,27 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/ToB/Banters/KulyokXan-Ninde/KulyokXan-Ninde_Banters.d~
 END
 
+// Angelo - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~badang25.dlg~ AND FILE_EXISTS_IN_GAME ~c-arn25b.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Angelo and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/ToB/Banters/aranw-angelo/aranw-angelo_banters.d~
+END
+
+// Ninde - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~blk#ni25.dlg~ AND FILE_EXISTS_IN_GAME ~c-arn25b.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Ninde and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/ToB/Banters/aranw-ninde/aranw-ninde_banters.d~
+END
+
+// Tashia - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~btashi25.dlg~ AND FILE_EXISTS_IN_GAME ~c-arn25b.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Tashia and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/ToB/Banters/aranw-tashia/aranw-tashia_banters.d~
+END
+
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
 // *******************************
@@ -1386,7 +1479,6 @@ THEN BEGIN
   PRINT ~Extending Darian's ToB script...~ 
   EXTEND_TOP ~T1Dar25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~ 
 END
-
 
 /* Fade romance conflict */
 ACTION_IF FILE_EXISTS_IN_GAME ~E3FADE.bcs~
