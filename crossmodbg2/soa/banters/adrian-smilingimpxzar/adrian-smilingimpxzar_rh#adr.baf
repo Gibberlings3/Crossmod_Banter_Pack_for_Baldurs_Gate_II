@@ -1,0 +1,114 @@
+// xzar and monty
+
+IF
+	InParty("rh#Adrian")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	InParty("7XXZAR")
+	!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+	InParty("7XMONT")
+	!StateCheck("7XMONT",CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !See([ENEMY])
+    PartyRested()
+    Global("G#XB.AdrianXzarFight","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFight","GLOBAL",1)
+	StartCutSceneMode()
+	StartCutScene("rh#cutXa")
+END
+
+// only xzar
+
+IF
+	InParty("rh#Adrian")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	InParty("7XXZAR")
+	!StateCheck("7XXZAR",CD_STATE_NOTVALID)
+	OR(2)
+		!InParty("7XMONT")
+		StateCheck("7XMONT",CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !See([ENEMY])
+    PartyRested()
+    Global("G#XB.AdrianXzarFight","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFight","GLOBAL",1)
+	StartCutSceneMode()
+	StartCutScene("rh#cutXb")
+END
+
+
+// only monty
+
+IF
+	InParty("rh#Adrian")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	OR(2)
+		!InParty("7XXZAR")
+		StateCheck("7XXZAR",CD_STATE_NOTVALID)
+	InParty("7XMONT")
+	!StateCheck("7XMONT",CD_STATE_NOTVALID)
+	CombatCounter(0)
+    !See([ENEMY])
+    PartyRested()
+    Global("G#XB.AdrianMontyFight","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianMontyFight","GLOBAL",1)
+	StartCutSceneMode()
+	StartCutScene("rh#cutXc")
+END
+
+// outcomes
+
+IF
+	Global("G#XB.AdrianXzarFightAdrian","GLOBAL",1)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightAdrian","GLOBAL",2)
+	SetGlobal("rh#AdrianJoined","GLOBAL",0)
+	LeaveParty()
+	Enemy()
+END
+
+IF
+	Global("G#XB.AdrianXzarFightAdrian","GLOBAL",2)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightAdrian","GLOBAL",3)
+	Spell(NearestEnemyOf(Myself),WIZARD_FIREBALL)
+END
+
+IF
+	Global("G#XB.AdrianXzarFightAdrian","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightAdrian","GLOBAL",4)
+	Spell(Myself,WIZARD_INVISIBILITY)
+END
+
+IF
+	Global("G#XB.AdrianXzarFightAdrian","GLOBAL",4)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightAdrian","GLOBAL",5)
+	EscapeArea()
+END
+
+IF
+    !StateCheck(Myself,STATE_INVISIBLE)
+    GlobalGT("G#XB.AdrianXzarFightAdrian","GLOBAL",3)
+THEN
+RESPONSE #100
+    SetGlobal("G#XB.AdrianXzarFightAdrian","GLOBAL",6)
+	Spell(NearestEnemyOf(Myself),WIZARD_CHARM_PERSON)
+END
+
+IF
+    Global("G#XB.AdrianXzarFightAdrian","GLOBAL",6)
+THEN
+RESPONSE #100
+    SetGlobal("G#XB.AdrianXzarFightAdrian","GLOBAL",3)
+END

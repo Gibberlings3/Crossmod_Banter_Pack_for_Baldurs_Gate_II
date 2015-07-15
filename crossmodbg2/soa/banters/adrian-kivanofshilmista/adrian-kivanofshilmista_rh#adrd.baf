@@ -1,0 +1,18 @@
+IF
+	InParty("rh#Adrian")
+	InParty("P#Kivan")
+	See("P#Kivan")
+	!See([ENEMY])
+	!ActuallyInCombat()
+	Global("rh#AdrianZhent","GLOBAL",1)
+	!Global("PlayerLooksLikeDrow","GLOBAL",1)
+	!StateCheck("P#Kivan",CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	Global("G#XB.AdrianKivanBanter2","GLOBAL",1)
+	Global("G#XB.AdrianKivanBanter3","GLOBAL",0)
+	RealGlobalTimerExpired("rh#AdrianKivanTalkTimer","GLOBAL")
+THEN
+RESPONSE #100
+	IncrementGlobal("G#XB.AdrianKivanBanter3","GLOBAL",1)
+	StartDialogueNoSet("p#kivan")
+END

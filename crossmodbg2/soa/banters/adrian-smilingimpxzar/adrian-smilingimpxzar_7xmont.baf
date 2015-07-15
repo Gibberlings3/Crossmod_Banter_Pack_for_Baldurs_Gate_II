@@ -1,0 +1,13 @@
+// montaron
+
+IF
+	Global("G#XB.AdrianXzarFightMonty","GLOBAL",1)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightMonty","GLOBAL",2)
+    SetGlobal("MONTIInParty","LOCALS",0)
+    LeaveParty()
+    Enemy()
+    Attack(NearestEnemyOf(Myself))
+END
+

@@ -58,7 +58,7 @@ DO ~SetGlobal("c-aran2ninde","GLOBAL",1)~
 == BLK#NIND ~[NINDE] Flattery will get you nowhere, darling.~
 EXIT 
 
-/* SoA Banters: ninde<>Aran : Of Mice and Men : cmorgan */
+/* SoA Banters: ninde<>Aran : Of Mice and Men */
 CHAIN IF ~Global("c-ninde2aran","GLOBAL",0)
 InParty(Myself) !StateCheck(Myself,CD_STATE_NOTVALID)
 InParty("c-aran") InMyArea("c-aran") !StateCheck("c-aran",CD_STATE_NOTVALID)
@@ -79,7 +79,7 @@ DO ~SetGlobal("c-ninde2aran","GLOBAL",1)~
 == BLK#NIND ~[NINDE] Mice, men... what's in a name, anyways?~
 EXIT
 
-/* SoA Banters: Aran<>Ninde : Husband Hunting : cmorgan */
+/* SoA Banters: Aran<>Ninde : Husband Hunting */
 CHAIN IF ~Global("c-aran3ninde","GLOBAL",0)
 InParty(Myself) !StateCheck(Myself,CD_STATE_NOTVALID)
 InParty("ninde") InMyArea("ninde") !StateCheck("ninde",CD_STATE_NOTVALID)

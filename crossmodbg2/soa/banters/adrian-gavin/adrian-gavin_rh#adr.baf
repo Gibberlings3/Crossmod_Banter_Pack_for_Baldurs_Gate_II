@@ -1,0 +1,31 @@
+IF
+	InParty("rh#Adrian") 
+	InParty("B!Gavin2")
+	See("B!Gavin2")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("B!Gavin2",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	PartyRested()
+	RealGlobalTimerExpired("rh#AdrianGavinTalkTimer","GLOBAL")
+	Global("G#XB.AdrianGavinBanter2","GLOBAL",1)
+	Global("G#XB.AdrianGavinBanter3","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianGavinBanter3","GLOBAL",1)
+END
+
+IF
+	InParty("rh#Adrian") 
+	InParty("B!Gavin2")
+	See("B!Gavin2")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("B!Gavin2",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	RealGlobalTimerExpired("rh#AdrianEdwinTOBTalkTimer","GLOBAL")
+	Global("G#XB.AdrianGavinBanter3","GLOBAL",1)
+THEN
+RESPONSE #100
+	StartDialogueNoSet("B!Gavin2")
+END

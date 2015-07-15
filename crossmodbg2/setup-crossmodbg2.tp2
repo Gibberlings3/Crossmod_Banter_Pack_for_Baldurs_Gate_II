@@ -8,6 +8,25 @@ VERSION ~v14 beta to 15~
 
 README ~CrossmodBG2/readme-crossmodbg2.html~
 
+
+ALWAYS
+	ACTION_IF GAME_IS ~bgee tutu bg~ THEN BEGIN
+	  PRINT ~WARNING. THIS MOD IS FOR BG2 OR BGT. DO NOT INSTALL THIS MOD.~
+	END
+	ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+	  PRINT ~WARNING. THIS MOD IS NOT TRAIFIED OR OR CONVERTED TO utf8. YOUR GAME MIGHT CRASH ON SOME BANTERS.~
+	END
+	ACTION_IF GAME_IS ~soa tob bgt~ THEN BEGIN
+	  PRINT ~BGII:SoA detected...~
+	END
+	ACTION_IF GAME_IS ~soa tob bgt~ THEN BEGIN
+	  PRINT ~BGII:ToB detected...~
+	END
+	ACTION_IF GAME_IS ~soa tob bgt~ THEN BEGIN
+	  PRINT ~BGT detected...~
+	END
+END
+
 // ****************************
 // * SHADOWS OF AMN COMPONENT *
 // ****************************
@@ -43,6 +62,34 @@ THEN BEGIN
 BEGIN BSOLA
 >>>>>>>>
   COMPILE ~CrossmodBG2/Inlined/BSOLA.d~
+END
+
+// Giving Smiling Imp's Xzar an SoA Override Script
+ACTION_IF FILE_EXISTS_IN_GAME ~7XCRE75.cre~ AND NOT FILE_EXISTS_IN_GAME ~7XXZAR.bcs~
+THEN BEGIN
+  PRINT ~Adding Xzar's override script...~
+  
+  COPY_EXISTING ~7XCRE75.cre~ ~override/7XCRE75.cre~
+    WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~7XXZAR~ #8
+    
+<<<<<<<< CrossmodBG2/Inlined/7XXZAR.baf
+// Start of Xzar's override script
+>>>>>>>>
+  COMPILE ~CrossmodBG2/Inlined/7XXZAR.baf~
+END
+
+  // Giving Smiling Imp's Montaron an SoA Override Script
+ACTION_IF FILE_EXISTS_IN_GAME ~7XCRE74.cre~ AND NOT FILE_EXISTS_IN_GAME ~7XMONT.bcs~
+THEN BEGIN
+  PRINT ~Adding Montaron's override script...~
+  
+  COPY_EXISTING ~7XCRE74.cre~ ~override/7XCRE74.cre~
+    WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~7XMONT~ #8
+    
+<<<<<<<< CrossmodBG2/Inlined/7XMONT.baf
+// Start of Montaron's override script
+>>>>>>>>
+  COMPILE ~CrossmodBG2/Inlined/7XMONT.baf~
 END
 
 // Giving Wikaede an SoA Override Script
@@ -720,6 +767,107 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/aranw-ninde/aranw-ninde_banters.d~
 END
 
+// Adrian-Angelo Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~adangel.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Sister Vigilante's Angelo...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-SisterVigilanteAngelo/Adrian-SisterVigilanteAngelo_Banters.d~
+END
+
+// Adrian-Arath Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#arath.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Arath...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Arath/Adrian-Arath_Banters.d~
+END
+
+// Adrian-Darian Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~t1dar.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Darian...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Darian/Adrian-Darian_Banters.d~
+END
+
+// Adrian-Faren Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~fhfrn.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Faren...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Faren/Adrian-Faren_Banters.d~
+  EXTEND_BOTTOM ~fhfrn.bcs~ ~CrossmodBG2/SoA/Banters/Adrian-Faren/Adrian-Faren_fhfrn.baf~
+END
+
+// Adrian-Gavin Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~b!gavj.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Gavin...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Gavin/Adrian-Gavin_Banters.d~
+  EXTEND_BOTTOM ~rh#adr.bcs~ ~CrossmodBG2/SoA/Banters/Adrian-Gavin/Adrian-Gavin_rh#adr.baf~
+END
+
+// Adrian-Kivan of Shilmista Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~p#kivan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Kivan of Shilmista...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-KivanOfShilmista/Adrian-KivanOfShilmista_Banters.d~
+  EXTEND_BOTTOM ~rh#adrd.bcs~ ~CrossmodBG2/SoA/Banters/Adrian-KivanOfShilmista/Adrian-KivanOfShilmista_rh#adrd.baf~
+END
+
+// Adrian-Kulyok's Coran Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~o#coran.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Kulyok's Coran...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-KulyokCoran/Adrian-KulyokCoran_Banters.d~
+END
+
+// Adrian-Kulyok's Tiax Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~o#tiax.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Kulyok's Tiax...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-KulyokTiax/Adrian-KulyokTiax_Banters.d~
+END
+
+// Adrian-Kulyok's Xan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Kulyok's Xan...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-KulyokXan/Adrian-KulyokXan_Banters.d~
+END
+
+// Adrian-Nephele Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#neph.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Nephele...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Nephele/Adrian-Nephele_Banters.d~
+END
+
+// Adrian-Ninde Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#nind.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Ninde...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Ninde/Adrian-Ninde_Banters.d~
+END
+
+// Adrian-Smiling Imp's Xzar and Montaron Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZAR.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Smiling Imp's Xzar and Montaron...~
+  
+  // Dialogue and scripts
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/Adrian-SmilingImpXzar_Banters.d~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/rh#cutXa.baf~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/rh#cutXb.baf~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/rh#cutXc.baf~
+  EXTEND_BOTTOM ~rh#adr.bcs~ ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/Adrian-SmilingImpXzar_rh#adr.baf~
+  EXTEND_BOTTOM ~7XXZAR.bcs~ ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/Adrian-SmilingImpXzar_7xxzar.baf~
+  EXTEND_BOTTOM ~7XMONT.bcs~ ~CrossmodBG2/SoA/Banters/Adrian-SmilingImpXzar/Adrian-SmilingImpXzar_7xmont.baf~
+END
+
+// Adrian-Xulaye Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#xula.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Adrian and Xulaye...~
+  COMPILE ~CrossmodBG2/SoA/Banters/Adrian-Xulaye/Adrian-Xulaye_Banters.d~
+END
 
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
@@ -1315,6 +1463,55 @@ THEN BEGIN
   PRINT ~Adding ToB banters between Tashia and Aran Whitehand...~
   COMPILE ~CrossmodBG2/ToB/Banters/aranw-tashia/aranw-tashia_banters.d~
 END
+
+// Adrian-Angelo Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~adang25.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding ToB banters between Adrian and Sister Vigilante's Angelo...~ 
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-SisterVigilanteAngelo/Adrian-SisterVigilanteAngelo_Banters.d~ 
+END
+
+// Adrian-Gavin Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~b!gav25j.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Adrian and Gavin...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-Gavin/Adrian-Gavin_Banters.d~
+END
+
+// Adrian-Iylos Material
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~lk#iylo.dlg~
+THEN BEGIN
+  PRINT ~Adding ToB banters between Adrian and Iylos...~
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-Iylos/Adrian-Iylos_Banters.d~
+END
+
+// Adrian-Kivan of Shilmista Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~bp#kiv25.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding ToB banters between Adrian and Kivan of Shilmista...~ 
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-KivanOfShilmista/Adrian-KivanOfShilmista_Banters.d~ 
+END 
+
+// Adrian-Kulyok's Coran Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~o#cor25.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding ToB banters between Adrian and Kulyok's Coran...~ 
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-KulyokCoran/Adrian-KulyokCoran_Banters.d~ 
+END 
+
+// Adrian-Kulyok's Xan Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~o#xan25.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding ToB banters between Adrian and Kulyok's Xan...~ 
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-KulyokXan/Adrian-KulyokXan_Banters.d~ 
+END
+
+// Adrian-Ninde Material 
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#ad25.dlg~ AND FILE_EXISTS_IN_GAME ~lk#ni25.dlg~ 
+THEN BEGIN 
+  PRINT ~Adding ToB banters between Adrian and Ninde...~ 
+  COMPILE ~CrossmodBG2/ToB/Banters/Adrian-Ninde/Adrian-Ninde_Banters.d~ 
+END 
 
 // *******************************
 // * ROMANCE CONFLICTS COMPONENT *
