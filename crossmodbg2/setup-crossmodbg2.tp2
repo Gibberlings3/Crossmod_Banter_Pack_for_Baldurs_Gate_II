@@ -767,6 +767,13 @@ THEN BEGIN
   COMPILE ~CrossmodBG2/SoA/Banters/aranw-ninde/aranw-ninde_banters.d~
 END
 
+// Arath - Aran Whitehand Material
+ACTION_IF FILE_EXISTS_IN_GAME ~blk#arat.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+  PRINT ~Adding SoA banters between Arath and Aran Whitehand...~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-arath/aranw-arath_banters.d~
+END
+
 // Adrian-Angelo Material
 ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~adangel.dlg~
 THEN BEGIN
