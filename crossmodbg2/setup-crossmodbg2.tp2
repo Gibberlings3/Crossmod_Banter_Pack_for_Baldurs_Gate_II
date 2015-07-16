@@ -714,7 +714,7 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~badangel.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
 THEN BEGIN
   PRINT ~Adding SoA banters between Angelo and Aran Whitehand...~
-  COMPILE ~CrossmodBG2/SoA/Banters/aranw-adrian/aranw-adrian_banters.d~
+  COMPILE ~CrossmodBG2/SoA/Banters/aranw-angelo/aranw-angelo_banters.d~
 END
 
 // Kivan of Shilmista - Aran Whitehand Material
@@ -876,7 +876,7 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~b!gavj.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
 THEN BEGIN
   PRINT ~Adding Gavin and Aran Whitehand interjection into UHKID01 state 3...~
-  COMPILE ~CrossmodBG2/SoA/Interjections/aranw_gavin/aranw-gavin_interjection.d~
+  COMPILE ~CrossmodBG2/SoA/interjections/aranw_gavin/aranw-gavin_interjection.d~
 END
 
 // Amber
