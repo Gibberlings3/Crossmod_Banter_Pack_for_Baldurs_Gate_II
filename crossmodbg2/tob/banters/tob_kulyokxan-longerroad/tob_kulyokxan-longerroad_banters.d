@@ -8,14 +8,14 @@ See("lrirenic")
 CombatCounter(0)
 !See([ENEMY])
 Global("G#XB.LRIrenicusXanToBBanter1","GLOBAL",0)~ THEN BO#XAN25 LRIrenicusXanToBBanter#1.1
-~I saw your dungeon, Joneleth. It took months to build and many more to furnish: years of research and dying from the inside. I understand that Ellesime put you into a vicious circle - without a spirit you could not feel compassion, and without it, true repentance was not an option, but wouldn't asking forgiveness of your people and the Seldarine simply seem like a logical choice?~ [O#XAN000]
+@0 /* I saw your dungeon, Joneleth. It took months to build and many more to furnish: years of research and dying from the inside. I understand that Ellesime put you into a vicious circle - without a spirit you could not feel compassion, and without it, true repentance was not an option, but wouldn't asking forgiveness of your people and the Seldarine simply seem like a logical choice? */
 DO ~SetGlobal("G#XB.LRIrenicusXanToBBanter1","GLOBAL",1)~
-== BJONEL25 ~To a spineless follower of his so-called "just" gods, perhaps. To the one who'd sigh and moan and mutter it's all hopeless, but would never *dare* to look up and as much as question the ways of his little world. Forgiveness is a myth invented by the milk-blooded vermin to justify their perpetual submission to the Powers that are as alien to their plight as they are ruthless.~
-== BO#XAN25 ~Not unlike the creator of that dungeon.~
-== BJONEL25 ~The knowledge is an ultimate goal in itself, far more valuable than salvation, and the price of it sometimes must be paid with the blood of the weak, be it a dumb <PRO_GIRLBOY> with more divine ichor in <PRO_HISHER> veins than thoughts in <PRO_HISHER> skull or a dimwit of a failed caster with a magic sword to support his flailing ego.~
-== BO#XAN25 ~Who yet were able to overcome your superior magics in the end. But returning to my question, didn't you want to restore what was lost? Being able to feel the ecstasy of reverie, for one? Or does the opinion of Suldanessellar's people and your own pride matter more to you?~
-== BJONEL25 ~Why would I care for the opinion of a roiling hive of blind worms, forever feeding each other their failed dreams and delusions? None of you have enough personality to stand on your own without the crutch of your swarm. Suldanessellar is an immortal den of magical drug-addicts, high on Black Lotus of their shared link.~
-== BO#XAN25 ~(sigh) Somehow, I knew it would be a pointless conversation.~
+== BJONEL25 @1 /* To a spineless follower of his so-called "just" gods, perhaps. To the one who'd sigh and moan and mutter it's all hopeless, but would never *dare* to look up and as much as question the ways of his little world. Forgiveness is a myth invented by the milk-blooded vermin to justify their perpetual submission to the Powers that are as alien to their plight as they are ruthless. */
+== BO#XAN25 @2 /* Not unlike the creator of that dungeon. */
+== BJONEL25 @3 /* The knowledge is an ultimate goal in itself, far more valuable than salvation, and the price of it sometimes must be paid with the blood of the weak, be it a dumb <PRO_GIRLBOY> with more divine ichor in <PRO_HISHER> veins than thoughts in <PRO_HISHER> skull or a dimwit of a failed caster with a magic sword to support his flailing ego. */
+== BO#XAN25 @4 /* Who yet were able to overcome your superior magics in the end. But returning to my question, didn't you want to restore what was lost? Being able to feel the ecstasy of reverie, for one? Or does the opinion of Suldanessellar's people and your own pride matter more to you? */
+== BJONEL25 @5 /* Why would I care for the opinion of a roiling hive of blind worms, forever feeding each other their failed dreams and delusions? None of you have enough personality to stand on your own without the crutch of your swarm. Suldanessellar is an immortal den of magical drug-addicts, high on Black Lotus of their shared link. */
+== BO#XAN25 @6 /* (sigh) Somehow, I knew it would be a pointless conversation. */
 EXIT
 
 // 2.
@@ -28,12 +28,12 @@ See("O#Xan")
 CombatCounter(0)
 !See([ENEMY])
 Global("G#XB.LRIrenicusXanToBBanter2","GLOBAL",0)~ THEN BJONEL25 LRIrenicusXanToBBanter#2.1
-~Evereskian, I see you still keep your blade. How convenient it must be for your god: willing slaves who proudly wear their own collars, considering it a great honor, no less.~
+@7 /* Evereskian, I see you still keep your blade. How convenient it must be for your god: willing slaves who proudly wear their own collars, considering it a great honor, no less. */
 DO ~SetGlobal("G#XB.LRIrenicusXanToBBanter2","GLOBAL",1)~
-== BO#XAN25 ~There is only a handful of us left now. I doubt Corellon is really concerned with what we do.~
-== BJONEL25 ~And he needn't be. Why, if one of you suddenly defies the moonblade's orders, he is struck down - and should a rebellious wielder part with his sword, he withers within months. Truly, I laud Corellon's scheme - even Lolth would be unable to come with a plan any finer.~
-== BO#XAN25 ~You... how can you even compare her poison to Corellon's light? Do you even see what a moonblade is? Each wielder makes a decision for life - to become a symbol of duty, a defender of his people. You yourself were from a prominent moon elven family, Joneleth - Ellesime told me. Have you never considered becoming a wielder? Weren't you offered?~
-== BJONEL25 ~That is none of your affair, mage. And never will be.~
-== BO#XAN25 ~You weren't. There was a chance, wasn't there, and they passed you by? Yes, there was a moonblade in Suldanessellar, and the owner was young, too young to have claimed it before your time - and you perhaps expected to be offered, prepared a rejection speech, even, but they called forth another, and you never learnt why: was it your Queen's love and grace that saved you, or did they truly not consider you worthy -~
-== BJONEL25 ~Enough of your idle ruminations! You will say no more on the matter. And do not repeat her name again, worm, if you know what is good for you.~
+== BO#XAN25 @8 /* There is only a handful of us left now. I doubt Corellon is really concerned with what we do. */
+== BJONEL25 @9 /* And he needn't be. Why, if one of you suddenly defies the moonblade's orders, he is struck down - and should a rebellious wielder part with his sword, he withers within months. Truly, I laud Corellon's scheme - even Lolth would be unable to come with a plan any finer. */
+== BO#XAN25 @10 /* You... how can you even compare her poison to Corellon's light? Do you even see what a moonblade is? Each wielder makes a decision for life - to become a symbol of duty, a defender of his people. You yourself were from a prominent moon elven family, Joneleth - Ellesime told me. Have you never considered becoming a wielder? Weren't you offered? */
+== BJONEL25 @11 /* That is none of your affair, mage. And never will be. */
+== BO#XAN25 @12 /* You weren't. There was a chance, wasn't there, and they passed you by? Yes, there was a moonblade in Suldanessellar, and the owner was young, too young to have claimed it before your time - and you perhaps expected to be offered, prepared a rejection speech, even, but they called forth another, and you never learnt why: was it your Queen's love and grace that saved you, or did they truly not consider you worthy - */
+== BJONEL25 @13 /* Enough of your idle ruminations! You will say no more on the matter. And do not repeat her name again, worm, if you know what is good for you. */
 EXIT
