@@ -1,4 +1,4 @@
-@0    = ~vBETA_15_07232015~
+@0    = ~vBETA_15_07272015~
 @1    = ~WARNING. THIS MOD IS FOR BG2 OR BGT. DO NOT INSTALL THIS MOD.~
 @2    = ~BG2:EE detected...~
 @3    = ~BGII:SoA detected...~
@@ -423,3 +423,104 @@
 @422  = ~Xan's SoA script o#xans.bcs not present.~
 @423  = ~Extending Xan's ToB script...~
 @424  = ~Xan's ToB script o#xan25s.bcs not present.~
+@426  = ~Adding SoA banters between LavaSkie and Arath...~
+@427  = ~1xSkieB.dlg and/or blk#arat.dlg not detected. Skipping these particular SoA banters.~
+@428  = ~Adding SoA banters between LavaSkie and Petsy...~
+@429  = ~Sonia's Smile~
+@430  = ~Sonia's Smile
+
+This amulet was given to Petsy by her friend Skie Silvershield. It looks as if it were made of silver. There are some mithril details and rings - as if the one who made this necklacee wished it to last forever. The jewel is white with some pink highlights. You're not sure what exactly stone or mineral was used.
+
+STATISTICS:
+
++2 charisma
++15 lore bonus
+
+Useable by:
+  halfling bards~
+@431  = ~Sonia's Smile
+
+This amulet was given to Petsy by her friend Skie Silvershield. It looks as if it were made of silver. There are some mithril details and rings - as if the one who made this necklace wished it to last forever. The jewel is white with some pink highlights. You're not sure what exactly stone or mineral was used.
+
+STATISTICS:
+
++2 charisma
++15 lore bonus
+
+Useable by:
+  halfling bards~
+@432  = ~1xSkieB.dlg and/or L3PetsyB.dlg not detected. Skipping these particular SoA banters.~
+@433  = ~Adding SoA banters between Fade and Skie...~
+@434  = ~BE3FADE.dlg and/or 1xSkieB.dlg not detected. Skipping these particular SoA banters.~
+@435  = ~Adding SoA banters between Foundling and Arath...~
+@436  = ~L#FOUB.dlg and/or blk#arat.dlg not detected. Skipping these particular SoA banters.~
+@437  = ~Adding SoA banters between Foundling and Fade...~
+@438  = ~L#FOUB.dlg and/or BE3FADE.dlg not detected. Skipping these particular SoA banters.~
+@439  = ~Adding SoA banters between Foundling and Faren...~
+@440  = ~L#FOUB.dlg and/or bfhfrn.dlg not detected. Skipping these particular SoA banters.~
+@441  = ~Adding SoA banters between Foundling and KulyokCoran...~
+@442  = ~L#FOUB.dlg and/or BO#CORAN.dlg not detected. Skipping these particular SoA banters.~
+@443  = ~Adding SoA banters between Foundling and KulyokTiax...~
+@444  = ~L#FOUB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters.~
+@445  = ~Adding SoA banters between Foundling and KulyokXan...~
+@446  = ~L#FOUB.dlg and/or BO#Xan.dlg not detected. Skipping these particular SoA banters.~
+@447  = ~Adding SoA banters between Foundling and Nathaniel...~
+@448  = ~L#FOUB.dlg and/or bfhnat.dlg not detected. Skipping these particular SoA banters.~
+@449  = ~Adding SoA banters between Foundling and Isra...~
+@450  = ~L#FOUB.dlg and/or brh#isr.dlg not detected. Skipping these particular SoA banters.~
+@451  = ~Adding SoA banters between Foundling and Skie...~
+@452  = ~L#FOUB.dlg and/or 1xSkieB.dlg not detected. Skipping these particular SoA banters.~
+@453  = ~Adding SoA banters between Foundling, Skie and Petsy...~
+@454  = ~L#FOUB.dlg and/or 1xSkieB.dlg and/or L3PetsyB.dlg not detected. Skipping these particular SoA banters.~
+@455  = ~Adding SoA banters between Foundling and YoshimoRomance...~
+@456  = ~L#FOUB.dlg and/or YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 not detected. Skipping these particular SoA banters.~
+@457  = ~Adding SoA banters between Foundling and Yasraena...~
+@458  = ~L#FOUB.dlg and/or BYASRAEN.dlg not detected. Skipping these particular SoA banters.~
+@459  = ~Adding SoA banters between Foundling and Yvette...~
+@460  = ~L#FOUB.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters.~
+@461  = ~Adding SoA banters between Petsy and Nephele...~
+@462  = ~L3PetsyB.dlg and/or BLK#NEP.dlg not detected. Skipping these particular SoA banters.~
+@463  = ~Adding SoA banters between Lava's Quayle and KulyokTiax...~
+@464  = ~1xQuayB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters.~
+@465  = ~Adding SoA banters between YoshimoRomance and HaerdalisRomance...~
+@466  = ~YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 and/or HAERDALISROMANCE/HAERDALISROMANCE.TP2 not detected. Skipping these particular SoA banters.~
+@467  = ~Adding SoA banters between YoshimoRomance and KulyokXan...~
+@468  = ~BO#XAN.dlg and/or YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 not detected. Skipping these particular SoA banters.~
+@469  = ~Adding SoA banters between LavaSkie and KulyokXan...~
+@470  = ~1xSkieB.dlg and/or BO#XAN.dlg not detected. Skipping these particular SoA banters.~
+@471  = ~Adding SoA banters between LavaSkie and Yasraena...~
+@472  = ~1xSkieB.dlg and/or BYASRAEN.dlg not detected. Skipping these particular SoA banters.~
+@473  = ~Adding SoA banters between Foundling and Aran Whitehand...~
+@474  = ~l#foub.dlg and/or c-aranb.dlg not detected. Skipping these particular SoA banters.~
+@476  = ~Adding ToB banters between Fade and Skie...~
+@477  = ~BE3FAD25.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~
+@478  = ~Adding ToB banters between Foundling and Fade...~
+@479  = ~L#Fou25B.dlg and/or BE3FAD25.dlg not detected. Skipping these particular ToB banters.~
+@480  = ~Adding ToB banters between Foundling and Faren...~
+@481  = ~L#Fou25B.dlg and/or bfhf25.dlg not detected. Skipping these particular ToB banters.~
+@482  = ~Adding ToB banters between Foundling and KulokCoran...~
+@483  = ~L#Fou25B.dlg and/or BO#COR25.dlg not detected. Skipping these particular ToB banters.~
+@484  = ~Adding ToB banters between Foundling and KulyokTiax...~
+@485  = ~L#Fou25B.dlg and/or BO#Tia25.dlg not detected. Skipping these particular ToB banters.~
+@486  = ~Adding ToB banters between Foundling and KulyokXan...~
+@487  = ~L#Fou25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+@488  = ~Adding ToB banters between Foundling and Lava del Vortel's Skie...~
+@489  = ~L#Fou25B.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~
+@490  = ~Adding ToB banters between Foundling and Nathaniel...~
+@491  = ~L#Fou25B.dlg and/or bfhn25.dlg not detected. Skipping these particular ToB banters.~
+@492  = ~Adding ToB banters between Foundling and Isra...~
+@493  = ~L#FOU25B.dlg and/or brh#is25.dlg not detected. Skipping these particular ToB banters.~
+@494  = ~Adding ToB banters between Foundling and Yasraena...~
+@495  = ~L#FOU25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters.~
+@496  = ~Adding ToB banters between Foundling and Yvette...~
+@497  = ~L#Fou25B.dlg and/or YxYv25B.dlg not detected. Skipping these particular ToB banters.~
+@498  = ~Adding ToB banters between Lava del Vortel's Quayle and KulyokTiax...~
+@499  = ~1xQU25B.dlg and/or BO#Tia25.dlg not detected. Skipping these particular ToB banters.~
+@500  = ~Adding ToB banters between LavaSkie and KulyokXan...~
+@501  = ~1xSki25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+@502  = ~Adding ToB banters between LavaSkie and Yasraena...~
+@503  = ~1xSki25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters.~
+@504  = ~Adding ToB banters between LavaSkie and Petsy...~
+@505  = ~1xSki25B.dlg and/or L3Pet25B.dlg not detected. Skipping these particular ToB banters.~
+@506  = ~Adding ToB banters between LavaSkie and Arath...~
+@507  = ~1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters.~

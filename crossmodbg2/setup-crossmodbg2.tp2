@@ -1259,6 +1259,265 @@ END ELSE BEGIN
 END
 
 
+/* LavaSkie - Arath SoA Material */ // 1 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSkieB.dlg~ AND FILE_EXISTS_IN_GAME ~blk#arat.dlg~
+THEN BEGIN
+    PRINT @426 /* Adding SoA banters between LavaSkie and Arath... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between LavaSkie and Arath...~
+    COMPILE ~crossmodbg2/soa/banters/soa_lavaskie-Arath/soa_lavaskie-arath_banters.d~
+END ELSE BEGIN
+    PRINT @427 /* 1xSkieB.dlg and/or blk#arat.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSkieB.dlg and/or blk#arat.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* LavaSkie - Petsy SoA Material */ // 6 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSkieB.dlg~ AND FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~
+THEN BEGIN
+    PRINT @428 /* Adding SoA banters between LavaSkie and Petsy... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between LavaSkie and Petsy...~
+    COMPILE ~crossmodbg2/soa/banters/soa_lavaskie-petsy/soa_lavaskie-petsy_banters.d~
+	COPY ~crossmodbg2/soa/banters/soa_lavaskie-petsy/g#xbpets.bam~ ~override~
+	COPY ~crossmodbg2/soa/banters/soa_lavaskie-petsy/g#xbpets.itm~ ~override~
+	    SAY NAME1 @429 /* Sonia's Smile */
+		SAY NAME2 @429 /* Sonia's Smile */
+		SAY UNIDENTIFIED_DESC @430
+		SAY DESC @431 
+END ELSE BEGIN
+    PRINT @432 /* 1xSkieB.dlg and/or L3PetsyB.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSkieB.dlg and/or L3PetsyB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Fade - Skie SoA Material */ //1 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~BE3FADE.dlg~ AND FILE_EXISTS_IN_GAME ~1xSkieB.dlg~
+THEN BEGIN
+    PRINT @433 /* Adding SoA banters between Fade and Skie... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fade and Skie...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Fade-lavaSkie/soa_fade-lavaskie_banters.d~
+END ELSE BEGIN
+    PRINT @434 /* BE3FADE.dlg and/or 1xSkieB.dlg not detected. Skipping these particular SoA banters.~ */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BE3FADE.dlg and/or 1xSkieB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Arath SoA Material */ // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~blk#arat.dlg~
+THEN BEGIN
+    PRINT @435 /* Adding SoA banters between Foundling and Arath... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Arath...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Arath/soa_Foundling-Arath_banters.d~
+END ELSE BEGIN
+    PRINT @436 /* L#FOUB.dlg and/or blk#arat.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or blk#arat.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Fade SoA Material */ // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~BE3FADE.dlg~
+THEN BEGIN
+    PRINT @437 /* Adding SoA banters between Foundling and Fade... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Fade...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Fade/soa_Foundling-Fade_banters.d~
+END ELSE BEGIN
+    PRINT @438 /* L#FOUB.dlg and/or BE3FADE.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or BE3FADE.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Faren SoA Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~bfhfrn.dlg~
+THEN BEGIN
+    PRINT @439 /* Adding SoA banters between Foundling and Faren... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Faren...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Faren/soa_Foundling-Faren_banters.d~
+END ELSE BEGIN
+    PRINT @440 /* L#FOUB.dlg and/or bfhfrn.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or bfhfrn.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - KulyokCoran SoA Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~BO#CORAN.dlg~
+THEN BEGIN
+    PRINT @441 /* Adding SoA banters between Foundling and KulyokCoran... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and KulyokCoran...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-KulyokCoran/soa_Foundling-KulyokCoran_banters.d~
+END ELSE BEGIN
+    PRINT @442 /* L#FOUB.dlg and/or BO#CORAN.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or BO#CORAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - KulyokTiax SoA Material */ // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~BO#TIAX.dlg~
+THEN BEGIN
+    PRINT @443 /* Adding SoA banters between Foundling and KulyokTiax... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and KulyokTiax...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-KulyokTiax/soa_Foundling-KulyokTiax_banters.d~
+END ELSE BEGIN
+    PRINT @444 /* L#FOUB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - KulyokXan SoA Material */ // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~BO#Xan.dlg~
+THEN BEGIN
+    PRINT @445 /* Adding SoA banters between Foundling and KulyokXan... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and KulyokXan...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-KulyokXan/soa_Foundling-KulyokXan_banters.d~
+END ELSE BEGIN
+    PRINT @446 /* L#FOUB.dlg and/or BO#Xan.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or BO#Xan.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Nathaniel SoA Material */ // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~bfhnat.dlg~
+THEN BEGIN
+    PRINT @447 /* Adding SoA banters between Foundling and Nathaniel... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Nathaniel...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Nathaniel/soa_Foundling-Nathaniel_banters.d~
+END ELSE BEGIN
+    PRINT @448 /* L#FOUB.dlg and/or bfhnat.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or bfhnat.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Isra SoA Material */ // 3 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~brh#isr.dlg~
+THEN BEGIN
+    PRINT @449 /* Adding SoA banters between Foundling and Isra... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Isra...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Isra/soa_Foundling-Isra_banters.d~
+END ELSE BEGIN
+    PRINT @450 /* L#FOUB.dlg and/or brh#isr.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or brh#isr.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Skie SoA Material */ //2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~1xSkieB.dlg~
+THEN BEGIN
+    PRINT @451 /* Adding SoA banters between Foundling and Skie... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Skie...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Skie/soa_Foundling-Skie_banters.d~
+END ELSE BEGIN
+    PRINT @452 /* L#FOUB.dlg and/or 1xSkieB.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or 1xSkieB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* LavaSkie - Foundling - Petsy SoA Material */ //1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~1xSkieB.dlg~ AND FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~
+THEN BEGIN
+    PRINT @453 /* Adding SoA banters between Foundling, Skie and Petsy... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling, Skie and Petsy...~
+    COMPILE ~crossmodbg2/soa/banters/soa_lavaskie-petsy-foundling/soa_lavaskie-petsy-foundling_banters.d~
+END ELSE BEGIN
+    PRINT @454 /* L#FOUB.dlg and/or 1xSkieB.dlg and/or L3PetsyB.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or 1xSkieB.dlg and/or L3PetsyB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - YoshimoRomance SoA Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND MOD_IS_INSTALLED ~YOSHIMOROMANCE/YOSHIMOROMANCE.TP2~ ~0~
+THEN BEGIN
+    PRINT @455 /* Adding SoA banters between Foundling and YoshimoRomance... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and YoshimoRomance...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-YoshimoRomance/soa_Foundling-YoshimoRom_banters.d~
+END ELSE BEGIN
+    PRINT @456 /* L#FOUB.dlg and/or YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or BYOSHIM.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Yasraena SoA Material */ // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~
+THEN BEGIN
+    PRINT @457 /* Adding SoA banters between Foundling and Yasraena... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Yasraena...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Yasraena/soa_Foundling-Yasraena_banters.d~
+END ELSE BEGIN
+    PRINT @458 /* L#FOUB.dlg and/or BYASRAEN.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or BYASRAEN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Yvette SoA Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ AND FILE_EXISTS_IN_GAME ~YxYveB.dlg~
+THEN BEGIN
+    PRINT @459 /* Adding SoA banters between Foundling and Yvette... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Yvette...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Foundling-Yvette/soa_Foundling-Yvette_banters.d~
+END ELSE BEGIN
+    PRINT @460 /* L#FOUB.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOUB.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Petsy - Nephele SoA Material */ // 3 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ AND FILE_EXISTS_IN_GAME ~BLK#NEP.dlg~
+THEN BEGIN
+    PRINT @461 /* Adding SoA banters between Petsy and Nephele... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Petsy and Nephele...~
+    COMPILE ~crossmodbg2/soa/banters/soa_Petsy-Nephele/soa_Petsy-Nephele_banters.d~
+END ELSE BEGIN
+    PRINT @462 /* L3PetsyB.dlg and/or BLK#NEP.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L3PetsyB.dlg and/or BLK#NEP.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Lava's Quayle - KulyokTiax SoA Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~1xQuayB.dlg~ AND FILE_EXISTS_IN_GAME ~BO#TIAX.dlg~
+THEN BEGIN
+    PRINT @463 /* Adding SoA banters between Lava's Quayle and KulyokTiax... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Quayle and KulyokTiax...~
+    COMPILE ~crossmodbg2/soa/banters/soa_lavaquayle-kulyoktiax/soa_lavaquayle-kulyoktiax_banters.d~
+END ELSE BEGIN
+    PRINT @464 /* 1xQuayB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xQuayB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* YoshimoRomance - HaerdalisRomance SoA Material */ // 2 banters
+ACTION_IF MOD_IS_INSTALLED ~YOSHIMOROMANCE/YOSHIMOROMANCE.TP2~ ~0~ AND MOD_IS_INSTALLED ~HAERDALISROMANCE/HAERDALISROMANCE.TP2~ ~0~
+THEN BEGIN
+    PRINT @465 /* Adding SoA banters between YoshimoRomance and HaerdalisRomance... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between YoshimoRomance and HaerdalisRomance...~
+    COMPILE ~crossmodbg2/soa/banters/soa_YoshimoRomance-HaerdalisRomance/soa_YoshimoRomance-HaerdalisRomance_banters.d~
+END ELSE BEGIN
+    PRINT @466 /* YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 and/or HAERDALISROMANCE/HAERDALISROMANCE.TP2 not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 and/or HAERDALISROMANCE/HAERDALISROMANCE.TP2 not detected. Skipping these particular SoA banters.~
+END
+
+/* YoshimoRomance - KulyokXan SoA Material */  // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#XAN.dlg~ AND MOD_IS_INSTALLED ~YOSHIMOROMANCE/YOSHIMOROMANCE.TP2~ ~0~ 
+THEN BEGIN
+    PRINT @467 /* Adding SoA banters between YoshimoRomance and KulyokXan... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between YoshimoRomance and KulyokXan...~
+    COMPILE ~crossmodbg2/soa/banters/soa_YoshimoRomance-KulyokXan/soa_YoshimoRomance-KulyokXan_banters.d~
+END ELSE BEGIN
+    PRINT @468 /* BO#XAN.dlg and/or YOSHIMOROMANCE/YOSHIMOROMANCE.TP2 not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BYOSHIM.dlg and/or BO#XAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* LavaSkie - KulyokXan SoA Material */  // 4 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSkieB.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN.dlg~
+THEN BEGIN
+    PRINT @469 /* Adding SoA banters between LavaSkie and KulyokXan... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between LavaSkie and KulyokXan...~
+    COMPILE ~crossmodbg2/soa/banters/soa_LavaSkie-KulyokXan/soa_LavaSkie-KulyokXan_banters.d~
+END ELSE BEGIN
+    PRINT @470 /* 1xSkieB.dlg and/or BO#XAN.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSkieB.dlg and/or BO#XAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* LavaSkie - Yasraena SoA Material */  // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSkieB.dlg~ AND FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~
+THEN BEGIN
+    PRINT @471 /* Adding SoA banters between LavaSkie and Yasraena... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between LavaSkie and Yasraena...~
+    COMPILE ~crossmodbg2/soa/banters/soa_LavaSkie-Yasraena/soa_LavaSkie-Yasraena_banters.d~
+END ELSE BEGIN
+    PRINT @472 /* 1xSkieB.dlg and/or BYASRAEN.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSkieB.dlg and/or BYASRAEN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Foundling - Aran Whitehand SoA Material */  // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~l#foub.dlg~ AND FILE_EXISTS_IN_GAME ~c-aranb.dlg~
+THEN BEGIN
+    PRINT @473 /* Adding SoA banters between Foundling and Aran Whitehand... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Foundling and Aran Whitehand...~
+    COMPILE ~crossmodbg2/soa/banters/soa_foundling-aranw/soa_foundling-aranw_banters.d~
+END ELSE BEGIN
+    PRINT @474 /* l#foub.dlg and/or c-aranb.dlg not detected. Skipping these particular SoA banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#foub.dlg and/or c-aranb.dlg not detected. Skipping these particular SoA banters.~
+END
+
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
 
@@ -2128,6 +2387,183 @@ END ELSE BEGIN
 	PRINT @347 /* rh#ad25.dlg and/or lk#ni25.dlg not detected. Skipping these particular ToB banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~rh#ad25.dlg and/or lk#ni25.dlg not detected. Skipping these particular ToB banters.~
 END
+
+/* Fade - Skie ToB Material */ //1 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~BE3FAD25.dlg~ AND FILE_EXISTS_IN_GAME ~1xSki25B.dlg~
+THEN BEGIN
+    PRINT @476 /* Adding ToB banters between Fade and Skie... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Fade and Skie...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Fade-lavaSkie/tob_fade-lavaskie_banters.d~
+END ELSE BEGIN
+    PRINT @477 /* BE3FAD25.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BE3FAD25.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Fade ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~BE3FAD25.dlg~
+THEN BEGIN
+    PRINT @478 /* Adding ToB banters between Foundling and Fade... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Fade...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-Fade/tob_Foundling-Fade_banters.d~
+END ELSE BEGIN
+    PRINT @479 /* ~L#Fou25B.dlg and/or BE3FAD25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or BE3FAD25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Faren ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~bfhf25.dlg~
+THEN BEGIN
+    PRINT @480 /* Adding ToB banters between Foundling and Faren... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Faren...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-Faren/tob_Foundling-Faren_banters.d~
+END ELSE BEGIN
+    PRINT @481 /* ~L#Fou25B.dlg and/or bfhf25.dlg not detected. Skipping these particular ToB banters.~ */
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or bfhf25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - KulokCoran ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#COR25.dlg~
+THEN BEGIN
+    PRINT @482 /* Adding ToB banters between Foundling and KulokCoran... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and KulokCoran...~
+    COMPILE ~crossmodbg2/tob/banters/tob_foundling-kulyokcoran/tob_foundling-kulyokcoran_banters.d~
+END ELSE BEGIN
+    PRINT @483 /* L#Fou25B.dlg and/or BO#COR25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or BO#COR25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - KulyokTiax ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#Tia25.dlg~
+THEN BEGIN
+    PRINT @484 /* Adding ToB banters between Foundling and KulyokTiax... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and KulyokTiax...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-KulyokTiax/tob_Foundling-KulyokTiax_banters.d~
+END ELSE BEGIN
+    PRINT @485 /* L#Fou25B.dlg and/or BO#Tia25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or BO#Tia25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - KulyokXan ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN25.dlg~
+THEN BEGIN
+    PRINT @486 /* Adding ToB banters between Foundling and KulyokXan... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and KulyokXan...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-KulyokXan/tob_Foundling-KulyokXan_banters.d~
+END ELSE BEGIN
+    PRINT @487 /* L#Fou25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Lava del' Vortel's Skie ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~1xSki25B.dlg~
+THEN BEGIN
+    PRINT @488 /* Adding ToB banters between Foundling and Lava del Vortel's Skie... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Lava del Vortel's Skie...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-LavaSkie/tob_foundling-lavaskie_banters.d~
+END ELSE BEGIN
+    PRINT @489 /* ~L#Fou25B.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~ */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Nathaniel ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~bfhn25.dlg~
+THEN BEGIN
+    PRINT @490 /* Adding ToB banters between Foundling and Nathaniel... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Nathaniel...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-Nathaniel/tob_Foundling-Nathaniel_banters.d~
+END ELSE BEGIN
+    PRINT @491 /* L#Fou25B.dlg and/or bfhn25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or bfhn25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Isra ToB Material */ // 1 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOU25B.dlg~ AND FILE_EXISTS_IN_GAME ~brh#is25.dlg~
+THEN BEGIN
+    PRINT @492 /* Adding ToB banters between Foundling and Isra... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Foundling and Isra...~
+    COMPILE ~crossmodbg2/ToB/banters/ToB_Foundling-Isra/ToB_Foundling-Isra_banters.d~
+END ELSE BEGIN
+    PRINT @493 /* L#FOU25B.dlg and/or brh#is25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOU25B.dlg and/or brh#is25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Yasraena ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FOU25B.dlg~ AND FILE_EXISTS_IN_GAME ~BYASRA25.dlg~
+THEN BEGIN
+    PRINT @494 /* Adding ToB banters between Foundling and Yasraena... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Foundling and Yasraena...~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-Yasraena/tob_Foundling-Yasraena_banters.d~
+END ELSE BEGIN
+    PRINT @495 /* L#FOU25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOU25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Foundling - Yvette ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~L#Fou25B.dlg~ AND FILE_EXISTS_IN_GAME ~YxYv25B.dlg~
+THEN BEGIN
+    PRINT @496 /* Adding ToB banters between Foundling and Yvette... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Yvette... ~
+    COMPILE ~crossmodbg2/tob/banters/tob_Foundling-Yvette/tob_Foundling-Yvette_banters.d~
+END ELSE BEGIN
+    PRINT @497 /* ~L#Fou25B.dlg and/or YxYv25B.dlg not detected. Skipping these particular ToB banters.~ */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#Fou25B.dlg and/or YxYv25B.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Lava del Vortel's Quayle - KulyokTiax ToB Material */ // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~1xQU25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#Tia25.dlg~
+THEN BEGIN
+    PRINT @498 /* Adding ToB banters between Lava del Vortel's Quayle and KulyokTiax... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava del Vortel's Quayle and KulyokTiax...~
+    COMPILE ~crossmodbg2/tob/banters/tob_lavaquayle-kulyoktiax/tob_lavaquayle-kulyoktiax_banters.d~
+END ELSE BEGIN
+    PRINT @499 /* c~1xQU25B.dlg and/or BO#Tia25.dlg not detected. Skipping these particular ToB banters.~ */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~1xQU25B.dlg and/or BO#Tia25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* LavaSkie - KulyokXan ToB Material */  // 2 banters
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN25.dlg~
+THEN BEGIN
+    PRINT @500 /* Adding ToB banters between LavaSkie and KulyokXan... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and KulyokXan...~
+    COMPILE ~crossmodbg2/ToB/banters/tob_LavaSkie-KulyokXan/tob_LavaSkie-KulyokXan_banters.d~
+END ELSE BEGIN
+    PRINT @501 /* 1xSki25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* LavaSkie - Yasraena ToB Material */  // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~BYASRA25.dlg~
+THEN BEGIN
+    PRINT @502 /* Adding ToB banters between LavaSkie and Yasraena... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and Yasraena...~
+    COMPILE ~crossmodbg2/tob/banters/tob_LavaSkie-Yasraena/tob_LavaSkie-Yasraena_banters.d~
+END ELSE BEGIN
+    PRINT @503 /* 1xSki25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. ~
+END
+
+/* LavaSkie - Petsy ToB Material */  // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~L3Pet25B.dlg~
+THEN BEGIN
+    PRINT @504 /* Adding ToB banters between LavaSkie and Petsy... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and Petsy... ~
+    COMPILE ~crossmodbg2/tob/banters/tob_lavaskie-petsy/tob_lavaskie-petsy_banters.d~
+END ELSE BEGIN
+    PRINT @505 /* 1xSki25B.dlg and/or L3Pet25B.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or L3Pet25B.dlg not detected. Skipping these particular ToB banters.~ 
+END
+
+/* LavaSkie - Arath ToB Material */  // 1 banter
+ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~BLK#AR25.dlg~
+THEN BEGIN
+    PRINT @506 /* Adding ToB banters between LavaSkie and Arath... */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and Arath...~
+    COMPILE ~crossmodbg2/tob/banters/tob_lavaskie-arath/tob_lavaskie-arath_banters.d~
+END ELSE BEGIN
+    PRINT @507 /* 1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters. */ 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters.~
+END
+
 
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
