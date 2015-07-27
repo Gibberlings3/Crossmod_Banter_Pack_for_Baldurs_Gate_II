@@ -635,6 +635,13 @@
     </ul>
   </div>
 
+   <h2>Troubleshooting Information</h2>
+
+  <div class="section">
+    <p> <a href="http://gibberlings3.net/forums/index.php?showtopic=27452">This forum thread </a> should help with troubleshopoting. The shgort story - on some batch installers and tools made for massive installs with many many mods, the .debug file created for a mod (NOT the weidu.log) will get overwritten by whatever was installed individually. So someone installs normally, no worries. But if they install from the command line component 0, then component 1, the SETUP-MYMOD.DEBUG file will only reflect what happened in component 1's install...  </p>
+	<p> To hget around this, and to porovide a more readable and targeted debug by component of what made it into your game, what didn't, and a clue or two as to why, we have a custom debug file that is built in the folder "crossmodbg2". The files crossmod_0_debug.log, crossmod_1_debug.log, and crossmod_2_debug.log are simple .txt files that have a log of what installed and a line telling you what it could not find and therefore skipped. These will "float" with each component, so if the component is installed, it will be there in your crossmodbg2 folder.</p> 
+  </div>
+  
   <h2>Contact Information</h2>
 
   <div class="section">
