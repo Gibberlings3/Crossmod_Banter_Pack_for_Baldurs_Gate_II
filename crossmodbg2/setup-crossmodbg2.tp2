@@ -19,7 +19,7 @@ ALWAYS
 			INT_VAR
 				infer_charset = 1
 			STR_VAR
-				tra_path = EVAL ~crossmodbg2\tra\%LANGUAGE%~
+				tra_path = EVAL ~crossmodbg2/tra~
 				noconvert_array = fl#noconvert
 				reload_array = fl#reload
 		END
@@ -2392,11 +2392,11 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~BE3FAD25.dlg~ AND FILE_EXISTS_IN_GAME ~1xSki25B.dlg~
 THEN BEGIN
     PRINT @476 /* Adding ToB banters between Fade and Skie... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Fade and Skie...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fade and Skie...~
     COMPILE ~crossmodbg2/tob/banters/tob_Fade-lavaSkie/tob_fade-lavaskie_banters.d~
 END ELSE BEGIN
     PRINT @477 /* BE3FAD25.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BE3FAD25.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~BE3FAD25.dlg and/or 1xSki25B.dlg not detected. Skipping these particular ToB banters.~
 END
 
 /* Foundling - Fade ToB Material */ // 1 banter
@@ -2480,22 +2480,22 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~L#FOU25B.dlg~ AND FILE_EXISTS_IN_GAME ~brh#is25.dlg~
 THEN BEGIN
     PRINT @492 /* Adding ToB banters between Foundling and Isra... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Foundling and Isra...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Isra...~
     COMPILE ~crossmodbg2/ToB/banters/ToB_Foundling-Isra/ToB_Foundling-Isra_banters.d~
 END ELSE BEGIN
     PRINT @493 /* L#FOU25B.dlg and/or brh#is25.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOU25B.dlg and/or brh#is25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FOU25B.dlg and/or brh#is25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 /* Foundling - Yasraena ToB Material */ // 1 banter
 ACTION_IF FILE_EXISTS_IN_GAME ~L#FOU25B.dlg~ AND FILE_EXISTS_IN_GAME ~BYASRA25.dlg~
 THEN BEGIN
     PRINT @494 /* Adding ToB banters between Foundling and Yasraena... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Foundling and Yasraena...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Foundling and Yasraena...~
     COMPILE ~crossmodbg2/tob/banters/tob_Foundling-Yasraena/tob_Foundling-Yasraena_banters.d~
 END ELSE BEGIN
     PRINT @495 /* L#FOU25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FOU25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FOU25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 /* Foundling - Yvette ToB Material */ // 1 banter
@@ -2524,44 +2524,44 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN25.dlg~
 THEN BEGIN
     PRINT @500 /* Adding ToB banters between LavaSkie and KulyokXan... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and KulyokXan...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between LavaSkie and KulyokXan...~
     COMPILE ~crossmodbg2/ToB/banters/tob_LavaSkie-KulyokXan/tob_LavaSkie-KulyokXan_banters.d~
 END ELSE BEGIN
     PRINT @501 /* 1xSki25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~1xSki25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 /* LavaSkie - Yasraena ToB Material */  // 1 banter
 ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~BYASRA25.dlg~
 THEN BEGIN
     PRINT @502 /* Adding ToB banters between LavaSkie and Yasraena... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and Yasraena...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between LavaSkie and Yasraena...~
     COMPILE ~crossmodbg2/tob/banters/tob_LavaSkie-Yasraena/tob_LavaSkie-Yasraena_banters.d~
 END ELSE BEGIN
     PRINT @503 /* 1xSki25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. ~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~1xSki25B.dlg and/or BYASRA25.dlg not detected. Skipping these particular ToB banters. ~
 END
 
 /* LavaSkie - Petsy ToB Material */  // 1 banter
 ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~L3Pet25B.dlg~
 THEN BEGIN
     PRINT @504 /* Adding ToB banters between LavaSkie and Petsy... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and Petsy... ~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between LavaSkie and Petsy... ~
     COMPILE ~crossmodbg2/tob/banters/tob_lavaskie-petsy/tob_lavaskie-petsy_banters.d~
 END ELSE BEGIN
     PRINT @505 /* 1xSki25B.dlg and/or L3Pet25B.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or L3Pet25B.dlg not detected. Skipping these particular ToB banters.~ 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~1xSki25B.dlg and/or L3Pet25B.dlg not detected. Skipping these particular ToB banters.~ 
 END
 
 /* LavaSkie - Arath ToB Material */  // 1 banter
 ACTION_IF FILE_EXISTS_IN_GAME ~1xSki25B.dlg~ AND FILE_EXISTS_IN_GAME ~BLK#AR25.dlg~
 THEN BEGIN
     PRINT @506 /* Adding ToB banters between LavaSkie and Arath... */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between LavaSkie and Arath...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between LavaSkie and Arath...~
     COMPILE ~crossmodbg2/tob/banters/tob_lavaskie-arath/tob_lavaskie-arath_banters.d~
 END ELSE BEGIN
     PRINT @507 /* 1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters. */ 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 
