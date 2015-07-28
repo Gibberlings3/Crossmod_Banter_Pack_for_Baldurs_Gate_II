@@ -1,0 +1,29 @@
+/* Morning cooking banter */ 
+IF 
+    InParty("b!gavin2") 
+    InParty(Myself) 
+    PartyRested()    
+    Global("c-arangavingriddle","GLOBAL",0) 
+    InMyArea("b!gavin2") 
+    !StateCheck("b!gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !Detect([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        SetGlobal("c-arangavingriddle","GLOBAL",1) 
+END 
+
+IF 
+    InParty("b!gavin2") 
+    InParty(Myself) 
+    Global("c-arangavingriddle","GLOBAL",1) 
+    InMyArea("b!gavin2") 
+    !StateCheck("b!gavin2",CD_STATE_NOTVALID) 
+    !StateCheck(Myself,CD_STATE_NOTVALID) 
+    CombatCounter(0) 
+    !Detect([ENEMY]) 
+THEN 
+    RESPONSE #100 
+        StartDialogueNoSet("b!gavin2")  
+END 

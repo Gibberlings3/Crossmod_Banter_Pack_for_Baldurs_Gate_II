@@ -1,0 +1,34 @@
+// xzar
+
+IF
+	Global("G#XB.AdrianXzarFightXzar","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("G#XB.AdrianXzarFightXzar","GLOBAL",2)
+    SetGlobal("XZARInParty","LOCALS",0)
+    LeaveParty()
+    Enemy()
+END
+IF
+	Global("G#XB.AdrianXzarFightXzar","GLOBAL",2)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightXzar","GLOBAL",3)
+	Spell(NearestEnemyOf(Myself),WIZARD_CONFUSION)
+END
+
+IF
+	Global("G#XB.AdrianXzarFightXzar","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightXzar","GLOBAL",4)
+    Spell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+	Global("G#XB.AdrianXzarFightXzar","GLOBAL",4)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianXzarFightXzar","GLOBAL",5)
+	Attack(NearestEnemyOf(Myself))
+END

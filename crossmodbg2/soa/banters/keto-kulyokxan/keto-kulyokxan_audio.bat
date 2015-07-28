@@ -1,9 +1,0 @@
-@echo off
-cd override
-oggdec o#xan903.ogg
-oggdec o#xan904.ogg
-oggdec o#xan905.ogg
-del o#xan903.ogg
-del o#xan904.ogg
-del o#xan905.ogg
-del oggdec.exe

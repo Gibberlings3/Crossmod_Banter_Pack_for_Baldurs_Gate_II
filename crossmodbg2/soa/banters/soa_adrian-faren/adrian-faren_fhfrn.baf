@@ -1,0 +1,101 @@
+IF
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	OR(2)
+		Global("rh#AdrianZhent","GLOBAL",1)
+		GlobalGT("rh#SoargylAftermath","GLOBAL",1)
+	OR(2)
+		GlobalGT("FHFarenFriendTalk","GLOBAL",6)
+		GlobalGT("FHFarenLoveTalk","GLOBAL",6)
+	Global("G#XB.AdrianFarenBanter4","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianFarenBanter4","GLOBAL",1)
+	RealSetGlobalTimer("rh#AdrianFarenTalkTimer","GLOBAL",300)
+END
+
+IF
+	RealGlobalTimerExpired("rh#AdrianFarenTalkTimer","GLOBAL")
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	See("rh#Adrian")
+	!ActuallyInCombat()
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("FHFRN",CD_STATE_NOTVALID)
+	Global("G#XB.AdrianFarenBanter4","GLOBAL",1)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianFarenBanter4","GLOBAL",2)
+END
+
+IF
+	RealGlobalTimerExpired("rh#AdrianFarenTalkTimer","GLOBAL")
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	See("rh#Adrian")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("FHFRN",CD_STATE_NOTVALID)
+	Global("G#XB.AdrianFarenBanter4","GLOBAL",2)
+ THEN
+RESPONSE #100
+	StartDialogueNoSet("rh#Adrian")
+END
+
+// keep it from triggering randomly if you pick up Faren later or some such
+
+IF
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	Global("rh#AdrianZhent","GLOBAL",1)
+	GlobalGT("rh#SoargylAftermath","GLOBAL",1)
+	!GlobalGT("FHFarenFriendTalk","GLOBAL",6)
+	!GlobalGT("FHFarenLoveTalk","GLOBAL",6)
+	Global("G#XB.AdrianFarenBanter4","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianFarenBanter4","GLOBAL",3)
+END
+
+// romance conflict
+
+IF
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	Global("FHFarenRomanceActive","GLOBAL",1)
+	Global("rh#AdrianRomanceActive","GLOBAL",1)
+	GlobalGT("rh#AdrianTalks","GLOBAL",22)
+	GlobalGT("FHFarenLoveTalk","GLOBAL",10)
+	Global("G#XB.AdrianFarenConflict","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianFarenConflict","GLOBAL",1)
+	RealSetGlobalTimer("rh#AdrianFarenConflictTimer","GLOBAL",200)
+END
+
+IF
+	RealGlobalTimerExpired("rh#AdrianFarenConflictTimer","GLOBAL")
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	See("rh#Adrian")
+	!ActuallyInCombat()
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("FHFRN",CD_STATE_NOTVALID)
+	Global("G#XB.AdrianFarenConflict","GLOBAL",1)
+THEN
+RESPONSE #100
+	SetGlobal("G#XB.AdrianFarenConflict","GLOBAL",2)
+END
+
+IF
+	RealGlobalTimerExpired("rh#AdrianFarenConflictTimer","GLOBAL")
+	InParty("rh#Adrian")
+	InParty("FHFRN")
+	See("rh#Adrian")
+	!StateCheck("rh#Adrian",CD_STATE_NOTVALID)
+	!StateCheck("FHFRN",CD_STATE_NOTVALID)
+	Global("G#XB.AdrianFarenConflict","GLOBAL",2)
+ THEN
+RESPONSE #100
+	StartDialogueNoSet("Player1")
+END
+
