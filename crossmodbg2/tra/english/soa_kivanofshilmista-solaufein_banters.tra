@@ -8,7 +8,7 @@
 @7    = ~No, but I believe that you are quite industrious in keeping yourself alive with your magic and your sword, Weapon Master.~
 @8    = ~And you begrudge a drow his survival?~
 @9    = ~I serve Shevarash, Solaufein.  I wish to believe that you are as different from your kin as you profess, but I am yet unsure.~
-@10   = ~I envy you, Kivan, I envy you even that very plight and torment of yours that makes you a subject of other's surfacers' pity.  All of you surfacers wear your hearts on your sleeve, even the most reclusive ones, like you.  Your every action betrays your passions.  And you think nothing of it.  Yet, it's a precious right.~
+@10   = ~I envy you, Kivan, I envy you even that very plight and torment of yours that makes you a subject of other surfacers' pity.  All of you surfacers wear your hearts on your sleeve, even the most reclusive ones, like you.  Your every action betrays your passions.  And you think nothing of it.  Yet, it's a precious right.~
 @11   = ~Is it not the same among drow?  I saw much demonstrations of feelings during our stay with your kin.  Hatred... mostly.~
 @12   = ~Ah, but even a hook horror roars when he falls on its victim and in spider's eyes you can see the bloodlust.~
 @13   = ~When Phaere spoke your name -~
@@ -38,13 +38,13 @@
 @37   = ~Perhaps, if I said that you were handsomer as a drow it would reconcile you with the memory of your transformation?~
 @38   = ~Hardly.~
 @39   = ~Here, drink this.~
-@40   = ~One part of the surface culture that I think my people where wise to discard is this herbal brew obsession of your kin.  Doubtlessly this potion's taste is a worthwhile rival to its horrendous appearance and aroma.  What is it and why do you want me to imbibe the foul liquid?~
+@40   = ~One part of the surface culture that I think my people were wise to discard is this herbal brew obsession of your kin.  Doubtlessly this potion's taste is a worthwhile rival to its horrendous appearance and aroma.  What is it and why do you want me to imbibe the foul liquid?~
 @41   = ~It is willowbark tea and it will make you sleep.  You are becoming jumpy.~
 @42   = ~My nightmares are coming to haunt me in flesh, my friend, so I'd rather not sleep deeply.  Who knows what I might conjure another time?~
 @43   = ~Act as a true poet – talk while you drink.~
 @44   = ~(He takes a cautious sip.)  I would rather reserve the rest for the next time that Lolth sends her minions after me.  A whiff of it would discourage even a Revenge Spider.~
 @45   = ~We have better means than that to ward off Lolth's minions, Solaufein.  And let us hope that there won't be another time.~
-@46   = ~The rebellious drow must be weeded out and all who impugn the faith must perish.  Lolth never forgets offences.  She dwells on them and invents ever crueler ways to exact her revenge on the deviants. T he Spider Queen does not let go...  Kiaransalee might rebel against Lolth's power, but vengeance is as much an aspect of the Spider Queen as that of the Vengeful Banshee herself.  (Quietly.)  Or Sheverash.~
+@46   = ~The rebellious drow must be weeded out and all who impugn the faith must perish.  Lolth never forgets offences.  She dwells on them and invents ever crueler ways to exact her revenge on the deviants. The Spider Queen does not let go...  Kiaransalee might rebel against Lolth's power, but vengeance is as much an aspect of the Spider Queen as that of the Vengeful Banshee herself.  (Quietly.)  Or Shevarash.~
 @47   = ~I would not have a drow lecture me on mercy.~
 @48   = ~As you wish.  And, Kivan, thank you for the drink: I did not enjoy it, but I do not doubt that it will help me.~
 @49   = ~If you must lecture me, take a place in line, Solaufein.  I am growing weary of people jumping ahead; it was <CHARNAME>'s turn to<DAYNIGHT> to drop subtle hints about the error of my ways.~
@@ -62,7 +62,7 @@
 @61   = ~I find the night and day's change captivating, as well as the surface custom to sleep by night.  Yet <CHARNAME> presses on and on, unaffected by the sunsets and sunrises.~
 @62   = ~Sleeping during the night is rather a human's custom than surfacers'.  The Elves walk as freely by night as by day.~
 @63   = ~(He yawns.)  Right now I am inclined to believe that in some ways the Humans are wiser than the Elves.~
-@64   = ~Do not you blaspheme your own faith, Eilistraee's worshiper?  Is not there a connection between the nighttime and the Dark Maiden?  And you want to sleep through it?~
+@64   = ~Do you not blaspheme your own faith, Eilistraee's worshiper?  Is not there a connection between the nighttime and the Dark Maiden?  And you want to sleep through it?~
 @65   = ~The time is right for the Eilistraee's Circle of Song indeed - we are outdoors, in a wooded area, on a moonlit night – but I'd rather enjoy the rituals in her honor at my ease at a campsite, than while walking ready to do battle.~
 @66   = ~I have heard that Eilistraee's avatars sometimes come disguised at the campfires of the wayfarers in the woodlands by night, to test their kindness.~
 @67   = ~Perhaps that is why <CHARNAME> avoids stopping for the night so studiously.~
@@ -71,7 +71,7 @@
 @70   = ~Humans build solidly and sternly, that's true.  But there is a certain solemn beauty to it.  It is when they try to imitate your kin, when it turns out false.~
 @71   = ~Elves were the first ones to work stone and metal.  What could humans do, but imitate?~
 @72   = ~The same as anyone does in the search of genuine inspiration: look inward.~
-@73   = ~When one truly looks inward he sees the same thing than when he looks outward – nature itself.~
+@73   = ~When one truly looks inward he sees the same thing than as he looks outward – nature itself.~
 @74   = ~You are always trying to make things simple, Kivan. Some would say too simple.~
 @75   = ~If I have to lose my ability to levitate in the surface world, I wish that I had acquired something in its stead, such as fairy's dreams, the reverie.~
 @76   = ~Your life was not enough for you to consider the loss of levitation a fair bargain?~

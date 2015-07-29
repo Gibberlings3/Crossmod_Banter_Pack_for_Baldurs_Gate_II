@@ -1,10 +1,10 @@
 @0    = ~Ajantis, what say you about a game of ball?~
-@1    = ~A game of Ball? Here? Now? Coran, you should know better than to propose a game of Ball to a paldin of Helm on duty.~
+@1    = ~A game of Ball? Here? Now? Coran, you should know better than to propose a game of Ball to a Paladin of Helm on duty.~
 @2    = ~That's a no, then?~
 @3    = ~That's a no, indeed.~
 @4    = ~But even a paladin needs a time out. You were young once, don't you remember the games and playfulness? Don't you miss it?~
 @5    = ~I was very young when I heard the call of my god. No, I do not miss the games from my childhood. Serving my god Helm gives me more joy than any children's game could.~
-@6    = ~(sigh) That answer was more than predictable. Allright, look at it like this: You could see it as a training. Catching the ball improves your reflexes - surely your mentor did teach you this.~
+@6    = ~(sigh) That answer was more than predictable. All right, look at it like this: You could see it as a training. Catching the ball improves your reflexes - surely your mentor did teach you this.~
 @7    = ~Hm.. Under these premises, if <CHARNAME> allows *and* no danger is to be expected...~
 @8    = ~Wonderful! Let me know when you are ready.~
 @9    = ~What say you about another game of ball? I want a rematch.~
@@ -20,9 +20,9 @@
 @19   = ~- wink at a serving wench or two -~
 @20   = ~Absolutely not.~
 @21   = ~(sigh) Spoilsport. Very well, but do not complain again if our singing wakes you up.~
-@22   = ~Coran, singing I can tolerate, even at three hours in the morning. But horrible screeching that came out the other night was an offence to all minstrels everywhere.~
-@23   = ~You wound me, comrade. Those were two brethren of your Order, heading for Matzica in the morning!~
-@24   = ~...I pity the Matzican Prelate already.~
+@22   = ~Coran, singing I can tolerate, even at three hours in the morning. But the horrible screeching that came out the other night was an offence to all minstrels everywhere.~
+@23   = ~You wound me, comrade. Those were two brethren of your Order, heading for Maztica in the morning!~
+@24   = ~...I pity the Maztican Prelate already.~
 @25   = ~I noticed a hunting knife in your hands the other day. Beautiful silverwork. Cormanthor, I take it?~
 @26   = ~The Dalelands. It is... it was a gift from a comrade in the Order.~
 @27   = ~I gave my younger brother a hunting knife once. He lost it the very next day. But this item must be very dear to you: you polish it nearly every time you rest. If I may ask, Ajantis, where is your friend now?~

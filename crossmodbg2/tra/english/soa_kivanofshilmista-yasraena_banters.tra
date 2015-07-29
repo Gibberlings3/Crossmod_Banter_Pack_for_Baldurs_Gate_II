@@ -6,10 +6,10 @@
 @5    = ~I know it.  There is little evil you could say of the drow that I would not agree was deserved.  But my master, Divalir, taught me.  He showed me that there was another way to live.~
 @6    = ~And he lived through the experience of sheltering a drow himself –– or so you say.  The man was either fearless or a madman to do it.~
 @7    = ~There is much to be said for such folly.~
-@8    = ~You think that Divalir did not survive his sheltering of me, do not you?~
+@8    = ~You think that Divalir did not survive his sheltering of me, do you not?~
 @9    = ~I think it is possible that you’ve lied.~
 @10   = ~I cannot yet prove to you that he lives.  We must rescue him before that can be done.  Yet surely the fact that I am in <CHARNAME>'s company will lend weight to my words.  Why else would I be here, on this roofless world, searching for Irenicus?~
-@11   = ~That I do not know, but as long as I hear no ill about you, and there is no evidence of treachery I will not move against you.  But I will be watching, as Sheverash wills me to.~
+@11   = ~That I do not know, but as long as I hear no ill about you, and there is no evidence of treachery I will not move against you.  But I will be watching, as Shevarash wills me to.~
 @12   = ~Watch me all you wish.  I have nothing to hide.  Just help me to save Divalir.~
 @13   = ~The way you speak of this man...  I believe that you wish desperately to save him.  I know the feeling and I cannot mistake it for anything.~
 @14   = ~From what <CHARNAME> had told me of you, you would know.~
@@ -25,7 +25,7 @@
 @24   = ~Do not say such a thing aloud!~
 @25   = ~Why should I whisper?~
 @26   = ~If his captors ever learned that he was not a drow--his torments would never end.~
-@27   = ~An elf that lives amongst the drow is worst than a drow.  How can anyone willingly betray his own kin and--~
+@27   = ~An elf that lives amongst the drow is worse than a drow.  How can anyone willingly betray his own kin and--~
 @28   = ~He only wished to know his enemies!  And... and he found one who would not be his enemy: myself.~
 @29   = ~Drow, you are first telling me that you were a girl placed in the male academy in secret and secondly that your mentor was an elven spy disguised as a drow.  The tales like that would not deceive an infant!  What is your game?  Is it <CHARNAME> you are after?~
 @30   = ~I am telling the truth!~
@@ -40,7 +40,7 @@
 @39   = ~(Extends his hand to her.)  I do, Yasraena.~
 @40   = ~(She takes his hand.)  It is settled then.~
 @41   = ~You do not call me a 'drow' any longer with that distasteful twist to your mouth.~
-@42   = ~Because you are not a drow, Yasraena.  You are an Ilythiri... a Mori’quendi... not a drow.~
+@42   = ~Because you are not a drow, Yasraena.  You are an Ilythiiri... a Mori’quendi... not a drow.~
 @43   = ~You honor me, Kivan, calling me by my people’s ancient names.  The name we bore with pride before retreating to the Underdark.~
 @44   = ~The honor is mine.~
 @45   = ~Does that mean that your vigils over me are over?  I felt safer than usual, for I knew that you would not cede the right to have my head to anyone.~
@@ -66,7 +66,7 @@
 @65   = ~Nothing escapes you, elf.  Once, after I had revealed my gender and true appearance to Divalir I thought that too often he saw me as a boy.  I arranged for a secret meeting and wore a woman’s dress and a diadem of precious gems.  He complimented me on my looks but took off my coronet.  'There is enough cold metal in the caverns under the mountains', he said, 'I’d rather have you crowned with a wreath of wild flowers.'~
 @66   = ~Then why just one flower?~
 @67   = ~It is impractical.  And I have no skill in such things.  (Yasraena hesitates.)  And--it is impractical.~
-@68   = ~Yasraena, if you help me gather some blooms and I will start one for you.~
+@68   = ~Yasraena, if you help me gather some blooms, I will start one for you.~
 @69   = ~You have such skills?  It will not fall apart?~
 @70   = ~I promise that it won’t.~
 @71   = ~(After watching Kivan braid the first few flowers together, Yasraena smiles.)  I see.  Let me try now.  That is quite clever.~
