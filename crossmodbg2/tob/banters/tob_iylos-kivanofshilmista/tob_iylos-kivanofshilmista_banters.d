@@ -18,11 +18,11 @@ DO ~SetGlobal("G#XB.IylosKivanToBBanter1","GLOBAL",1)~
 = @6 /* So, deduce for yourself if it is Shevarash's inclination, or 'inane' gossip. */
 == BLK#IYL @7 /* Then you think all Drow are evil, Kivan? Would you narrow your perception to that of your god, and wound your ability to comprehend that there is no such thing as undiluted evil, or irredeemable evil? */
 == BLK#IYL @8 /* If so - then you are a fool. */
-== BP#KIV25 IF ~OR(3) InParty("sola") InParty("Solafein") InParty("Yasraena")~ THEN @9 /* You are quick to call others foolish. Where I come from, they say it is a sign of a fool. No, not all drow are evil; I am not blind. And neither is Shevarash. */
-== BP#KIV25 IF ~!InParty("Solafein") !InParty("sola") !InParty("Yasraena")~ THEN @10 /* If I am a fool, you are a madman to defend those without mercy. */
-== BP#Kiv25 IF ~!InParty("Solaufein") !InParty("sola") !InParty("Yasraena")~ THEN @11 /* My Lord's pain is my pain, just like mine was his once when he awoke me. */
-== BLK#IYL IF ~OR(3) InParty("sola") InParty("Solafein") InParty("Yasraena")~ THEN @12 /* Then why do I see your eyes flash each time someone mentions the word Drow, or speaks in such? Do you have a history yourself, Kivan? */
-== BP#Kiv IF ~OR(3) InParty("sola") InParty("Solafein") InParty("Yasraena")~ THEN @13 /* No, but my Lord's pain is mine, just like mine was his once when he awoke me. */
+== BP#KIV25 IF ~OR(4) InParty("sola") InParty("solaufein")  InParty("c#solaufein") InParty("Yasraena")~ THEN @9 /* You are quick to call others foolish. Where I come from, they say it is a sign of a fool. No, not all drow are evil; I am not blind. And neither is Shevarash. */
+== BP#KIV25 IF ~!InParty("solaufein") !InParty("sola")  !InParty("c#solaufein") !InParty("Yasraena")~ THEN @10 /* If I am a fool, you are a madman to defend those without mercy. */
+== BP#Kiv25 IF ~!InParty("Solaufein") !InParty("sola")  !InParty("c#solaufein") !InParty("Yasraena")~ THEN @11 /* My Lord's pain is my pain, just like mine was his once when he awoke me. */
+== BLK#IYL IF ~OR(4) InParty("sola") InParty("solaufein")  InParty("c#solaufein") InParty("Yasraena")~ THEN @12 /* Then why do I see your eyes flash each time someone mentions the word Drow, or speaks in such? Do you have a history yourself, Kivan? */
+== BP#Kiv IF ~OR(4) InParty("sola") InParty("solaufein") InParty("c#solaufein") InParty("Yasraena")~ THEN @13 /* No, but my Lord's pain is mine, just like mine was his once when he awoke me. */
 == BLK#IYL @14 /* You have given me much to think upon, Elf. I will speak to you anon. (Why I defend the Drow, I know not... but there is something unnerving in that man's gaze.) */
 EXIT
 
