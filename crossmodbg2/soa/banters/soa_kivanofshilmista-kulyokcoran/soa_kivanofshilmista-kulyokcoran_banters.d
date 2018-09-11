@@ -51,7 +51,7 @@ See("P#Kivan")
 !StateCheck("O#Coran",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-GlobalLT("Chapter","GLOBAL",4)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
 Global("G#XB.CoranKivanBanter3","GLOBAL",0)~ THEN BO#CORAN CoranKivanBanter#3.1
 @18 /* Have you seen that mysterious enemy of <CHARNAME>'s? */
 DO ~SetGlobal("G#XB.CoranKivanBanter3","GLOBAL",1)~

@@ -7,7 +7,7 @@ See("rh#Isra2")
 !StateCheck("O#Coran",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-GlobalLT("Chapter","GLOBAL",7)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_7%)
 GlobalGT("rh#IsraWasInBGI","GLOBAL",0)
 Global("G#XB.IsraCoranSoABanter1","GLOBAL",0)~ THEN BO#CORAN IsraCoranSoABanter#1.1
 @0 /* And I am out of Elverquisst again. Just when an another old face shows by. But apologies, my lady: yours is a beautiful face, and when I say "old", by no means do I imply any wrinkles or anything of the sort. ...By Hanali, I'm digging my own grave here, am I? */

@@ -2,7 +2,7 @@ IF
 InParty("M#Amber")
 InParty("O#Xan")
 AreaCheck("AR0300")
-GlobalLT("Chapter","GLOBAL",4)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
 Global("G#XB.AmberXanBanter4","GLOBAL",0)
 THEN
 RESPONSE #100
@@ -12,7 +12,7 @@ END
 
 IF
 RealGlobalTimerExpired("G#XB.AmberXanTimer4","GLOBAL")
-GlobalLT("Chapter","GLOBAL",4)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
 InParty("M#Amber")
 InParty("O#Xan")
 AreaCheck("AR0300")

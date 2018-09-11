@@ -68,7 +68,7 @@ See("P#Kivan")
 !StateCheck("P#Kivan",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-OR(2) AreaType(FOREST) Global("Chapter","GLOBAL",7)
+OR(2) AreaType(FOREST) Global("Chapter","GLOBAL",%bg2_chapter_7%)
 Global("G#XB.AdrianKivanBanter3","GLOBAL",2)
 Global("G#XB.AdrianKivanBanter4","GLOBAL",0)~ THEN BRH#ADR AdrianKivanBanter#4.1
 @33 /* You look somewhat happier than usual, Kivan. */

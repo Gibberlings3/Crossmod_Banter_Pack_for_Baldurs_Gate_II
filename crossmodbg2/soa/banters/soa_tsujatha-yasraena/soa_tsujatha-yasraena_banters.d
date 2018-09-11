@@ -4,7 +4,7 @@ See("Yasraena")
 !StateCheck("Tsujath",CD_STATE_NOTVALID)
 !StateCheck("Yasraena",CD_STATE_NOTVALID)
 CombatCounter(0)
-GlobalLT("CHAPTER","GLOBAL",5)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_5%)
 Global("G#XB.TsuYasraeBanter1","GLOBAL",0)~ THEN BTSUJAT TsuYasraeBanter#1.1
 @0 /* Why did you flee your homeland? */
 DO ~SetGlobal("G#XB.TsuYasraeBanter1","GLOBAL",1)~

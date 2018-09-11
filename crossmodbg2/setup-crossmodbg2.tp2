@@ -1,5 +1,6 @@
 BACKUP ~crossmodbg2\backup~
-AUTHOR ~Grim Squeaker, K'aeloree, and Berelinde, maintained at www.gibberlings3.net~
+//AUTHOR ~Grim Squeaker, K'aeloree, and Berelinde, maintained at www.gibberlings3.net~
+SUPPORT ~http://www.gibberlings3.net/forums/index.php?showforum=55~
 
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
@@ -8,32 +9,45 @@ VERSION @0 /* <--- current version number from setup.tra here */
 
 README ~crossmodbg2/readme-crossmodbg2.html~
 
-
 ALWAYS
-	ACTION_IF GAME_IS ~bgee tutu bg1~ THEN BEGIN
-		PRINT @1 /* WARNING. THIS MOD IS FOR BG2 OR BGT. DO NOT INSTALL THIS MOD. */
-	END
-	ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-		PRINT @2 /* BG2:EE detected... */
-		LAF HANDLE_CHARSETS
-			INT_VAR
-				infer_charset = 1
-			STR_VAR
-				tra_path = EVAL ~crossmodbg2/tra~
-				noconvert_array = fl#noconvert
-				reload_array = fl#reload
-		END
-	END
-	ACTION_IF GAME_IS ~soa~ THEN BEGIN
-		PRINT @3 /* BGII:SoA detected... */
-	END
-	ACTION_IF GAME_IS ~tob~ THEN BEGIN
-		PRINT @4 /* BGII:ToB detected... */
-	END
-	ACTION_IF GAME_IS ~bgt~ THEN BEGIN
-		PRINT @5 /* BGT detected... */
-	END
+
+  ACTION_IF NOT VARIABLE_IS_SET bg2_chapter THEN BEGIN // check to make this happen only once per install
+  
+    ACTION_IF GAME_IS ~eet~ BEGIN
+      OUTER_SET bg2_chapter = 12
+    END ELSE BEGIN
+      OUTER_SET bg2_chapter = 0
+    END
+    OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+      OUTER_SET bg2_chapter = bg2_chapter + 1
+      OUTER_SPRINT name_source ~bg2_chapter_%i%~
+      OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+    END
+  
+    ACTION_IF GAME_IS ~bgee tutu bg1 totsc tutu_totsc~ THEN BEGIN
+      FAIL @1 /* WARNING. THIS MOD IS FOR BG2 OR BGT. DO NOT INSTALL THIS MOD. */
+    END
+    ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+      PRINT @2 /* BG2:EE detected... */
+      LAF HANDLE_CHARSETS INT_VAR  infer_charsets = 1 STR_VAR tra_path = EVAL ~crossmodbg2/tra~ noconvert_array = fl#noconvert reload_array = fl#reload END
+    END
+    ACTION_IF GAME_IS ~soa~ THEN BEGIN
+      PRINT @3 /* BGII:SoA detected... */
+    END
+    ACTION_IF GAME_IS ~tob~ THEN BEGIN
+      PRINT @4 /* BGII:ToB detected... */
+    END
+    ACTION_IF GAME_IS ~bgt~ THEN BEGIN
+      PRINT @5 /* BGT detected... */
+    END
+
+<<<<<<<< .../crossmodbg2-inlined/blank.log
+>>>>>>>>
+	
+  END    
+  
 END
+
 AUTO_TRA ~crossmodbg2/tra/%s~
 LANGUAGE ~English~ ~english~ ~crossmodbg2/tra/english/setup.tra~ 
 		
@@ -45,7 +59,7 @@ LANGUAGE ~English~ ~english~ ~crossmodbg2/tra/english/setup.tra~
 BEGIN @6 /* Crossmod Banter Pack for Shadows of Amn */
 REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~fw0100.are~ @7 /* You can't have BG1Tutu installed to install this component. */
 
-COPY ~crossmodbg2/media/blank.log~ ~crossmodbg2/crossmod_0_debug.log~
+COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_0_debug.log~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\// Crossmod Component 0 \\//\\//\\//\\~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\SoA Banters and Interjections \\//\\//~
@@ -249,7 +263,7 @@ THEN BEGIN
 	PRINT @26 /* Adding SoA banters between Amber and Kulyok's Xan... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Amber and Kulyok's Xan...~
 	COMPILE ~crossmodbg2/soa/banters/soa_Amber-kulyokxan/soa_Amber-kulyokxan_banters.d~
-	EXTEND_BOTTOM ~m#amber.bcs~ ~crossmodbg2/soa/banters/soa_Amber-kulyokxan/Amber-kulyokxan_M#Amber.baf~
+	EXTEND_BOTTOM ~m#amber.bcs~ ~crossmodbg2/soa/banters/soa_Amber-kulyokxan/Amber-kulyokxan_M#Amber.baf~ EVALUATE_BUFFER
 END ELSE BEGIN
 	PRINT @27 /* bm#amber.dlg and/or o#xan.dlg not detected. Skipping these particular SoA banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~bm#amber.dlg and/or o#xan.dlg not detected. Skipping these particular SoA banters.~
@@ -307,7 +321,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~k#aurenb.dlg~ AND FILE_EXISTS_IN_GAME ~bp#kiv.dlg
 THEN BEGIN
 	PRINT @36 /* Adding SoA banters between Auren and Kivan of Shilmista... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Auren and Kivan of Shilmista...~
-	COMPILE ~crossmodbg2/soa/banters/soa_Auren-KivanOfShilmista/soa_Auren-KivanOfShilmista_banters.d~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_Auren-KivanOfShilmista/soa_Auren-KivanOfShilmista_banters.d~
 END ELSE BEGIN
 	PRINT @37 /* k#aurenb.dlg and/or bp#kiv.dlg not detected. Skipping these particular SoA banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~k#aurenb.dlg and/or bp#kiv.dlg not detected. Skipping these particular SoA banters.~
@@ -612,7 +626,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~p#kivan.dlg~ AND FILE_EXISTS_IN_GAME ~o#coran.dlg
 THEN BEGIN
 	PRINT @90 /* Adding SoA banters between Kivan of Shilmista and Kulyok's Coran... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Kivan of Shilmista and Kulyok's Coran...~
-	COMPILE ~crossmodbg2/soa/banters/soa_kivanofshilmista-kulyokcoran/soa_kivanofshilmista-kulyokcoran_banters.d~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_kivanofshilmista-kulyokcoran/soa_kivanofshilmista-kulyokcoran_banters.d~
 END ELSE BEGIN
 	PRINT @91 /* p#kivan.dlg and/or o#coran.dlg not detected. Skipping these particular SoA banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~p#kivan.dlg and/or o#coran.dlg not detected. Skipping these particular SoA banters.~
@@ -774,7 +788,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~btsujat.dlg~ AND FILE_EXISTS_IN_GAME ~byasraen.dl
 THEN BEGIN
 	PRINT @118 /* Adding SoA banters between Tsujatha and Yasraena... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Tsujatha and Yasraena...~
-	COMPILE ~crossmodbg2/soa/banters/soa_Tsujatha-Yasraena/soa_Tsujatha-Yasraena_banters.d~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_Tsujatha-Yasraena/soa_Tsujatha-Yasraena_banters.d~
 END ELSE BEGIN
 	PRINT @119 /* btsujat.dlg and/or byasraen.dlg not detected. Skipping these particular SoA banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~btsujat.dlg and/or byasraen.dlg not detected. Skipping these particular SoA banters.~
@@ -895,7 +909,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~brh#isr.dlg~ AND FILE_EXISTS_IN_GAME ~bo#coran.dl
 THEN BEGIN
 	PRINT @140 /* Adding SoA banters between Isra and Kulyok's Coran... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Isra and Kulyok's Coran...~
-	COMPILE ~crossmodbg2/soa/banters/soa_Isra-kulyokcoran/soa_Isra-kulyokcoran_banters.d~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_Isra-kulyokcoran/soa_Isra-kulyokcoran_banters.d~
 END ELSE BEGIN
 	PRINT @141 /* brh#isr.dlg and/or bo#coran.dlg not detected. Skipping these particular SoA banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~brh#isr.dlg and/or bo#coran.dlg not detected. Skipping these particular SoA banters.~
@@ -1127,7 +1141,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~lk#arath.dlg
 THEN BEGIN
 	PRINT @182 /* Adding SoA banters between Adrian and Arath... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Adrian and Arath...~
-	COMPILE ~crossmodbg2/soa/banters/soa_Adrian-Arath/soa_Adrian-Arath_banters.d~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_Adrian-Arath/soa_Adrian-Arath_banters.d~
 END ELSE BEGIN
 	PRINT @183 /* badangel.dlg and/or lk#arath.dlg not detected. Skipping these particular SoA banters. */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~badangel.dlg and/or lk#arath.dlg not detected. Skipping these particular SoA banters.~
@@ -1173,7 +1187,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~p#kivan.dlg~
 THEN BEGIN
 	PRINT @190 /* Adding SoA banters between Adrian and Kivan of Shilmista... */
 	APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Adrian and Kivan of Shilmista...~
-	COMPILE ~crossmodbg2/soa/banters/soa_Adrian-KivanOfShilmista/soa_Adrian-KivanOfShilmista_banters.d~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_Adrian-KivanOfShilmista/soa_Adrian-KivanOfShilmista_banters.d~
 	EXTEND_BOTTOM ~rh#adrd.bcs~ ~crossmodbg2/soa/banters/soa_Adrian-KivanOfShilmista/Adrian-KivanOfShilmista_rh#adrd.baf~
 END ELSE BEGIN
 	PRINT @191 /* rh#adr.dlg and/or p#kivan.dlg not detected. Skipping these particular SoA banters. */
@@ -1678,9 +1692,9 @@ APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\
 
 BEGIN @223 /* Crossmod Banter Pack for Throne of Bhaal */
 REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~fw0100.are~ @7 /* You can't have BG1Tutu installed to install this component. */
-REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~baldur25.bcs~ @224 /* You must have Throne of Bhaal installed to install this component. */
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @224 /* You must have Throne of Bhaal installed to install this component. */
 
-COPY ~crossmodbg2/media/blank.log~ ~crossmodbg2/crossmod_1_debug.log~
+COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_1_debug.log~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\// Crossmod Component 1 \\//\\//\\//\\~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\ToB Banters and Interjections \\//\\//~
@@ -2579,7 +2593,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\
 
 BEGIN @348 /* Crossmod Romance Conflicts */
 
-COPY ~crossmodbg2/media/blank.log~ ~crossmodbg2/crossmod_2_debug.log~
+COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_2_debug.log~
 
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\// Crossmod Component 2 \\//\\//\\//\\~

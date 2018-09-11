@@ -1,7 +1,7 @@
 CHAIN
 IF ~InParty("K#Auren")
 See("K#Auren")
-GlobalLT("Chapter","GLOBAL",4)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
 !StateCheck(Myself,CD_STATE_NOTVALID)
 !StateCheck("K#Auren",CD_STATE_NOTVALID)
 CombatCounter(0)
@@ -41,7 +41,7 @@ EXIT
 CHAIN
 IF ~InParty("P#Kivan")
 See("P#Kivan")
-GlobalLT("Chapter","GLOBAL",4)
+GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
 Global("G#XB.AurenKivanBanter2","GLOBAL",1)
 !StateCheck(Myself,CD_STATE_NOTVALID)
 !StateCheck("P#Kivan",CD_STATE_NOTVALID)

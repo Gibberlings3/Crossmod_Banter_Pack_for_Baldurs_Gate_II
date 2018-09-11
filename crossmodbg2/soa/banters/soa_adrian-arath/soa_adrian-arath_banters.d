@@ -66,7 +66,7 @@ See("Arath")
 !StateCheck("rh#Adrian",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
-GlobalGT("Chapter","GLOBAL",5)
+GlobalGT("Chapter","GLOBAL",%bg2_chapter_5%)
 Global("G#XB.AdrianArathBanter2","GLOBAL",1)
 Global("G#XB.AdrianArathBanter4","GLOBAL",0)~ THEN BRH#ADR AdrianArathBanter#4.1
 @24 /* I didn't realise I was quite so confusing, druid. */
