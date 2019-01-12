@@ -74,7 +74,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~User Directory = %USER_DIRECTOR
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Installation type is: %INTERACTIVE% 
-( 1 = install is being done interactively (IE you launched setup-mymod.exe and you’re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+( 1 = install is being done interactively (IE you launched setup-mymod.exe and youï¿½re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 // IDS FILES
@@ -1538,6 +1538,318 @@ END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#foub.dlg and/or c-aranb.dlg not detected. Skipping these particular SoA banters.~
 END
 
+
+/* Elaryn - Adrian SoA Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~brh#adr.dlg~
+THEN BEGIN
+    PRINT @508 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Adrian..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-adrian/soa_elaryn-adrian_banters.d~
+END ELSE BEGIN
+    PRINT @509 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or BRH#ADR.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Ajantis SoA Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg~
+THEN BEGIN
+    PRINT @510 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Ajantis..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-ajantis/soa_elaryn-ajantis.d~
+END ELSE BEGIN
+    PRINT @511 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or C#AjanB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Auren SoA Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~K#AurenB.dlg~
+THEN BEGIN
+    PRINT @512 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Auren..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-auren/soa_elaryn-auren_banters.d~
+END ELSE BEGIN
+    PRINT @513 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or K#Auren.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Branwen SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~O#BBRAN.dlg~
+THEN BEGIN
+    PRINT @514 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Branwen..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-branwen/soa_elaryn-branwen_banters.d~
+END ELSE BEGIN
+    PRINT @515 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or O#BBRAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Foundling SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L#FouB.dlg~
+THEN BEGIN
+    PRINT @516 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Foundling..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-foundling/soa_elaryn-foundling_banters.d~
+END ELSE BEGIN
+    PRINT @517 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or L#FouB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Isra SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~BRH#ISR.dlg~
+THEN BEGIN
+    PRINT @518 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Isra..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-isra/soa_elaryn-isra_banters.d~
+END ELSE BEGIN
+    PRINT @519 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or BRH#ISR.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Neh'Taniel SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~
+THEN BEGIN
+    PRINT @520 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Neh'Taniel..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-neht/soa_elaryn-neht_banters.d~
+END ELSE BEGIN
+    PRINT @521 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or BSK#NEHT.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Sarah SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~K#SarahB.dlg~
+THEN BEGIN
+    PRINT @522 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Sarah..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-sarah/soa_elaryn-sarah_banters.d~
+END ELSE BEGIN
+    PRINT @523 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or K#SarahB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Skie SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~
+THEN BEGIN
+    PRINT @524 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Skie..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-skiecost/soa_elaryn-skiecost_banters.d~
+END ELSE BEGIN
+    PRINT @525 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Tiax SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~BO#TIAX.dlg~
+THEN BEGIN
+    PRINT @526 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Tiax..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-tiax/soa_elaryn-tiax_banters.d~
+END ELSE BEGIN
+    PRINT @527 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Verr'Sza SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VerrB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2PhalB~
+THEN BEGIN
+    PRINT @528 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Verr'Sza..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-verr/soa_elaryn-verr_banters.d~
+END ELSE BEGIN
+    PRINT @529 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or L#2VerrB.dlg and/or L#2PhalB not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Will SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L0WillB.dlg~
+THEN BEGIN
+    PRINT @532 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Will..~
+    COMPILE ~crossmodbg2/soa/banters/soa_will-adrian/soa_elaryn-will_banters.d~
+END ELSE BEGIN
+    PRINT @533 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or L0WillB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Xan SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN.dlg~
+THEN BEGIN
+    PRINT @534 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Xan..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-xan/soa_elaryn-xan_banters.d~
+END ELSE BEGIN
+    PRINT @535 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or BO#XAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Elaryn - Yvette Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~YxYveB.dlg~
+THEN BEGIN
+    PRINT @536
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Yvette..~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-yvette/soa_elaryn-yvette_banters.d~
+END ELSE BEGIN
+    PRINT @537 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Adrian SoA Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~brh#adr.dlg~
+THEN BEGIN
+    PRINT @544 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Adrian..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-adrian/soa_minyae-adrian_banters.d~
+END ELSE BEGIN
+    PRINT @545 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or BRH#ADR.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Ajantis SoA Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg~
+THEN BEGIN
+    PRINT @546 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Ajantis..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-ajantis/soa_minyae-ajantis.d~
+END ELSE BEGIN
+    PRINT @547 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or C#AjanB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Auren SoA Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~K#AurenB.dlg~
+THEN BEGIN
+    PRINT @548
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Auren..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-auren/soa_minyae-auren_banters.d~
+END ELSE BEGIN
+    PRINT @549 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or K#Auren.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Branwen SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~O#BBRAN.dlg~
+THEN BEGIN
+    PRINT @550 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Branwen..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-branwen/soa_minyae-branwen_banters.d~
+END ELSE BEGIN
+    PRINT @551
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or O#BBRAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Foundling SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L#FouB.dlg~
+THEN BEGIN
+    PRINT @552
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Foundling..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-foundling/soa_minyae-foundling_banters.d~
+END ELSE BEGIN
+    PRINT @553 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or L#FouB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Isra SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~BRH#ISR.dlg~
+THEN BEGIN
+    PRINT @554
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Isra..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-isra/soa_minyae-isra_banters.d~
+END ELSE BEGIN
+    PRINT @555 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or BRH#ISR.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Neh'Taniel SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~
+THEN BEGIN
+    PRINT @556
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Neh'Taniel..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-neht/soa_minyae-neht_banters.d~
+END ELSE BEGIN
+    PRINT @557 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or BSK#NEHT.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Sarah SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~K#SarahB.dlg~
+THEN BEGIN
+    PRINT @558
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Sarah..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-sarah/soa_minyae-sarah_banters.d~
+END ELSE BEGIN
+    PRINT @559 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or K#SarahB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Skie SoA Material */ 
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~
+THEN BEGIN
+    PRINT @560
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Skie..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-skiecost/soa_minyae-skiecost_banters.d~
+END ELSE BEGIN
+    PRINT @561 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Tiax SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~BO#TIAX.dlg~
+THEN BEGIN
+    PRINT @562
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Tiax..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-tiax/soa_minyae-tiax_banters.d~
+END ELSE BEGIN
+    PRINT @563 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or BO#TIAX.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Verr'Sza SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VerrB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2PhalB~
+THEN BEGIN
+    PRINT @564 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Verr'Sza..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-verr/soa_minyae-verr_banters.d~
+END ELSE BEGIN
+    PRINT @565 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or L#2VerrB.dlg and/or L#2PhalB not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Will SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L0WillB.dlg~
+THEN BEGIN
+    PRINT @568
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Will..~
+    COMPILE ~crossmodbg2/soa/banters/soa_will-adrian/soa_minyae-will_banters.d~
+END ELSE BEGIN
+    PRINT @569 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or L0WillB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Xan SoA Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN.dlg~
+THEN BEGIN
+    PRINT @570 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Xan..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-xan/soa_minyae-xan_banters.d~
+END ELSE BEGIN
+    PRINT @571 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or BO#XAN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Minyae - Yvette Material */
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~YxYveB.dlg~
+THEN BEGIN
+    PRINT @572
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Yvette..~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-yvette/soa_minyae-yvette_banters.d~
+END ELSE BEGIN
+    PRINT @573 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+
+
+
 // INTERJECTIONS
 // Note these files contain interjections into the respective mod, not from that mod
 
@@ -1708,7 +2020,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Operating System = %WEIDU_OS% ~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~User Directory = %USER_DIRECTORY% ~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
-APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac1ively (IE you launched setup-mymod.exe and you’re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac1ively (IE you launched setup-mymod.exe and youï¿½re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 // IDS FILES
@@ -2584,6 +2896,101 @@ END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~1xSki25B.dlg and/or BLK#AR25.dlg not detected. Skipping these particular ToB banters.~
 END
 
+/****************************** AHHHHHHH******/
+
+/* Elaryn - Branwen ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#E25B.dlg~ AND FILE_EXISTS_IN_GAME ~O#BBRA25.dlg~
+THEN BEGIN
+    PRINT @538 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Elaryn and Branwen...~
+    COMPILE ~crossmodbg2/tob/banters/tob_elaryn-branwen/tob_elaryn-branwen_banters.d~
+END ELSE BEGIN
+    PRINT @539 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#E25B.dlg and/or O#BBRA25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Elaryn - Tiax ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#E25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#TIA25.dlg~
+THEN BEGIN
+    PRINT @540 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Elaryn and Tiax...~
+    COMPILE ~crossmodbg2/tob/banters/tob_elaryn-tiax/tob_elaryn-tiax_banters.d~
+END ELSE BEGIN
+    PRINT @541 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#E25B.dlg and/or BO#TIA25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Elaryn - Xan ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#E25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN25.dlg~
+THEN BEGIN
+    PRINT @542 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Elaryn and Xan...~
+    COMPILE ~crossmodbg2/tob/banters/tob_elaryn-xan/tob_elaryn-xan_banters.d~
+END ELSE BEGIN
+    PRINT @543 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#E25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Minyae - Ajantis ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#M25B.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dlg~
+THEN BEGIN
+    PRINT @574 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Minyae and Branwen...~
+    COMPILE ~crossmodbg2/tob/banters/tob_minyae-branwen/tob_minyae-branwen_banters.d~
+END ELSE BEGIN
+    PRINT @575 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#M25B.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Minyae - Branwen ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#M25B.dlg~ AND FILE_EXISTS_IN_GAME ~O#BBRA25.dlg~
+THEN BEGIN
+    PRINT @576
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Minyae and Branwen...~
+    COMPILE ~crossmodbg2/tob/banters/tob_minyae-branwen/tob_minyae-branwen_banters.d~
+END ELSE BEGIN
+    PRINT @577 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#M25B.dlg and/or O#BBRA25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Minyae - Tiax ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#M25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#TIA25.dlg~
+THEN BEGIN
+    PRINT @578 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Minyae and Tiax...~
+    COMPILE ~crossmodbg2/tob/banters/tob_minyae-tiax/tob_minyae-tiax_banters.d~
+END ELSE BEGIN
+    PRINT @579 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#M25B.dlg and/or BO#TIA25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* Minyae - Xan ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#M25B.dlg~ AND FILE_EXISTS_IN_GAME ~BO#XAN25.dlg~
+THEN BEGIN
+    PRINT @580 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Minyae and Xan...~
+    COMPILE ~crossmodbg2/tob/banters/tob_minyae-xan/tob_minyae-xan_banters.d~
+END ELSE BEGIN
+    PRINT @581 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#M25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+END
+
+
+
+
+
+
+
+
+
+
+
+/********* AHHHHHHHHHHHHHHHHHHHHHHHHHHH *****/
+
+
+
+
+
 
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
@@ -2608,7 +3015,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Operating System = %WEIDU_OS% ~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~User Directory = %USER_DIRECTORY% ~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac2ively (IE you launched setup-mymod.exe and you’re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac2ively (IE you launched setup-mymod.exe and youï¿½re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 
