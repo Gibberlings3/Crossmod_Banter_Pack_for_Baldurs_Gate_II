@@ -10,8 +10,8 @@ InParty("YxYve")
 See("QI#Ela")
 !StateCheck("YxYve",CD_STATE_NOTVALID)
 Global("QI#ElarynYvette","GLOBAL",0)~ THEN YxYveB ElarynYvette1
-~I...I’m sorry you had to go through that, Elaryn. No one should have to kill their own sister.~
+@0 /*I...I’m sorry you had to go through that, Elaryn. No one should have to kill their own sister.*/
 DO ~SetGlobal("QI#ElarynYvette","GLOBAL",1)~
-== QI#ELAB ~Your concern is much appreciated, Yvette. I wish there had been another way.~
-== YxYveB ~I wish that too.~
+== QI#ELAB @1 /*Your concern is much appreciated, Yvette. I wish there had been another way.*/
+== YxYveB @2 /*I wish that too.*/
 EXIT 
