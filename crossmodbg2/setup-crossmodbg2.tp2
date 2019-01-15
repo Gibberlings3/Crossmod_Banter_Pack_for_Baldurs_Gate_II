@@ -1650,7 +1650,7 @@ END ELSE BEGIN
 END
 
 /* Elaryn - Verr'Sza SoA Material */
-ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VerrB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2PhalB~
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VERRB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2PhalB.dlg~
 THEN BEGIN
     PRINT @528 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Verr'Sza..~
@@ -1804,7 +1804,7 @@ END ELSE BEGIN
 END
 
 /* Minyae - Verr'Sza SoA Material */
-ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VerrB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2PhalB~
+ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L#2VerrB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2PhalB.dlg~
 THEN BEGIN
     PRINT @564 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Verr'Sza..~

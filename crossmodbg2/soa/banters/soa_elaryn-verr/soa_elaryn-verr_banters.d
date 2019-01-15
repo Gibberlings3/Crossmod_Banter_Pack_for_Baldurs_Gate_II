@@ -1,4 +1,4 @@
-@0 /** Elaryn - Verr'Sza */
+/** Elaryn - Verr'Sza */
 
 CHAIN
 IF ~InParty("QI#Ela")
