@@ -1555,7 +1555,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg
 THEN BEGIN
     PRINT @510 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Ajantis..~
-    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-ajantis/soa_elaryn-ajantis.d~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-ajantis/soa_elaryn-ajantis_banters.d~
 END ELSE BEGIN
     PRINT @511 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or C#AjanB.dlg not detected. Skipping these particular SoA banters.~
@@ -1709,7 +1709,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg~
 THEN BEGIN
     PRINT @546 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Ajantis..~
-    COMPILE ~crossmodbg2/soa/banters/soa_minyae-ajantis/soa_minyae-ajantis.d~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-ajantis/soa_minyae-ajantis_banters.d~
 END ELSE BEGIN
     PRINT @547 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or C#AjanB.dlg not detected. Skipping these particular SoA banters.~
@@ -2936,7 +2936,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~QI#M25B.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dl
 THEN BEGIN
     PRINT @574 
     APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Minyae and Branwen...~
-    COMPILE ~crossmodbg2/tob/banters/tob_minyae-branwen/tob_minyae-branwen_banters.d~
+    COMPILE ~crossmodbg2/tob/banters/tob_minyae-ajantis/tob_minyae-ajantis_banters.d~
 END ELSE BEGIN
     PRINT @575 
     APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#M25B.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
