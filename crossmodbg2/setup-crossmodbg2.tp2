@@ -1665,7 +1665,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~qi#elab.dlg~ AND FILE_EXISTS_IN_GAME ~L0WillB.dlg
 THEN BEGIN
     PRINT @532 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Elaryn and Will..~
-    COMPILE ~crossmodbg2/soa/banters/soa_will-adrian/soa_elaryn-will_banters.d~
+    COMPILE ~crossmodbg2/soa/banters/soa_elaryn-will/soa_elaryn-will_banters.d~
 END ELSE BEGIN
     PRINT @533 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or L0WillB.dlg not detected. Skipping these particular SoA banters.~
