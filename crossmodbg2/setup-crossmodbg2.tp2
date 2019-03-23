@@ -5,9 +5,10 @@ SUPPORT ~http://www.gibberlings3.net/forums/index.php?showforum=55~
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
 
-VERSION @0 /* <--- current version number from setup.tra here */
+VERSION ~v19~ //put version number here, not inside setup.tra
 
 README ~crossmodbg2/readme-crossmodbg2.html~
+
 
 ALWAYS
 
@@ -27,6 +28,13 @@ ALWAYS
     ACTION_IF GAME_IS ~bgee tutu bg1 totsc tutu_totsc~ THEN BEGIN
       FAIL @1 /* WARNING. THIS MOD IS FOR BG2 OR BGT. DO NOT INSTALL THIS MOD. */
     END
+
+/* German version - as long as it's not fully translated, copy files around so the "german" folder is complete with all German translations */
+    ACTION_IF ("%LANGUAGE%" STRING_COMPARE_CASE "german" = 0) THEN BEGIN
+      COPY ~crossmodbg2/tra/english~  ~crossmodbg2/tra/%LANGUAGE%~
+      COPY ~crossmodbg2/tra/%LANGUAGE%/tras~  ~crossmodbg2/tra/%LANGUAGE%~
+    END
+
     ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
       PRINT @2 /* BG2:EE detected... */
       LAF HANDLE_CHARSETS INT_VAR  infer_charsets = 1 STR_VAR tra_path = EVAL ~crossmodbg2/tra~ noconvert_array = fl#noconvert reload_array = fl#reload END
@@ -50,6 +58,7 @@ END
 
 AUTO_TRA ~crossmodbg2/tra/%s~
 LANGUAGE ~English~ ~english~ ~crossmodbg2/tra/english/setup.tra~ 
+LANGUAGE ~Deutsch (Teildeutsche Version, der Rest ist in Englisch)~ ~german~ ~crossmodbg2/tra/english/setup.tra~ // reads the English setup.tra for now!
 		
 			
 // ****************************
@@ -74,7 +83,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~User Directory = %USER_DIRECTOR
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Installation type is: %INTERACTIVE% 
-( 1 = install is being done interactively (IE you launched setup-mymod.exe and you�re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+( 1 = install is being done interactively (IE you launched setup-mymod.exe and you re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 // IDS FILES
@@ -1847,6 +1856,54 @@ END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters.~
 END
 
+/* Skie Cost of One Soul - jastey's Ajantis SoA banters */
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg~
+THEN BEGIN
+    PRINT @599
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Skie - Cost of One Soul and jastey's Ajantis..~
+    COMPILE ~crossmodbg2/soa/banters/soa_skiecostonesoul_jasteyajantis/soa_skiecostonesoul_jasteyajantis_banters.d~
+		USING ~crossmodbg2/tra/%s/skiecostsoul_jasteyajantis.tra~
+END ELSE BEGIN
+    PRINT @582 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#2SDSKB.dlg and/or C#AJANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* Gavin - jastey's Ajantis SoA banters */
+ACTION_IF FILE_EXISTS_IN_GAME ~bb!gav.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg~
+THEN BEGIN
+    PRINT @587
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Gavin and jastey's Ajantis..~
+    COMPILE ~crossmodbg2/soa/banters/soa_gavin_jasteyajantis/soa_gavin_jasteyajantis_banters.d~
+		USING ~crossmodbg2/tra/%s/gavin_jasteyajantis_banters.tra~
+END ELSE BEGIN
+    PRINT @588 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~bb!gav.dlg and/or C#AJANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/* jastey's Solaufein - jastey's Ajantis SoA banters - NEEDs ToB - */
+ACTION_IF FILE_EXISTS_IN_GAME ~C#SOLAUB.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dlg~
+THEN BEGIN
+    PRINT @591
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between jastey's Solaufein and jastey's Ajantis..~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_jasteysolaufein-jasteyajantis/soa_jasteysolaufein_jasteyajantis_banters.d~
+		USING ~crossmodbg2/tra/%s/jasteysolaufein_jasteyajantis_banters.tra~
+END ELSE BEGIN
+    PRINT @592 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#SOLAUB.dlg and/or C#Aja25B.dlg not detected. Skipping these particular SoA banters.~
+END
+
+
+/* jastey's Solaufein - Gavin SoA banters - NEEDs ToB -  */
+ACTION_IF FILE_EXISTS_IN_GAME ~C#SOLAUB.dlg~ AND FILE_EXISTS_IN_GAME ~bb!gav25.dlg~
+THEN BEGIN
+    PRINT @595
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between jastey's Solaufein and Gavin..~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_jasteysolaufein-gavin/soa_jasteysolaufein_gavin_banters.d~
+		USING ~crossmodbg2/tra/%s/jasteysolaufein_gavin_banters.tra~
+END ELSE BEGIN
+    PRINT @596 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#SOLAUB.dlg and/or bb!gav25.dlg not detected. Skipping these particular SoA banters.~
+END
 
 
 
@@ -1949,6 +2006,20 @@ ACTION_IF FILE_EXISTS_IN_GAME ~sk#neht.dlg~ THEN BEGIN
 	END
 END
 
+
+/* Skie Cost of One Soul: jastey's Ajantis BGII Interjections */
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2SDNEM.dlg~ THEN BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~C#AjanJ.dlg~ THEN BEGIN
+		PRINT @583 /* ~Adding jastey's Ajantis's interjections into Skie - Cost of One Soul...~ */
+		COMPILE ~CrossmodBG2/SoA/Interjections/skiecostonesoul/jasteyajantis/jasteyajantis_skiecostonesoul_interjections.d~
+		USING ~crossmodbg2/tra/%s/skiecostsoul_jasteyajantis.tra~
+		APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding jastey's Ajantis's interjections into Skie - Cost of One Soul...~
+	END
+END
+
+		
+
+
 // QUESTS AND OTHERS
 
 // Homeward Bound
@@ -1996,6 +2067,24 @@ ACTION_IF FILE_EXISTS_IN_GAME ~0x1DG.bcs~ THEN BEGIN
 	END
 END
 
+// Alternatives
+ACTION_IF FILE_EXISTS_IN_GAME ~B!ASTER.dlg~ THEN BEGIN
+	/* add other NPCs to Brega's dialogue - PC needs witness */
+	/* this will grab the correct state from the language alternatives is installed in - this is great! */
+	/* @853  = ~Something I can put my hands on. A document, a witness, something more than your word against his.~ */
+	OUTER_SET brega_state_853 = STATE_WHICH_SAYS 853 IN ~alternatives/%s/DIALOGUE.tra~ FROM ~HABREGA.dlg~
+	/* @893  = ~Very well, your witness is credible and confirms your allegations, and that's enough justification to act.~ */
+	OUTER_SET brega_state_893 = STATE_WHICH_SAYS 893 IN ~alternatives/%s/DIALOGUE.tra~ FROM ~HABREGA.dlg~
+
+	ACTION_IF FILE_EXISTS_IN_GAME ~C#AjanJ.dlg~ THEN BEGIN
+		PRINT @584 /* ~Adding jastey's Ajantis's interjections into Alternatives Mod~ */
+		COMPILE EVALUATE_BUFFER ~CrossmodBG2/SoA/Interjections/alternatives/jasteyajantis/jasteyajantis_alternatives_interjections.d~
+		USING ~crossmodbg2/tra/%s/jasteyajantis_alternatives.tra~
+		EXTEND_BOTTOM ~C#Ajan.bcs~ ~CrossmodBG2/SoA/Interjections/alternatives/jasteyajantis/jasteyajantis_alternatives_interjections.baf~ EVALUATE_BUFFER
+		APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding jastey's Ajantis's interjections into Alternatives Mod~
+	END
+END
+
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 // *****************************
@@ -2020,7 +2109,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Operating System = %WEIDU_OS% ~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~User Directory = %USER_DIRECTORY% ~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
-APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac1ively (IE you launched setup-mymod.exe and you�re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac1ively (IE you launched setup-mymod.exe and you re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 // IDS FILES
@@ -2975,8 +3064,53 @@ END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~QI#M25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
 END
 
+/* Skie-Cost of One Soul - jastey's Ajantis ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dlg~
+THEN BEGIN
+    PRINT @585 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Skie - Cost of One Soul and jastey's Ajantis..~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_skiecostonesoul_jasteyajantis/tob_skiecostonesoul_jasteyajantis_banters.d~
+		USING ~crossmodbg2/tra/%s/skiecostsoul_jasteyajantis.tra~
+END ELSE BEGIN
+    PRINT @586 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#2SD25B.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+END
 
+/* Gavin - jastey's Ajantis ToB Material */  
+ACTION_IF FILE_EXISTS_IN_GAME ~bb!gav25.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dlg~
+THEN BEGIN
+    PRINT @589 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Gavin and jastey's Ajantis..~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_gavin_jasteyajantis/tob_gavin_jasteyajantis_banters.d~
+		USING ~crossmodbg2/tra/%s/gavin_jasteyajantis_banters.tra~
+END ELSE BEGIN
+    PRINT @590 
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~bb!gav25.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+END
 
+/* jastey's Solaufein - jastey's Ajantis ToB banters */
+ACTION_IF FILE_EXISTS_IN_GAME ~C#SOLAUB.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dlg~
+THEN BEGIN
+    PRINT @593
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between jastey's Solaufein and jastey's Ajantis..~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_jasteysolaufein-jasteyajantis/tob_jasteysolaufein_jasteyajantis_banters.d~
+		USING ~crossmodbg2/tra/%s/jasteysolaufein_jasteyajantis_banters.tra~
+END ELSE BEGIN
+    PRINT @594 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#SOLAUB.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+END
+
+/* jastey's Solaufein - Gavin ToB banters */
+ACTION_IF FILE_EXISTS_IN_GAME ~C#SOLAUB.dlg~ AND FILE_EXISTS_IN_GAME ~bb!gav25.dlg~
+THEN BEGIN
+    PRINT @597
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between jastey's Solaufein and Gavin..~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_jasteysolaufein-gavin/tob_jasteysolaufein_gavin_banters.d~
+		USING ~crossmodbg2/tra/%s/jasteysolaufein_gavin_banters.tra~
+END ELSE BEGIN
+    PRINT @598 
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#SOLAUB.dlg and/or bb!gav25.dlg not detected. Skipping these particular ToB banters.~
+END
 
 
 
@@ -3015,7 +3149,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Operating System = %WEIDU_OS% ~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~User Directory = %USER_DIRECTORY% ~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac2ively (IE you launched setup-mymod.exe and you�re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac2ively (IE you launched setup-mymod.exe and you re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 

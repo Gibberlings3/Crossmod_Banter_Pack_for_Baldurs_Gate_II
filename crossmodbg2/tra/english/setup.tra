@@ -1,4 +1,4 @@
-@0    = ~v17~
+//@0    = ~v17~
 @1    = ~WARNING. THIS MOD IS FOR BG2, BG2EE, BGT, OR EET. DO NOT INSTALL THIS MOD.~
 @2    = ~BG2:EE/EET detected...~
 @3    = ~BGII:SoA detected...~
@@ -598,3 +598,21 @@ Useable by:
 @579  = ~QI#M25B.dlg and/or BO#TIA25.dlg not detected. Skipping these particular ToB banters.~
 @580  = ~Adding ToB banters between Minyae and Xan...~
 @581  = ~QI#M25B.dlg and/or BO#XAN25.dlg not detected. Skipping these particular ToB banters.~
+@582  = ~L#2SDSKB.dlg and/or C#AJANB.dlg not detected. Skipping these particular SoA banters.~
+@583  = ~Adding jastey's Ajantis's interjections into Skie - Cost of One Soul...~
+@584  = ~Adding jastey's Ajantis's interjections into Alternatives Mod~
+@585  = ~Adding ToB banters between Skie - Cost of One Soul and jastey's Ajantis..~
+@586  = ~L#2SD25B.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+@587  = ~Adding SoA banters between Gavin and jastey's Ajantis..~
+@588  = ~bb!gav.dlg and/or C#AJANB.dlg not detected. Skipping these particular SoA banters.~
+@589  = ~Adding ToB banters between Gavin and jastey's Ajantis..~
+@590  = ~bb!gav25.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+@591  = ~Adding SoA banters between jastey's Solaufein and jastey's Ajantis..~
+@592  = ~C#SOLAUB.dlg and/or C#Aja25B.dlg not detected. Skipping these particular SoA banters.~
+@593  = ~Adding ToB banters between jastey's Solaufein and jastey's Ajantis..~
+@594  = ~C#SOLAUB.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+@595  = ~Adding SoA banters between jastey's Solaufein and Gavin..~
+@596  = ~C#SOLAUB.dlg and/or bb!gav25.dlg not detected. Skipping these particular SoA banters.~
+@597  = ~Adding ToB banters between jastey's Solaufein and Gavin..~
+@598  = ~C#SOLAUB.dlg and/or bb!gav25.dlg not detected. Skipping these particular ToB banters.~
+@599  = ~Adding SoA banters between Skie - Cost of One Soul and jastey's Ajantis..~
