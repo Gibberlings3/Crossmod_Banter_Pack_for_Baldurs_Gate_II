@@ -2080,7 +2080,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~B!ASTER.dlg~ THEN BEGIN
 		PRINT @584 /* ~Adding jastey's Ajantis's interjections into Alternatives Mod~ */
 		COMPILE EVALUATE_BUFFER ~CrossmodBG2/SoA/Interjections/alternatives/jasteyajantis/jasteyajantis_alternatives_interjections.d~
 		USING ~crossmodbg2/tra/%s/jasteyajantis_alternatives.tra~
-		EXTEND_BOTTOM ~C#Ajan.bcs~ ~CrossmodBG2/SoA/Interjections/alternatives/jasteyajantis/jasteyajantis_alternatives_interjections.baf~ EVALUATE_BUFFER
 		APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding jastey's Ajantis's interjections into Alternatives Mod~
 	END
 END
