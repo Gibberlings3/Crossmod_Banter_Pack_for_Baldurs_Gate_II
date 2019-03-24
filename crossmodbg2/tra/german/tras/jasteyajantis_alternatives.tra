@@ -1,3 +1,7 @@
+/*
+Dies ist dieselbe Tra-Datei wie die "alternatives_reactions.tra" aus der Ajantis Mod v19 - bitte Hinweise in der Ajantis Mod hierzu beachten, falls sich das in späteren Versionen geändert haben sollte.
+Bitte beachten: Für das CBP werden nicht alle Zeilen benötigt.
+*/
 @0    = ~Die Schattendiebe! Meine Dame, ich stimme Euch nur zu gerne zu.~
 @1    = ~<CHARNAME>, dies ist mehr, als wir uns erhoffen können! Nun wird uns Hilfe aus einer rechtschaffenen Quelle angeboten!~
 @2    = ~Endlich! Der Aufruf, auf den ich bereits des Längeren gewartet habe. Zeit, diese böse Ausgeburt zu stoppen, die die Schattendiebe in diesem Land darstellen!~

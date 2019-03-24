@@ -1,3 +1,7 @@
+/*
+This is the same Tra-file as the "alternatives_reactions.tra" from the Ajantis Mod v19 (Unless there is a note stating otherwise in the Ajantis mod.)
+Please note that not all lines are needed for the CBP.
+*/
 @0    = ~The Shadow Thieves! My lady, I do agree to your list only too well.~
 @1    = ~<CHARNAME>, this is more than we can hope for! We get help to find Imeon from righteous sources, at last!~
 @2    = ~Finally! The call I was waiting for for a longer time. Time to stop the evil manifestation the Shadow Thieves are in these lands!~
