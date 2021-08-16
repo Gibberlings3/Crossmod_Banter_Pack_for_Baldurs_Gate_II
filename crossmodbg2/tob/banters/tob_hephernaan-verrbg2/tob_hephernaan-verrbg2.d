@@ -1,0 +1,43 @@
+////VERR - HEPHERNAAN TOB
+
+CHAIN IF ~InParty("L#HPH")
+See("L#HPH")
+!StateCheck("L#HPH",CD_STATE_NOTVALID)
+!StateCheck("L#2VERR",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("L#HPHVerrToB","GLOBAL",0)~ THEN L#2VE25B Verr2HPHToB01
+@0
+DO ~SetGlobal("L#HPHVerrToB","GLOBAL",1)~ 
+== L#HPH25B @1
+== L#2VE25B @2
+== L#HPH25B @3
+== L#2VE25B @4
+== L#2VE25B @5
+EXIT
+
+CHAIN IF ~InParty("L#HPH")
+See("L#HPH")
+!StateCheck("L#HPH",CD_STATE_NOTVALID)
+!StateCheck("L#2VERR",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("L#HPHVerrToB","GLOBAL",1)~ THEN L#2VE25B Verr2HPHToB02
+@6
+DO ~SetGlobal("L#HPHVerrToB","GLOBAL",2)~ 
+== L#HPH25B @7
+== L#2VE25B @8
+EXIT
+
+////PHALH - HEPHERNAAN TOB
+
+CHAIN IF ~InParty("L#HPH")
+See("L#HPH")
+!StateCheck("L#HPH",CD_STATE_NOTVALID)
+!StateCheck("L#2PHAL",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("L#HPHPhalhToB","GLOBAL",0)~ THEN L#2PH25B Phalh2HPHToB01
+@9
+DO ~SetGlobal("L#HPHPhalhToB","GLOBAL",1)~ 
+== L#HPH25B @10
+== L#HPH25B @11
+== L#2PH25B @12
+EXIT
