@@ -6,40 +6,44 @@ WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref6 = RESOLVE_STR_REF(@207)
   /* (sigh) Do you remember Dynaheir? And Khalid? Some wounds never heal... */
 END
-STRING_SET strref6 @12
 
 WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref7 = RESOLVE_STR_REF(@1028)
   /* I am. He paid for what he did to me, Khalid, Dynaheir and Imoen. */
 END
-STRING_SET strref7 @13
 
 WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref8 = RESOLVE_STR_REF(@1593)
   /* Minsc is puzzled. How can this evil slaver bear the proud name of our fallen comrade? */
 END
-STRING_SET strref8 @14
 
 WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref9 = RESOLVE_STR_REF(@3230)
   /* I will never lose you like Jaheira lost Khalid, I swear */
 END
-STRING_SET strref9 @15
 
 WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref10 = RESOLVE_STR_REF(@3675)
   /* There is so much we cannot change. Irenicus, Khalid's senseless death, destruction in Suldanessellar... It was not in our power. Although had I known, I would have taken you to Evereska - and to the Abyss with the consequences. */
 END
-STRING_SET strref10 @16
 
 WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref11 = RESOLVE_STR_REF(@3829)
   /* Cherry blossoms. When spring gives way to summer, it rains white all over the valley. Mirtul... remember the flowering in Baldur's Gate, near the Hall of Wonders? We went there together. Khalid was alive... I wish we saw more of him. I never knew... */
 END
-STRING_SET strref11 @17
 
 WITH_TRA ~Xan/%s/O#XAN25J.tra~ BEGIN
   OUTER_SET strref12 = RESOLVE_STR_REF(@3943)
   /* ...One for Khalid, a true friend. And Dynaheir, a proud witch of Rashemen. And others. */
 END
-STRING_SET strref12 @18
+
+
+WITH_TRA ~crossmodbg2/tra/%s/xankhalidupdate.tra~ BEGIN
+  STRING_SET strref6 @12
+  STRING_SET strref7 @13
+  STRING_SET strref8 @14
+  STRING_SET strref9 @15
+  STRING_SET strref10 @16
+  STRING_SET strref11 @17
+  STRING_SET strref12 @18
+END
