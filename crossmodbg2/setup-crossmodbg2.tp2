@@ -1,11 +1,11 @@
 BACKUP ~crossmodbg2\backup~
 //AUTHOR ~Grim Squeaker, K'aeloree, and Berelinde, maintained at www.gibberlings3.net~
-SUPPORT ~http://www.gibberlings3.net/forums/index.php?showforum=55~
+SUPPORT ~https://www.gibberlings3.net/forums/forum/55-crossmod-banter-pack/~
 
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
 
-VERSION ~v20~ //put version number here, not inside setup.tra
+VERSION ~v21~ //put version number here, not inside setup.tra
 
 README ~crossmodbg2/readme-crossmodbg2.html~
 
