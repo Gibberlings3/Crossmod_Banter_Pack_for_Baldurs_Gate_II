@@ -9,6 +9,6 @@ WITH_TRA ~coran/%s/O#CORANJ.tra~ BEGIN
 END
 
 WITH_TRA ~crossmodbg2/tra/%s/corankhalidupdate.tra~ BEGIN
-  STRING_SET strref1 @5
-  STRING_SET strref2 @6
+  STRING_SET_EVALUATE strref1 @5
+  STRING_SET_EVALUATE strref2 @6
 END

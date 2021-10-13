@@ -39,11 +39,11 @@ END
 
 
 WITH_TRA ~crossmodbg2/tra/%s/xankhalidupdate.tra~ BEGIN
-  STRING_SET strref6 @12
-  STRING_SET strref7 @13
-  STRING_SET strref8 @14
-  STRING_SET strref9 @15
-  STRING_SET strref10 @16
-  STRING_SET strref11 @17
-  STRING_SET strref12 @18
+  STRING_SET_EVALUATE strref6 @12
+  STRING_SET_EVALUATE strref7 @13
+  STRING_SET_EVALUATE strref8 @14
+  STRING_SET_EVALUATE strref9 @15
+  STRING_SET_EVALUATE strref10 @16
+  STRING_SET_EVALUATE strref11 @17
+  STRING_SET_EVALUATE strref12 @18
 END

@@ -4,5 +4,5 @@ WITH_TRA ~Branwen/tra/%s/o#branj.tra~ BEGIN
 END
 
 WITH_TRA ~crossmodbg2/tra/%s/branwenkhalidupdate.tra~ BEGIN
-  STRING_SET strref1 @4
+  STRING_SET_EVALUATE strref1 @4
 END
