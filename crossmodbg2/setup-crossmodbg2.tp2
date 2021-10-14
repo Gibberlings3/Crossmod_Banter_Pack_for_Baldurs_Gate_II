@@ -37,7 +37,8 @@ ALWAYS
 
     ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
       PRINT @2 /* BG2:EE detected... */
-      LAF HANDLE_CHARSETS INT_VAR  infer_charsets = 1 STR_VAR tra_path = EVAL ~crossmodbg2/tra~ noconvert_array = fl#noconvert reload_array = fl#reload END
+      ACTION_DEFINE_ARRAY cdnoconvert BEGIN soa_khalid-skie END // both EE mods, so already in utf-8
+      LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~crossmodbg2/tra~ noconvert_array = cdnoconvert END
     END
     ACTION_IF GAME_IS ~soa~ THEN BEGIN
       PRINT @3 /* BGII:SoA detected... */
