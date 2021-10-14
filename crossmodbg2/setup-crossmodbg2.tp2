@@ -68,6 +68,7 @@ LANGUAGE ~Deutsch (Teildeutsche Version, der Rest ist in Englisch)~ ~german~ ~cr
 
 BEGIN @6 /* Crossmod Banter Pack for Shadows of Amn */
 REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~fw0100.are~ @7 /* You can't have BG1Tutu installed to install this component. */
+LABEL ~cd_crossmod_banter_pack_bg2_soa~
 
 COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_0_debug.log~
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
@@ -2574,6 +2575,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\
 BEGIN @223 /* Crossmod Banter Pack for Throne of Bhaal */
 REQUIRE_PREDICATE NOT FILE_EXISTS_IN_GAME ~fw0100.are~ @7 /* You can't have BG1Tutu installed to install this component. */
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @224 /* You must have Throne of Bhaal installed to install this component. */
+LABEL ~cd_crossmod_banter_pack_bg2_tob~
 
 COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_1_debug.log~
 APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
@@ -4091,6 +4093,7 @@ APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\
 // *******************************
 
 BEGIN @348 /* Crossmod Romance Conflicts */
+LABEL ~cd_crossmod_banter_pack_bg2_romance_conflicts~
 
 COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_2_debug.log~
 
