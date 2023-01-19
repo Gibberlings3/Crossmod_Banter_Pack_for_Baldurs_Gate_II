@@ -1,0 +1,60 @@
+
+////////////////////////////////////////////////////////
+/////////////////////O#XAN//////////////////////////////
+////////////////////////////////////////////////////////
+
+WITH_TRA ~Xan/%s/O#XAN.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@74)
+  /* Oh, very well. A mad mage killed Khalid and Dynaheir, tortured me and Imoen, kept Minsc and Jaheira in cages, and had no intention of letting us go. We escaped and found ourselves here, in Athkatla. */
+END
+
+////////////////////////////////////////////////////////
+/////////////////////BO#XAN/////////////////////////////
+////////////////////////////////////////////////////////
+
+WITH_TRA ~Xan/%s/BO#XAN.tra~ BEGIN
+  OUTER_SET strref2 = RESOLVE_STR_REF(@0)
+  /* Dynaheir... Khalid... Imoen... (sigh) I am sorry to hear of your past misfortunes. Do you have the slightest idea of what your captor wanted? */
+END
+
+WITH_TRA ~Xan/%s/BO#XAN.tra~ BEGIN
+  OUTER_SET strref3 = RESOLVE_STR_REF(@2174)
+  /* Why do you treat these matters so lightly? You buried Gorion; Khalid and Dynaheir died practically before your eyes. Your mother is likely dead, too. Do not jest with death, <CHARNAME>. */
+END
+
+WITH_TRA ~Xan/%s/BO#XAN.tra~ BEGIN
+  OUTER_SET strref4 = RESOLVE_STR_REF(@2201)
+  /* Nothing good would have come of it, in any case. Should it have come to pass, Irenicus would have only gloated a little longer before killing me instead of the unfortunate Khalid. */
+END
+
+WITH_TRA ~Xan/%s/BO#XAN.tra~ BEGIN
+  OUTER_SET strref5 = RESOLVE_STR_REF(@2417)
+  /* Yes, my infatuation with you is ridiculous. You are a dangerous woman to travel with, let alone to care about. I doubted it before, but poor Khalid's and Dynaheir's fates proved it to me well enough. You are one of Bhaal's progeny, a manifestation of murder, a symbol of ultimate destruction. Mine. */
+END
+
+////////////////////////////////////////////////////////
+/////////////////////O#XANJ/////////////////////////////
+////////////////////////////////////////////////////////
+
+WITH_TRA ~Xan/%s/O#XANJ.tra~ BEGIN
+  OUTER_SET strref13 = RESOLVE_STR_REF(@3283)
+  /* It appears that things are more lasting than their owners. Poor Khalid and Dynaheir's fates show it quite well. */
+END
+
+WITH_TRA ~Xan/%s/O#XANJ.tra~ BEGIN
+  OUTER_SET strref14 = RESOLVE_STR_REF(@3288)
+  /* Yes, but we rarely have our wishes granted, do we? Though I admit, I was wistfully happy to see my old robe, even if I'd much rather shake Khalid's hand. */
+END
+
+
+
+
+WITH_TRA ~crossmodbg2/tra/%s/xankhalidupdate.tra~ BEGIN
+  STRING_SET_EVALUATE strref1 @7
+  STRING_SET_EVALUATE strref2 @8
+  STRING_SET_EVALUATE strref3 @9
+  STRING_SET_EVALUATE strref4 @10
+  STRING_SET_EVALUATE strref5 @11
+  STRING_SET_EVALUATE strref13 @19
+  STRING_SET_EVALUATE strref14 @20
+END

@@ -1,0 +1,30 @@
+////VERR - GAHESH TOB
+
+CHAIN IF ~InParty("L#2VERR")
+See("L#2VERR")
+!StateCheck("GAHESH",CD_STATE_NOTVALID)
+!StateCheck("L#2VERR",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("L#GAHESHVerr","GLOBAL",0)~ THEN G1Gah25B Verr2Gahesh2501
+@0
+DO ~SetGlobal("L#GAHESHVerr","GLOBAL",1)~ 
+== L#2VE25B @1
+== G1Gah25B @2
+== L#2VE25B @3
+EXIT
+
+
+////PHALH - GAHESH TOB
+
+CHAIN IF ~InParty("GAHESH")
+See("GAHESH")
+!StateCheck("GAHESH",CD_STATE_NOTVALID)
+!StateCheck("L#2PHAL",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("L#GAHESHPhalh","GLOBAL",0)~ THEN L#2PH25B Phalh2Gahes2501
+@4
+DO ~SetGlobal("L#GAHESHPhalh","GLOBAL",1)~ 
+== G1Gah25B @5
+== L#2PH25B @6
+== L#2PH25B @7
+EXIT

@@ -1,0 +1,14 @@
+//KHALID HEPHERNAAN
+
+CHAIN IF ~InParty("L#HPH")
+See("L#HPH")
+!StateCheck("L#HPH",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("L#HPHKhalid25","GLOBAL",0)~ THEN L#KHA25B Khalid2HPH2501
+@0
+DO ~SetGlobal("L#HPHKhalid25","GLOBAL",1)~
+== L#HPH25B @1
+== L#HPH25B @2
+== L#KHA25B @3
+EXIT
