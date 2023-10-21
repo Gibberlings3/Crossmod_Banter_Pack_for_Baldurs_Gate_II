@@ -1,0 +1,30 @@
+CHAIN IF ~InParty("QUAYLE")
+See("QUAYLE")
+!StateCheck("QUAYLE",CD_STATE_NOTVALID)
+!StateCheck("L#FHA",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("G#XB.QUAYLEL#FHA","GLOBAL",0)~ THEN L#FHAB L#FHAG#XB.QUAYLE1
+@0
+DO ~SetGlobal("G#XB.QUAYLEL#FHA","GLOBAL",1)~
+==1xQuayB @1
+==L#FHAB @2
+==1xQuayB @3
+==L#FHAB @4
+EXIT
+
+CHAIN IF ~InParty("QUAYLE")
+See("QUAYLE")
+!StateCheck("QUAYLE",CD_STATE_NOTVALID)
+!StateCheck("L#FHA",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("G#XB.QUAYLEL#FHA","GLOBAL",1)~ THEN L#FHAB L#FHAG#XB.QUAYLE2
+@5
+DO ~SetGlobal("G#XB.QUAYLEL#FHA","GLOBAL",2)~
+==1xQuayB @6
+==L#FHAB @7
+==1xQuayB @8
+==L#FHAB @9
+==1xQuayB @10 
+==L#FHAB @11
+==1xQuayB @12
+EXIT

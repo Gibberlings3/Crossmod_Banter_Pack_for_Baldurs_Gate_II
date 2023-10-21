@@ -1,11 +1,11 @@
-BACKUP ~crossmodbg2\backup~
+BACKUP ~weidu_external\crossmodbg2\backup~
 //AUTHOR ~Grim Squeaker, K'aeloree, and Berelinde, maintained at www.gibberlings3.net~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/55-crossmod-banter-pack/~
 
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
 
-VERSION ~v21~ //put version number here, not inside setup.tra
+VERSION ~v22~ //put version number here, not inside setup.tra
 
 README ~crossmodbg2/readme-crossmodbg2.html~
 
@@ -2566,6 +2566,698 @@ ACTION_IF FILE_EXISTS_IN_GAME ~B!ASTER.dlg~ THEN BEGIN
 	END
 END
 
+// v22
+
+// Dvaradime - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFUB.dlg~ THEN BEGIN
+
+  PRINT @757
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-afu/soa_dvaradime-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @758
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#AFUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2EDB.dlg~ THEN BEGIN
+
+  PRINT @759
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Eddard... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-eddard/soa_dvaradime-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @760
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#2EDB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FALB.dlg~ THEN BEGIN
+
+  PRINT @761
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Faldorn... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-faldorn/soa_dvaradime-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @762
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#FALB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Fhaugy Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ THEN BEGIN
+
+  PRINT @763
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Fhaugy... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-fhaugy/soa_dvaradime-fhaugy.d~
+
+END ELSE BEGIN
+
+  PRINT @764
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#FHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Fyalvara Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FYAB.dlg~ THEN BEGIN
+
+  PRINT @765
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Fyalvara... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-fyalvara/soa_dvaradime-fyalvara.d~
+
+END ELSE BEGIN
+
+  PRINT @766
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#FYAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPHB.dlg~ THEN BEGIN
+
+  PRINT @767
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Hephernaan... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-hephernaan/soa_dvaradime-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @768
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#HPHB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ THEN BEGIN
+
+  PRINT @769
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Khalid... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-khalid/soa_dvaradime-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @770
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#KHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Lhannd Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ THEN BEGIN
+
+  PRINT @771
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Lhannd... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-lhannd/soa_dvaradime-lhannd.d~
+
+END ELSE BEGIN
+
+  PRINT @772
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#LHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ THEN BEGIN
+
+  PRINT @773
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-skiecostonesoul/soa_dvaradime-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @774
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Dvaradime - Xzele Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ THEN BEGIN
+
+  PRINT @775
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Dvaradime and Xzele... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_dvaradime-xzele/soa_dvaradime-xzele.d~
+
+END ELSE BEGIN
+
+  PRINT @776
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#DVAB.dlg and/or L#XZEB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Faldorn - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FALB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2EDB.dlg~ THEN BEGIN
+
+  PRINT @777
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Faldorn and Eddard... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_faldorn-eddard/soa_faldorn-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @778
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FALB.dlg and/or L#2EDB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Faldorn - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FALB.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPHB.dlg~ THEN BEGIN
+
+  PRINT @779
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Faldorn and Hephernaan... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_faldorn-hephernaan/soa_faldorn-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @780
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FALB.dlg and/or L#HPHB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Faldorn - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FALB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ THEN BEGIN
+
+  PRINT @781
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Faldorn and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_faldorn-skiecostonesoul/soa_faldorn-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @782
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FALB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFUB.dlg~ THEN BEGIN
+
+  PRINT @783
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-afu/soa_fhaugy-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @784
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or L#AFUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2EDB.dlg~ THEN BEGIN
+
+  PRINT @785
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Eddard... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-eddard/soa_fhaugy-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @786
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or L#2EDB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FALB.dlg~ THEN BEGIN
+
+  PRINT @787
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Faldorn... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-faldorn/soa_fhaugy-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @788
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or L#FALB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Gahesh Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~G1GaheB.dlg~ THEN BEGIN
+
+  PRINT @789
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Gahesh... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-gahesh/soa_fhaugy-gahesh.d~
+
+END ELSE BEGIN
+
+  PRINT @790
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or G1GaheB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPHB.dlg~ THEN BEGIN
+
+  PRINT @791
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Hephernaan... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-hephernaan/soa_fhaugy-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @792
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or L#HPHB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ THEN BEGIN
+
+  PRINT @793
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Khalid... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-khalid/soa_fhaugy-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @794
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or L#KHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Quayle Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~1xQuayB.dlg~ THEN BEGIN
+
+  PRINT @795
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Quayle... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-lavasquayle/soa_fhaugy-lavasquayle.d~
+
+END ELSE BEGIN
+
+  PRINT @796
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or 1xQuayB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fhaugy - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ THEN BEGIN
+
+  PRINT @797
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fhaugy and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fhaugy-skiecostonesoul/soa_fhaugy-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @798
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FHAB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fyalvara - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FALB.dlg~ THEN BEGIN
+
+  PRINT @799
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fyalvara and Faldorn... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fyalvara-faldorn/soa_fyalvara-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @800
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FYAB.dlg and/or L#FALB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fyalvara - Fhaugy Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ THEN BEGIN
+
+  PRINT @801
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fyalvara and Fhaugy... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fyalvara-fhaugy/soa_fyalvara-fhaugy.d~
+
+END ELSE BEGIN
+
+  PRINT @802
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FYAB.dlg and/or L#FHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fyalvara - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ THEN BEGIN
+
+  PRINT @803
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fyalvara and Khalid... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fyalvara-khalid/soa_fyalvara-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @804
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FYAB.dlg and/or L#KHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fyalvara - Lhannd Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ THEN BEGIN
+
+  PRINT @805
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fyalvara and Lhannd... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fyalvara-lhannd/soa_fyalvara-lhannd.d~
+
+END ELSE BEGIN
+
+  PRINT @806
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FYAB.dlg and/or L#LHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Fyalvara - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ THEN BEGIN
+
+  PRINT @807
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Fyalvara and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_fyalvara-skiecostonesoul/soa_fyalvara-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @808
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#FYAB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Khalid - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FALB.dlg~ THEN BEGIN
+
+  PRINT @809
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Khalid and Faldorn... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_khalid-faldorn/soa_khalid-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @810
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#KHAB.dlg and/or L#FALB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Khalid - Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ AND FILE_EXISTS_IN_GAME ~BRH#ISR.dlg~ THEN BEGIN
+
+  PRINT @811
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Khalid and Isra... ~
+  INCLUDE ~crossmodbg2/soa/banters/soa_khalid-isra/soa_khalid-isra.tph~
+  COMPILE ~crossmodbg2/soa/banters/soa_khalid-isra/soa_khalid-isra.d~
+
+END ELSE BEGIN
+
+  PRINT @812
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#KHAB.dlg and/or BRH#ISR.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Khalid - kivan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ AND FILE_EXISTS_IN_GAME ~BP#KIV.dlg~ THEN BEGIN
+
+  PRINT @813
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Khalid and kivan... ~
+  INCLUDE ~crossmodbg2/soa/banters/soa_khalid-kivan/soa_khalid-kivan.tph~
+  COMPILE ~crossmodbg2/soa/banters/soa_khalid-kivan/soa_khalid-kivan.d~
+
+END ELSE BEGIN
+
+  PRINT @814
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#KHAB.dlg and/or BP#KIV.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Lhannd - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFUB.dlg~ THEN BEGIN
+
+  PRINT @815
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lhannd and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_lhannd-afu/soa_lhannd-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @816
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#LHAB.dlg and/or L#AFUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Lhannd - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2EDB.dlg~ THEN BEGIN
+
+  PRINT @817
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lhannd and Eddard... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_lhannd-eddard/soa_lhannd-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @818
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#LHAB.dlg and/or L#2EDB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Lhannd - Foundling Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ THEN BEGIN
+
+  PRINT @819
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lhannd and Foundling... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_lhannd-foundling/soa_lhannd-foundling.d~
+
+END ELSE BEGIN
+
+  PRINT @820
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#LHAB.dlg and/or L#FOUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Lhannd - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPHB.dlg~ THEN BEGIN
+
+  PRINT @821
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lhannd and Hephernaan... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_lhannd-hephernaan/soa_lhannd-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @822
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#LHAB.dlg and/or L#HPHB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Lhannd - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ THEN BEGIN
+
+  PRINT @823
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lhannd and Khalid... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_lhannd-khalid/soa_lhannd-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @824
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#LHAB.dlg and/or L#KHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Lhannd - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHAB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ THEN BEGIN
+
+  PRINT @825
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lhannd and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_lhannd-skiecostonesoul/soa_lhannd-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @826
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#LHAB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Walahnan - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2WHB.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFUB.dlg~ THEN BEGIN
+
+  PRINT @827
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Walahnan and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_walahnanbg2-afu/soa_walahnanbg2-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @828
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#2WHB.dlg and/or L#AFUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Walahnan - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2WHB.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ THEN BEGIN
+
+  PRINT @829
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Walahnan and Khalid... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_walahnanbg2-khalid/soa_walahnanbg2-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @830
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#2WHB.dlg and/or L#KHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Walahnan - Quayle Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2WHB.dlg~ AND FILE_EXISTS_IN_GAME ~1xQuayB.dlg~ THEN BEGIN
+
+  PRINT @831
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Walahnan and Quayle... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_walahnanbg2-lavasquayle/soa_walahnanbg2-lavasquayle.d~
+
+END ELSE BEGIN
+
+  PRINT @832
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#2WHB.dlg and/or 1xQuayB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFUB.dlg~ THEN BEGIN
+
+  PRINT @833
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-afu/soa_xzele-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @834
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#AFUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2EDB.dlg~ THEN BEGIN
+
+  PRINT @835
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Eddard... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-eddard/soa_xzele-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @836
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#2EDB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Fhaugy Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FHAB.dlg~ THEN BEGIN
+
+  PRINT @837
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Fhaugy... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-fhaugy/soa_xzele-fhaugy.d~
+
+END ELSE BEGIN
+
+  PRINT @838
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#FHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Foundling Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#FOUB.dlg~ THEN BEGIN
+
+  PRINT @839
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Foundling... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-foundling/soa_xzele-foundling.d~
+
+END ELSE BEGIN
+
+  PRINT @840
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#FOUB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~BRH#ISR.dlg~ THEN BEGIN
+
+  PRINT @841
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Isra... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-isra/soa_xzele-isra.d~
+
+END ELSE BEGIN
+
+  PRINT @842
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or BRH#ISR.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Ajantis Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~C#AjanB.dlg~ THEN BEGIN
+
+  PRINT @843
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Ajantis... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-jasteyajantis/soa_xzele-jasteyajantis.d~
+
+END ELSE BEGIN
+
+  PRINT @844
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or C#AjanB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHAB.dlg~ THEN BEGIN
+
+  PRINT @845
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Khalid... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-khalid/soa_xzele-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @846
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#KHAB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg~ THEN BEGIN
+
+  PRINT @847
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-skiecostonesoul/soa_xzele-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @848
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Walahnan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L#2WHB.dlg~ THEN BEGIN
+
+  PRINT @849
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Walahnan... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-walahnanbg2/soa_xzele-walahnanbg2.d~
+
+END ELSE BEGIN
+
+  PRINT @850
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L#2WHB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Will Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~L0WillB.dlg~ THEN BEGIN
+
+  PRINT @851
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Will... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-will/soa_xzele-will.d~
+
+END ELSE BEGIN
+
+  PRINT @852
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or L0WillB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+// Xzele - Yvette Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZEB.dlg~ AND FILE_EXISTS_IN_GAME ~YxYveB.dlg~ THEN BEGIN
+
+  PRINT @853
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzele and Yvette... ~
+  COMPILE ~crossmodbg2/soa/banters/soa_xzele-yvette/soa_xzele-yvette.d~
+
+END ELSE BEGIN
+
+  PRINT @854
+  APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#XZEB.dlg and/or YxYveB.dlg not detected. Skipping these particular SoA banters.~
+
+END
+
+
+
 APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
 
 // *****************************
@@ -4618,5 +5310,848 @@ END ELSE BEGIN
 	PRINT @424 /* Xan's ToB script o#xan25s.bcs not present. */
 	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Xan's ToB script o#xan25s.bcs not present.~
 END
+
+// v22
+
+// Dvaradime - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFU25B.dlg~ THEN BEGIN
+
+  PRINT @855
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-afu/tob_dvaradime-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @856
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#AFU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2ED25B.dlg~ THEN BEGIN
+
+  PRINT @857
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Eddard... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-eddard/tob_dvaradime-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @858
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#2ED25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ THEN BEGIN
+
+  PRINT @859
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Faldorn... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-faldorn/tob_dvaradime-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @860
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#FAL25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Fhaugy Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ THEN BEGIN
+
+  PRINT @861
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Fhaugy... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-fhaugy/tob_dvaradime-fhaugy.d~
+
+END ELSE BEGIN
+
+  PRINT @862
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#FHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Fyalvara Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ THEN BEGIN
+
+  PRINT @863
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Fyalvara... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-fyalvara/tob_dvaradime-fyalvara.d~
+
+END ELSE BEGIN
+
+  PRINT @864
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#FYA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPH25B.dlg~ THEN BEGIN
+
+  PRINT @865
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Hephernaan... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-hephernaan/tob_dvaradime-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @866
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#HPH25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @867
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-khalid/tob_dvaradime-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @868
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Lhannd Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ THEN BEGIN
+
+  PRINT @869
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Lhannd... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-lhannd/tob_dvaradime-lhannd.d~
+
+END ELSE BEGIN
+
+  PRINT @870
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#LHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ THEN BEGIN
+
+  PRINT @871
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-skiecostonesoul/tob_dvaradime-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @872
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#2SD25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - Xzele Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ THEN BEGIN
+
+  PRINT @873
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and Xzele... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-xzele/tob_dvaradime-xzele.d~
+
+END ELSE BEGIN
+
+  PRINT @874
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or L#XZE25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Dvaradime - yoshimosremorse Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ AND FILE_EXISTS_IN_GAME ~YYosh25B.dlg~ THEN BEGIN
+
+  PRINT @875
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Dvaradime and yoshimosremorse... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_dvaradime-yoshimosremorse/tob_dvaradime-yoshimosremorse.d~
+
+END ELSE BEGIN
+
+  PRINT @876
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#DVA25B.dlg and/or YYosh25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Faldorn - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2ED25B.dlg~ THEN BEGIN
+
+  PRINT @877
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Faldorn and Eddard... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_faldorn-eddard/tob_faldorn-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @878
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FAL25B.dlg and/or L#2ED25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Faldorn - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPH25B.dlg~ THEN BEGIN
+
+  PRINT @879
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Faldorn and Hephernaan... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_faldorn-hephernaan/tob_faldorn-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @880
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FAL25B.dlg and/or L#HPH25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Faldorn - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ THEN BEGIN
+
+  PRINT @881
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Faldorn and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_faldorn-skiecostonesoul/tob_faldorn-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @882
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FAL25B.dlg and/or L#2SD25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFU25B.dlg~ THEN BEGIN
+
+  PRINT @883
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-afu/tob_fhaugy-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @884
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or L#AFU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2ED25B.dlg~ THEN BEGIN
+
+  PRINT @885
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Eddard... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-eddard/tob_fhaugy-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @886
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or L#2ED25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ THEN BEGIN
+
+  PRINT @887
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Faldorn... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-faldorn/tob_fhaugy-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @888
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or L#FAL25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Gahesh Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~G1Gah25B.dlg~ THEN BEGIN
+
+  PRINT @889
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Gahesh... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-gahesh/tob_fhaugy-gahesh.d~
+
+END ELSE BEGIN
+
+  PRINT @890
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or G1Gah25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPH25B.dlg~ THEN BEGIN
+
+  PRINT @891
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Hephernaan... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-hephernaan/tob_fhaugy-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @892
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or L#HPH25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @893
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-khalid/tob_fhaugy-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @894
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Quayle Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~1xQU25B.dlg~ THEN BEGIN
+
+  PRINT @895
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Quayle... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-lavasquayle/tob_fhaugy-lavasquayle.d~
+
+END ELSE BEGIN
+
+  PRINT @896
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or 1xQU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fhaugy - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ THEN BEGIN
+
+  PRINT @897
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fhaugy and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fhaugy-skiecostonesoul/tob_fhaugy-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @898
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FHA25B.dlg and/or L#2SD25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fyalvara - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2ED25B.dlg~ THEN BEGIN
+
+  PRINT @899
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fyalvara and Eddard... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fyalvara-eddard/tob_fyalvara-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @900
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FYA25B.dlg and/or L#2ED25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fyalvara - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ THEN BEGIN
+
+  PRINT @901
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fyalvara and Faldorn... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fyalvara-faldorn/tob_fyalvara-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @902
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FYA25B.dlg and/or L#FAL25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fyalvara - Fhaugy Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ THEN BEGIN
+
+  PRINT @903
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fyalvara and Fhaugy... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fyalvara-fhaugy/tob_fyalvara-fhaugy.d~
+
+END ELSE BEGIN
+
+  PRINT @904
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FYA25B.dlg and/or L#FHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fyalvara - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @905
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fyalvara and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fyalvara-khalid/tob_fyalvara-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @906
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FYA25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fyalvara - Lhannd Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ THEN BEGIN
+
+  PRINT @907
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fyalvara and Lhannd... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fyalvara-lhannd/tob_fyalvara-lhannd.d~
+
+END ELSE BEGIN
+
+  PRINT @908
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FYA25B.dlg and/or L#LHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Fyalvara - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ THEN BEGIN
+
+  PRINT @909
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Fyalvara and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_fyalvara-skiecostonesoul/tob_fyalvara-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @910
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#FYA25B.dlg and/or L#2SD25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFU25B.dlg~ THEN BEGIN
+
+  PRINT @911
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-afu/tob_juniper-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @912
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#AFU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Dvaradime Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#DVA25B.dlg~ THEN BEGIN
+
+  PRINT @913
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Dvaradime... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-dvaradime/tob_juniper-dvaradime.d~
+
+END ELSE BEGIN
+
+  PRINT @914
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#DVA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ THEN BEGIN
+
+  PRINT @915
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Faldorn... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-faldorn/tob_juniper-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @916
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#FAL25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Fyalvara Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FYA25B.dlg~ THEN BEGIN
+
+  PRINT @917
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Fyalvara... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-fyalvara/tob_juniper-fyalvara.d~
+
+END ELSE BEGIN
+
+  PRINT @918
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#FYA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @919
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-khalid/tob_juniper-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @920
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Lhannd Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ THEN BEGIN
+
+  PRINT @921
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Lhannd... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-lhannd/tob_juniper-lhannd.d~
+
+END ELSE BEGIN
+
+  PRINT @922
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#LHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - Xzele Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ THEN BEGIN
+
+  PRINT @923
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and Xzele... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-xzele/tob_juniper-xzele.d~
+
+END ELSE BEGIN
+
+  PRINT @924
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or L#XZE25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Juniper - yoshimosremorse Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#JN25B.dlg~ AND FILE_EXISTS_IN_GAME ~YYosh25B.dlg~ THEN BEGIN
+
+  PRINT @925
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Juniper and yoshimosremorse... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_juniper-yoshimosremorse/tob_juniper-yoshimosremorse.d~
+
+END ELSE BEGIN
+
+  PRINT @926
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#JN25B.dlg and/or YYosh25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Khalid - Faldorn Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FAL25B.dlg~ THEN BEGIN
+
+  PRINT @927
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Khalid and Faldorn... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_khalid-faldorn/tob_khalid-faldorn.d~
+
+END ELSE BEGIN
+
+  PRINT @928
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#KHA25B.dlg and/or L#FAL25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Khalid - Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~BRH#IS25.dlg~ THEN BEGIN
+
+  PRINT @929
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Khalid and Isra... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_khalid-isra/tob_khalid-isra.d~
+
+END ELSE BEGIN
+
+  PRINT @930
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#KHA25B.dlg and/or BRH#IS25.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Khalid - kivan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~BP#KIV25.dlg~ THEN BEGIN
+
+  PRINT @931
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Khalid and kivan... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_khalid-kivan/tob_khalid-kivan.d~
+
+END ELSE BEGIN
+
+  PRINT @932
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#KHA25B.dlg and/or BP#KIV25.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Lhannd - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFU25B.dlg~ THEN BEGIN
+
+  PRINT @933
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lhannd and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_lhannd-afu/tob_lhannd-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @934
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#LHA25B.dlg and/or L#AFU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Lhannd - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2ED25B.dlg~ THEN BEGIN
+
+  PRINT @935
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lhannd and Eddard... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_lhannd-eddard/tob_lhannd-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @936
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#LHA25B.dlg and/or L#2ED25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Lhannd - Foundling Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FOU25B.dlg~ THEN BEGIN
+
+  PRINT @937
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lhannd and Foundling... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_lhannd-foundling/tob_lhannd-foundling.d~
+
+END ELSE BEGIN
+
+  PRINT @938
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#LHA25B.dlg and/or L#FOU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Lhannd - Hephernaan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#HPH25B.dlg~ THEN BEGIN
+
+  PRINT @939
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lhannd and Hephernaan... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_lhannd-hephernaan/tob_lhannd-hephernaan.d~
+
+END ELSE BEGIN
+
+  PRINT @940
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#LHA25B.dlg and/or L#HPH25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Lhannd - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @941
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lhannd and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_lhannd-khalid/tob_lhannd-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @942
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#LHA25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Lhannd - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#LHA25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ THEN BEGIN
+
+  PRINT @943
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lhannd and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_lhannd-skiecostonesoul/tob_lhannd-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @944
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#LHA25B.dlg and/or L#2SD25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Walahnan - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2WH25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFU25B.dlg~ THEN BEGIN
+
+  PRINT @945
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Walahnan and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_walahnanbg2-afu/tob_walahnanbg2-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @946
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#2WH25B.dlg and/or L#AFU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Walahnan - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2WH25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @947
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Walahnan and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_walahnanbg2-khalid/tob_walahnanbg2-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @948
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#2WH25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Walahnan - Quayle Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#2WH25B.dlg~ AND FILE_EXISTS_IN_GAME ~1xQU25B.dlg~ THEN BEGIN
+
+  PRINT @949
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Walahnan and Quayle... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_walahnanbg2-lavasquayle/tob_walahnanbg2-lavasquayle.d~
+
+END ELSE BEGIN
+
+  PRINT @950
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#2WH25B.dlg and/or 1xQU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Afu-Zuuvi Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#AFU25B.dlg~ THEN BEGIN
+
+  PRINT @951
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Afu-Zuuvi... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-afu/tob_xzele-afu.d~
+
+END ELSE BEGIN
+
+  PRINT @952
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#AFU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Eddard Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2ED25B.dlg~ THEN BEGIN
+
+  PRINT @953
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Eddard... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-eddard/tob_xzele-eddard.d~
+
+END ELSE BEGIN
+
+  PRINT @954
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#2ED25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Fhaugy Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FHA25B.dlg~ THEN BEGIN
+
+  PRINT @955
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Fhaugy... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-fhaugy/tob_xzele-fhaugy.d~
+
+END ELSE BEGIN
+
+  PRINT @956
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#FHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Foundling Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#FOU25B.dlg~ THEN BEGIN
+
+  PRINT @957
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Foundling... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-foundling/tob_xzele-foundling.d~
+
+END ELSE BEGIN
+
+  PRINT @958
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#FOU25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Isra Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~BRH#IS25.dlg~ THEN BEGIN
+
+  PRINT @959
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Isra... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-isra/tob_xzele-isra.d~
+
+END ELSE BEGIN
+
+  PRINT @960
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or BRH#IS25.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Ajantis Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~C#AJA25B.dlg~ THEN BEGIN
+
+  PRINT @961
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Ajantis... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-jasteyajantis/tob_xzele-jasteyajantis.d~
+
+END ELSE BEGIN
+
+  PRINT @962
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or C#AJA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Khalid Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#KHA25B.dlg~ THEN BEGIN
+
+  PRINT @963
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Khalid... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-khalid/tob_xzele-khalid.d~
+
+END ELSE BEGIN
+
+  PRINT @964
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#KHA25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Skie (Cost of One Girl's Soul) Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SD25B.dlg~ THEN BEGIN
+
+  PRINT @965
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Skie (Cost of One Girl's Soul)... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-skiecostonesoul/tob_xzele-skiecostonesoul.d~
+
+END ELSE BEGIN
+
+  PRINT @966
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#2SD25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Walahnan Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L#2WH25B.dlg~ THEN BEGIN
+
+  PRINT @967
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Walahnan... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-walahnanbg2/tob_xzele-walahnanbg2.d~
+
+END ELSE BEGIN
+
+  PRINT @968
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L#2WH25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Will Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~L0Wil25B.dlg~ THEN BEGIN
+
+  PRINT @969
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Will... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-will/tob_xzele-will.d~
+
+END ELSE BEGIN
+
+  PRINT @970
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or L0Wil25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - yoshimosremorse Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~YYosh25B.dlg~ THEN BEGIN
+
+  PRINT @971
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and yoshimosremorse... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-yoshimosremorse/tob_xzele-yoshimosremorse.d~
+
+END ELSE BEGIN
+
+  PRINT @972
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or YYosh25B.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
+// Xzele - Yvette Material
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~tob_yvette.dlg~ THEN BEGIN
+
+  PRINT @973
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Yvette... ~
+  COMPILE ~crossmodbg2/tob/banters/tob_xzele-yvette/tob_xzele-yvette.d~
+
+END ELSE BEGIN
+
+  PRINT @974
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or tob_yvette.dlg not detected. Skipping these particular ToB banters.~
+
+END
+
 
 APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~

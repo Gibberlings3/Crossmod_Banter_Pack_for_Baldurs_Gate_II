@@ -1,0 +1,117 @@
+
+// bp#kiv.tra:
+
+WITH_TRA ~kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
+  OUTER_SET strref42 = RESOLVE_STR_REF(@42)
+END
+
+WITH_TRA ~crossmodbg2/tra/%s/soa_khalid-kivan.tra~ BEGIN
+  STRING_SET_EVALUATE strref42 @15
+END
+
+//p#kinew:
+
+WITH_TRA ~kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
+  OUTER_SET strref42 = RESOLVE_STR_REF(@42)
+END
+
+
+WITH_TRA ~crossmodbg2/tra/%s/soa_khalid-kivan.tra~ BEGIN
+  STRING_SET_EVALUATE strref1 @15
+  STRING_SET_EVALUATE strref5 @16
+  STRING_SET_EVALUATE strref6 @17
+  STRING_SET_EVALUATE strref7 @18
+  STRING_SET_EVALUATE strref8 @19
+END
+
+/*
+
+bp#kiv.tra:
+
+@42  = ~It is not just Dynaheir's and Khalid's deaths... Not just Imoen's kidnapping... It is something deeper, something at the very core of my heart.~
+new: ~It is not just Dynaheir's and our Harper friend's deaths... Not just Imoen's kidnapping... It is something deeper, something at the very core of my heart.~
+
+p#kinew:
+
+85   = ~I'm sure that Imoen can find a way out on her own. What I truly want is to avenge Khalid and Dynaheir.~
+new:  ~I'm sure that Imoen can find a way out on her own. What I truly want is to avenge Khalid and our Harper friend.~
+
+@93   = ~I still cannot come to terms with Khalid and Dynaheir's deaths. We had been through tight places before and managed to emerge victorious.~
+new:  ~I still cannot come to terms with our Harper friend's and Dynaheir's deaths. We had been through tight places before and managed to emerge victorious.~
+
+@95   = ~Alas, Kivan, they are dead. At least Khalid is. I've seen what was left of him in the dungeon.~
+new:  ~Alas, Kivan, they are dead. At least our Harper friend is. I've seen what was left of him in the dungeon.~
+
+@104  = ~If they wished to live... Khalid's body was mutilated almost beyond recognition, Kivan.~
+new:  ~If they wished to live... Our friend's body was mutilated almost beyond recognition, Kivan.~
+
+@110  = ~I have seen such things in Irenicus' dungeon... Khalid was among the lucky ones. There were jars full of still living... parts of people who offended the mage somehow. One just happened to enter the wrong room. There were clones of a woman driven mad by whatever Irenicus did to them. There were dryads held as concubines...~
+new: ~I have seen such things in Irenicus' dungeon... Our Harper friend was among the lucky ones. There were jars full of still living... parts of people who offended the mage somehow. One just happened to enter the wrong room. There were clones of a woman driven mad by whatever Irenicus did to them. There were dryads held as concubines...~
+
+@169  = ~I had to leave, <CHARNAME>. Surely, you do not blame me for all that had come to pass? The imprisonment, the tortures, Khalid and Dynaheir dead... (shakes his head sadly).~
+new: ~I had to leave, <CHARNAME>. Surely, you do not blame me for all that had come to pass? The imprisonment, the tortures, our friends' deaths... (shakes his head sadly).~
+
+@174  = ~It seems that way; the imprisonment, the torture rack, Khalid and Dynaheir dead... (shakes his head sadly) It should not have happened to any of you. Do you know the fate of our other companions?~
+new: ~It seems that way; the imprisonment, the torture rack, our friends' deaths... (shakes his head sadly) It should not have happened to any of you. Do you know the fate of our other companions?~
+
+@325  = ~Is your loyalty to your people stronger than the bond of our friendship? Are you refusing to help me avenge Khalid and Dynaheir and kill a vile man just because he is an elf?~
+new: ~Is your loyalty to your people stronger than the bond of our friendship? Are you refusing to help me avenge our friends and kill a vile man just because he is an elf?~
+
+@330  = ~Are you trying to tell me that your loyalty to your people is stronger than the bond of our friendship? Are you refusing to help me avenge Khalid and Dynaheir and kill a vile man just because he is an elf?!~
+new: ~Are you trying to tell me that your loyalty to your people is stronger than the bond of our friendship? Are you refusing to help me avenge our friends and kill a vile man just because he is an elf?!~
+
+@1154 = ~Don't worry, if I turn into the Slayer again, I'm likely to wake even Khalid and Dynaheir, let alone our bunch of light sleepers.~
+new: ~Don't worry, if I turn into the Slayer again, I'm likely to wake even our dead friends, let alone our bunch of light sleepers.~
+
+p#kipid:
+
+@118  = ~I would like to say a prayer where Khalid and Dynaheir fell.~
+new: ~I would like to say a prayer where our Harper friend and Dynaheir fell.~
+
+@407  = ~Of Khalid and Dynaheir, too. Not even a stone marks their graves. ~
+new: ~Dynaheir and our Harper friend, too. Not even a stone marks their graves. ~
+
+@415  = ~Yes, Khalid and Dynaheir lay under rubble. But they did not die unmourned, unloved, unavenged. That is what is important.~
+new: ~Yes, our friends lay under rubble. But they did not die unmourned, unloved, unavenged. That is what is important.~
+
+p#kivsoa:
+
+@69   = ~I shall join in. To Dynaheir! None could summon a fireball with such a grace! To Khalid, the man who won each battle with due humility!~
+new: ~I shall join in. To Dynaheir! None could summon a fireball with such a grace! To our Harper friend, who won each battle with due humility!~
+
+@72   = ~To Khalid and Dynaheir!~
+new: ~To the fallen friends who shall be remembered!~
+
+@440  = ~You and Khalid were friends...~
+new: ~You were friends with-~
+
+@441  = ~He was a good and true man.~
+new: ~Yes. We were.~
+
+@442  = ~I know... Well, *now* I know. Before I thought... I thought he was... well... a chicken.~
+new: ~Mhm... I think I took some of our frineds for granted... I looked at them and thought we *deserve* to have people like them by our side.~
+
+@443  = ~You were a young girl and judged by appearances. It is not the greatest sin, Imoen. The main thing was that you had never said a bitter word to him or insulted him. You were always kind, even when you teased him.~
+new: ~You were a young girl and judged by appearances. It is not the greatest sin, Imoen. The main thing was that you had never said a bitter word to them. You were always kind, even when you teased them.~
+
+@444  = ~Yeah, I knew he was a nice guy, but I didn't know just how brave he was. Kivan, the things I saw Irenicus do to him in my presence... I would have begged for mercy. In fact, I did... I could not watch what he did to him. I... I...~
+new: ~Yeah, I know, but I didn't know just how brave they were to be there, fight by our side. Kivan, the things I saw Irenicus do to our Harper friend in my presence... I would have begged for mercy. In fact, I did... I could not watch what he did... I... I...~
+
+@445  = ~Khalid is beyond the reach of pain now, and he died bravely. It is a poor consolation, Imoen, but it is all I can offer.~
+new: ~Our friend is beyond the reach of pain now. It is a poor consolation, Imoen, but it is all I can offer.~
+
+@446  = ~He did die bravely, Kivan. He... he found me with his eyes and whispered: "Jaheira... don't tell Jaheira..." And Irenicus then said: "Amusing... What have you learned today, Imoen?" And I said that I hated him... and he just said: "Good, now I will prove to you that love does not exist." And he opened his chest to cut out Khalid's heart. He said that he'd let Jaheira eat it, and she... she would not know.~
+new: ~I... I know, Kivan. I can still remember the horrors, how... he would... torture our friend, he would... I can even speak about it, even though it's been weeks... there was so much blood...~
+
+@448  = ~But he did change something inside me. I feel broken sometimes. And... I lied to Jaheira too, Kivan. I told her that he was... already dead. I never lied to Jaheira before. Well, not deliberately. It's like I've stolen something from her, and afraid to give it back.~
+new: ~But he did change something inside me. I feel broken sometimes. I feel like... I've shifted into someone else, I see things differently, I say things differently...~
+
+@449  = ~You did the right thing, Imoen. The only right thing. Jaheira has grieved enough.~
+new: ~Sometimes we do not chose to change. Sometimes it's forced upon us, Imoen.~
+
+@450  = ~I know, but a selfish, nasty thing in me, it pushes me to tell her...~
+new: ~I know, but there is a part of me that-~
+
+*/
+
+

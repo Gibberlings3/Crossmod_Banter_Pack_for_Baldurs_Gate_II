@@ -1,0 +1,15 @@
+CHAIN IF ~InParty("L#HPH")
+See("L#HPH")
+!StateCheck("L#FALD",CD_STATE_NOTVALID)
+!StateCheck("L#HPH",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("G#XB.FaldornL#HPHTOB","GLOBAL",0)~ THEN L#FAL25B L#HPHG#XB.FaldornTOB1
+@0
+DO ~SetGlobal("G#XB.FaldornL#HPHTOB","GLOBAL",1)~
+==L#HPH25B @1
+==L#FAL25B @2
+==L#HPH25B @3
+==L#HPH25B @4
+==L#FAL25B @5
+EXIT
+

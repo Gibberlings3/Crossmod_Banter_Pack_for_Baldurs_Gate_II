@@ -1,0 +1,14 @@
+CHAIN IF ~InParty("L#FHA")
+See("L#FHA")
+!StateCheck("L#2EDDRD",CD_STATE_NOTVALID)
+!StateCheck("L#FHA",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("G#XB.EddardL#FHATOB","GLOBAL",0)~ THEN L#2ED25B L#FHAG#XB.EddardTOB1
+@0
+DO ~SetGlobal("G#XB.EddardL#FHATOB","GLOBAL",1)~
+==L#FHA25B @1
+==L#FHA25B @2
+==L#2ED25B @3
+==L#FHA25B @4
+==L#2ED25B @5
+EXIT

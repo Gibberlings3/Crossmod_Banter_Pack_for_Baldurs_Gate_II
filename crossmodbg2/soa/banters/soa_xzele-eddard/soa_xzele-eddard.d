@@ -1,0 +1,26 @@
+CHAIN IF ~InParty("L#2EDDRD")
+See("L#2EDDRD")
+!StateCheck("L#XZE",CD_STATE_NOTVALID)
+!StateCheck("L#2EDDRD",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("G#XB.XzeleL#2EDDRD","GLOBAL",0)~ THEN L#XZEB L#2EDDRDG#XB.Xzele1
+@0
+DO ~SetGlobal("G#XB.XzeleL#2EDDRD","GLOBAL",1)~
+==L#2EDB @1
+==L#XZEB @2
+==L#2EDB @3
+==L#XZEB @4
+EXIT
+
+CHAIN IF ~InParty("L#2EDDRD")
+See("L#2EDDRD")
+!StateCheck("L#XZE",CD_STATE_NOTVALID)
+!StateCheck("L#2EDDRD",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("G#XB.XzeleL#2EDDRD","GLOBAL",1)~ THEN L#XZEB L#2EDDRDG#XB.Xzele2
+@5
+DO ~SetGlobal("G#XB.XzeleL#2EDDRD","GLOBAL",2)~
+==L#2EDB @6
+==L#XZEB @7
+==L#2EDB @8
+EXIT
