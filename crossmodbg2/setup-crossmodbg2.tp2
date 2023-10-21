@@ -37,7 +37,7 @@ ALWAYS
 
     ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
       PRINT @2 /* BG2:EE detected... */
-      ACTION_DEFINE_ARRAY cdnoconvert BEGIN soa_khalid-skie END // both EE mods, so already in utf-8
+      ACTION_DEFINE_ARRAY cdnoconvert BEGIN soa_khalid-skiecostonesoul END // both EE mods, so already in utf-8
       LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~crossmodbg2/tra~ noconvert_array = cdnoconvert END
     END
     ACTION_IF GAME_IS ~soa~ THEN BEGIN
@@ -1797,7 +1797,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~qi#mib.dlg~ AND FILE_EXISTS_IN_GAME ~L#2SDSKB.dlg
 THEN BEGIN
     PRINT @560
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Minyae and Skie..~
-    COMPILE ~crossmodbg2/soa/banters/soa_minyae-skiecost/soa_minyae-skiecost_banters.d~
+    COMPILE ~crossmodbg2/soa/banters/soa_minyae-skiecostonesoul/soa_minyae-skiecostonesoul_banters.d~
 END ELSE BEGIN
     PRINT @561 
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~qi#mib.dlg and/or L#2SDSKB.dlg not detected. Skipping these particular SoA banters.~
@@ -2374,8 +2374,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~l#khab.dlg~ AND FILE_EXISTS_IN_GAME ~l#2sdskb.dlg
 THEN BEGIN
     PRINT @745
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Lava's Khalid and Lava's Skie (Cost of One Girl's Soul)...~
-    COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_khalid-skie/soa_khalid-skie.d~
-		USING ~crossmodbg2/tra/%s/soa_khalid-skie.tra~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_khalid-skiecostonesoul/soa_khalid-skiecostonesoul.d~
+		USING ~crossmodbg2/tra/%s/soa_khalid-skiecostonesoul.tra~
 END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#khab.dlg and/or l#2sdskb.dlg not detected. Skipping these particular SoA banters.~
 END
@@ -4032,8 +4032,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~l#2sd25b.d
 THEN BEGIN
     PRINT @753
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Skie (Cost of One Girl's Soul)...~
-    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-skie/tob_khalid-skie.d~
-		USING ~crossmodbg2/tra/%s/tob_khalid-skie.tra~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-skiecostonesoul/tob_khalid-skiecostonesoul.d~
+		USING ~crossmodbg2/tra/%s/tob_khalid-skiecostonesoul.tra~
 END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or l#2sd25b.dlg not detected. Skipping these particular ToB banters.~
 END
@@ -4065,8 +4065,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~l#2sd25b.dlg~ AND FILE_EXISTS_IN_GAME ~yyosh25b.d
 THEN BEGIN
     PRINT @756
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Skie (Cost of One Girl's Soul) and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
-    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_skie-yoshimosremorse/tob_skie-yoshimosremorse.d~
-		USING ~crossmodbg2/tra/%s/tob_skie-yoshimosremorse.tra~
+    COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_skiecostonesoul-yoshimosremorse/tob_skiecostonesoul-yoshimosremorse.d~
+		USING ~crossmodbg2/tra/%s/tob_skiecostonesoul-yoshimosremorse.tra~
 END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#2sd25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
 END
