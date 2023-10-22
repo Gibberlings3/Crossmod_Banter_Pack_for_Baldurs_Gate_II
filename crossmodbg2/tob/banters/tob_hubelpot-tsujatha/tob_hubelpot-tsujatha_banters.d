@@ -17,8 +17,8 @@ END
 ++ @3 /* It's all right, Tsujatha. What do you need, Hubelpot? */ EXTERN BSC#HU25 DinPlans1
 ++ @4 /* Sorry, Hubelpot, we're busy right now. */ EXTERN BSC#Hu25 DinEnd1
 
-CHAIN BSC#Hu25 DinEnd 1
-~Ah'm goin'. Sorry te bother ye.~ EXIT
+CHAIN BSC#Hu25 DinEnd1
+@17 EXIT
 
 CHAIN BSC#Hu25 DinPlans1
 @6 /* Ah thank ye. Ah've been thinkin' that Ah'd like te honor th' both o' ye. Ah'm plannin' a right fine feast, one tha't hopefully ye'll never ferget! */
@@ -27,7 +27,7 @@ CHAIN BSC#Hu25 DinPlans1
 END
 ++ @9 /* What a wonderful idea, Hubelpot! I think it will be grand. */ EXTERN BSC#Hu25 DinPlans2
 ++ @10 /* As nice as it sounds, Hubelpot, I don't think we really have the time. I'm sorry. */ EXTERN BSC#Hu25 DinEnd2
-++ @11 /* I don't think so, Hubelpot. Thanks, but no thanks. */ EXTERN BSC#Hu25 DinEnd
+++ @11 /* I don't think so, Hubelpot. Thanks, but no thanks. */ EXTERN BSC#Hu25 DinEnd1
 
 CHAIN BSC#Hu25 DinPlans2
 @12 /* Ah'm glad ye like the idea! Ah'll be fixin' most o' yer favorites. An' Ah'll be sure te fix ye that fish recipe that ye like so much, Master Tsujatha. */
