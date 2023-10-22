@@ -1,5 +1,6 @@
 CHAIN IF ~InParty("YOSHIMO")
-See("YOSHIMO")
+InParty("L#HPH")
+See("L#HPH")
 !StateCheck("L#HPH",CD_STATE_NOTVALID)
 !StateCheck("YOSHIMO",CD_STATE_NOTVALID)
 CombatCounter(0)
