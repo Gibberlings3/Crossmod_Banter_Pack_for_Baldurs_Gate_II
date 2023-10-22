@@ -4763,554 +4763,6 @@ END ELSE BEGIN
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#2sd25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
-
-
-
-
-
-
-
-
-/********* AHHHHHHHHHHHHHHHHHHHHHHHHHHH *****/
-
-
-
-
-
-
-APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
-
-// *******************************
-// * ROMANCE CONFLICTS COMPONENT *
-// *******************************
-
-BEGIN @348 /* Crossmod Romance Conflicts */
-LABEL ~cd_crossmod_banter_pack_bg2_romance_conflicts~
-
-COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_2_debug.log~
-
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\// Crossmod Component 2 \\//\\//\\//\\~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\ Scripted Romance Shutdowns \\//\\//\\~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
-
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~WeiDU thinks that this is Component %COMPONENT_NUMBER%~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Author: %TP2_AUTHOR%~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Language = %LANGUAGE% ~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Architecture = %WEIDU_ARCH% ~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Operating System = %WEIDU_OS% ~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~User Directory = %USER_DIRECTORY% ~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac2ively (IE you launched setup-mymod.exe and you re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
-APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
-
-
-//INCLUDE ~CrossmodBG2/RomanceConflicts/TPHs/romance_corrections.tph~
-
-//COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
-//  COUNT_2DA_ROWS 12 "rows"
-//  FOR (index = 0 ; index < rows ; index = index + 1) BEGIN
-//    READ_2DA_ENTRY %index% 10 14 NPC1_SOA_CHECK
-//    READ_2DA_ENTRY %index% 11 14 NPC1_TOB_CHECK
-//    SET_2DA_ENTRY  %index% 12 14 ~0~
-//    SET_2DA_ENTRY  %index% 13 14 ~0~
-//    INNER_ACTION BEGIN
-
-//      ACTION_IF FILE_EXISTS ~override/%NPC1_SOA_CHECK%~ THEN BEGIN
-//        COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
-//          SET_2DA_ENTRY %index% 12 14 ~1~
-//      END
-
-//      ACTION_IF FILE_EXISTS ~override/%NPC1_TOB_CHECK%~ THEN BEGIN
-//        COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
-//          SET_2DA_ENTRY %index% 13 14 ~1~
-//      END
-
-//    END
-//  END
-
-//COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
-//  FOR (index = 0 ; index < rows ; index = index + 1) BEGIN
-//    READ_2DA_ENTRY %index%  7 14 NPC1_CAN_KILL
-//    READ_2DA_ENTRY %index% 12 14 NPC1_SOA_CHECK
-//    READ_2DA_ENTRY %index% 13 14 NPC1_TOB_CHECK
-//    PATCH_IF (("%NPC1_CAN_KILL%" = 1) AND (("%NPC1_SOA_CHECK%" = 1) OR ("%NPC1_TOB_CHECK%" = 1))) BEGIN
-//      READ_2DA_ENTRY %index% 0 14 NPC1_NAME
-//      READ_2DA_ENTRY %index% 1 14 NPC1_SOA_SCRIPT
-//      READ_2DA_ENTRY %index% 2 14 NPC1_TOB_SCRIPT
-//      READ_2DA_ENTRY %index% 3 14 NPC1_SERIOUS_NUM
-//      READ_2DA_ENTRY %index% 5 14 NPC1_FOR_FEMALE
-//      READ_2DA_ENTRY %index% 6 14 NPC1_FOR_MALE
-//      READ_2DA_ENTRY %index% 9 14 NPC1_ROM_VAR
-//      // For loop for second NPC
-//      FOR (index2 = 0 ; index2 < rows ; index2 = index2 + 1) BEGIN
-//        // Read data for second NPC
-//        READ_2DA_ENTRY %index2% 0  14 NPC2_NAME
-//        READ_2DA_ENTRY %index2% 5  14 NPC2_FOR_FEMALE
-//        READ_2DA_ENTRY %index2% 6  14 NPC2_FOR_MALE
-//        READ_2DA_ENTRY %index2% 8  14 NPC2_CAN_BE_KILLED
-//        READ_2DA_ENTRY %index2% 12 14 NPC2_SOA_CHECK
-//        READ_2DA_ENTRY %index2% 13 14 NPC2_TOB_CHECK
-// If second NPC has been installed and is a valid romance killee for first NPC
-//        PATCH_IF ((~%NPC1_NAME%~ STRING_COMPARE ~%NPC2_NAME%~ != 0)
-//              AND (~%NPC2_CAN_BE_KILLED%~ = 1)
-//              AND (((~%NPC1_FOR_FEMALE%~ = 1) AND (~%NPC2_FOR_FEMALE%~ = 1 )) OR ((~%NPC1_FOR_MALE%~ = 1) AND (~%NPC2_FOR_MALE%~ = 1)))
-//              AND ((("%NPC1_SOA_CHECK%" = 1) AND ("%NPC2_SOA_CHECK%" = 1)) OR (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1)))) BEGIN
-//          READ_2DA_ENTRY %index2% 1 14 NPC2_SOA_SCRIPT
-//          READ_2DA_ENTRY %index2% 2 14 NPC2_TOB_SCRIPT
-//          READ_2DA_ENTRY %index2% 4 14 NPC2_KILL_NUM
-//          READ_2DA_ENTRY %index2% 9 14 NPC2_ROM_VAR
-
-// Template inline file
-//INNER_ACTION BEGIN
-//<<<<<<<< CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf
-//IF
-//  InParty(Myself)
-//  !Global("G#XB.NoRomanceConflicts","GLOBAL",1)
-//  Global("%NPC1_ROM_VAR%","GLOBAL",%NPC1_SERIOUS_NUM%)
-//  !Global("%NPC2_ROM_VAR%","GLOBAL",0)
-//  !Global("%NPC2_ROM_VAR%","GLOBAL",%NPC2_KILL_NUM%)
-//THEN
-//  RESPONSE #100
-//    SetGlobal("%NPC2_ROM_VAR%","GLOBAL",%NPC2_KILL_NUM%)
-//END
-//>>>>>>>>
-//END
-
-// Run various correction MACROs
-//          LAUNCH_PATCH_MACRO ~amber_corrections~
-//          LAUNCH_PATCH_MACRO ~corthala_romantique_corrections~
-//          LAUNCH_PATCH_MACRO ~weimer_solaufein_corrections~
-// Adding script blocks to first NPC"s scripts
-//         PATCH_IF (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1))
-// WEIMER_SOLAUFEIN killing KELSEY not needed
-//                AND NOT ( ( ~%NPC1_NAME%~ STRING_COMPARE ~WEIMER_SOLAUFEIN~ = 0 ) AND ( ~%NPC2_NAME%~ STRING_COMPARE ~KELSEY~ = 0 ) ) BEGIN
-//            INNER_ACTION BEGIN
-
-//              PRINT ~Adding killscripts for %NPC1_NAME% killing %NPC2_NAME%"s romance in SoA...~
-//              EXTEND_BOTTOM ~%NPC1_SOA_SCRIPT%.bcs~ ~CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf~
-//                EVALUATE_BUFFER
-
-//            END
-//          END
-// Adding script blocks to first NPC"s scripts
-//          PATCH_IF (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1))
-// WEIMER_SOLAUFEIN killing KELSEY not needed
-//                AND NOT ( ( ~%NPC1_NAME%~ STRING_COMPARE ~WEIMER_SOLAUFEIN~ = 0 ) AND ( ~%NPC2_NAME%~ STRING_COMPARE ~KELSEY~ = 0 ) ) BEGIN
-//            INNER_ACTION BEGIN
-
-//              PRINT ~Adding killscripts for %NPC1_NAME% killing %NPC2_NAME%"s romance in ToB...~
-//              EXTEND_BOTTOM ~%NPC1_TOB_SCRIPT%.bcs~ ~CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf~
-//                EVALUATE_BUFFER
-
-//            END
-//          END
-//        END
-//      END
-//    END
-//  END
-
-/* Jastey's Ajantis romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~c#ajan.bcs~
-THEN BEGIN
-	PRINT @349 /* Extending Ajantis's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Ajantis's SoA script...~
-	EXTEND_TOP ~c#ajan.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/jastey_ajantis/rc_c#ajantis.baf~
-END ELSE BEGIN 
-	PRINT @350 /* Ajantis's SoA script c#ajan.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Ajantis's SoA script c#ajan.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~c#ajan25.bcs~ THEN BEGIN
-	PRINT @351 /* Extending Ajantis's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Ajantis's ToB script...~
-	EXTEND_TOP ~c#ajan25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/jastey_ajantis/rc_c#ajantis.baf~
-END ELSE BEGIN 
-	PRINT @352 /* Ajantis's ToB script c#ajan25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Ajantis's ToB script c#ajan25.bcs not present.~
-END
-
-/* Amber romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.bcs~
-THEN BEGIN
-	PRINT @353 /* Extending Amber's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Amber's SoA script...~
-	EXTEND_TOP ~m#amber.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Amber/RC_m#amber.baf~
-END ELSE BEGIN 
-	PRINT @354 /* Amber's SoA script m#amber.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Amber's SoA script m#amber.bcs not present.~
-END
-
-/* Angelo romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~adangel.bcs~
-THEN BEGIN
-	PRINT @355 /* Extending Angelo's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Angelo's SoA script...~
-	EXTEND_TOP ~ADANGEL.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Angelo/rc_adangel.baf~
-END ELSE BEGIN 
-	PRINT @356 /* Angelo's SoA script adangel.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Angelo's SoA script adangel.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~adang25.bcs~
-THEN BEGIN
-	PRINT @357 /* Extending Angelo's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Angelo's ToB script...~
-	EXTEND_TOP ~ADANG25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Angelo/rc_adangel.baf~
-END ELSE BEGIN 
-	PRINT @358 /* Angelo's ToB script adang25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Angelo's ToB script adang25.bcs not present.~
-END
-
-/* Chloe romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~chloe.bcs~
-THEN BEGIN
-	PRINT @359 /* Extending Chloe's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Chloe's SoA script...~
-	EXTEND_TOP ~chloe.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Chloe/RC_CHLOE.baf~
-END ELSE BEGIN 
-	PRINT @360 /* Chloe's SoA script chloe.bcs not present. */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Chloe's SoA script chloe.bcs not present.~
-END
-
-/* Darian romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~t1dar.bcs~
-THEN BEGIN
-	PRINT @361 /* Extending Darian's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Darian's SoA script...~
-	EXTEND_TOP ~t1dar.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~
-END ELSE BEGIN 
-	PRINT @362 /* Darian's SoA script t1dar.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Darian's SoA script t1dar.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~t1dar25.bcs~
-THEN BEGIN
-	PRINT @363 /* Extending Darian's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Darian's ToB script...~
-	EXTEND_TOP ~t1dar25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~
-END ELSE BEGIN 
-	PRINT @364 /* Darian's ToB script t1dar25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Darian's ToB script t1dar25.bcs not present.~
-END
-
-/* Fade romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~e3fade.bcs~
-THEN BEGIN
-	PRINT @365 /* Extending Fade's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Fade's SoA script...~
-	EXTEND_TOP ~e3fade.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Fade/RC_E3FADE.baf~
-END ELSE BEGIN 
-	PRINT @366 /* Fade's SoA script e3fade.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Fade's SoA script e3fade.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~e3fade25.bcs~
-THEN BEGIN
-	PRINT @367 /* Extending Fade's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Fade's ToB script... ~
-	EXTEND_TOP ~e3fade25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Fade/RC_E3FADE.baf~
-END ELSE BEGIN 
-	PRINT @368 /* Fade's ToB script e3fade25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Fade's ToB script e3fade25.bcs not present. ~
-END
-
-/* Gavin romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~b!gavs.bcs~
-THEN BEGIN
-	PRINT @369 /* Extending Gavin's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Gavin's SoA script... ~
-	EXTEND_TOP ~b!gavs.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Gavin/rc_b!gavs.baf~
-END ELSE BEGIN 
-	PRINT @370 /* Gavin's SoA script b!gavs.bcs script not present. */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Gavin's SoA script b!gavs.bcs script not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~b!gav25s.bcs~
-THEN BEGIN
-	PRINT @371 /* Extending Gavin's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Gavin's ToB script...~
-	EXTEND_TOP ~b!gav25s.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Gavin/rc_b!gavs.baf~
-END ELSE BEGIN 
-	PRINT @372 /* Gavin's ToB script b!gav25s.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Gavin's ToB script b!gav25s.bcs not present.~
-END
-
-/* Lord Mirrabo's Imoen romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~imdream.cre~
-THEN BEGIN
-	PRINT @373 /* Extending (LM) Imoen's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (LM) Imoen's SoA script...~
-	EXTEND_TOP ~imoen2.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/MirraboImoen/RC_imoen2.baf~
-END ELSE BEGIN 
-	PRINT @374 /* (LM) Imoen's SoA script detection file imdream.cre not present. */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(LM) Imoen's SoA script detection file imdream.cre not present.~
-END
-
-/* berelinde's Keldorn romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~b!kring.itm~
-THEN BEGIN
-	PRINT @375 /* Extending (Berelinde's) Keldorn's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (Berelinde's) Keldorn's SoA script... ~
-	EXTEND_TOP ~keldorn.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Keldorn/rc_keldorn.baf~
-END ELSE BEGIN 
-	PRINT @376 /* (Berelinde's) Keldorn's SoA script detection file b!kring.itm not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(Berelinde's) Keldorn's SoA script detection file b!kring.itm not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~b!kring.itm~ AND FILE_EXISTS_IN_GAME ~keld25.bcs~
-THEN BEGIN
-	PRINT @377 /* Extending (Berelinde's) Keldorn's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (Berelinde's) Keldorn's ToB script...~
-	EXTEND_TOP ~keld25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Keldorn/rc_keldorn.baf~
-END ELSE BEGIN 
-	PRINT @378 /* (Berelinde's) Keldorn's ToB script detection file b!kring.itm or keld25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(Berelinde's) Keldorn's ToB script detection file b!kring.itm or keld25.bcs not present.~
-END
-
-/* Kelsey romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~j#klsy.bcs~
-THEN BEGIN
-	PRINT @379 /* Extending Kelsey's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Kelsey's SoA script...~
-	EXTEND_TOP ~J#klsy.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/kelsey/RC_J#klsy.baf~
-END ELSE BEGIN 
-	PRINT @380 /* Kelsey's SoA script j#klsy.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Kelsey's SoA script j#klsy.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~j#klsy25.bcs~
-THEN BEGIN
-	PRINT @381 /* Extending Kelsey's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Kelsey's ToB script...~
-	EXTEND_TOP ~J#klsy25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/kelsey/RC_J#klsy.baf~
-END ELSE BEGIN 
-	PRINT @382 /* Kelsey's ToB script j#klsy25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Kelsey's ToB script j#klsy25.bcs not present.~
-END
-
-/* Arnel's Nalia romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~nalbdy.itm~
-THEN BEGIN
-	PRINT @383 /* Extending (Arnel's) Nalia's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (Arnel's) Nalia's SoA script...~
-	EXTEND_TOP ~nalia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/ArnelNalia/RC_ArnelNalia.baf~
-END ELSE BEGIN 
-	PRINT @384 /* (Arnel's) Nalia's SoA script detection item nalbdy.itm not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(Arnel's) Nalia's SoA script detection item nalbdy.itm not present.~
-END
-
-/* Pocket Plane Group's Nalia romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~pgnalbeg.cre~
-THEN BEGIN
-	PRINT @385 /* Extending (PPG) Nalia's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (PPG) Nalia's SoA script...~
-	EXTEND_TOP ~nalia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/PG_Nalia/RC_PGNalia.baf~
-END ELSE BEGIN 
-	PRINT @386 /* (PPG) Nalia's SoA script detection file pgnalbeg.cre not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(PPG) Nalia's SoA script detection file pgnalbeg.cre not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~PGNalBeg.cre~ AND FILE_EXISTS_IN_GAME ~baldur25.bcs~
-THEN BEGIN
-	PRINT @387 /* Extending (PPG) Nalia's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (PPG) Nalia's ToB script...~
-	EXTEND_TOP ~nalia25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/PG_Nalia/RC_PGNalia.baf~
-END ELSE BEGIN 
-	PRINT @388 /* (PPG) Nalia's ToB script detection file pgnalbeg.cre or baldur25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(PPG) Nalia's ToB script detection file pgnalbeg.cre or baldur25.bcs not present.~
-END
-
-/* Nathaniel romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~fhnat.bcs~
-THEN BEGIN
-	PRINT @389 /* Extending Nathaniel's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Nathaniel's SoA script...~
-	EXTEND_TOP ~fhnat.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Nathaniel/RC_FHNAT.baf~
-END ELSE BEGIN 
-	PRINT @390 /* Nathaniel's SoA script fhnat.bcs not present. */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Nathaniel's SoA script fhnat.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~fhnat25.bcs~
-THEN BEGIN
-	PRINT @391 /* Extending Nathaniel's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Nathaniel's ToB script...~
-	EXTEND_TOP ~fhnat25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Nathaniel/RC_FHNAT.baf~
-END ELSE BEGIN 
-	PRINT @392 /* Nathaniel's ToB script fhnat25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Nathaniel's ToB script fhnat25.bcs not present.~
-END
-
-/* Saerileth romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~saerilet.bcs~
-THEN BEGIN
-	PRINT @393 /* Extending Saerileth's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Saerileth's SoA script...~
-	EXTEND_TOP ~saerilet.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Saerileth/RC_SAERILET.baf~
-END ELSE BEGIN 
-	PRINT @394 /* Saerileth's SoA script saerilet.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Saerileth's SoA script saerilet.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~saeril25.bcs~
-THEN BEGIN
-	PRINT @395 /* Extending Saerileth's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Saerileth's ToB script...~
-	EXTEND_TOP ~saeril25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Saerileth/RC_SAERILET.baf~
-END ELSE BEGIN 
-	PRINT @396 /* Saerileth's ToB script saeril25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Saerileth's ToB script saeril25.bcs not present.~
-END
-
-/* Sarah romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~k#sarah.bcs~
-THEN BEGIN
-	PRINT @397 /* Extending Sarah's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sarah's SoA script...~
-	EXTEND_TOP ~K#Sarah.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Sarah/RC_K#Sarah.baf~
-END ELSE BEGIN 
-	PRINT @398 /* Sarah's SoA script k#sarah.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sarah's SoA script k#sarah.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~k#sara25.bcs~
-THEN BEGIN
-	PRINT @399 /* Extending Sarah's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sarah's ToB script...~
-	EXTEND_TOP ~k#sara25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Sarah/RC_K#Sarah.baf~
-END ELSE BEGIN 
-	PRINT @400 /* Sarah's ToB script k#sara25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sarah's ToB script k#sara25.bcs not present.~
-END
-
-/* Tortured Souls' Sime romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~sime.bcs~
-THEN BEGIN
-	PRINT @401 /* Extending Sime's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sime's SoA script...~
-	EXTEND_TOP ~sime.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/TS_Sime/RC_sime.baf~
-END ELSE BEGIN 
-	PRINT @402 /* Sime's SoA script sime.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sime's SoA script sime.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~sime25.bcs~
-THEN BEGIN
-	PRINT @403 /* Extending Sime's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sime's ToB script...~
-	EXTEND_TOP ~sime25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/TS_Sime/RC_sime.baf~
-END ELSE BEGIN 
-	PRINT @404 /* Sime's ToB script sime25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sime's ToB script sime25.bcs not present.~
-END
-
-/* Tashia romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~tashia.bcs~
-THEN BEGIN
-	PRINT @405 /* Extending Tashia's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tashia's SoA script...~
-	EXTEND_TOP ~tashia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tashia/RC_TASHIA.baf~
-END ELSE BEGIN 
-	PRINT @406 /* Tashia's SoA script tashia.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tashia's SoA script tashia.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~tash25.bcs~
-THEN BEGIN
-	PRINT @407 /* Extending Tashia's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tashia's ToB script...~
-	EXTEND_TOP ~tash25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tashia/RC_TASHIA.baf~
-END ELSE BEGIN 
-	PRINT @408 /* Tashia's ToB script tash25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tashia's ToB script tash25.bcs not present.~
-END
-
-/* Tsujatha romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~tsujath.bcs~
-THEN BEGIN
-	PRINT @409 /* Extending Tsujatha's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tsujatha's SoA script...~
-	EXTEND_TOP ~tsujath.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tsujatha/RC_TSUJATH.baf~
-END ELSE BEGIN 
-	PRINT @410 /* Tsujatha's SoA script tsujath.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tsujatha's SoA script tsujath.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~tsujat25.bcs~
-THEN BEGIN
-	PRINT @411 /* Extending Tsujatha's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tsujatha's ToB script...~
-	EXTEND_TOP ~tsujat25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tsujatha/RC_TSUJATH.baf~
-END ELSE BEGIN 
-	PRINT @412 /* Tsujatha's ToB script tsujat25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tsujatha's ToB script tsujat25.bcs not present.~
-END
-
-/* Tyris Flare romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~g#tyris.bcs~
-THEN BEGIN
-	PRINT @413 /* Extending Tyris Flare's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tyris Flare's SoA script...~
-	EXTEND_TOP ~g#tyris.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tyris/rc_g#tyris.baf~
-END ELSE BEGIN 
-	PRINT @414 /* Tyris Flare's SoA script g#tyris.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tyris Flare's SoA script g#tyris.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~g#tyrs25.bcs~
-THEN BEGIN
-	PRINT @415 /* Extending Tyris Flare's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tyris Flare's ToB script...~
-	EXTEND_TOP ~g#tyrs25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tyris/rc_g#tyris.baf~
-END ELSE BEGIN 
-	PRINT @416 /* Tyris Flare's ToB script g#tyrs25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tyris Flare's ToB script g#tyrs25.bcs not present.~
-END
-
-/* Valygar romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~h#leon.dlg~
-THEN BEGIN
-	PRINT @417 /* Extending H#Valygar's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending H#Valygar's SoA script...~
-	EXTEND_TOP ~VALYGAR.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/CR_Valygar/RC_VALYGAR.baf~
-END ELSE BEGIN 
-	PRINT @418 /* H#Valygar's SoA script detection file h#leon.dlg not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~H#Valygar's SoA script detection file h#leon.dlg not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~H#LEON.dlg~ AND FILE_EXISTS_IN_GAME ~baldur25.bcs~
-THEN BEGIN
-	PRINT @419 /* Extending H#Valygar's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending H#Valygar's ToB script...~
-	EXTEND_TOP ~VALY25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/CR_Valygar/RC_VALYGAR.baf~
-END ELSE BEGIN 
-	PRINT @420 /* H#Valygar's ToB script detection h#leon.dlg or baldur25.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~H#Valygar's ToB script detection h#leon.dlg or baldur25.bcs not present.~
-END
-
-/* Xan romance conflict */
-ACTION_IF FILE_EXISTS_IN_GAME ~o#xans.bcs~
-THEN BEGIN
-	PRINT @421 /* Extending Xan's SoA script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Xan's SoA script...~
-	EXTEND_TOP ~O#XanS.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Xan/RC_O#XanS.baf~
-END ELSE BEGIN 
-	PRINT @422 /* Xan's SoA script o#xans.bcs not present. */ 
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Xan's SoA script o#xans.bcs not present.~
-END
-
-ACTION_IF FILE_EXISTS_IN_GAME ~o#xan25s.bcs~
-THEN BEGIN
-	PRINT @423 /* Extending Xan's ToB script... */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Xan's ToB script...~
-	EXTEND_TOP ~O#Xan25S.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Xan/RC_O#XanS.baf~
-END ELSE BEGIN 
-	PRINT @424 /* Xan's ToB script o#xan25s.bcs not present. */
-	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Xan's ToB script o#xan25s.bcs not present.~
-END
-
 // v22
 
 // Dvaradime - Afu-Zuuvi Material
@@ -6151,6 +5603,554 @@ END ELSE BEGIN
   PRINT @974
   APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or tob_yvette.dlg not detected. Skipping these particular ToB banters.~
 
+END
+
+
+
+
+
+
+
+
+
+/********* AHHHHHHHHHHHHHHHHHHHHHHHHHHH *****/
+
+
+
+
+
+
+APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
+
+// *******************************
+// * ROMANCE CONFLICTS COMPONENT *
+// *******************************
+
+BEGIN @348 /* Crossmod Romance Conflicts */
+LABEL ~cd_crossmod_banter_pack_bg2_romance_conflicts~
+
+COPY ~.../crossmodbg2-inlined/blank.log~ ~crossmodbg2/crossmod_2_debug.log~
+
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\// Crossmod Component 2 \\//\\//\\//\\~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\ Scripted Romance Shutdowns \\//\\//\\~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
+
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~WeiDU thinks that this is Component %COMPONENT_NUMBER%~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Author: %TP2_AUTHOR%~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Language = %LANGUAGE% ~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Architecture = %WEIDU_ARCH% ~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Operating System = %WEIDU_OS% ~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~User Directory = %USER_DIRECTORY% ~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Running .exe = %WEIDU_EXECUTABLE%~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Mod name (as seen by WeiDU) = %TP2_FILE_NAME%~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Installation type is: %INTERACTIVE% ( 1 = install is being done interac2ively (IE you launched setup-mymod.exe and you re installing mymod), or 0 = the install is being done non-interactively (IE you launched setup-mymod.exe and now weidu is reinstalling othermod due to the domino uninstall and reinstall).~
+APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//~
+
+
+//INCLUDE ~CrossmodBG2/RomanceConflicts/TPHs/romance_corrections.tph~
+
+//COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//  COUNT_2DA_ROWS 12 "rows"
+//  FOR (index = 0 ; index < rows ; index = index + 1) BEGIN
+//    READ_2DA_ENTRY %index% 10 14 NPC1_SOA_CHECK
+//    READ_2DA_ENTRY %index% 11 14 NPC1_TOB_CHECK
+//    SET_2DA_ENTRY  %index% 12 14 ~0~
+//    SET_2DA_ENTRY  %index% 13 14 ~0~
+//    INNER_ACTION BEGIN
+
+//      ACTION_IF FILE_EXISTS ~override/%NPC1_SOA_CHECK%~ THEN BEGIN
+//        COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//          SET_2DA_ENTRY %index% 12 14 ~1~
+//      END
+
+//      ACTION_IF FILE_EXISTS ~override/%NPC1_TOB_CHECK%~ THEN BEGIN
+//        COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//          SET_2DA_ENTRY %index% 13 14 ~1~
+//      END
+
+//    END
+//  END
+
+//COPY - ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~ ~CrossmodBG2/RomanceConflicts/2DAs/romances.2da~
+//  FOR (index = 0 ; index < rows ; index = index + 1) BEGIN
+//    READ_2DA_ENTRY %index%  7 14 NPC1_CAN_KILL
+//    READ_2DA_ENTRY %index% 12 14 NPC1_SOA_CHECK
+//    READ_2DA_ENTRY %index% 13 14 NPC1_TOB_CHECK
+//    PATCH_IF (("%NPC1_CAN_KILL%" = 1) AND (("%NPC1_SOA_CHECK%" = 1) OR ("%NPC1_TOB_CHECK%" = 1))) BEGIN
+//      READ_2DA_ENTRY %index% 0 14 NPC1_NAME
+//      READ_2DA_ENTRY %index% 1 14 NPC1_SOA_SCRIPT
+//      READ_2DA_ENTRY %index% 2 14 NPC1_TOB_SCRIPT
+//      READ_2DA_ENTRY %index% 3 14 NPC1_SERIOUS_NUM
+//      READ_2DA_ENTRY %index% 5 14 NPC1_FOR_FEMALE
+//      READ_2DA_ENTRY %index% 6 14 NPC1_FOR_MALE
+//      READ_2DA_ENTRY %index% 9 14 NPC1_ROM_VAR
+//      // For loop for second NPC
+//      FOR (index2 = 0 ; index2 < rows ; index2 = index2 + 1) BEGIN
+//        // Read data for second NPC
+//        READ_2DA_ENTRY %index2% 0  14 NPC2_NAME
+//        READ_2DA_ENTRY %index2% 5  14 NPC2_FOR_FEMALE
+//        READ_2DA_ENTRY %index2% 6  14 NPC2_FOR_MALE
+//        READ_2DA_ENTRY %index2% 8  14 NPC2_CAN_BE_KILLED
+//        READ_2DA_ENTRY %index2% 12 14 NPC2_SOA_CHECK
+//        READ_2DA_ENTRY %index2% 13 14 NPC2_TOB_CHECK
+// If second NPC has been installed and is a valid romance killee for first NPC
+//        PATCH_IF ((~%NPC1_NAME%~ STRING_COMPARE ~%NPC2_NAME%~ != 0)
+//              AND (~%NPC2_CAN_BE_KILLED%~ = 1)
+//              AND (((~%NPC1_FOR_FEMALE%~ = 1) AND (~%NPC2_FOR_FEMALE%~ = 1 )) OR ((~%NPC1_FOR_MALE%~ = 1) AND (~%NPC2_FOR_MALE%~ = 1)))
+//              AND ((("%NPC1_SOA_CHECK%" = 1) AND ("%NPC2_SOA_CHECK%" = 1)) OR (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1)))) BEGIN
+//          READ_2DA_ENTRY %index2% 1 14 NPC2_SOA_SCRIPT
+//          READ_2DA_ENTRY %index2% 2 14 NPC2_TOB_SCRIPT
+//          READ_2DA_ENTRY %index2% 4 14 NPC2_KILL_NUM
+//          READ_2DA_ENTRY %index2% 9 14 NPC2_ROM_VAR
+
+// Template inline file
+//INNER_ACTION BEGIN
+//<<<<<<<< CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf
+//IF
+//  InParty(Myself)
+//  !Global("G#XB.NoRomanceConflicts","GLOBAL",1)
+//  Global("%NPC1_ROM_VAR%","GLOBAL",%NPC1_SERIOUS_NUM%)
+//  !Global("%NPC2_ROM_VAR%","GLOBAL",0)
+//  !Global("%NPC2_ROM_VAR%","GLOBAL",%NPC2_KILL_NUM%)
+//THEN
+//  RESPONSE #100
+//    SetGlobal("%NPC2_ROM_VAR%","GLOBAL",%NPC2_KILL_NUM%)
+//END
+//>>>>>>>>
+//END
+
+// Run various correction MACROs
+//          LAUNCH_PATCH_MACRO ~amber_corrections~
+//          LAUNCH_PATCH_MACRO ~corthala_romantique_corrections~
+//          LAUNCH_PATCH_MACRO ~weimer_solaufein_corrections~
+// Adding script blocks to first NPC"s scripts
+//         PATCH_IF (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1))
+// WEIMER_SOLAUFEIN killing KELSEY not needed
+//                AND NOT ( ( ~%NPC1_NAME%~ STRING_COMPARE ~WEIMER_SOLAUFEIN~ = 0 ) AND ( ~%NPC2_NAME%~ STRING_COMPARE ~KELSEY~ = 0 ) ) BEGIN
+//            INNER_ACTION BEGIN
+
+//              PRINT ~Adding killscripts for %NPC1_NAME% killing %NPC2_NAME%"s romance in SoA...~
+//              EXTEND_BOTTOM ~%NPC1_SOA_SCRIPT%.bcs~ ~CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf~
+//                EVALUATE_BUFFER
+
+//            END
+//          END
+// Adding script blocks to first NPC"s scripts
+//          PATCH_IF (("%NPC1_TOB_CHECK%" = 1) AND ("%NPC2_TOB_CHECK%" = 1))
+// WEIMER_SOLAUFEIN killing KELSEY not needed
+//                AND NOT ( ( ~%NPC1_NAME%~ STRING_COMPARE ~WEIMER_SOLAUFEIN~ = 0 ) AND ( ~%NPC2_NAME%~ STRING_COMPARE ~KELSEY~ = 0 ) ) BEGIN
+//            INNER_ACTION BEGIN
+
+//              PRINT ~Adding killscripts for %NPC1_NAME% killing %NPC2_NAME%"s romance in ToB...~
+//              EXTEND_BOTTOM ~%NPC1_TOB_SCRIPT%.bcs~ ~CrossmodBG2/Inlined/%NPC1_NAME%-%NPC2_NAME%.baf~
+//                EVALUATE_BUFFER
+
+//            END
+//          END
+//        END
+//      END
+//    END
+//  END
+
+/* Jastey's Ajantis romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajan.bcs~
+THEN BEGIN
+	PRINT @349 /* Extending Ajantis's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Ajantis's SoA script...~
+	EXTEND_TOP ~c#ajan.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/jastey_ajantis/rc_c#ajantis.baf~
+END ELSE BEGIN 
+	PRINT @350 /* Ajantis's SoA script c#ajan.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Ajantis's SoA script c#ajan.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~c#ajan25.bcs~ THEN BEGIN
+	PRINT @351 /* Extending Ajantis's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Ajantis's ToB script...~
+	EXTEND_TOP ~c#ajan25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/jastey_ajantis/rc_c#ajantis.baf~
+END ELSE BEGIN 
+	PRINT @352 /* Ajantis's ToB script c#ajan25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Ajantis's ToB script c#ajan25.bcs not present.~
+END
+
+/* Amber romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~m#amber.bcs~
+THEN BEGIN
+	PRINT @353 /* Extending Amber's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Amber's SoA script...~
+	EXTEND_TOP ~m#amber.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Amber/RC_m#amber.baf~
+END ELSE BEGIN 
+	PRINT @354 /* Amber's SoA script m#amber.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Amber's SoA script m#amber.bcs not present.~
+END
+
+/* Angelo romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~adangel.bcs~
+THEN BEGIN
+	PRINT @355 /* Extending Angelo's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Angelo's SoA script...~
+	EXTEND_TOP ~ADANGEL.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Angelo/rc_adangel.baf~
+END ELSE BEGIN 
+	PRINT @356 /* Angelo's SoA script adangel.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Angelo's SoA script adangel.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~adang25.bcs~
+THEN BEGIN
+	PRINT @357 /* Extending Angelo's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Angelo's ToB script...~
+	EXTEND_TOP ~ADANG25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Angelo/rc_adangel.baf~
+END ELSE BEGIN 
+	PRINT @358 /* Angelo's ToB script adang25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Angelo's ToB script adang25.bcs not present.~
+END
+
+/* Chloe romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~chloe.bcs~
+THEN BEGIN
+	PRINT @359 /* Extending Chloe's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Chloe's SoA script...~
+	EXTEND_TOP ~chloe.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Chloe/RC_CHLOE.baf~
+END ELSE BEGIN 
+	PRINT @360 /* Chloe's SoA script chloe.bcs not present. */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Chloe's SoA script chloe.bcs not present.~
+END
+
+/* Darian romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~t1dar.bcs~
+THEN BEGIN
+	PRINT @361 /* Extending Darian's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Darian's SoA script...~
+	EXTEND_TOP ~t1dar.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~
+END ELSE BEGIN 
+	PRINT @362 /* Darian's SoA script t1dar.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Darian's SoA script t1dar.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~t1dar25.bcs~
+THEN BEGIN
+	PRINT @363 /* Extending Darian's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Darian's ToB script...~
+	EXTEND_TOP ~t1dar25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Darian/rc_t1dar.baf~
+END ELSE BEGIN 
+	PRINT @364 /* Darian's ToB script t1dar25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Darian's ToB script t1dar25.bcs not present.~
+END
+
+/* Fade romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~e3fade.bcs~
+THEN BEGIN
+	PRINT @365 /* Extending Fade's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Fade's SoA script...~
+	EXTEND_TOP ~e3fade.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Fade/RC_E3FADE.baf~
+END ELSE BEGIN 
+	PRINT @366 /* Fade's SoA script e3fade.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Fade's SoA script e3fade.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~e3fade25.bcs~
+THEN BEGIN
+	PRINT @367 /* Extending Fade's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Fade's ToB script... ~
+	EXTEND_TOP ~e3fade25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Fade/RC_E3FADE.baf~
+END ELSE BEGIN 
+	PRINT @368 /* Fade's ToB script e3fade25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Fade's ToB script e3fade25.bcs not present. ~
+END
+
+/* Gavin romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gavs.bcs~
+THEN BEGIN
+	PRINT @369 /* Extending Gavin's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Gavin's SoA script... ~
+	EXTEND_TOP ~b!gavs.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Gavin/rc_b!gavs.baf~
+END ELSE BEGIN 
+	PRINT @370 /* Gavin's SoA script b!gavs.bcs script not present. */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Gavin's SoA script b!gavs.bcs script not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!gav25s.bcs~
+THEN BEGIN
+	PRINT @371 /* Extending Gavin's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Gavin's ToB script...~
+	EXTEND_TOP ~b!gav25s.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Gavin/rc_b!gavs.baf~
+END ELSE BEGIN 
+	PRINT @372 /* Gavin's ToB script b!gav25s.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Gavin's ToB script b!gav25s.bcs not present.~
+END
+
+/* Lord Mirrabo's Imoen romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~imdream.cre~
+THEN BEGIN
+	PRINT @373 /* Extending (LM) Imoen's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (LM) Imoen's SoA script...~
+	EXTEND_TOP ~imoen2.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/MirraboImoen/RC_imoen2.baf~
+END ELSE BEGIN 
+	PRINT @374 /* (LM) Imoen's SoA script detection file imdream.cre not present. */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(LM) Imoen's SoA script detection file imdream.cre not present.~
+END
+
+/* berelinde's Keldorn romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~b!kring.itm~
+THEN BEGIN
+	PRINT @375 /* Extending (Berelinde's) Keldorn's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (Berelinde's) Keldorn's SoA script... ~
+	EXTEND_TOP ~keldorn.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Keldorn/rc_keldorn.baf~
+END ELSE BEGIN 
+	PRINT @376 /* (Berelinde's) Keldorn's SoA script detection file b!kring.itm not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(Berelinde's) Keldorn's SoA script detection file b!kring.itm not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~b!kring.itm~ AND FILE_EXISTS_IN_GAME ~keld25.bcs~
+THEN BEGIN
+	PRINT @377 /* Extending (Berelinde's) Keldorn's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (Berelinde's) Keldorn's ToB script...~
+	EXTEND_TOP ~keld25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Keldorn/rc_keldorn.baf~
+END ELSE BEGIN 
+	PRINT @378 /* (Berelinde's) Keldorn's ToB script detection file b!kring.itm or keld25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(Berelinde's) Keldorn's ToB script detection file b!kring.itm or keld25.bcs not present.~
+END
+
+/* Kelsey romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~j#klsy.bcs~
+THEN BEGIN
+	PRINT @379 /* Extending Kelsey's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Kelsey's SoA script...~
+	EXTEND_TOP ~J#klsy.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/kelsey/RC_J#klsy.baf~
+END ELSE BEGIN 
+	PRINT @380 /* Kelsey's SoA script j#klsy.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Kelsey's SoA script j#klsy.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~j#klsy25.bcs~
+THEN BEGIN
+	PRINT @381 /* Extending Kelsey's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Kelsey's ToB script...~
+	EXTEND_TOP ~J#klsy25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/kelsey/RC_J#klsy.baf~
+END ELSE BEGIN 
+	PRINT @382 /* Kelsey's ToB script j#klsy25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Kelsey's ToB script j#klsy25.bcs not present.~
+END
+
+/* Arnel's Nalia romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~nalbdy.itm~
+THEN BEGIN
+	PRINT @383 /* Extending (Arnel's) Nalia's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (Arnel's) Nalia's SoA script...~
+	EXTEND_TOP ~nalia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/ArnelNalia/RC_ArnelNalia.baf~
+END ELSE BEGIN 
+	PRINT @384 /* (Arnel's) Nalia's SoA script detection item nalbdy.itm not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(Arnel's) Nalia's SoA script detection item nalbdy.itm not present.~
+END
+
+/* Pocket Plane Group's Nalia romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~pgnalbeg.cre~
+THEN BEGIN
+	PRINT @385 /* Extending (PPG) Nalia's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (PPG) Nalia's SoA script...~
+	EXTEND_TOP ~nalia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/PG_Nalia/RC_PGNalia.baf~
+END ELSE BEGIN 
+	PRINT @386 /* (PPG) Nalia's SoA script detection file pgnalbeg.cre not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(PPG) Nalia's SoA script detection file pgnalbeg.cre not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~PGNalBeg.cre~ AND FILE_EXISTS_IN_GAME ~baldur25.bcs~
+THEN BEGIN
+	PRINT @387 /* Extending (PPG) Nalia's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending (PPG) Nalia's ToB script...~
+	EXTEND_TOP ~nalia25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/PG_Nalia/RC_PGNalia.baf~
+END ELSE BEGIN 
+	PRINT @388 /* (PPG) Nalia's ToB script detection file pgnalbeg.cre or baldur25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~(PPG) Nalia's ToB script detection file pgnalbeg.cre or baldur25.bcs not present.~
+END
+
+/* Nathaniel romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~fhnat.bcs~
+THEN BEGIN
+	PRINT @389 /* Extending Nathaniel's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Nathaniel's SoA script...~
+	EXTEND_TOP ~fhnat.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Nathaniel/RC_FHNAT.baf~
+END ELSE BEGIN 
+	PRINT @390 /* Nathaniel's SoA script fhnat.bcs not present. */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Nathaniel's SoA script fhnat.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~fhnat25.bcs~
+THEN BEGIN
+	PRINT @391 /* Extending Nathaniel's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Nathaniel's ToB script...~
+	EXTEND_TOP ~fhnat25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Nathaniel/RC_FHNAT.baf~
+END ELSE BEGIN 
+	PRINT @392 /* Nathaniel's ToB script fhnat25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Nathaniel's ToB script fhnat25.bcs not present.~
+END
+
+/* Saerileth romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~saerilet.bcs~
+THEN BEGIN
+	PRINT @393 /* Extending Saerileth's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Saerileth's SoA script...~
+	EXTEND_TOP ~saerilet.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Saerileth/RC_SAERILET.baf~
+END ELSE BEGIN 
+	PRINT @394 /* Saerileth's SoA script saerilet.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Saerileth's SoA script saerilet.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~saeril25.bcs~
+THEN BEGIN
+	PRINT @395 /* Extending Saerileth's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Saerileth's ToB script...~
+	EXTEND_TOP ~saeril25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Saerileth/RC_SAERILET.baf~
+END ELSE BEGIN 
+	PRINT @396 /* Saerileth's ToB script saeril25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Saerileth's ToB script saeril25.bcs not present.~
+END
+
+/* Sarah romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~k#sarah.bcs~
+THEN BEGIN
+	PRINT @397 /* Extending Sarah's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sarah's SoA script...~
+	EXTEND_TOP ~K#Sarah.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Sarah/RC_K#Sarah.baf~
+END ELSE BEGIN 
+	PRINT @398 /* Sarah's SoA script k#sarah.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sarah's SoA script k#sarah.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~k#sara25.bcs~
+THEN BEGIN
+	PRINT @399 /* Extending Sarah's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sarah's ToB script...~
+	EXTEND_TOP ~k#sara25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Sarah/RC_K#Sarah.baf~
+END ELSE BEGIN 
+	PRINT @400 /* Sarah's ToB script k#sara25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sarah's ToB script k#sara25.bcs not present.~
+END
+
+/* Tortured Souls' Sime romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~sime.bcs~
+THEN BEGIN
+	PRINT @401 /* Extending Sime's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sime's SoA script...~
+	EXTEND_TOP ~sime.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/TS_Sime/RC_sime.baf~
+END ELSE BEGIN 
+	PRINT @402 /* Sime's SoA script sime.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sime's SoA script sime.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sime25.bcs~
+THEN BEGIN
+	PRINT @403 /* Extending Sime's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Sime's ToB script...~
+	EXTEND_TOP ~sime25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/TS_Sime/RC_sime.baf~
+END ELSE BEGIN 
+	PRINT @404 /* Sime's ToB script sime25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Sime's ToB script sime25.bcs not present.~
+END
+
+/* Tashia romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~tashia.bcs~
+THEN BEGIN
+	PRINT @405 /* Extending Tashia's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tashia's SoA script...~
+	EXTEND_TOP ~tashia.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tashia/RC_TASHIA.baf~
+END ELSE BEGIN 
+	PRINT @406 /* Tashia's SoA script tashia.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tashia's SoA script tashia.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~tash25.bcs~
+THEN BEGIN
+	PRINT @407 /* Extending Tashia's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tashia's ToB script...~
+	EXTEND_TOP ~tash25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tashia/RC_TASHIA.baf~
+END ELSE BEGIN 
+	PRINT @408 /* Tashia's ToB script tash25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tashia's ToB script tash25.bcs not present.~
+END
+
+/* Tsujatha romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~tsujath.bcs~
+THEN BEGIN
+	PRINT @409 /* Extending Tsujatha's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tsujatha's SoA script...~
+	EXTEND_TOP ~tsujath.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tsujatha/RC_TSUJATH.baf~
+END ELSE BEGIN 
+	PRINT @410 /* Tsujatha's SoA script tsujath.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tsujatha's SoA script tsujath.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~tsujat25.bcs~
+THEN BEGIN
+	PRINT @411 /* Extending Tsujatha's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tsujatha's ToB script...~
+	EXTEND_TOP ~tsujat25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tsujatha/RC_TSUJATH.baf~
+END ELSE BEGIN 
+	PRINT @412 /* Tsujatha's ToB script tsujat25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tsujatha's ToB script tsujat25.bcs not present.~
+END
+
+/* Tyris Flare romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~g#tyris.bcs~
+THEN BEGIN
+	PRINT @413 /* Extending Tyris Flare's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tyris Flare's SoA script...~
+	EXTEND_TOP ~g#tyris.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tyris/rc_g#tyris.baf~
+END ELSE BEGIN 
+	PRINT @414 /* Tyris Flare's SoA script g#tyris.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tyris Flare's SoA script g#tyris.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~g#tyrs25.bcs~
+THEN BEGIN
+	PRINT @415 /* Extending Tyris Flare's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Tyris Flare's ToB script...~
+	EXTEND_TOP ~g#tyrs25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Tyris/rc_g#tyris.baf~
+END ELSE BEGIN 
+	PRINT @416 /* Tyris Flare's ToB script g#tyrs25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Tyris Flare's ToB script g#tyrs25.bcs not present.~
+END
+
+/* Valygar romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~h#leon.dlg~
+THEN BEGIN
+	PRINT @417 /* Extending H#Valygar's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending H#Valygar's SoA script...~
+	EXTEND_TOP ~VALYGAR.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/CR_Valygar/RC_VALYGAR.baf~
+END ELSE BEGIN 
+	PRINT @418 /* H#Valygar's SoA script detection file h#leon.dlg not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~H#Valygar's SoA script detection file h#leon.dlg not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~H#LEON.dlg~ AND FILE_EXISTS_IN_GAME ~baldur25.bcs~
+THEN BEGIN
+	PRINT @419 /* Extending H#Valygar's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending H#Valygar's ToB script...~
+	EXTEND_TOP ~VALY25.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/CR_Valygar/RC_VALYGAR.baf~
+END ELSE BEGIN 
+	PRINT @420 /* H#Valygar's ToB script detection h#leon.dlg or baldur25.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~H#Valygar's ToB script detection h#leon.dlg or baldur25.bcs not present.~
+END
+
+/* Xan romance conflict */
+ACTION_IF FILE_EXISTS_IN_GAME ~o#xans.bcs~
+THEN BEGIN
+	PRINT @421 /* Extending Xan's SoA script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Xan's SoA script...~
+	EXTEND_TOP ~O#XanS.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Xan/RC_O#XanS.baf~
+END ELSE BEGIN 
+	PRINT @422 /* Xan's SoA script o#xans.bcs not present. */ 
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Xan's SoA script o#xans.bcs not present.~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~o#xan25s.bcs~
+THEN BEGIN
+	PRINT @423 /* Extending Xan's ToB script... */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Extending Xan's ToB script...~
+	EXTEND_TOP ~O#Xan25S.bcs~ ~CrossmodBG2/RomanceConflicts/RomanceConflictScripts/Xan/RC_O#XanS.baf~
+END ELSE BEGIN 
+	PRINT @424 /* Xan's ToB script o#xan25s.bcs not present. */
+	APPEND_OUTER ~crossmodbg2/crossmod_2_debug.log~ ~Xan's ToB script o#xan25s.bcs not present.~
 END
 
 
