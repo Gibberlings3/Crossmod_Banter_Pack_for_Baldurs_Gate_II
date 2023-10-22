@@ -4617,24 +4617,24 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~C#SOLAUB.dlg~ AND FILE_EXISTS_IN_GAME ~C#Aja25B.dlg~
 THEN BEGIN
     PRINT @593
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between jastey's Solaufein and jastey's Ajantis..~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between jastey's Solaufein and jastey's Ajantis..~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_jasteysolaufein-jasteyajantis/tob_jasteysolaufein_jasteyajantis_banters.d~
 		USING ~crossmodbg2/tra/%s/jasteysolaufein_jasteyajantis_banters.tra~
 END ELSE BEGIN
     PRINT @594 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#SOLAUB.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~C#SOLAUB.dlg and/or C#Aja25B.dlg not detected. Skipping these particular ToB banters.~
 END
 
 /* jastey's Solaufein - Gavin ToB banters */
 ACTION_IF FILE_EXISTS_IN_GAME ~C#SOLAUB.dlg~ AND FILE_EXISTS_IN_GAME ~bb!gav25.dlg~
 THEN BEGIN
     PRINT @597
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between jastey's Solaufein and Gavin..~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between jastey's Solaufein and Gavin..~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_jasteysolaufein-gavin/tob_jasteysolaufein_gavin_banters.d~
 		USING ~crossmodbg2/tra/%s/jasteysolaufein_gavin_banters.tra~
 END ELSE BEGIN
     PRINT @598 
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#SOLAUB.dlg and/or bb!gav25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~C#SOLAUB.dlg and/or bb!gav25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 /////                                                  \\\\\
@@ -4645,122 +4645,122 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~c#aja25b.dlg~
 THEN BEGIN
     PRINT @746
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and jastey's Ajantis...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and jastey's Ajantis...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-ajantis/tob_khalid-ajantis.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-ajantis.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or c#aja25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or c#aja25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Lava's Hephernaan
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~l#hph25b.dlg~
 THEN BEGIN
     PRINT @747
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Hephernaan...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Hephernaan...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-hephernaan/tob_khalid-hephernaan.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-hephernaan.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or l#hph25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or l#hph25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Kulyok's Branwen
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~o#bbra25.dlg~
 THEN BEGIN
     PRINT @748
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Branwen...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Branwen...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-kulyokbranwen/tob_khalid-kulyokbranwen.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-kulyokbranwen.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or o#bbra25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or o#bbra25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Kulyok's Coran
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~bo#cor25.dlg~
 THEN BEGIN
     PRINT @749
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Coran...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Coran...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-kulyokcoran/tob_khalid-kulyokcoran.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-kulyokcoran.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or bo#cor25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or bo#cor25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Kulyok's Tiax
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~bo#tia25.dlg~
 THEN BEGIN
     PRINT @750
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Tiax...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Tiax...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-kulyoktiax/tob_khalid-kulyoktiax.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-kulyoktiax.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or bo#tia25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or bo#tia25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Kulyok's Xan
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~bo#xan25.dlg~
 THEN BEGIN
     PRINT @751
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Xan...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Kulyok's Xan...~
     INCLUDE ~crossmodbg2/tob/banters/tob_khalid-kulyokxan/xankhalidupdate_tob.tph~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-kulyokxan/tob_khalid-kulyokxan.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-kulyokxan.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or bo#xan25.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or bo#xan25.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Lava's Quayle
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~1xqu25b.dlg~
 THEN BEGIN
     PRINT @752
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Quayle...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Quayle...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-lavasquayle/tob_khalid-lavasquayle.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-lavasquayle.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or 1xqu25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or 1xqu25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 3 banters between Lava's Khalid and Lava's Skie (Cost of One Girl's Soul)
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~l#2sd25b.dlg~
 THEN BEGIN
     PRINT @753
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Skie (Cost of One Girl's Soul)...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's Skie (Cost of One Girl's Soul)...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-skiecostonesoul/tob_khalid-skiecostonesoul.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-skiecostonesoul.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or l#2sd25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or l#2sd25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Khalid and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)
 ACTION_IF FILE_EXISTS_IN_GAME ~l#kha25b.dlg~ AND FILE_EXISTS_IN_GAME ~yyosh25b.dlg~
 THEN BEGIN
     PRINT @754
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Khalid and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_khalid-yoshimosremorse/tob_khalid-yoshimosremorse.d~
 		USING ~crossmodbg2/tra/%s/tob_khalid-yoshimosremorse.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#kha25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#kha25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 1 banter between Lava's Hephernaan and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)
 ACTION_IF FILE_EXISTS_IN_GAME ~l#hph25b.dlg~ AND FILE_EXISTS_IN_GAME ~yyosh25b.dlg~
 THEN BEGIN
     PRINT @755
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Hephernaan and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Hephernaan and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_hephernaan-yoshimosremorse/tob_hephernaan-yoshimosremorse.d~
 		USING ~crossmodbg2/tra/%s/tob_hephernaan-yoshimosremorse.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#hph25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#hph25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // 2 banters between Lava's Skie (Cost of One Girl's Soul) and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)
 ACTION_IF FILE_EXISTS_IN_GAME ~l#2sd25b.dlg~ AND FILE_EXISTS_IN_GAME ~yyosh25b.dlg~
 THEN BEGIN
     PRINT @756
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding ToB banters between Lava's Skie (Cost of One Girl's Soul) and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Lava's Skie (Cost of One Girl's Soul) and Lava's and jmaeq's Yoshimo (Yoshimo's Remorse)...~
     COMPILE EVALUATE_BUFFER ~crossmodbg2/tob/banters/tob_skiecostonesoul-yoshimosremorse/tob_skiecostonesoul-yoshimosremorse.d~
 		USING ~crossmodbg2/tra/%s/tob_skiecostonesoul-yoshimosremorse.tra~
 END ELSE BEGIN
-    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~l#2sd25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
+    APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~l#2sd25b.dlg and/or yyosh25b.dlg not detected. Skipping these particular ToB banters.~
 END
 
 // v22
@@ -5592,7 +5592,7 @@ END ELSE BEGIN
 END
 
 // Xzele - Yvette Material
-ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~tob_yvette.dlg~ THEN BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~YxYv25B.dlg~ THEN BEGIN
 
   PRINT @973
   APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~Adding ToB banters between Xzele and Yvette... ~
@@ -5601,7 +5601,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~L#XZE25B.dlg~ AND FILE_EXISTS_IN_GAME ~tob_yvette
 END ELSE BEGIN
 
   PRINT @974
-  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or tob_yvette.dlg not detected. Skipping these particular ToB banters.~
+  APPEND_OUTER ~crossmodbg2/crossmod_1_debug.log~ ~L#XZE25B.dlg and/or YxYv25B.dlg not detected. Skipping these particular ToB banters.~
 
 END
 
