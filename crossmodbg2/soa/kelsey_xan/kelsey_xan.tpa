@@ -1,0 +1,3 @@
+EXTEND_BOTTOM ~o#xans.bcs~ ~crossmodbg2/soa/kelsey_xan/o#xans.baf~
+EXTEND_BOTTOM ~j#klsy.bcs~ ~crossmodbg2/soa/kelsey_xan/j#klsy.baf~
+LAF HANDLE_AUDIO STR_VAR audio_path = ~crossmodbg2/soa/kelsey_xan~ oggdec_path = ~crossmodbg2/audio~ sox_path = ~crossmodbg2/audio~ END

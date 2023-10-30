@@ -1,0 +1,12 @@
+COPY ~crossmodbg2/soa/skie_petsy/g#xbpets.bam~ ~override~
+COPY ~crossmodbg2/soa/skie_petsy/g#xbpets.itm~ ~override~
+  SAY NAME1 @53 /* Sonia's Smile */
+  SAY NAME2 @53 /* Sonia's Smile */
+  SAY UNIDENTIFIED_DESC @54
+  SAY DESC @55 
+  
+
+ACTION_IF FILE_EXISTS_IN_GAME ~l#foub.dlg~ THEN BEGIN
+  APPEND_OUTER + ~%logfile%~ ~%secondary_code%%secondary_params_0% (%secondary_params_1%) & Foundling (Lava)~ // log the find
+  COMPILE ~crossmodbg2/soa/skie_petsy/skie_petsy_foundling.d~
+END

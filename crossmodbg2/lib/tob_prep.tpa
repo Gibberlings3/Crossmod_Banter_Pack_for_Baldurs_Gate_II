@@ -1,0 +1,13 @@
+// ToB BANTER
+// These files contain normal and scripted banters between the two NPCs
+
+// Giving solaufein a banter file
+ACTION_IF FILE_EXISTS_IN_GAME ~sola.dlg~ AND NOT FILE_EXISTS_IN_GAME ~bsola25.dlg~ THEN BEGIN
+
+<<<<<<<< CrossmodBG2/Inlined/BSOLA25.d
+BEGIN BSOLA25
+>>>>>>>>
+  
+  COMPILE ~CrossmodBG2/Inlined/BSOLA25.d~
+  
+END

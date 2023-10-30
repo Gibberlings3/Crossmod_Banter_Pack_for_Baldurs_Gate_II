@@ -1,0 +1,3 @@
+EXTEND_TOP ~b!hals.bcs~ ~crossmodbg2/soa/gavin_haldamir/b!hals.baf~
+COMPILE                 ~crossmodbg2/soa/gavin_haldamir/b!halftp.baf~
+                        ~crossmodbg2/soa/gavin_haldamir/b!halfgt.baf~

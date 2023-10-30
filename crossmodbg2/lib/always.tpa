@@ -1,0 +1,76 @@
+OUTER_SET cd_crossmodbg2_always = 1
+
+ACTION_IF GAME_IS ~eet~   BEGIN OUTER_SET game_is_eet = 1   END ELSE BEGIN OUTER_SET game_is_eet = 0   END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN OUTER_SET game_is_bg2ee = 1 END ELSE BEGIN OUTER_SET game_is_bg2ee = 0 END
+ACTION_IF GAME_IS ~bgt~   BEGIN OUTER_SET game_is_bgt = 1   END ELSE BEGIN OUTER_SET game_is_bgt = 0   END
+ACTION_IF GAME_IS ~soa~   BEGIN OUTER_SET game_is_soa = 1   END ELSE BEGIN OUTER_SET game_is_soa = 0   END
+ACTION_IF GAME_IS ~tob~   BEGIN OUTER_SET game_is_tob = 1   END ELSE BEGIN OUTER_SET game_is_tob = 0   END
+  
+ACTION_IF game_is_eet BEGIN
+  OUTER_SET bg2_chapter = 12
+END ELSE BEGIN
+  OUTER_SET bg2_chapter = 0
+END
+OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+  OUTER_SET bg2_chapter = bg2_chapter + 1
+  OUTER_SPRINT name_source ~bg2_chapter_%i%~
+  OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+END
+
+OUTER_SET enhanced_edition = 0
+OUTER_SPRINT ~tra_location~ ~%MOD_FOLDER%/languages~
+
+ACTION_IF game_is_bg2ee OR game_is_eet BEGIN
+
+  OUTER_SET enhanced_edition = 1
+  OUTER_SPRINT ~tra_location~ ~weidu_external/%MOD_FOLDER%/languages~
+
+  ACTION_DEFINE_ARRAY cdnoconvert BEGIN // since there's a signficant number of tra files, I try to exclude as many as possible from conversion to save time
+  
+    weidu soa_khalid_skiecost // strings for the installer, and the original UTF-8 poster child, err, file
+    
+    // file associated with EE-only mods are saved in utf8 and not converted. At present EE-only mods are: Khalid,, Skie (Cost of One Girl's Soul), Faldorn, 
+    // Dvaradime, Fhaugy, Fyalvara, Lhannd, Xzele, Afu-zuuvi, Juniper, Walahnan, Eddard, Will (will of the wisp), Verr'sza, Hephernaan
+    soa_dvaradime_afuzuuvi soa_dvaradime_eddard soa_dvaradime_faldorn soa_dvaradime_fhaugy soa_dvaradime_fyalvara soa_dvaradime_hephernaan soa_dvaradime_khalid 
+    soa_dvaradime_lhannd soa_dvaradime_skiecost soa_dvaradime_xzele soa_beaurin-legacy-hidden_skiecost soa_beaurin-legacy-hidden_verrsza soa_beaurin-legacy-hidden_will 
+    soa_faldorn_eddard soa_faldorn_hephernaan soa_faldorn_skiecost soa_fhaugy_afuzuuvi soa_fhaugy_eddard soa_fhaugy_faldorn soa_fhaugy_gahesh soa_fhaugy_hephernaan 
+    soa_fhaugy_khalid soa_fhaugy_quayle soa_fhaugy_skiecost soa_fyalvara_faldorn soa_fyalvara_fhaugy soa_fyalvara_khalid soa_fyalvara_lhannd soa_fyalvara_skiecost 
+    soa_hephernaan_fade soa_hephernaan_foundling soa_hephernaan_gahesh soa_hephernaan_petsy soa_hephernaan_quayle soa_hephernaan_skiecost soa_hephernaan_varshoon 
+    soa_hephernaan_verrsza soa_hephernaan_will soa_hephernaan_yvette soa_khalid_ajantis soa_khalid_branwen soa_khalid_coran soa_khalid_faldorn soa_khalid_hephernaan 
+    soa_khalid_isra soa_khalid_kivan soa_khalid_quayle soa_khalid_tiax soa_khalid_xan soa_lhannd_afuzuuvi soa_lhannd_eddard soa_lhannd_foundling soa_lhannd_hephernaan 
+    soa_lhannd_khalid soa_lhannd_skiecost soa_beaurin-legacy_skiecost soa_beaurin-legacy_verrsza soa_beaurin-legacy_will soa_skiecost_adrian soa_skiecost_ajantis 
+    soa_skiecost_branwen soa_skiecost_coran soa_skiecost_fade soa_skiecost_foundling soa_skiecost_isra soa_skiecost_ninde soa_skiecost_petsy soa_skiecost_quayle 
+    soa_skiecost_tiax soa_skiecost_varshoon soa_skiecost_verrsza soa_skiecost_will soa_skiecost_xan soa_skiecost_yvette soa_verrsza_fade soa_verrsza_foundling 
+    soa_verrsza_gahesh soa_walahnan_afuzuuvi soa_walahnan_khalid soa_walahnan_quayle soa_will_foundling soa_will_paina soa_will_petsy soa_will_quayle soa_will_sirene 
+    soa_xzele_afuzuuvi soa_xzele_ajantis soa_xzele_eddard soa_xzele_fhaugy soa_xzele_foundling soa_xzele_isra soa_xzele_khalid soa_xzele_skiecost soa_xzele_walahnan 
+    soa_xzele_will soa_xzele_yvette /*tob begins */ tob_dvaradime_afuzuuvi tob_dvaradime_eddard tob_dvaradime_faldorn tob_dvaradime_fhaugy tob_dvaradime_fyalvara 
+    tob_dvaradime_hephernaan tob_dvaradime_khalid tob_dvaradime_lhannd tob_dvaradime_skiecost tob_dvaradime_xzele tob_dvaradime_yoshimo-remorse tob_faldorn_eddard 
+    tob_faldorn_hephernaan tob_faldorn_skiecost tob_fhaugy_afuzuuvi tob_fhaugy_eddard tob_fhaugy_faldorn tob_fhaugy_gahesh tob_fhaugy_hephernaan tob_fhaugy_khalid 
+    tob_fhaugy_quayle tob_fhaugy_skiecost tob_fyalvara_eddard tob_fyalvara_faldorn tob_fyalvara_fhaugy tob_fyalvara_khalid tob_fyalvara_lhannd tob_fyalvara_skiecost 
+    tob_hephernaan_fade tob_hephernaan_foundling tob_hephernaan_gahesh tob_hephernaan_petsy tob_hephernaan_quayle tob_hephernaan_skiecost tob_hephernaan_varshoon 
+    tob_hephernaan_verrsza tob_hephernaan_will tob_hephernaan_yoshimo-remorse tob_hephernaan_yvette tob_juniper_afuzuuvi tob_juniper_dvaradime tob_juniper_faldorn 
+    tob_juniper_fyalvara tob_juniper_khalid tob_juniper_lhannd tob_juniper_xzele tob_juniper_yoshimo-remorse tob_khalid_ajantis tob_khalid_branwen tob_khalid_coran 
+    tob_khalid_faldorn tob_khalid_hephernaan tob_khalid_isra tob_khalid_kivan tob_khalid_quayle tob_khalid_skiecost tob_khalid_tiax tob_khalid_xan tob_khalid_yoshimo-remorse 
+    tob_lhannd_afuzuuvi tob_lhannd_eddard tob_lhannd_foundling tob_lhannd_hephernaan tob_lhannd_khalid tob_lhannd_skiecost tob_skiecost_adrain tob_skiecost_ajantis 
+    tob_skiecost_branwen tob_skiecost_coran tob_skiecost_fade tob_skiecost_foundling tob_skiecost_isra tob_skiecost_ninde tob_skiecost_petsy tob_skiecost_quayle 
+    tob_skiecost_tiax tob_skiecost_varshoon tob_skiecost_verrsza tob_skiecost_will tob_skiecost_xan tob_skiecost_yoshimo-remorse tob_skiecost_yvette tob_verrsza_fade 
+    tob_verrsza_foundling tob_verrsza_gahesh tob_walahnan_afuzuuvi tob_walahnan_khalid tob_walahnan_quayle tob_will_foundling tob_will_petsy tob_will_quayle 
+    tob_xzele_afuzuuvi tob_xzele_ajantis tob_xzele_eddard tob_xzele_fhaugy tob_xzele_foundling tob_xzele_isra tob_xzele_khalid tob_xzele_skiecost tob_xzele_walahnan 
+    tob_xzele_will tob_xzele_yoshimo-remorse tob_xzele_yvette 
+
+  END
+  LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 
+                      STR_VAR default_language = ~english~ tra_path = EVAL ~%MOD_FOLDER%/languages~ out_path = EVAL ~weidu_external/%MOD_FOLDER%/languages~ noconvert_array = cdnoconvert  END
+                      
+  // because of how we're using USING and WITH_TRA, we want toe non-cenverted files to be copied to tra_location
+  ACTION_PHP_EACH cdnoconvert AS foo => file BEGIN
+    COPY ~%MOD_FOLDER%/languages/english/%file%.tra~ ~weidu_external/%MOD_FOLDER%/languages/english~
+    ACTION_IF ("%LANGUAGE%" STRING_COMPARE_CASE "english") BEGIN
+      ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/languages/%LANGUAGE%/%file%.tra~ BEGIN
+        COPY ~%MOD_FOLDER%/languages/%LANGUAGE%/%file%.tra~ ~weidu_external/%MOD_FOLDER%/languages/%LANGUAGE%~
+      END 
+    END  
+  END
+END
+
+APPEND ~state.ids~ ~0x80101FEF CD_STATE_NOTVALID~	UNLESS ~CD_STATE_NOTVALID~
