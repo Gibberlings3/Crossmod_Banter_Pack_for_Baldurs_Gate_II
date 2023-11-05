@@ -1,8 +1,0 @@
-EXTEND_BOTTOM ~m#amber.bcs~ ~crossmodbg2/soa/amber_kivan/m#amber.baf~
-  
-// interjections
-OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
-OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
-
-COMPILE EVALUATE_BUFFER  ~crossmodbg2/soa/amber_kivan/interjections.d~
-EXTEND_TOP ~p#kiv01.bcs~ ~crossmodbg2/soa/amber_kivan/p#kiv01.baf~ 

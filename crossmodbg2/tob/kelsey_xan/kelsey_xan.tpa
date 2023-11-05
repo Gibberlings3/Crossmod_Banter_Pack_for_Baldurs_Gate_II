@@ -1,2 +1,0 @@
-EXTEND_BOTTOM ~o#xan25s.bcs~ ~crossmodbg2/tob/kelsey_xan/o#xan25s.baf~
-AF HANDLE_AUDIO STR_VAR audio_path = ~crossmodbg2/tob/kelsey_xan~ oggdec_path = ~crossmodbg2/audio~ sox_path = ~crossmodbg2/audio~ END

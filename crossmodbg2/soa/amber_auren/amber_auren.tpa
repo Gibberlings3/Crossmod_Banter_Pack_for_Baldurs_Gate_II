@@ -1,5 +1,0 @@
-OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
-OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
-
-COMPILE EVALUATE_BUFFER   ~crossmodbg2/soa/amber_auren/interjections.d~
-EXTEND_TOP ~k#auren.bcs~  ~crossmodbg2/soa/amber_auren/k#auren.baf~ 

@@ -1,7 +1,0 @@
-// interjections
-OUTER_SET actual_joining_state_1 = (STATE_WHICH_SAYS  0 IN ~Neh'taniel/%s/sk#neht.tra~ FROM ~sk#neht~)
-OUTER_SET actual_joining_state_2 = (STATE_WHICH_SAYS 27 IN ~Neh'taniel/%s/sk#neht.tra~ FROM ~sk#neht~)
-
-COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/gavin_nehtaniel/interjections.d~
-EXTEND_TOP ~b!gavs.bcs~ ~crossmodbg2/soa/gavin_nehtaniel/b!gavj.baf~
-COMPILE                 ~crossmodbg2/soa/gavin_nehtaniel/g#gavneh.baf~

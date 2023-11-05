@@ -36,8 +36,8 @@ BEGIN @1000 DESIGNATED 0
 REQUIRE_PREDICATE GAME_IS ~bgt eet bg2ee soa tob~ @100
 LABEL ~cd_crossmod_banter_pack_bg2_soa~
 
-OUTER_SPRINT game ~soa~
 OUTER_SET exp_check = 0
+OUTER_SET conflict_check = 0
 INCLUDE ~%MOD_FOLDER%/lib/common.tpa~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -53,8 +53,8 @@ REQUIRE_PREDICATE GAME_IS ~bgt eet bg2ee soa tob~ @100
 REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @101 /* You must have Throne of Bhaal installed to install this component. */
 LABEL ~cd_crossmod_banter_pack_bg2_tob~
 
-OUTER_SPRINT game ~tob~
 OUTER_SET exp_check = 1
+OUTER_SET conflict_check = 0
 INCLUDE ~%MOD_FOLDER%/lib/common.tpa~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -69,4 +69,14 @@ BEGIN @3000 DESIGNATED 2 /* Crossmod Romance Conflicts */
 REQUIRE_PREDICATE GAME_IS ~bgt eet bg2ee soa tob~ @100
 LABEL ~cd_crossmod_banter_pack_bg2_romance_conflicts~
 
-INCLUDE ~%MOD_FOLDER%/lib/conflicts.tpa~
+OUTER_SET exp_check = 0
+OUTER_SET conflict_check = 1
+INCLUDE ~%MOD_FOLDER%/lib/common.tpa~
+
+ACTION_IF !game_is_soa BEGIN
+
+  OUTER_SET exp_check = 1
+  OUTER_SET conflict_check = 1
+  INCLUDE ~%MOD_FOLDER%/lib/common.tpa~
+  
+END

@@ -17,6 +17,10 @@ OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
   OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 END
 
+// values needed for actual library
+OUTER_SPRINT basegame ~soa~
+OUTER_SPRINT exp_game ~tob~
+
 OUTER_SET enhanced_edition = 0
 OUTER_SPRINT ~tra_location~ ~%MOD_FOLDER%/languages~
 

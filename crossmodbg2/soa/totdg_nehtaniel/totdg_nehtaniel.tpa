@@ -1,4 +1,0 @@
-OUTER_SET actual_interject_state_1 = (STATE_WHICH_SAYS 39 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
-OUTER_SET actual_interject_state_2 = (STATE_WHICH_SAYS 37 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
-
-EXTEND_TOP ~sk#nehtb.bcs~ ~crossmodbg2/soa/totdg_nehtaniel/sk#nehtb.baf~
