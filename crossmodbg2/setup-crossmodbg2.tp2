@@ -5,7 +5,7 @@ SUPPORT ~https://www.gibberlings3.net/forums/forum/55-crossmod-banter-pack/~
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
 
-VERSION ~v23~ //put version number here, not inside setup.tra
+VERSION ~v24~ //put version number here, not inside setup.tra
 
 README ~crossmodbg2/readme-crossmodbg2.html~
 
@@ -29,10 +29,13 @@ ALWAYS
       FAIL @1 /* WARNING. THIS MOD IS FOR BG2 OR BGT. DO NOT INSTALL THIS MOD. */
     END
 
+   INCLUDE ~crossmodbg2/lib/extra_regexp_vars.tph~
+   OUTER_SPRINT newline ~%WNL%%LNL%%MNL%%TAB% ~
+
 /* German version - as long as it's not fully translated, copy files around so the "german" folder is complete with all German translations */
     ACTION_IF ("%LANGUAGE%" STRING_COMPARE_CASE "german" = 0) THEN BEGIN
       COPY ~crossmodbg2/tra/english~  ~crossmodbg2/tra/%LANGUAGE%~
-      COPY ~crossmodbg2/tra/%LANGUAGE%/tras~  ~crossmodbg2/tra/%LANGUAGE%~
+      COPY ~crossmodbg2/tra/incomplete/%LANGUAGE%~  ~crossmodbg2/tra/%LANGUAGE%~
     END
 
     ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
@@ -2488,6 +2491,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~sk#neht.dlg~ THEN BEGIN
 	END
 END
 
+/* Jastey's Ajantis */
 
 /* Skie Cost of One Soul: jastey's Ajantis BGII Interjections */
 ACTION_IF FILE_EXISTS_IN_GAME ~L#2SDNEM.dlg~ THEN BEGIN
@@ -2499,7 +2503,64 @@ ACTION_IF FILE_EXISTS_IN_GAME ~L#2SDNEM.dlg~ THEN BEGIN
 	END
 END
 
+/* Jastey's Solaufein */
 
+/* Eilistaree's Song: Interjections and Crossmod for jastey's Solaufein */
+ACTION_IF FILE_EXISTS_IN_GAME ~ESxMH.dlg~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~c#solauJ.dlg~ BEGIN
+  PRINT @975 /* ~Adding jastey's Solaufein's interjections into Eilistaree's Song...~ */
+COPY_EXISTING ~AR2401.BCS~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(!Exists("C#Solaufein")[%newline%]*!InParty("C#Solaufein")\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+BUT_ONLY
+
+// Get state for C#SOLAU %dazu_04% @156 (c#solau.d)
+/* ~(snort) So much for my noble approach. But I understand your answer - I would have done the same, in your place. I will follow you discretely then.~ */
+OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/autotra/%s/c#solatra.tra~ FROM ~c#solau~
+
+// Get state for C#SOLAU %dazu_05% @2703 (c#solau.d)
+/* ~Search for me outside of the elven camp.~ */
+OUTER_SET dazu_05 = STATE_WHICH_SAYS 2703 IN ~C#Solaufein/Translations/autotra/%s/c#solatra.tra~ FROM ~c#solau~
+
+COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/interjections/jasteys_solaufein/jasteys_solaufein_eilistraeessong_crossmod.d~
+
+/* my Solaufein will talk about Eilistraee's Clearing if he joins at Underdark exit */
+EXTEND_BOTTOM ~C#SOLAU.bcs~   ~crossmodbg2/soa/interjections/jasteys_solaufein/Eilistraeessong_c#solau.baf~ EVALUATE_BUFFER
+
+/* remove extra Solaufein from ES (my Solaufein will take over quest start) */
+EXTEND_TOP ~AR2401.bcs~ ~crossmodbg2/soa/interjections/jasteys_solaufein/eilistraeessong_ar2401.baf~
+
+
+	END
+END
+
+/* Sellswords: Interjections and Crossmod for jastey's Solaufein */
+ACTION_IF FILE_EXISTS_IN_GAME ~O#LLKIMM.dlg~ BEGIN
+	ACTION_IF FILE_EXISTS_IN_GAME ~c#solauJ.dlg~ BEGIN
+  PRINT @976 /* ~Adding jastey's Solaufein's interjections into Sellswords...~ */
+// Get state for O#LLKIMM %O#LLKIMM_145% @145 (Sellswords.d)
+/* ~I know Jarlaxle. Everyone who expects his demise becomes bitterly disappointed at some point or another. And he is ruthless to those who betray him.~ */
+OUTER_SET O#LLKIMM_145 = STATE_WHICH_SAYS 145 IN ~Sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+
+// Get state for O#LLKIMM %O#LLKIMM_@152% @152 (Sellswords.d)
+/* ~She employs surface mercenaries from time to time, but a Child of Bhaal would be a gift beyond her wildest dreams.~ */
+OUTER_SET O#LLKIMM_152 = STATE_WHICH_SAYS 152 IN ~Sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+
+// Get state for O#LLKIMM %O#LLKIMM_@153% @153 (Sellswords.d)
+/* ~You have a drow in your party. That is of no consequence. An exile or not, she is just another of your companions. Everyone's eyes will be on you, especially those of the Matron Mother.~ */
+OUTER_SET O#LLKIMM_153 = STATE_WHICH_SAYS 153 IN ~Sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+
+COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/interjections/jasteys_solaufein/jasteys_solaufein_sellswords_crossmod.d~
+	END
+END
 
 
 // QUESTS AND OTHERS

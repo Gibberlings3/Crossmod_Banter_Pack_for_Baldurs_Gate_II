@@ -1,0 +1,33 @@
+@0  = ~<CHARNAME>, avevo un altro motivo per raggiungere la superficie da solo prima di unirmi a te. Molto tempo fa ho parlato con un altro drow, una seguace di Eilistraee. Lei... mi ha trovato nel mio momento di dolore dopo la punizione di Phaere. Non ero pronto ad ascoltare allora, ma lo sono adesso. Ha lasciato il Sottosuolo e io so dove è andata.~ 
+@1 = ~Ci sono altri come me - seguaci di Eilistraee. Vivono in superficie, nascosti nelle profondità della foresta di Tethyr. Si nascondono non solo dagli altri drow, ma anche dagli elfi di superficie che attaccano un drow a prima vista.~
+@2 = ~Ti aspetta un combattimento difficile - per quanto ne so e posso prevedere. Sono sicuro che Fall e gli altri della Radura di Eilistraee ti aiuteranno come possono.~
+@3 = ~Posso indicare la Radura sulla tua mappa?~
+@4 = ~Sì.~
+@5 = ~Cosa farai se dico di no?~
+@6 = ~Non ho bisogno dell'aiuto di uno sciocco rinnegato.~
+@7 = ~Se rifiuti ora, non aprirò più l'argomento. So dove sono, posso raggiungerli in qualsiasi momento. Ma adesso preferisco viaggiare con te in superficie e imparare il più possibile.~
+@8 = ~Ecco: è a est dell'accampamento degli elfi di superficie.~
+@9 = ~È un peccato ma accetto la tua decisione. Devo abituarmi alla superficie e imparare il più possibile sotto la tua protezione per ora.~
+@10 = ~Sì, sono stato io, Fall. Mi ha colto di sorpresa il fatto che ti ricordassi di me - per non parlare del fatto che mi chiamassi amico.~
+@11 = ~(sorride) Sappiamo di chi possiamo fidarci e non dimentichiamo nessun drow abbastanza coraggioso da mettere in discussione il dogma della Regina Ragno, Solaufein. Il tuo volto non è stato dimenticato, anche se non eri pronto ad ascoltarci allora.~
+@12 = ~Ora sono pronto, Fall. Anche Yoea è qui? Ricordo che si avvicinò a me, molto tempo fa... Ricordo ancora la sensazione di felicità nello scoprirmi capace di misericordia dinnanzi al racconto delle sue "visioni blasfeme".~
+@13 = ~Sì, lei è qui. Sono sicuro che sarà felice di sapere che adesso anche tu hai trovato la strada per Eilistraee. Vai a parlare con lei, Solaufein. Ha molto da insegnare.~
+@14 = ~Lo farò, se <CHARNAME> è d'accordo. <CHARNAME> mi ha salvato, più di una volta, Fall. Ci stiamo preparando per una grande battaglia contro un potente nemico e avremo bisogno di tutto il supporto possibile.~
+@15 = ~In realtà, sono venuto qui perché Solaufein lo desiderava, ma sarò grato per tutto l'aiuto che posso ottenere contro il mio nemico.~
+@16 = ~Solaufein! Vedo che hai finalmente trovato la tua strada verso noi. Voglio pensare che adesso non rinneghi più la Signora dai Capelli d'Argento come nostra dea~
+@17 = ~Fai bene a pensarlo, Yoea. Mi... dispiace per come ti ho trattato l'ultima volta. Sono stato uno sciocco a rifiutarti quando mi hai trovato...~
+@18 = ~Mi hai rifiutata e aggredita, lo so, ma non mi hai uccisa né mi hai conseganta agli altri, Solaufein, come avresti potuto. Eri più vicino alla nostra Signora dai Capelli d'Argento di quanto ti rendessi conto e sono felice che tu abbia trovato la tua strada. Ti do il benvenuto alla Radura di Eilistraee.~
+@19 = ~<CHARNAME> ha una missione di grande importanza. Torna da me quando avrà finito.~
+@20 = ~Insegnerò a <CHARNAME>, ma ciò che insegno a <PRO_HIMHER> potrebbe rivelarsi importante per te, Solaufein.~
+@21 = ~Ascolterò, Yoea. Ora lo farò e apprezzerò ogni momento.~
+@22 = ~Per favore, <CHARNAME>, riconsidera.~
+@23 = ~Mi ha detto dove avrebbe nascosto un messaggio per me se avessi lasciato il Sottosuolo, assicurandosi con un incantesimo che non volevo farle del male ed ero per questo degno di assistenza .~
+/*
+@24 =
+@25 =
+@26 =
+@27 =
+@28 =
+@29 =
+@30 =
+*/
