@@ -1,0 +1,33 @@
+@0  = ~<CHARNAME>, I had another reason for wanting to reach the surface on my own prior to rejoining you.  A long time ago I spoke to another drow, a follower of Eilistraee. She... found me in my times of sorrow after Phaere's punishment. I wasn't ready to listen then, but I am now.  She left the Underdark, and I now know where she went.~ 
+@1  = ~There are others like me - worshipers of the Lady Silverhair. They live on the surface, hidden in the deep in Tethyrian forests. They hide not only from other drow, but from the surface elves too who usually just attack when they see a dark elf.~
+@2  = ~A dangerous fight awaits you - as far as I know and can predict. I am sure Fall and others of Eilistraee's Clearing will help you as much as they can.~
+@3  = ~Shall I point out the Clearing on your map?~
+@4  = ~Yes.~
+@5  = ~What will you do if I say no?~
+@6  = ~I do not need the help from any foolish renegades.~
+@7  = ~If you decline now, I will not raise the topic again. I know where they are, I can visit anytime. I will prefer to travel the surface with you and learn as much as I can.~
+@8  = ~Here: it is east of the camp of the surface elves.~
+@9  = ~It is a pity but I accept your decision. I need to become accustomed to the surface and to learn as much as I can under your protection for now.~
+@10 = ~Yes, it was me, Fall. It took me by surprise that you would remember me - and call me a friend no less.~
+@11  = ~(smiles) We know who we can trust and do not forget any drow we notice questioning the dogma of the Spider Queen, Solaufein. Your face was not forgotten, although you were not ready to listen then.~
+@12  = ~I am ready now, Fall. Is Yoea here, too? I remember her approaching me, long ago... I recall being pleased to learn that I still had a capacity for mercy when I was able to stay my blades upon hearing her 'blasphemous views'.~
+@13  = ~Yes, she is here. I am sure she will be happy to know you have now also found your way to Eilistraee. Go speak with her, Solaufein. She has a lot to teach.~
+@14  = ~I will, if <CHARNAME> agrees. <CHARNAME> has saved me, more than once, Fall. We are preparing for a great battle against a mighty foe, and can use any support we can get.~
+@15  = ~Actually, I came here because Solaufein wished to, but I will be grateful for any help I can get against my foe.~
+@16  = ~Solaufein! I see you found your way here at last. Do I assume correctly that you no longer deny our Lady Silverhair to be your goddess?~
+@17  = ~You assume correctly, Yoea. I... I am sorry about how I treated you when we last met. I was a fool to turn you down when you found me...~
+@18  = ~Turned me down and spat in my face, yes, but you did not kill me nor did you betray me to others, Solaufein, as you could have. You were nearer to our Lady Silverhair than you realized yourself, and I am glad you found your way. I welcome you to Eilistraee's Clearing.~
+@19  = ~<CHARNAME> has a task, and it is an important one. Come back to me when it is done.~
+@20 = ~I will teach <CHARNAME>, but what I teach <PRO_HIMHER> might prove as important to you, Solaufein.~
+@21 = ~I will listen, Yoea. Now I will, and I will cherish every moment.~
+@22 = ~Please, <CHARNAME>, reconsider.~ 
+@23 = ~She told me where she would hide a message for me if I were to ever leave the Underdark and, amazingly, she did just that with some clever spellwork that meant I was only able find it because I did not mean her harm.~ 
+/*
+@24 =
+@25 =
+@26 =
+@27 =
+@28 =
+@29 =
+@30 =
+*/

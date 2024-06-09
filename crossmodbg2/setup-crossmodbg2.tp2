@@ -5,7 +5,7 @@ SUPPORT ~https://www.gibberlings3.net/forums/forum/55-crossmod-banter-pack/~
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
 
-VERSION ~v24~ //put version number here, not inside setup.tra
+VERSION ~v24.1~ //put version number here, not inside setup.tra
 
 README ~crossmodbg2/readme-crossmodbg2.html~
 
