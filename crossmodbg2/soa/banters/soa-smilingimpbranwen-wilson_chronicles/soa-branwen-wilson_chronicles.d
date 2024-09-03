@@ -1,0 +1,3 @@
+INTERJECT_COPY_TRANS BNALIA %WilsonBranwen1% 7xWilsonBranwenNalia
+== 7XBRANB IF ~InParty("7XBRAN") InMyArea("7XBRAN") !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @11
+END

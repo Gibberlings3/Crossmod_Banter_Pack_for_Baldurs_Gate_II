@@ -1,0 +1,3 @@
+INTERJECT_COPY_TRANS BMINSC %WilsonQuayle1% 7xWilsonQuayleMinsc
+== 7XQUAYB IF ~InParty("7XQUAY") InMyArea("7XQUAY") !StateCheck("7XQUAY",CD_STATE_NOTVALID)~ THEN @10
+END
