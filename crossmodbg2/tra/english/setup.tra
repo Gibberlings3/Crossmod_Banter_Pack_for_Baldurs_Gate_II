@@ -999,3 +999,341 @@ Useable by:
 @974  = ~L#XZE25B.dlg and/or tob_yvette.dlg not detected. Skipping these particular ToB banters.~
 @975  = ~Adding jastey's Solaufein's interjections into Eilistaree's Song...~
 @976  = ~Adding jastey's Solaufein's interjections into Sellswords...~
+
+// NEW
+   @977  = ~Adding SoA banters between Shar-Teel and Varshoon...~
+   @978  = ~VxVarB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+ 
+   @979  = ~Adding SoA banters between Shar-Teel and Aeon...~
+   @980  = ~1XAEONB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+   
+   @981  = ~Adding SoA banters between Shar-Teel and Petsy...~
+   @982  = ~L3PetsyB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+   
+   @983  = ~Adding SoA banters between Shar-Teel and Angelo...~
+   @984  = ~BADANGEL.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+   
+   @985  = ~Adding SoA banters between Shar-Teel and Silver Star...~
+   @986  = ~BSilver.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+   
+   @987  = ~Adding SoA banters between Shar-Teel and Kindrek...~
+   @988  = ~BKINDREK.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~   
+   
+   @989  = ~Adding SoA banters between Shar-Teel and Saerileth...~
+   @990  = ~BSAERILE.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~ 
+   
+   @991  = ~Adding SoA banters between Shar-Teel and Yasraena...~
+   @992  = ~BYASRAEN.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @992  = ~Adding SoA banters between Shar-Teel and Tsujatha...~
+   @993  = ~BTSUJAT.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~   
+
+   @994  = ~Adding SoA banters between Shar-Teel and Solaufein...~
+   @995  = ~SOLA.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~   
+
+   @996  = ~Adding SoA banters between Shar-Teel and Valen...~
+   @997  = ~VALENJ.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~       
+   
+   @998  = ~Adding SoA banters between Shar-Teel and Swylif...~
+   @999  = ~LD#SWYB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~    
+
+   @1000  = ~Adding SoA banters between Shar-Teel and Neh'taniel...~
+   @1001  = ~BSK#NEHT.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1002  = ~Adding SoA banters between Shar-Teel and Kitanya...~
+   @1003  = ~R#KITYB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1004  = ~Adding SoA banters between Shar-Teel and Kiara/Zaiya...~
+   @1005  = ~BKIARA.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1006  = ~Adding SoA banters between Shar-Teel and Horace...~
+   @1007  = ~BHorace.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1008  = ~Adding SoA banters between Shar-Teel and Allison...~
+   @1009  = ~R#ALLISB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1010  = ~Adding SoA banters between Shar-Teel and Tsuki...~
+   @1011  = ~L7TsukiB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1012  = ~Adding SoA banters between Shar-Teel and Keto...~
+   @1013  = ~BFWKETO.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1014  = ~Adding SoA banters between Shar-Teel and Biddekelorak...~
+   @1015  = ~BBIDDE.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1016  = ~Adding SoA banters between Shar-Teel and Hubelpot...~
+   @1017  = ~BSC#Hub.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~ 
+
+   @1018  = ~Adding SoA banters between Shar-Teel and Azrael...~
+   @1019  = ~M#Azrael.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1020  = ~Adding SoA banters between Shar-Teel and Minyae/Elaryn...~
+   @1021  = ~QI#MIB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1022  = ~Adding SoA banters between Shar-Teel and jastey's Ajantis...~
+   @1023  = ~C#AjanB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1024  = ~Adding SoA banters between Shar-Teel and Kulyok's Xan...~
+   @1025  = ~BO#XAN.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1026  = ~Adding Shar-Teel's interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1027  = ~L#wilwis.cre and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1028  = ~Adding SoA banters between Garrick and Varshoon...~
+   @1029  = ~VxVarB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~   
+   
+   @1030  = ~Adding SoA banters between Garrick and Aeon...~
+   @1031  = ~1XAEONB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1032  = ~Adding SoA banters between Garrick and Petsy...~
+   @1033  = ~L3PetsyB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1034  = ~Adding SoA banters between Garrick and Silver Star...~
+   @1035  = ~BSilver.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1036  = ~Adding SoA banters between Garrick and Kindrek...~
+   @1037  = ~BKINDREK.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1038  = ~Adding SoA banters between Garrick and Saerileth...~
+   @1039  = ~BSAERILE.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1040  = ~Adding SoA banters between Garrick and Yasraena...~
+   @1041  = ~BYASRAEN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1042  = ~Adding SoA banters between Garrick and Tsujatha...~
+   @1043  = ~BTSUJAT.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1044  = ~Adding SoA banters between Garrick and Kiara/Zaiya...~
+   @1045  = ~BZAIYA.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1046  = ~Adding SoA banters between Garrick and Horace...~
+   @1047  = ~BHorace.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1048  = ~Adding SoA banters between Garrick and Allison...~
+   @1049  = ~R#ALLISB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1050  = ~Adding SoA banters between Garrick and Stivan...~
+   @1051  = ~TB#STIVB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1052  = ~Adding SoA banters between Garrick and Tsuki...~
+   @1053  = ~L7TsukiB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1054  = ~Adding SoA banters between Garrick and Hubelpot...~
+   @1055  = ~BSC#Hub.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1056  = ~Adding SoA banters between Garrick and Kido...~
+   @1057  = ~MWBKID.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~    
+
+   @1058  = ~Adding SoA banters between Garrick and Minyae/Elaryn...~
+   @1059  = ~QI#MIB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1060  = ~Adding SoA banters between Garrick and jastey's Ajantis...~
+   @1061  = ~C#AjanB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1062  = ~Adding SoA banters between Garrick and Kulyok's Xan...~
+   @1063  = ~BO#XAN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~    
+
+   @1064  = ~Adding SoA banters between Garrick and Kulyok's Coran...~
+   @1065  = ~BO#CORAN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1066  = ~Adding Garrick's interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1067  = ~L#wilwis.cre and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~    
+
+   @1068  = ~Adding SoA banters between Smiling Imp's Branwen and Varshoon...~
+   @1069  = ~VxVarB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1070  = ~Adding SoA banters between Smiling Imp's Branwen and Aeon...~
+   @1071  = ~1XAEONB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1072  = ~Adding SoA banters between Smiling Imp's Branwen and SilverStar...~
+   @1073  = ~BSilver.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1074  = ~Adding SoA banters between Smiling Imp's Branwen and Saerileth...~
+   @1075  = ~BSAERILE.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~   
+   
+   @1076  = ~Adding SoA banters between Smiling Imp's Branwen and Tsujatha...~
+   @1077  = ~BTSUJAT.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~     
+  
+   @1078  = ~Adding SoA banters between Smiling Imp's Branwen and Valen...~
+   @1079  = ~VALENJ.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1080  = ~Adding SoA banters between Smiling Imp's Branwen and Kiara/Zaiya...~
+   @1081  = ~BZAIYA.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~  
+   
+   @1082  = ~Adding SoA banters between Smiling Imp's Branwen and Horace...~
+   @1083  = ~BHorace.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1084  = ~Adding SoA banters between Smiling Imp's Branwen and Stivan...~
+   @1085  = ~TB#STIVB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1086  = ~Adding SoA banters between Smiling Imp's Branwen and Yasraena...~
+   @1087  = ~BYASRAEN.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~       
+   
+   @1088  = ~Adding SoA banters between Smiling Imp's Branwen and Minyae/Elaryn...~
+   @1089  = ~QI#ELAB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~        
+   
+   @1090  = ~Adding SoA banters between Smiling Imp's Branwen and jastey's Ajantis...~
+   @1091  = ~C#AjanB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1092  = ~Adding SoA banters between Smiling Imp's Branwen and Kulyok's Xan...~
+   @1093  = ~BO#XAN.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1094  = ~Adding SoA banters between Smiling Imp's Yeslick and Varshoon...~
+   @1095  = ~VxVarB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~     
+
+   @1096  = ~Adding SoA banters between Smiling Imp's Yeslick and Aeon...~
+   @1097  = ~1XAEONB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~       
+   
+   @1098  = ~Adding SoA banters between Smiling Imp's Yeslick and Biddekelorak...~
+   @1099  = ~BBIDDE.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1100  = ~Adding SoA banters between Smiling Imp's Yeslick and Kiara/Zaiya...~
+   @1101  = ~BZAIYA.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~     
+
+   @1102  = ~Adding SoA banters between Smiling Imp's Yeslick and Horace...~
+   @1103  = ~BHorace.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~    
+
+   @1104  = ~Adding SoA banters between Smiling Imp's Yeslick and Minyae/Elaryn...~
+   @1105  = ~QI#ELAB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1106  = ~Adding SoA banters between Eldoth and Varshoon...~
+   @1107  = ~VxVarB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1108  = ~Adding SoA banters between Eldoth and Valen...~
+   @1109  = ~VALENJ.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1110  = ~Adding SoA banters between Eldoth and Tsuki...~
+   @1111  = ~L7TsukiB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1112  = ~Adding SoA banters between Eldoth and Minyae/Elaryn...~
+   @1113  = ~QI#ELAB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~
+
+   @1114  = ~Adding SoA banters between Smiling Imp's Skie and Minyae/Elaryn...~
+   @1115  = ~QI#ELAB.dlg and/or 7XSkiB.dlg not detected. Skipping these particular SoA banters.~       
+   
+   @1116  = ~Adding SoA banters between Smiling Imp's  Skie and jastey's Ajantis...~
+   @1117  = ~C#AjanB.dlg and/or 7XSkiB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1118  = ~Adding SoA banters between Smiling Imp's Alora and Stivan...~
+   @1119  = ~TB#STIVB.dlg and/or 7XAloraB.dlg not detected. Skipping these particular SoA banters.~    
+     
+   @1120  = ~Adding SoA banters between Smiling Imp's Alora and Minyae/Elaryn...~
+   @1121  = ~QI#ELAB.dlg and/or 7XAloraB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1122  = ~Adding SoA banters between Smiling Imp's Xzar and SilverStar...~
+   @1123  = ~BSilver.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1124  = ~Adding SoA banters between Smiling Imp's Xzar and Neh'taniel...~
+   @1125  = ~BSK#NEHT.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1126  = ~Adding SoA banters between Smiling Imp's Xzar and Kiara/Zaiya...~
+   @1127  = ~BZAIYA.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1128  = ~Adding SoA banters between Smiling Imp's Xzar and Horace...~
+   @1129  = ~BHorace.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1130  = ~Adding SoA banters between Smiling Imp's Xzar and Kitanya...~
+   @1131  = ~R#KITYB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1132  = ~Adding SoA banters between Smiling Imp's Xzar and Stivan...~
+   @1133  = ~TB#STIVB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1134  = ~Adding SoA banters between Smiling Imp's Xzar and Tsuki...~
+   @1135  = ~L7TsukiB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1136  = ~Adding SoA banters between Smiling Imp's Montaron and Kiara/Zaiya...~
+   @1137  = ~BZAIYA.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1138  = ~Adding SoA banters between Smiling Imp's Montaron and Stivan...~
+   @1139  = ~TB#STIV.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1140  = ~Adding SoA banters between Smiling Imp's Montaron and Yasraena...~
+   @1141  = ~BYASRAEN.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1142  = ~Adding SoA banters between Smiling Imp's Xzar/Montaron and Minyae/Elaryn...~
+   @1143  = ~QI#ELAB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1144  = ~Adding SoA banters between Smiling Imp's Montaron and Kulyok's Tiax...~
+   @1145  = ~BO#TIAX.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1146  = ~Adding Smiling Imp's Xzar/Montaron interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1147  = ~L#wilwis.cre and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~       
+   
+   @1148  = ~Adding SoA banters between Smiling Imp's Tiax and Biddekelorak...~
+   @1149  = ~BBIDDE.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1150  = ~Adding SoA banters between Smiling Imp's Tiax and Yasraena...~
+   @1151  = ~BYASRAEN.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1152  = ~Adding SoA banters between Smiling Imp's Tiax and Kido...~
+   @1153  = ~MWBKID.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1154  = ~Adding SoA banters between Smiling Imp's Tiax and Minyae/Elaryn...~
+   @1155  = ~QI#ELAB.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1156  = ~Adding SoA banters between Smiling Imp's Quayle and Minyae/Elaryn...~
+   @1157  = ~QI#ELAB.dlg and/or 7XQUAYB.dlg not detected. Skipping these particular SoA banters.~    
+   
+   @1158  = ~Adding SoA banters between Smiling Imp's Tiax and Kulyok's Xan...~
+   @1159  = ~QI#ELAB.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~     
+
+   @1160  = ~Adding Smiling Imp's Tiax interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1161  = ~L#wilwis.cre and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~    
+
+   @1162  = ~Adding Smiling Imp's Quayle interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1163  = ~L#wilwis.cre and/or 7XQUAYB.dlg not detected. Skipping these particular SoA banters.~      
+   
+   @1164  = ~Adding SoA banters between Smiling Imp's Coran/Safana and Minyae/Elaryn...~
+   @1165  = ~QI#ELAB.dlg and/or B7XCoran.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1166  = ~Adding SoA banters between Smiling Imp's Coran and Kulyok's Xan...~
+   @1167  = ~BO#XAN.dlg and/or B7XCoran.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1168  = ~Adding Smiling Imp's Coran/Safana interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1169  = ~L#wilwis.cre and/or B7XCoran.dlg not detected. Skipping these particular SoA banters.~     
+
+   @1170  = ~Adding SoA banters between Smiling Imp's Deekin and Minyae/Elaryn...~
+   @1171  = ~QI#ELAB.dlg and/or BDEEKIN.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1172  = ~Adding SoA banters between Smiling Imp's Faldorn and Minyae/Elaryn...~
+   @1173  = ~QI#ELAB.dlg and/or 7XFALDB.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1174  = ~Adding Smiling Imp's Faldorn interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1175  = ~L#wilwis.cre and/or 7XFALDJ.dlg not detected. Skipping these particular SoA banters.~   
+
+   @1176  = ~Adding SoA banters between Smiling Imp's Kagain and Minyae/Elaryn...~
+   @1177  = ~QI#ELAB.dlg and/or 7XKagaB.dlg not detected. Skipping these particular SoA banters.~     
+   
+   @1178  = ~Adding Smiling Imp's Kagain interjections to the "Wilson Chrinicles" mod (SoA)...~
+   @1179  = ~L#wilwis.cre and/or 7XKagaB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1180  = ~Adding SoA banters between Smiling Imp's Kivan and Minyae/Elaryn...~
+   @1181  = ~QI#ELAB.dlg and/or 7XKIVAB.dlg not detected. Skipping these particular SoA banters.~  
+
+   @1182  = ~Adding SoA banters between Smiling Imp's Ajantis and Kulyok's Coran...~
+   @1183  = ~BO#CORAN.dlg and/or 7XAJANB.dlg not detected. Skipping these particular SoA banters.~      
+  
+   @1184  = ~Adding SoA banters between Smiling Imp's Ajantis and Kulyok's Tiax...~
+   @1185  = ~BO#TIAX.dlg and/or 7XAJANB.dlg not detected. Skipping these particular SoA banters.~  
+  
+   @1186   = ~Hubelpot's recipe for Cinnamon Cakes~
+   @1187   = ~Hubelpot's recipe for Cinnamon Cakes
+
+   Cinnamon Cakes
+   Take 6 cups o' fresh butter
+   A good pinch o' salt
+   3 cups o' sugar
+   A goodly dash o' cinnamon, an' then a little more fer luck.
+   12 cups unbleached flour
+
+   Cream together sugar, salt, & butter.
+
+   Mix th' cinnamon an' th' flour together.
+
+   And them te th' butter an' sugar.
+
+   Add water te' make it mnageable.
+
+   Press th' dough down on a bakin' sheet, poke it wi' a fork, and beke it hot for half an' hour or so.
+
+   Serve it warm.~
