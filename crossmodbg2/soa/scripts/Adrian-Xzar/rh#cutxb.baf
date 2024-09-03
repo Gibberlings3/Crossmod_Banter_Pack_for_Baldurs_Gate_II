@@ -7,10 +7,10 @@ THEN
     Wait(1)
     ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
     Wait(1)
-    MoveToObject("7XMONT")
+    MoveToObject("7XXZAR")
     Wait(1)
-    ApplyDamage("7XMONT",20,SLASHING)
+    ApplyDamage("7XXZAR",20,SLASHING)
     Wait(1)
 	EndCutSceneMode()
-	ActionOverride("rh#Adrian",StartDialogueNoSet(Player1))
+	ActionOverride("7XXZAR",StartDialogueNoSet("rh#Adrian"))
 END
