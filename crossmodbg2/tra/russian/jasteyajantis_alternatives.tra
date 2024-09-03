@@ -1,0 +1,52 @@
+/*
+This is the same Tra-file as the "alternatives_reactions.tra" from the Ajantis Mod v19 (Unless there is a note stating otherwise in the Ajantis mod.)
+Please note that not all lines are needed for the CBP.
+*/
+@0    = ~The Shadow Thieves! My lady, I do agree to your list only too well.~
+@1    = ~<CHARNAME>, this is more than we can hope for! We get help to find Imeon from righteous sources, at last!~
+@2    = ~Finally! The call I was waiting for for a longer time. Time to stop the evil manifestation the Shadow Thieves are in these lands!~
+@3    = ~Tell me when, and I'll be ready to walk this path with you, <CHARNAME>.~
+@4    = ~<CHARNAME>, we will agree to the terms of Lady Aster, I hope?~
+@5    = ~Right you are! It would be time to remove this evil from the city.~
+@6    = ~Ajantis... I am not ready to stomp in and kill just anyone I see in there.~
+@7    = ~The Shadow Thieves' attack on Irenicus made the way free for me to escape, remember? Even though they did not plan to, I profited from their losses and *am* in their dept.~
+@8    = ~I don't know... The Shadow Thieves seem to be the only ones fighting the vampire threat in the city currently. I don't see how fighting them off first makes the situation any better.~
+@9    = ~A guild is a guild. Ever wondered why the Order of the Radiant Heart doesn't just march into the Thieves' Guild? It's outside the law.~
+@10   = ~And find myself fighting Husam? No, I won't.~
+@11   = ~I haven't decided, yet.~
+@12   = ~I am glad you see it this way. Let us return to Lady Aster as soon as possible with the required sum and agree to her terms!~
+@13   = ~But it's a righteous task! The Order of Lathander asks us to drive out the evil of this place.~
+@14   = ~And just how do we know it's righteous?~
+@15   = ~I will decide this later.~
+@16   = ~But... It's an offer from a righteous Order to get near Imoen. How else do you want to get there - by working for the Shadow Thieves?! Taking side of the evil?~
+@17   = ~I see your point, but the situation is not that easy for me. I need to ponder about this.~
+@18   = ~Don't you have any second thoughts? Any at all? Aster is requesting a slaughter, and it's alright for you because there are evil people in there?~
+@19   = ~How can it be not righteous to hunt murderers and assassins?! Yes, it is true there were no direct assaults from the Order to the Thieves' Guild House, but...~
+@20   = ~(sigh) I... I do see your point. Still...~
+@21   = ~<CHARNAME>, if you decide to go this way, I will be at your side.~
+@22   = ~<CHARNAME>, why did you turn down Lady Aster's righteous offer? Why did you not agree to her terms?~
+@23   = ~We talked about this. Now I made a decision.~
+@24   = ~I will not go and kill a house full of humans if there are other things to be considered.~
+@25   = ~I will not turn Husam against me, Ajantis.~
+@26   = ~I liked another offer better.~
+@27   = ~Well, then I surely hope this Husam will appreciate your reluctance!~
+@28   = ~(sighs in frustration) Well, she is gone now, the moment passed. And I will keep on following you - but do not think I would not watch your decisions very closely!~
+@29   = ~Love, I really think you should have taken Aster's offer for help! Where will we be turning to now?~
+@30   = ~<CHARNAME>, you are not seriously considering this?!~
+@31   = ~<CHARNAME>, why didn't you have that man 'Malficus' leave the moment he opened his mouth?~
+@32   = ~Why should I have?~
+@33   = ~Because I want to know what he is up to.~
+@34   = ~Because I am planning on going to Maztica, that is why.~
+@35   = ~Why you should have?! Because this man reaks of evil, and... and he is proposing to *run away* from your duties!~
+@36   = ~A commendable reason, but I am sure we could deal with him without listening to his false praises and doing errands for him!~
+@37   = ~If that would be the case, then I would leave your company, because my duties are here. Surely you must be kidding.~
+@38   = ~<CHARNAME>, I will *not* be part of something like this!~
+@39   = ~<CHARNAME>, I will not be part of an assassination. As soon as we know what is planned, I expect you to report to Chief Inspector Brega to impede this evil scheme!~
+@40   = ~<CHARNAME>, how can you do something like this?! The evil in you is showing. I have to stop you!~
+@41   = ~Sir Ajantis was there, too. He could testify what I said.~
+@42   = ~Yes, Chief Inspector Brega, what <CHARNAME> said is true.~
+@43   = ~Sir Ajantis Ilvastarr, isn't it? Your mentor Keldorn is well known to me.~
+@44   = ~<CHARNAME>, I will go against the Shadow Thieves with you, but I would prefer it a righteous cause instead of getting a discount for a ship voyage away from your duties!~
+@45   = ~<CHARNAME>, this is where our paths will separate. My duties are calling. Farewell.~
+@46   = ~Love, I... I will come with you, and be it only to watch over you. You are not yourself!~
+@47   = ~Well, not everyone is really ready for a holiday, as it seems.~
