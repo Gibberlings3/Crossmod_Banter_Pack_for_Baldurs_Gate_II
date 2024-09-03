@@ -1,0 +1,21 @@
+IF
+
+InParty("MWKido")!StateCheck("MWKido",CD_STATE_NOTVALID)
+InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+  Global("KIDOGARRICK","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("7XGAR",Interact("MWKido"))
+END
+
+IF
+
+TimeOfDay(NIGHT)InParty("MWKido")!StateCheck("MWKido",CD_STATE_NOTVALID)
+InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+  Global("KIDOGARRICK","GLOBAL",1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("MWKido",Interact("7XGAR"))
+END

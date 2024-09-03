@@ -1,0 +1,26 @@
+
+
+
+IF
+
+AreaCheck("AR0700")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")InParty("Yasraena")
+!StateCheck("Yasraena",CD_STATE_NOTVALID)CombatCounter(0)
+  Global("TiaxYasraenaAR0700","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+  SetGlobal("TiaxYasraenaAR0700","GLOBAL",1)
+    ActionOverride("7XTIAX",Interact("Yasraena"))
+END
+
+IF
+
+AreaCheck("AR0300")!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")InParty("Yasraena")
+!StateCheck("Yasraena",CD_STATE_NOTVALID)CombatCounter(0)
+  Global("TiaxYasraenaAR0300","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+  SetGlobal("TiaxYasraenaAR0300","GLOBAL",1)
+    ActionOverride("7XTIAX",Interact("Yasraena"))
+END
