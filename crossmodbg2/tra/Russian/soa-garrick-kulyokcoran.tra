@@ -1,33 +1,33 @@
-// Coran - Garrick
-@239  = ~My brave Sir Garrick! Tell me, how was that bridesmaid?~ [coran20]
-@240  = ~No doubt you have many stories of a fun night filled with debauchery.~ [coranr]
-@241  = ~Leave me alone, Coran.~
-@242  = ~Can't you see that every moment without Lady Irlana is like a knife in my heart?~
-@243  = ~Yes, I suppose that any man deprived of Lady Irlana's favors would feel the same.~ [coran21]
-@244  = ~But cheer up, old friend, there are many other women out there for you to fall hopelessly in love with.~ [coran7]
-@245  = ~No.. I don't think I'll be falling in love again for quite some time, thank you.~
-@246  = ~So just a few tavern wenches to take your mind off her then?~ [coran23]
-@247  = ~Well, I haven't ruled that out.. but what I am really looking for is a soulmate.~
-@248  = ~A woman of such beauty and grace that she could inspire new songs and ballads for an eternity.~
-@249  = ~By Hanali, that's the spirit!~ [coran25]
-@250  = ~You know what I always say.. Luck is always on the side of the romantic.~ [coran4]
+// Коран - Гаррик 1
+@239  = ~Мой храбрый сэр Гаррик! Скажи, как там эта подружка невесты?~ [coran20]
+@240  = ~Несомненно, у тебя есть много историй о веселых ночах, наполненных развратом.~ [coranr]
+@241  = ~Оставь меня в покое, Коран.~
+@242  = ~Разве ты не видишь, что каждый миг без леди Ирланы подобен ножу в моем сердце?~
+@243  = ~Да, я полагаю, что любой мужчина, лишенный милости леди Ирланы, чувствовал бы то же самое.~ [coran21]
+@244  = ~Но взбодрись, старый друг - есть много других женщин, чтобы ты безнадежно влюбился в них.~ [coran7]
+@245  = ~Нет.. Я не думаю, что смогу кого-то еще полюбить, спасибо.~
+@246  = ~Тогда, может, просто пара женщин из таверн, чтобы отвлечься от нее?~ [coran23]
+@247  = ~Ну, я не исключаю этого... но главное, что я ищу - это родственная душа.~
+@248  = ~Женщину такой красоты и грации, что могла бы вечно вдохновлять на новые песни и баллады.~
+@249  = ~Ханали, вот это дух!~ [coran25]
+@250  = ~Как я всегда говорю... Удача всегда на стороне романтика.~ [coran4]
 
-// Coran - Garrick 2
-@602 = ~Coran, so you think that life is an adventure, and if not an adventure, then it is not life? ~
-@603 = ~That's right! ~
-@604 = ~Considering how long elves live, this could be a century-long adventure. ~
-@605 = ~I don't want anything else, my friend. And yes, I'm not afraid to burn out, if that's what you mean. However, I do not like to look far into the future. ~
-@606 = ~Me too. ~
+// Коран - Гаррик 2
+@602 = ~Коран, значит, ты считаешь, что жизнь – это приключение, а если не приключение, то это и не жизнь?~
+@603 = ~Именно так!~
+@604 = ~Если учесть, сколько живут эльфы, то это может быть приключение длинной в столетия.~
+@605 = ~Ничего другого я и не хочу, друг мой. И да, я не боюсь перегореть, если ты об этом. Впрочем, не люблю заглядывать далеко в будущее.~
+@606 = ~Я тоже.~
 
-// Coran - Garrick 3
-@607 = ~Luck is a lovely lady! ~
-@608 = ~Oh, am I already being quoted? That's nice.~
-@609 = ~There are many things you and I agree on, Coran. ~
-@610 = ~It's true. Life is great, isn't it? That's what you always say. And I completely agree with you. Well then, go ahead, my friend, let's taste her gifts.~
-@611 = ~Yes, yes! The road is calling us, and it's full of adventure!~ [GARRICKH]
+// Коран - Гаррик 3
+@607 = ~Удача – прекрасная леди!~
+@608 = ~О, меня уже цитируют? Это приятно.~
+@609 = ~Есть многое, в чем мы с тобой сходимся, Коран.~
+@610 = ~Это правда. Жизнь прекрасна, да? Так ты всегда говоришь. И я с тобой полностью согласен. Что ж, тогда вперед, дружище, вкусим ее дары.~
+@611 = ~Да-да. Дорога нас зовет, и она полна приключений!~ [GARRICKH]
 
-// Coran - Garrick 4
-@612 = ~Lady Nalia is intelligent and determined and you will never be bored with her. Congratulations Garrick, great choice.~
-@613 = ~Choice is a strange word in our case. We didn't choose each other, it just... happened.~ [GARRICKT]
-@614 = ~And from the way your eyes are shining, I can see it turned out great. The way I see it, you are very suitable for each other. I'm happy for you!~
-@615 = ~Thank you Coran! And you, too, be happy... with the one and only, or the way you are used to. ~
+// Коран - Гаррик 4
+@612 = ~Леди Налия – умная и решительная, и с ней никогда не будет скучно. Поздравляю, Гаррик, прекрасный выбор.~
+@613 = ~Выбор – странное слово в нашем случае. Мы не выбирали друг друга, оно так... само получилось.~ [GARRICKT]
+@614 = ~И по тому, как сияют твои глаза, я вижу, что получилось отлично. Как по мне, так вы очень друг другу подходите. Рад за тебя!~
+@615 = ~Спасибо, Коран! И ты тоже будь счастлив... с одной-единственной, или так, как ты привык.~

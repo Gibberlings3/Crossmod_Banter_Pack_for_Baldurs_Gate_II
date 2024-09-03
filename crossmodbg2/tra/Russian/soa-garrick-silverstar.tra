@@ -1,15 +1,8 @@
-@0    = ~Do you have a few pages to spare in the newest edition of your ballad, Sir Garrick, for a few
-tales about the sheep that Black Rose and I butchered?~
-@1    = ~Sheep?~
-@2    = ~Hahahaha! I remember this one particular night, when the two of us were leaving a
-tavern, when several city guards appeared from around the corner, shouting sillily and stumbling
-around, obviously drunk! One tried to grab me while another laughed.~
-@3    = ~They said they wanted to play with me, so I did not understand why he got so angry after I cut
-off a few of his fingers.~
-@4    = ~Ouch!~ [garrick8]
-@5    = ~I then gutted one of them and used a deadly poison on another. Hehe! He started
-foaming at the mouth and twitching. That is when the art show began.~
-@6    = ~We literally painted the streets red that night with blood that night. However someone spoiled
-the fun after taking down the heads where I'd hung them on the tavern sign. A bit disappointing,
-but still worthy of an inclusion in your ballad, I would hope.~
-@7    = ~Hmmm.. I'll get back to you on that.~ [garrick7]
+@0 = ~Сэр Гаррик, в твоей новой балладе найдется пара страниц для историй об овце, которую мы зарезали с Черной Роуз?~
+@1 = ~Овце?~
+@2 = ~Хахахаха! Я помню ту особую ночь - мы вдвоем выходили из таверны, и тут из-за угла вышло несколько городских стражников, глупо крича и спотыкаясь, пьяные в дюпель! Один попытался схватить меня, а другой смеялся.~
+@3 = ~Они сказали, что хотят поиграть со мной - но почему-то, когда я отрезала одному из них пару пальцев, он почему-то страшно закричал.~
+@4 = ~Ой! ~ [garrick8]
+@5 = ~Потом я выпотрошила одного из них, а другому влила в глотку смертельный яд. Хе-хе! У него пошла пена изо рта, дергаться начал. Это было настоящее шоу.~
+@6 = ~Той ночью мы буквально выкрасили улицы в красный цвет. Однако кто-то испортил веселье - снял головы, которые я повесила на вывеску таверны. Это подпортило эффект. Но, надеюсь, достойно включения в твою балладу.~
+@7 = ~Хммм... Я подумаю над этим и сообщу, если что. ~ [garrick7]

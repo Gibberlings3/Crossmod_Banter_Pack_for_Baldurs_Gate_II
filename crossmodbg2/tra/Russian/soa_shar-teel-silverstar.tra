@@ -1,38 +1,22 @@
-@0    = ~Mmm.. Shar-Teel. Mommy says that you are the perfect wolf to help round the sheep.~ [Female2a]
-@1    = ~What are you speaking of, Silver Star? I haven't the time for metaphors.~ [shart_]
-@2    = ~Mary's sheep need you. Thousands and thousands of them, there are...and they hurt,
-they scream, they hit... They leave nothing untouched...in the swamps or in the darkness!~ [Female2l]
-@3    = ~Hahahahaha! Have I told you how Black Rose taught me how to cut throats? Now there was a woman
-that enjoyed penetrating men.~
-@4    = ~Understand this, Silver. I am not some thief that enjoys slitting the throats of
-sleeping victims. I want to see the fear in his eyes when I slay a man.~
-@5    = ~An excellent wolf you will make, indeed.~
-@6    = ~We must give thanks to the Master for leaving us this fresh trail of lambs. What say you,
-Shar-Teel? Shall we toast on the blood of our enemies tonight?~ [Female2a]
-@7    = ~I love bloodshed as much as the next girl, but the only thanks I will give Irenicus
-is that of a victorious hunter standing over the decapitated body of her slain prey.~ [sharth]
-@8    = ~The Master is kind and merciful. I have seen the many tortures he has inflicted upon
-the lost sheep and heard them beg for death. The Master usually agreed to let them die, although
-there were a few he kept alive to make art from them.~
-@9    = ~The Master is kind and merciful. He gave me a little cage that kept me from sitting down in and
-becoming slothful. Twice a day a golem gave me a meal, but every time I ate, it hurt badly. So
-for a time I ignored the meals, until my need for food became greater than my fear of pain. That
-is when I learned the true beauty of death.~
-@10   = ~The Master is kind and merciful.~
-@11   = ~I don't know what kind of spell Irenicus holds over you Silver, but you needn't worry
-too much longer. My blade will put an end to that wizard soon enough and then your suffering
-shall end.~ [shart0]
-@12   = ~Oh no, you do not understand. The Master has not made me suffer. The Master has set
-me free by showing me the true beauty of death.~
-@13   = ~Now, even when the gods are against me, I'm always smiling.~
-@14   = ~You know something, Silver Star, if you learned some discipline, I might be able to teach you
-how to use a blade properly.~
-@15   = ~My time with the Master taught me not to rely too heavily on weapons of steel.~
-@16   = ~Especially if you have a vial of acid at the ready! Hahahahaha! That poor beautiful girl that
-the Master sold to the circus never knew what hit her, until her face was melting off.~
-@17   = ~Of course the fireball that caused her body to explode was another matter all together.~
-@18   = ~Mutilating a helpless captive does not make you a true warrior.~ [shartt]
-@19   = ~Don't you understand? I don't want to be a true warrior. I want to be like the
-Master, an artist in death.~
-@20   = ~I just need the inspiration to create a masterpiece.~
-@21   = ~Your impudence will one day get you killed.~ [sharto]
+@0 = ~Ммм... Шар-Тил. Мама говорит, что ты идеальный волк для помощи овцам.~ [Female2a]
+@1 = ~О чем ты, Сильверстар? У меня нет времени на метафоры.~ [Shart_]
+@2 = ~Ты нужна овечке Марии. Их кругом тысячи и тысячи... и им больно, они кричат, дерутся... Ничто не оставляют нетронутым... в болотах или в темноте!~ [Female2l]
+@3 = ~Хахахахаха! Я рассказывала, как Черная Роза научила меня перерезать глотки? Это была женщина, которой нравилось проникать в мужчину.~
+@4 = ~Пойми, Сильвер. Я не вор, которому нравится перерезать горло спящим жертвам. Когда я кого-то убиваю, я хочу видеть страх в его глазах.~
+@5 = ~Из тебя действительно получится отличный волк.~
+@6 = ~Мы должны поблагодарить Хозяина за то, что он оставил нам этот свежий след ягнят. Что скажешь, Шар-Тил? Сегодня выпьем за то, чтобы пролилась кровь наших врагов? ~ [Female2a]
+@7 = ~Я люблю кровопролитие, но единственное, за моя благодарность Айреникусу - это благодарность победившей охотницы, стоящей над обезглавленным телом своей убитой жертвы.~ [sharth]
+@8 = ~Хозяин добр и милосерден. Я много раз видела, как он пытал заблудших овец, и слышала, как они умоляли о смерти. Хозяин обычно соглашался и позволял им умереть, хотя некоторых оставил в живых, чтобы с ними творить искусство.~
+@9 = ~Хозяин добр и милосерден. Он дал мне маленькую клетку, в которой я не могла сесть и предаться лени. Дважды в день голем кормил меня, но, когда я ела, было очень больно. Поэтому я часто пропускала еду, пока голод не пересиливал страх боли. Именно тогда я узнала истинную красоту смерти.~
+@10 = ~Хозяин добр и милосерден.~
+@11 = ~Сильвер, я не знаю, какое заклинание на тебе использовал Айреникус, но тебе больше не о чем беспокоиться. Мой клинок скоро пронзит этог омага, и тогда твои страдания прекратятся.~ [Shart0]
+@12 = ~О нет, ты не понимаешь. Хозяин не заставлял меня страдать. Хозяин освободил меня, показав истинную красоту смерти.~
+@13 = ~Теперь, даже когда сами боги против меня, я всегда улыбаюсь.~
+@14 = ~Знаешь, Сильверстар... если ты будешь дисциплинированной, я могу научить тебя правильно обращаться с клинком.~
+@15 = ~Время, проведенное с Хозяином, научило меня не слишком полагаться на стальное оружие.~
+@16 = ~Особенно когда у тебя есть наготове пузырек с кислотой! Хахахахаха! Бедная красивая девушка, которую Хозяин продал в цирк, не знала, что ее поразило, пока ее лицо полностью не разъло.~
+@17 = ~Конечно, огненный шар, от которого все ее тело лопнуло - совсем другое дело. ~
+@18 = ~Если наносить увечья беспомощному пленнику, это не сделает из тебя настоящего воина. ~ [shartt]
+@19 = ~Разве ты не понимаешь? Я не хочу быть настоящим воином. Я хочу быть похожим на Хозяина, художника смерти.~
+@20 = ~Мне просто нужно вдохновение, чтобы создать свой шедевр.~
+@21 = ~Твоя самоуверенность однажды тебя и погубит.~ [sharto]

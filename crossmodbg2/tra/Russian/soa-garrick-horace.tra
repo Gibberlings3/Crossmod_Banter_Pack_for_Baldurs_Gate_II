@@ -1,19 +1,15 @@
-@0    = ~Horace, I have never met a skeleton that was able to articulate themselves like you do. Could it be that you worked in the
-world of theater in your previous life?~
-@1    = ~Given the way that handling a sword comes so naturally, I find it highly doubtful, although I suppose anything is
-possible.~
-@2    = ~Well, whatever it is that you did, you simply cannot let opportunity pass by when it comes knocking on your door.~
-@3    = ~What are you talking about, Garrick?~
-@4    = ~Think about it! We can have Faerыn's only tap-dancing skeleton show, complete with xylophone symphony! It will be
-magnificent!~
-@5    = ~Tap-dancing? I don't think so.~
-@6    = ~I'll give you some time to let the idea simmer.~
-@7    = ~Come now, Horace, won't you as the proverbial saying goes, throw a dog a bone?~
-@8    = ~Absolutely not! I already told you Garrick, there in no way that I am tap-dancing on stage.~
-@9    = ~But you have such a natural grace about you.~
-@10   = ~Are you sure that you won't meet with my dance instructor, Alea?~
-@11   = ~Yes, I'm certain. I have no interst in being in one of your productions.~
-@12   = ~*sigh* Very well. In that case, how about I just append your tale to the newest edition of the Ballad of brave
-Brave Sir Garrick?~ [garrickp]
-@13   = ~If you wish, but I have no memory of my past life.~
-@14   = ~Well now, that is going to make things easy now, isn't it?~
+@0 = ~Хорас, я никогда не встречал скелета с таким навыком артикуляции. Может, в прошлой жизни ты работал в мире театра?~
+@1 = ~Учитывая, как я умею обращаться с мечом, сомневаюсь. Хотя все возможно.~
+@2 = ~В любом случае важно не упустить возможность, когда она стучится в дверь.~
+@3 = ~О чем ты, Гаррик? ~
+@4 = ~Подумай об этом! У нас может быть единственное на Фаэруне шоу со скелетом, танцующим чечетку под симфонию ксилофона! Будет великолепно!~
+@5 = ~Чечётка? Это вряд ли.~
+@6 = ~Я дам тебе немного времени, чтобы обдумать эту идею.~
+@7 = ~Ну что, Хорас, ты, как говорится, бросишь собаке кость? ~
+@8 = ~Точно нет! Я уже сказал тебе, Гаррик - не собираюсь я танцевать чечетку на сцене. ~
+@9 = ~Но у тебя такая естественная грация!~
+@10 = ~Ты уверен, что не хочешь встретиться с моим учителем танцев, Али?~
+@11 = ~Да, уверен. Мне неинтересно участвовать в одном из твоих спектаклей.~
+@12 = ~*Вздох* Хорошо. Тогда как насчет того, чтобы я просто добавил твой рассказ в последнее издание Баллады о храбром сэре Гаррике?~ [Garrickp]
+@13 = ~Если хочешь, давай. Но я не помню своей прошлой жизни.~
+@14 = ~Что ж, это многое упростит, не так ли?~
