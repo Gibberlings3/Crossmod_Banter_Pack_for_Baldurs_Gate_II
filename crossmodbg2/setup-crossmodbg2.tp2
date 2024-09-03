@@ -6,7 +6,7 @@ SUPPORT ~https://www.gibberlings3.net/forums/forum/55-crossmod-banter-pack/~
 NO_IF_EVAL_BUG
 
 VERSION ~v25~ //put version number here, not inside setup.tra
-
+AUTO_TRA ~crossmodbg2/tra/%s~
 README ~crossmodbg2/readme-crossmodbg2.html~
 
 
@@ -41,6 +41,7 @@ ALWAYS
     ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
       PRINT @2 /* BG2:EE detected... */
       ACTION_DEFINE_ARRAY cdnoconvert BEGIN soa_khalid-skiecostonesoul END // both EE mods, so already in utf-8
+	  ACTION_DEFINE_ARRAY cdreload BEGIN setup END
       LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~crossmodbg2/tra~ noconvert_array = cdnoconvert END
     END
     ACTION_IF GAME_IS ~soa~ THEN BEGIN
@@ -5925,8 +5926,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~QI#MIB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
 THEN BEGIN
     PRINT @1020 /* Adding SoA banters between Shar-Teel and Minyae/Elaryn... */
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Minyae/Elaryn.~
-    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-minyae-elaryn/soa_minyae-sharteel.d~
-	COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-minyae-elaryn/soa_elaryn-sharteel.d~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-minyae-elaryn/minyae-sharteel.d~
+	COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-minyae-elaryn/elaryn-sharteel.d~
 END ELSE BEGIN
     PRINT @1021 /* QI#MIB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
     APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#MIB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
