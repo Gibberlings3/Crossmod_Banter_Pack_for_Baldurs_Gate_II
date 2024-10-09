@@ -5,8 +5,8 @@ SUPPORT ~https://www.gibberlings3.net/forums/forum/55-crossmod-banter-pack/~
 /* backwards compatibility is a PITA, but necessary */
 NO_IF_EVAL_BUG
 
-VERSION ~v24.1~ //put version number here, not inside setup.tra
-
+VERSION ~v25~ //put version number here, not inside setup.tra
+AUTO_TRA ~crossmodbg2/tra/%s~
 README ~crossmodbg2/readme-crossmodbg2.html~
 
 
@@ -41,6 +41,7 @@ ALWAYS
     ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
       PRINT @2 /* BG2:EE detected... */
       ACTION_DEFINE_ARRAY cdnoconvert BEGIN soa_khalid-skiecostonesoul END // both EE mods, so already in utf-8
+	  ACTION_DEFINE_ARRAY cdreload BEGIN setup END
       LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~crossmodbg2/tra~ noconvert_array = cdnoconvert END
     END
     ACTION_IF GAME_IS ~soa~ THEN BEGIN
@@ -63,6 +64,7 @@ END
 AUTO_TRA ~crossmodbg2/tra/%s~
 LANGUAGE ~English~ ~english~ ~crossmodbg2/tra/english/setup.tra~ 
 LANGUAGE ~Deutsch (Teildeutsche Version, der Rest ist in Englisch)~ ~german~ ~crossmodbg2/tra/english/setup.tra~ // reads the English setup.tra for now!
+LANGUAGE ~Russian (incomplete translation)~ ~russian~ ~crossmodbg2/tra/russian/setup.tra~ 
 		
 			
 // ****************************
@@ -5666,9 +5668,1258 @@ END ELSE BEGIN
 
 END
 
+////// NEW
+
+// Shar-Teel - Varshoon
+
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @977 /* Adding SoA banters between Shar-Teel and Varshoon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Varshoon..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-varshoon/soa_shar-teel-varshoon.d~
+END ELSE BEGIN
+    PRINT @978 /* VxVarB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VxVarB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Aeon
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @979 /* Adding SoA banters between Shar-Teel and Aeon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Aeon..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-aeon/soa_shar-teel-aeon.d~
+END ELSE BEGIN
+    PRINT @980 /* 1XAEONB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1XAEONB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Petsy
+ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @981 /* Adding SoA banters between Shar-Teel and Petsy... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Petsy..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-petsy/soa_shar-teel-petsy.d~
+END ELSE BEGIN
+    PRINT @982 /* L3PetsyB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L3PetsyB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Angelo
+ACTION_IF FILE_EXISTS_IN_GAME ~BADANGEL.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @983 /* Adding SoA banters between Shar-Teel and Angelo... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Angelo..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-angelo/soa_shar-teel-angelo.d~
+END ELSE BEGIN
+    PRINT @984 /* BADANGEL.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BADANGEL.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Silver Star
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @985 /* Adding SoA banters between Shar-Teel and Silver Star... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Silver Star..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-silverstar/soa_shar-teel-silverstar.d~
+END ELSE BEGIN
+    PRINT @986 /* BSilver.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSilver.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Kindrek
+ACTION_IF FILE_EXISTS_IN_GAME ~BKINDREK.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @987 /* Adding SoA banters between Shar-Teel and Kindrek... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Kindrek..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-kindrek/soa_shar-teel-kindrek.d~
+END ELSE BEGIN
+    PRINT @988 /* BKINDREK.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BKINDREK.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Saerileth
+ACTION_IF FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @989 /* Adding SoA banters between Shar-Teel and Saerileth... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Saerileth..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-saerileth/soa_shar-teel-saerileth.d~
+	EXTEND_TOP ~7xshar.bcs~ ~crossmodbg2/soa/scripts/SharSaerileth.baf~
+END ELSE BEGIN
+    PRINT @990 /* BSAERILE.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSAERILE.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Yasraena
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @991 /* Adding SoA banters between Shar-Teel and Yasraena... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Yasraena..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-yasraena/soa_shar-teel-yasraena.d~
+END ELSE BEGIN
+    PRINT @992 /* BYASRAEN.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BYASRAEN.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Tsujatha
+ACTION_IF FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @993 /* Adding SoA banters between Shar-Teel and Tsujatha... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Tsujatha..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-tsujatha/soa_shar-teel-tsujatha.d~
+END ELSE BEGIN
+    PRINT @994 /* BTSUJAT.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BTSUJAT.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Weimer's Solaufein
+ACTION_IF FILE_EXISTS_IN_GAME ~SOLA.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @995 /* Adding SoA banters between Shar-Teel and Weimer's Solaufein... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Weimer's Solaufein..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-weimersolaufein/soa_shar-teel-weimersolaufein.d~
+END ELSE BEGIN
+    PRINT @996 /* SOLA.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~SOLA.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Valen
+ACTION_IF FILE_EXISTS_IN_GAME ~VALENJ.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @997 /* Adding SoA banters between Shar-Teel and Valen... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Valen..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-valen/soa_shar-teel-valen.d~
+	EXTEND_TOP ~7xshar.bcs~ ~crossmodbg2/soa/scripts/SharValen.baf~
+END ELSE BEGIN
+    PRINT @998 /* VALENJ.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VALENJ.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Swylif
+ACTION_IF FILE_EXISTS_IN_GAME ~LD#SWYB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @998 /* Adding SoA banters between Shar-Teel and Swylif... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Swylif..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-swylif/soa_shar-teel-swylif.d~
+END ELSE BEGIN
+    PRINT @999 /* LD#SWYB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~LD#SWYB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Neh'taniel
+ACTION_IF FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1000 /* Adding SoA banters between Shar-Teel and Neh'taniel... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Neh'taniel..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-nehtaniel/soa_shar-teel-nehtaniel.d~
+END ELSE BEGIN
+    PRINT @1001 /* BSK#NEHT.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSK#NEHT.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Kitanya
+ACTION_IF FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1002 /* Adding SoA banters between Shar-Teel and Kitanya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Kitanya..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-kitanya/soa_shar-teel-kitanya.d~
+END ELSE BEGIN
+    PRINT @1003 /* R#KITYB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~R#KITYB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Kiara/Zaiya
+ACTION_IF FILE_EXISTS_IN_GAME ~BKIARA.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1004 /* Adding SoA banters between Shar-Teel and Kiara/Zaiya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Kiara/Zaiya..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-kiara-zaiya/soa_shar-teel-kiara-zaiya.d~
+END ELSE BEGIN
+    PRINT @1005 /* BKIARA.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BKIARA.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Horace
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1006 /* Adding SoA banters between Shar-Teel and Horace... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Horace..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-horace/soa_shar-teel-horace.d~
+END ELSE BEGIN
+    PRINT @1007 /* BHorace.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BHorace.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Allison
+ACTION_IF FILE_EXISTS_IN_GAME ~R#ALLISB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1008 /* Adding SoA banters between Shar-Teel and Allison... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Allison..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-allison/soa_shar-teel-allison.d~
+END ELSE BEGIN
+    PRINT @1009 /* R#ALLISB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~R#ALLISB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Tsuki
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1010 /* Adding SoA banters between Shar-Teel and Tsuki... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Tsuki..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-tsuki/soa_shar-teel-tsuki.d~
+END ELSE BEGIN
+    PRINT @1011 /* L7TsukiB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L7TsukiB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Keto
+ACTION_IF FILE_EXISTS_IN_GAME ~BFWKETO.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1012 /* Adding SoA banters between Shar-Teel and Keto... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Keto..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-keto/soa_shar-teel-keto.d~
+END ELSE BEGIN
+    PRINT @1013 /* BFWKETO.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BFWKETO.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Biddekelorak
+ACTION_IF FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1014 /* Adding SoA banters between Shar-Teel and Biddekelorak... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Biddekelorak..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-biddekelorak/soa_shar-teel-biddekelorak.d~
+END ELSE BEGIN
+    PRINT @1015 /* BBIDDE.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BBIDDE.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Hubelpot
+ACTION_IF FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1016 /* Adding SoA banters between Shar-Teel and Hubelpot... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Hubelpot..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-hubelpot/soa_shar-teel-hubelpot.d~
+		COPY ~crossmodbg2/soa/items/g#xbcin.itm~ ~Override/g#xbcin.itm~
+			SAY NAME1 @1186
+			SAY NAME2 @1186
+			SAY UNIDENTIFIED_DESC @1186
+			SAY DESC @1187
+END ELSE BEGIN
+    PRINT @1017 /* BSC#Hub.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSC#Hub.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Azrael
+ACTION_IF FILE_EXISTS_IN_GAME ~M#Azrael.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1018 /* Adding SoA banters between Shar-Teel and Azrael... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Azrael..~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-azrael/soa_shar-teel-azrael.d~
+	EXTEND_TOP ~7xshar.bcs~ ~crossmodbg2/soa/scripts/SharAzrael.baf~
+END ELSE BEGIN
+    PRINT @1019 /* M#Azrael.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~M#Azrael.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#MIB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1020 /* Adding SoA banters between Shar-Teel and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-minyae-elaryn/minyae-sharteel.d~
+	COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-minyae-elaryn/elaryn-sharteel.d~
+END ELSE BEGIN
+    PRINT @1021 /* QI#MIB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#MIB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - jastey's Ajantis
+ACTION_IF FILE_EXISTS_IN_GAME ~C#AjanB.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1022 /* Adding SoA banters between Shar-Teel and jastey's Ajantis... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and jastey's Ajantis.~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-jasteyajantis/soa_shar-teel-jasteyajantis.d~
+END ELSE BEGIN
+    PRINT @1023 /* C#AjanB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#AjanB.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel - Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#XAN.dlg~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1024 /* Adding SoA banters between Shar-Teel and Kulyok's Xan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Shar-Teel and Kulyok's Xan.~
+    COMPILE ~crossmodbg2/soa/banters/soa_shar-teel-kulyokxan/soa_shar-teel-kulyokxan.d~
+END ELSE BEGIN
+    PRINT @1025 /* BO#XAN.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#XAN.dlg and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Shar-Teel's interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~B7Xshar.dlg~
+THEN BEGIN
+    PRINT @1026 /* Adding Shar-Teel's interjections to the Wilson Chrinicles mod (SoA)... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding Shar-Teel's interjections to the Wilson Chrinicles mod.~
+	OUTER_SET WilsonShar1 = STATE_WHICH_SAYS 78 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+	OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BKELDOR~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa_shar-teel-wilson_chronicles/soa_shar-teel-wilson_chronicles.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1027 /* L#wilwis.cre and/or B7Xshar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or B7Xshar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+////////////////////////////////////////////////////////
 
 
+// Garrick - Varshoon
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1028 /* Adding SoA banters between Garrick and Varshoon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Varshoon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-varshoon/soa-garrick-varshoon.d~
+END ELSE BEGIN
+    PRINT @1029 /* VxVarB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VxVarB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
 
+// Garrick - Aeon
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1030 /* Adding SoA banters between Garrick and Aeon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Aeon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-aeon/soa-garrick-aeon.d~
+END ELSE BEGIN
+    PRINT @1031 /* 1XAEONB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1XAEONB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Petsy
+ACTION_IF FILE_EXISTS_IN_GAME ~L3PetsyB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1032 /* Adding SoA banters between Garrick and Petsy... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Petsy.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-petsy/soa-garrick-petsy.d~
+END ELSE BEGIN
+    PRINT @1033 /* L3PetsyB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L3PetsyB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Silver Star
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1034 /* Adding SoA banters between Garrick and Silver Star... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Silver Star.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-silverstar/soa-garrick-silverstar.d~
+END ELSE BEGIN
+    PRINT @1035 /* BSilver.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSilver.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Kindrek
+ACTION_IF FILE_EXISTS_IN_GAME ~BKINDREK.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1036 /* Adding SoA banters between Garrick and Kindrek... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Kindrek.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-kindrek/soa-garrick-kindrek.d~
+END ELSE BEGIN
+    PRINT @1037 /* BKINDREK.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BKINDREK.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Saerileth
+ACTION_IF FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1038 /* Adding SoA banters between Garrick and Saerileth... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Saerileth.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-saerileth/soa-garrick-saerileth.d~
+END ELSE BEGIN
+    PRINT @1039 /* BSAERILE.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSAERILE.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Yasraena
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1040 /* Adding SoA banters between Garrick and Yasraena... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Yasraena.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-yasraena/soa-garrick-yasraena.d~
+END ELSE BEGIN
+    PRINT @1041 /* BYASRAEN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BYASRAEN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Tsujatha
+ACTION_IF FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1042 /* Adding SoA banters between Garrick and Tsujatha... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Tsujatha.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-yasraena/soa-garrick-yasraena.d~
+END ELSE BEGIN
+    PRINT @1043 /* BTSUJAT.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BTSUJAT.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Kiara/Zaiya
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1044 /* Adding SoA banters between Garrick and Kiara/Zaiya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Kiara/Zaiya.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-kiara-zaiya/soa-garrick-kiara-zaiya.d~
+END ELSE BEGIN
+    PRINT @1045 /* BZAIYA.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BZAIYA.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Horace
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1046 /* Adding SoA banters between Garrick and Horace... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Horace.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-horace/soa-garrick-horace.d~
+END ELSE BEGIN
+    PRINT @1047 /* BHorace.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BHorace.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Allison
+ACTION_IF FILE_EXISTS_IN_GAME ~R#ALLISB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1048 /* Adding SoA banters between Garrick and Allison... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Allison.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-allison/soa-garrick-allison.d~
+END ELSE BEGIN
+    PRINT @1049 /* R#ALLISB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~R#ALLISB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Stivan
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1050 /* Adding SoA banters between Garrick and Stivan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Stivan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-stivan/soa-garrick-stivan.d~
+END ELSE BEGIN
+    PRINT @1051 /* TB#STIVB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~TB#STIVB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Tsuki
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1052 /* Adding SoA banters between Garrick and Tsuki... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Tsuki.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-tsuki/soa-garrick-tsuki.d~
+END ELSE BEGIN
+    PRINT @1053 /* L7TsukiB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L7TsukiB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Hubelpot
+ACTION_IF FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1054 /* Adding SoA banters between Garrick and Hubelpot... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Hubelpot.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-hubelpot/soa-garrick-hubelpot.d~
+END ELSE BEGIN
+    PRINT @1055 /* BSC#Hub.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSC#Hub.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Kido
+ACTION_IF FILE_EXISTS_IN_GAME ~MWBKID.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1056 /* Adding SoA banters between Garrick and Kido... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Kido.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-kido/soa-garrick-kido.d~
+	EXTEND_TOP ~7XGARR.bcs~ ~crossmodbg2/soa/scripts/7XGarrKido.baf~
+END ELSE BEGIN
+    PRINT @1057 /* MWBKID.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~MWBKID.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#MIB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1058 /* Adding SoA banters between Garrick and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-minyae-elaryn/minyae-garrick.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-garrick-minyae-elaryn/elaryn-garrick.d~
+END ELSE BEGIN
+    PRINT @1059 /* QI#MIB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#MIB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - jastey's Ajantis
+ACTION_IF FILE_EXISTS_IN_GAME ~C#AjanB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1060 /* Adding SoA banters between Garrick and jastey's Ajantis... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and jastey's Ajantis.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-jasteyajantis/soa-garrick-jasteyajantis.d~
+END ELSE BEGIN
+    PRINT @1061 /* C#AjanB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#AjanB.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#XAN.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1062 /* Adding SoA banters between Garrick and Kulyok's Xan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Kulyok's Xan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-kulyokxan/soa-garrick-kulyokxan.d~
+END ELSE BEGIN
+    PRINT @1063 /* BO#XAN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#XAN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick - Kulyok's Coran
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#CORAN.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1064 /* Adding SoA banters between Garrick and Kulyok's Coran... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Garrick and Kulyok's Coran.~
+    COMPILE ~crossmodbg2/soa/banters/soa-garrick-kulyokcoran/soa-garrick-kulyokcoran.d~
+END ELSE BEGIN
+    PRINT @1065 /* BO#CORAN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#CORAN.dlg and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Garrick's interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~
+THEN BEGIN
+    PRINT @1066 /* Adding Garrick's interjections to the Wilson Chrinicles mod (SoA)... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding Garrick's interjections to the Wilson Chrinicles mod.~
+    OUTER_SET WilsonGarrick1 = STATE_WHICH_SAYS 104 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BHAERDA~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-garrick-wilson_chronicles/soa-garrick-wilson_chronicles.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1067/* L#wilwis.cre and/or B7XGar.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or B7XGar.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/////////////////////////////////////////////////////
+
+// Branwen - Varshoon
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1068 /* Adding SoA banters between Smiling Imp's Branwen and Varshoon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Varshoon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-varshoon/soa-smilingimpbranwen-varshoon.d~
+END ELSE BEGIN
+    PRINT @1069 /* VxVarB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VxVarB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Aeon
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1070 /* Adding SoA banters between Smiling Imp's Branwen and Aeon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Aeon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-aeon/soa-smilingimpbranwen-aeon.d~
+END ELSE BEGIN
+    PRINT @1071 /* 1XAEONB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1XAEONB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - SilverStar
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1072 /* Adding SoA banters between Smiling Imp's Branwen and SilverStar... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and SilverStar.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-silverstar/soa-smilingimpbranwen-silverstar.d~
+END ELSE BEGIN
+    PRINT @1073 /* BSilver.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSilver.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Saerileth
+ACTION_IF FILE_EXISTS_IN_GAME ~BSAERILE.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1074 /* Adding SoA banters between Smiling Imp's Branwen and Saerileth... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Saerileth.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-saerileth/soa-smilingimpbranwen-saerileth.d~
+END ELSE BEGIN
+    PRINT @1075 /* BSAERILE.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSAERILE.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Tsujatha
+ACTION_IF FILE_EXISTS_IN_GAME ~BTSUJAT.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1076 /* Adding SoA banters between Smiling Imp's Branwen and Tsujatha... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Tsujatha.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-tsujatha/soa-smilingimpbranwen-tsujatha.d~
+END ELSE BEGIN
+    PRINT @1077 /* BTSUJAT.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BTSUJAT.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Valen
+ACTION_IF FILE_EXISTS_IN_GAME ~VALENJ.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1078 /* Adding SoA banters between Smiling Imp's Branwen and Valen... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Valen.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-valen/soa-smilingimpbranwen-valen.d~
+END ELSE BEGIN
+    PRINT @1079 /* VALENJ.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VALENJ.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Kiara/Zaiya
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1080 /* Adding SoA banters between Smiling Imp's Branwen and Kiara/Zaiya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Kiara/Zaiya.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-kiara-zaiya/soa-smilingimpbranwen-kiara-zaiya.d~
+END ELSE BEGIN
+    PRINT @1081 /* BZAIYA.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BZAIYA.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Horace
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1082 /* Adding SoA banters between Smiling Imp's Branwen and Horace... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Horace.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-horace/soa-branwen-horace.d~
+END ELSE BEGIN
+    PRINT @1083 /* BHorace.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BHorace.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Stivan
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1084 /* Adding SoA banters between Smiling Imp's Branwen and Stivan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Stivan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-stivan/soa-smilingimpbranwen-stivan.d~
+END ELSE BEGIN
+    PRINT @1085 /* TB#STIVB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~TB#STIVB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Yasraena
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1086 /* Adding SoA banters between Smiling Imp's Branwen and Yasraena... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Yasraena.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-yasraena/soa-smilingimpbranwen-yasraena.d~
+	EXTEND_TOP ~7xbran.bcs~ ~crossmodbg2\soa\scripts\7xbranYasraena.baf~
+END ELSE BEGIN
+    PRINT @1087 /* BYASRAEN.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BYASRAEN.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1088 /* Adding SoA banters between Smiling Imp's Branwen and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-minyae-elaryn/minyae-branwen.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-minyae-elaryn/elaryn-branwen.d~
+END ELSE BEGIN
+    PRINT @1089 /* QI#ELAB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - jastey's Ajantis
+ACTION_IF FILE_EXISTS_IN_GAME ~C#AjanB.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1090 /* Adding SoA banters between Smiling Imp's Branwen and jastey's Ajantis... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and jastey's Ajantis.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-jasteyajantis/soa-smilingimpbranwen-jasteyajantis.d~
+END ELSE BEGIN
+    PRINT @1091 /* C#AjanB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#AjanB.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen - Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#XAN.dlg~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1092 /* Adding SoA banters between Smiling Imp's Branwen and Kulyok's Xan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Branwen and Kulyok's Xan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpbranwen-kulyokxan/soa-smilingimpbranwen-kulyokxan.d~
+END ELSE BEGIN
+    PRINT @1093 /* BO#XAN.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#XAN.dlg and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Branwen's interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~7XBRANB.dlg~
+THEN BEGIN
+    PRINT @1066 /* Adding Smiling Imp's Branwen's interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonBranwen1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BNALIA~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpbranwen-wilson_chronicles/soa-branwen-wilson_chronicles.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1067/* L#wilwis.cre and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or 7XBRANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/////////////////////////////////////////////
+
+// Yeslick - Varshoon
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XYES.dlg~
+THEN BEGIN
+    PRINT @1094 /* Adding SoA banters between Smiling Imp's Yeslick and Varshoon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Yeslick and Varshoon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-varshoon/soa-smilingimpyeslick-varshoon.d~
+END ELSE BEGIN
+    PRINT @1095 /* VxVarB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VxVarB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Yeslick - Aeon
+ACTION_IF FILE_EXISTS_IN_GAME ~1XAEONB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XYES.dlg~
+THEN BEGIN
+    PRINT @1096 /* Adding SoA banters between Smiling Imp's Yeslick and Aeon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Yeslick and Aeon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-aeon/soa-smilingimpyeslick-aeon.d~
+END ELSE BEGIN
+    PRINT @1097 /* 1XAEONB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~1XAEONB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Yeslick - Biddekelorak
+ACTION_IF FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ AND FILE_EXISTS_IN_GAME ~B7XYES.dlg~
+THEN BEGIN
+    PRINT @1098 /* Adding SoA banters between Smiling Imp's Yeslick and Biddekelorak... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Yeslick and Biddekelorak.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-biddekelorak/soa-smilingimpyeslick-biddekelorak.d~
+END ELSE BEGIN
+    PRINT @1099 /* BBIDDE.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BBIDDE.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Yeslick - Kiara/Zaiya
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ AND FILE_EXISTS_IN_GAME ~B7XYES.dlg~
+THEN BEGIN
+    PRINT @1100 /* Adding SoA banters between Smiling Imp's Yeslick and Kiara/Zaiya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Yeslick and Kiara/Zaiya.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-kiara-zaiya/soa-smilingimpyeslick-kiara-zaiya.d~
+END ELSE BEGIN
+    PRINT @1101 /* BZAIYA.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BZAIYA.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Yeslick - Horace
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ AND FILE_EXISTS_IN_GAME ~B7XYES.dlg~
+THEN BEGIN
+    PRINT @1102 /* Adding SoA banters between Smiling Imp's Yeslick and Horace... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Yeslick and Horace.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-horace/soa-smilingimpyeslick-horace.d~
+END ELSE BEGIN
+    PRINT @1103 /* BHorace.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BHorace.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Yeslick - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XYES.dlg~
+THEN BEGIN
+    PRINT @1104 /* Adding SoA banters between Smiling Imp's Yeslick and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Yeslick and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-minyae-elaryn/minyae-yeslick.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpyeslick-minyae-elaryn/elaryn-yeslick.d~
+END ELSE BEGIN
+    PRINT @1105 /* QI#ELAB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or B7XYES.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/////////////////////////////////////////
+
+// Eldoth - Varshoon
+ACTION_IF FILE_EXISTS_IN_GAME ~VxVarB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XEldo.dlg~
+THEN BEGIN
+    PRINT @1106 /* Adding SoA banters between Eldoth and Varshoon... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Eldoth and Varshoon.~
+    COMPILE ~crossmodbg2/soa/banters/soa-eldoth-varshoon/soa-eldoth-varshoon.d~
+END ELSE BEGIN
+    PRINT @1107 /* VxVarB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VxVarB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Eldoth - Valen
+ACTION_IF FILE_EXISTS_IN_GAME ~VALENJ.dlg~ AND FILE_EXISTS_IN_GAME ~B7XEldo.dlg~
+THEN BEGIN
+    PRINT @1108 /* Adding SoA banters between Eldoth and Valen... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Eldoth and Valen.~
+    COMPILE ~crossmodbg2/soa/banters/soa-eldoth-valen/soa-eldoth-valen.d~
+END ELSE BEGIN
+    PRINT @1109 /* VALENJ.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~VALENJ.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Eldoth - Tsuki
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XEldo.dlg~
+THEN BEGIN
+    PRINT @1110 /* Adding SoA banters between Eldoth and Tsuki... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Eldoth and Tsuki.~
+    COMPILE ~crossmodbg2/soa/banters/soa-eldoth-valen/soa-eldoth-valen.d~
+END ELSE BEGIN
+    PRINT @1111 /* L7TsukiB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L7TsukiB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Eldoth - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XEldo.dlg~
+THEN BEGIN
+    PRINT @1112 /* Adding SoA banters between Eldoth and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Eldoth and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-eldoth-minyae-elaryn/minyae-eldoth.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-eldoth-minyae-elaryn/elaryn-eldoth.d~
+END ELSE BEGIN
+    PRINT @1113 /* QI#ELAB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or B7XEldo.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Skie - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XSkiB.dlg~
+THEN BEGIN
+    PRINT @1114 /* Adding SoA banters between Smiling Imp's Skie and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Skie and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpskie-minyae-elaryn/minyae-skie.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpskie-minyae-elaryn/elaryn-skie.d~
+END ELSE BEGIN
+    PRINT @1115 /* QI#ELAB.dlg and/or 7XSkiB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XSkiB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Skie - jastey's Ajantis
+ACTION_IF FILE_EXISTS_IN_GAME ~C#AjanB.dlg~ AND FILE_EXISTS_IN_GAME ~7XSkiB.dlg~
+THEN BEGIN
+    PRINT @1116 /* Adding SoA banters between Smiling Imp's Skie and jastey's Ajantis... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Skie and jastey's Ajantis.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpskie-jasteyajantis/soa-smilingimpskie-jasteyajantis.d~
+END ELSE BEGIN
+    PRINT @1117 /* C#AjanB.dlg and/or 7XSkiB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~C#AjanB.dlg and/or 7XSkiB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+///////////////////////////////////
+
+// Alora - Stivan
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ AND FILE_EXISTS_IN_GAME ~7XAloraB.dlg~
+THEN BEGIN
+    PRINT @1118 /* Adding SoA banters between Smiling Imp's Alora and Stivan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Alora and Stivan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpalora-stivan/soa-smilingimpalora-stivan.d~
+END ELSE BEGIN
+    PRINT @1119 /* TB#STIVB.dlg and/or 7XAloraB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~TB#STIVB.dlg and/or 7XAloraB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+
+// Alora - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XAloraB.dlg~
+THEN BEGIN
+    PRINT @1120 /* Adding SoA banters between Smiling Imp's Alora and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Alora and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpalora-minyae-elaryn/minyae-alora.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpalora-minyae-elaryn/elaryn-alora.d~
+END ELSE BEGIN
+    PRINT @1121 /* QI#ELAB.dlg and/or 7XAloraB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XAloraB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+////////////////////////////
+
+// Xzar - SilverStar
+ACTION_IF FILE_EXISTS_IN_GAME ~BSilver.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1122 /* Adding SoA banters between Smiling Imp's Xzar and SilverStar... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and SilverStar.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-silverstar/soa-smilingimpxzar-silverstar.d~
+END ELSE BEGIN
+    PRINT @1123 /* BSilver.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSilver.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar - Neh'taniel
+ACTION_IF FILE_EXISTS_IN_GAME ~BSK#NEHT.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1124 /* Adding SoA banters between Smiling Imp's Xzar and Neh'taniel... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and Neh'taniel.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-nehtaniel/soa-smilingimpxzar-nehtaniel.d~
+END ELSE BEGIN
+    PRINT @1125 /* BSK#NEHT.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BSK#NEHT.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar - Kiara/Zaiya
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1126 /* Adding SoA banters between Smiling Imp's Xzar and Kiara/Zaiya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and Kiara/Zaiya.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-kiara-zaiya/soa-smilingimpxzar-kiara-zaiya.d~
+END ELSE BEGIN
+    PRINT @1127 /* BZAIYA.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BZAIYA.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar - Horace
+ACTION_IF FILE_EXISTS_IN_GAME ~BHorace.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1128 /* Adding SoA banters between Smiling Imp's Xzar and Horace... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and Horace.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-horace/soa-smilingimpxzar-horace.d~
+END ELSE BEGIN
+    PRINT @1129 /* BHorace.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BHorace.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar - Kitanya
+ACTION_IF FILE_EXISTS_IN_GAME ~R#KITYB.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1130 /* Adding SoA banters between Smiling Imp's Xzar and Kitanya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and Kitanya.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-kitanya/soa-smilingimpxzar-kitanya.d~
+END ELSE BEGIN
+    PRINT @1131 /* R#KITYB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~R#KITYB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar - Stivan
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIVB.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1132 /* Adding SoA banters between Smiling Imp's Xzar and Stivan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and Stivan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-stivan/soa-smilingimpxzar-stivan.d~
+END ELSE BEGIN
+    PRINT @1133 /* TB#STIVB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~TB#STIVB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar - Tsuki
+ACTION_IF FILE_EXISTS_IN_GAME ~L7TsukiB.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1134 /* Adding SoA banters between Smiling Imp's Xzar and Tsuki... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar and Tsuki.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-tsuki/soa-smilingimpxzar-tsuki.d~
+END ELSE BEGIN
+    PRINT @1135 /* L7TsukiB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L7TsukiB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Adrian - Xzar and Montaron 
+ACTION_IF FILE_EXISTS_IN_GAME ~rh#adr.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZAR.dlg~
+ THEN BEGIN
+ PRINT @202 /* Adding SoA banters between Adrian and Smiling Imp's Xzar and Montaron... */
+ APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Adrian and Smiling Imp's Xzar and Montaron...~
+COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-adrian/soa-smilingimpxzar-adrian.d~
+COMPILE ~crossmodbg2/soa/scripts/Adrian-Xzar/rh#cutXa.baf~
+COMPILE ~crossmodbg2/soa/scripts/Adrian-Xzar/rh#cutXb.baf~
+COMPILE ~crossmodbg2/soa/scripts/Adrian-Xzar/rh#cutXc.baf~
+EXTEND_BOTTOM ~rh#adr.bcs~ ~crossmodbg2/soa/scripts/Adrian-Xzar/Adrian-SmilingImpXzar_rh#adr.baf~
+EXTEND_BOTTOM ~7XXZAR.bcs~ ~crossmodbg2/soa/scripts/Adrian-Xzar/Adrian-SmilingImpXzar_7xxzar.baf~
+EXTEND_BOTTOM ~7XMONT.bcs~ ~crossmodbg2/soa/scripts/Adrian-Xzar/Adrian-SmilingImpXzar_7xmont.baf~
+END ELSE BEGIN
+PRINT @203 /* rh#adr.dlg and/or 7XXZAR.dlg not detected. Skipping these particular SoA banters. */
+APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~rh#adr.dlg and/or 7XXZAR.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Montaron - Kiara/Zaiya
+ACTION_IF FILE_EXISTS_IN_GAME ~BZAIYA.dlg~ AND FILE_EXISTS_IN_GAME ~7XMONTB.dlg~
+THEN BEGIN
+    PRINT @1136 /* Adding SoA banters between Smiling Imp's Montaron and Kiara/Zaiya... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Montaron and Kiara/Zaiya.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpmontaron-kiara-zaiya/soa-smilingimpmontaron-kiara-zaiya.d~
+END ELSE BEGIN
+    PRINT @1137 /* BZAIYA.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BZAIYA.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Montaron - Stivan
+ACTION_IF FILE_EXISTS_IN_GAME ~TB#STIV.dlg~ AND FILE_EXISTS_IN_GAME ~7XMONTB.dlg~
+THEN BEGIN
+    PRINT @1138 /* Adding SoA banters between Smiling Imp's Montaron and Stivan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Montaron and Stivan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpmontaron-stivan/soa-smilingimpmontaron-stivan.d~
+END ELSE BEGIN
+    PRINT @1139 /* TB#STIV.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~TB#STIV.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Montaron - Yasraena
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ AND FILE_EXISTS_IN_GAME ~7XMONTB.dlg~
+THEN BEGIN
+    PRINT @1140 /* Adding SoA banters between Smiling Imp's Montaron and Yasraena... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Montaron and Yasraena.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpmontaron-yasraena/soa-smilingimpmontaron-yasraena.d~
+END ELSE BEGIN
+    PRINT @1141 /* BYASRAEN.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BYASRAEN.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Xzar/Montaron - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XXZARB.dlg~
+THEN BEGIN
+    PRINT @1142 /* Adding SoA banters between Smiling Imp's Xzar/Montaron and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Xzar/Montaron and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-mont-minyae-elaryn/minyae-montaron.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-mont-minyae-elaryn/elaryn-montaron.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-mont-minyae-elaryn/minyae-xzar.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpxzar-mont-minyae-elaryn/elaryn-xzar.d~
+END ELSE BEGIN
+    PRINT @1143 /* QI#ELAB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XXZARB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Montaron - Kulyok's Tiax
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#TIAX.dlg~ AND FILE_EXISTS_IN_GAME ~7XMONTB.dlg~
+THEN BEGIN
+    PRINT @1144 /* Adding SoA banters between Smiling Imp's Montaron and Kulyok's Tiax... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Montaron and Kulyok's Tiax.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpmontaron-kulyoktiax/soa-smilingimpmontaron-kulyoktiax.d~
+END ELSE BEGIN
+    PRINT @1145 /* BO#TIAX.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#TIAX.dlg and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Xzar and Montaron interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~7XMONTB.dlg~
+THEN BEGIN
+    PRINT @1146 /* Adding Smiling Imp's Xzar and Montaron interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonMontaron1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BNALIA~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpxzar-mont-wilson_chr/Montaron.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+	OUTER_SET WilsonXzar1 = STATE_WHICH_SAYS 218 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BVALYGA~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpxzar-mont-wilson_chr/Xzar.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1147/* L#wilwis.cre and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or 7XMONTB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+//////////////////////////////
+
+// Smiling Imp's Tiax - Biddekelorak
+ACTION_IF FILE_EXISTS_IN_GAME ~BBIDDE.dlg~ AND FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~
+THEN BEGIN
+    PRINT @1148 /* Adding SoA banters between Smiling Imp's Tiax and Biddekelorak... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Tiax and Biddekelorak.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimptiax-biddekelorak/soa-smilingimptiax-biddekelorak.d~
+END ELSE BEGIN
+    PRINT @1149 /* BBIDDE.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BBIDDE.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Tiax - Yasraena
+ACTION_IF FILE_EXISTS_IN_GAME ~BYASRAEN.dlg~ AND FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~
+THEN BEGIN
+    PRINT @1150 /* Adding SoA banters between Smiling Imp's Tiax and Yasraena... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Tiax and Yasraena.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimptiax-yasraena/soa-smilingimptiax-yasraena.d~
+	EXTEND_TOP ~7xTiax.bcs~ ~crossmodbg2/soa/scripts/7xTiaxYasraena.baf~
+END ELSE BEGIN
+    PRINT @1151 /* BYASRAEN.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BYASRAEN.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Tiax - Kido
+ACTION_IF FILE_EXISTS_IN_GAME ~MWBKID.dlg~ AND FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~
+THEN BEGIN
+    PRINT @1152 /* Adding SoA banters between Smiling Imp's Tiax and Kido... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Tiax and Kido.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimptiax-kido/soa-smilingimptiax-kido.d~
+	EXTEND_TOP ~7xTiax.bcs~ ~crossmodbg2/soa/scripts/7xTiaxKido.baf~
+END ELSE BEGIN
+    PRINT @1153 /* MWBKID.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~MWBKID.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Tiax - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~
+THEN BEGIN
+    PRINT @1154 /* Adding SoA banters between Smiling Imp's Tiax and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Tiax and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimptiax-minyae-elaryn/minyae-tiax.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimptiax-minyae-elaryn/elaryn-tiax.d~
+END ELSE BEGIN
+    PRINT @1155 /* QI#ELAB.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Quayle - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XQUAYB.dlg~
+THEN BEGIN
+    PRINT @1156 /* Adding SoA banters between Smiling Imp's Quayle and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Quayle and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpquayle-minyae-elaryn/minyae-quayle.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpquayle-minyae-elaryn/elaryn-quayle.d~
+END ELSE BEGIN
+    PRINT @1157 /* QI#ELAB.dlg and/or 7XQUAYB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XQUAYB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Tiax - Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#XAN.dlg~ AND FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~
+THEN BEGIN
+    PRINT @1158 /* Adding SoA banters between Smiling Imp's Tiax and Kulyok's Xan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Tiax and Kulyok's Xan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimptiax-kulyokxan/soa-smilingimptiax-kulyokxan.d~
+END ELSE BEGIN
+    PRINT @1159 /* BO#XAN.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#XAN.dlg and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Tiax interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~7XTIAXB.dlg~
+THEN BEGIN
+    PRINT @1160 /* Adding Smiling Imp's Tiax interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonTiax1 = STATE_WHICH_SAYS 76 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimptiax-wilson_chronicles/Tiax.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1161/* L#wilwis.cre and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or 7XTIAXB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Quayle interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~7XQUAYB.dlg~
+THEN BEGIN
+    PRINT @1162 /* Adding Smiling Imp's Quayle interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonQuayle1 = STATE_WHICH_SAYS 190 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BMINSC~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpquayle-wilson_chronicles/Quayle.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1163/* L#wilwis.cre and/or 7XQUAYB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or 7XQUAYB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+//////////////////////////////////
+
+
+// Coran/Safana - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~B7XCoran.dlg~
+THEN BEGIN
+    PRINT @1164 /* Adding SoA banters between Smiling Imp's Coran/Safana and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Coran/Safana and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpsafana-minyae-elaryn/minyae-safana.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpsafana-minyae-elaryn/elaryn-safana.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpcoran-minyae-elaryn/minyae-coran.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpcoran-minyae-elaryn/elaryn-coran.d~
+END ELSE BEGIN
+    PRINT @1165 /* QI#ELAB.dlg and/or B7XCoran.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or B7XCoran.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Coran - Kulyok's Xan
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#XAN.dlg~ AND FILE_EXISTS_IN_GAME ~B7XCoran.dlg~
+THEN BEGIN
+    PRINT @1166 /* Adding SoA banters between Smiling Imp's Coran and Kulyok's Xan... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Coran and Kulyok's Xan.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpcoran-kulyokxan/soa-smilingimpcoran-kulyokxan.d~
+END ELSE BEGIN
+    PRINT @1167 /* BO#XAN.dlg and/or B7XCoran.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#XAN.dlg and/or B7XCoran.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Coran/Safana interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~B7XCoran.dlg~
+THEN BEGIN
+    PRINT @1168 /* Adding Smiling Imp's Coran/Safana interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonCoran1 = STATE_WHICH_SAYS 73 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpcoransafana-wilson/Coran.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+    OUTER_SET WilsonSafana1 = STATE_WHICH_SAYS 69 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpcoransafana-wilson/Safana.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1169/* L#wilwis.cre and/or B7XCoran.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or B7XCoran.dlg not detected. Skipping these particular SoA banters.~
+END
+
+//////////////////////////////////////
+
+// Deekin - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~BDEEKIN.dlg~
+THEN BEGIN
+    PRINT @1170 /* Adding SoA banters between Smiling Imp's Deekin and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Deekin and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-deekin-minyae-elaryn/minyae-deekin.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-deekin-minyae-elaryn/elaryn-deekin.d~
+END ELSE BEGIN
+    PRINT @1171 /* QI#ELAB.dlg and/or BDEEKIN.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or BDEEKIN.dlg not detected. Skipping these particular SoA banters.~
+END
+
+//////////////////////////////////////
+
+// Smiling Imp's Faldorn - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XFALDB.dlg~
+THEN BEGIN
+    PRINT @1172 /* Adding SoA banters between Smiling Imp's Faldorn and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Faldorn and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpfaldorn-minyae-elaryn/minyae-faldorn.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpfaldorn-minyae-elaryn/elaryn-faldorn.d~
+END ELSE BEGIN
+    PRINT @1173 /* QI#ELAB.dlg and/or 7XFALDB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XFALDB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Faldorn interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~7XFALDJ.dlg~
+THEN BEGIN
+    PRINT @1174 /* Adding Smiling Imp's Faldorn interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonFaldorn1 = STATE_WHICH_SAYS 211 IN ~WilsonChronicles\tra\%s\wilsonj.tra~ FROM ~WILSONJ~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-smilingimpfaldorn-wilson_chronicles/Faldorn.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1175/* L#wilwis.cre and/or 7XFALDJ.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or 7XFALDJ.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/////////////////////////////////////
+
+// Smiling Imp's Kagain - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XKagaB.dlg~
+THEN BEGIN
+    PRINT @1176 /* Adding SoA banters between Smiling Imp's Kagain and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Kagain and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-kagain-minyae-elaryn/minyae-kagain.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-kagain-minyae-elaryn/elaryn-kagain.d~
+END ELSE BEGIN
+    PRINT @1177 /* QI#ELAB.dlg and/or 7XKagaB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XKagaB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Kagain interjections to the "Wilson Chrinicles" mod (SoA)
+ACTION_IF FILE_EXISTS_IN_GAME ~L#wilwis.cre~ AND FILE_EXISTS_IN_GAME ~7XkagaB.dlg~
+THEN BEGIN
+    PRINT @1178 /* Adding Smiling Imp's Kagain interjections to the Wilson Chrinicles mod (SoA)... */
+    OUTER_SET WilsonKagain1 = STATE_WHICH_SAYS 150 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BJAN~
+	COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/banters/soa-kagain-wilson_chronicles/Kagain.d~ USING ~crossmodbg2/tra/%LANGUAGE%/wilsonchronicles.tra~
+END ELSE BEGIN
+    PRINT @1179/* L#wilwis.cre and/or 7XkagaB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~L#wilwis.cre and/or 7XkagaB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/////////////////////////////////////
+
+// Smiling Imp's Kivan - Minyae/Elaryn
+ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAB.dlg~ AND FILE_EXISTS_IN_GAME ~7XKIVAB.dlg~
+THEN BEGIN
+    PRINT @1180 /* Adding SoA banters between Smiling Imp's Kivan and Minyae/Elaryn... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Kivan and Minyae/Elaryn.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpkivan-minyae-elaryn/minyae-kivan.d~
+	COMPILE ~crossmodbg2/soa/banters/soa-smilingimpkivan-minyae-elaryn/elaryn-kivan.d~
+END ELSE BEGIN
+    PRINT @1181 /* QI#ELAB.dlg and/or 7XKIVAB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~QI#ELAB.dlg and/or 7XKIVAB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+/////////////////////////////////////
+
+// Smiling Imp's Ajantis - Kulyok's Coran
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#CORAN.dlg~ AND FILE_EXISTS_IN_GAME ~7XAJANB.dlg~
+THEN BEGIN
+    PRINT @1182 /* Adding SoA banters between Smiling Imp's Ajantis and Kulyok's Coran... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Ajantis and Kulyok's Coran.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpajantis-kulyokcoran/soa-smilingimpajantis-kulyokcoran.d~
+END ELSE BEGIN
+    PRINT @1183 /* BO#CORAN.dlg and/or 7XAJANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#CORAN.dlg and/or 7XAJANB.dlg not detected. Skipping these particular SoA banters.~
+END
+
+// Smiling Imp's Ajantis - Kulyok's Tiax
+ACTION_IF FILE_EXISTS_IN_GAME ~BO#TIAX.dlg~ AND FILE_EXISTS_IN_GAME ~7XAJANB.dlg~
+THEN BEGIN
+    PRINT @1184 /* Adding SoA banters between Smiling Imp's Ajantis and Kulyok's Tiax... */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~Adding SoA banters between Smiling Imp's Ajantis and Kulyok's Tiax.~
+    COMPILE ~crossmodbg2/soa/banters/soa-smilingimpajantis-kulyoktiax/soa-smilingimpajantis-kulyoktiax.d~
+END ELSE BEGIN
+    PRINT @1185 /* BO#TIAX.dlg and/or 7XAJANB.dlg not detected. Skipping these particular SoA banters. */
+    APPEND_OUTER ~crossmodbg2/crossmod_0_debug.log~ ~BO#TIAX.dlg and/or 7XAJANB.dlg not detected. Skipping these particular SoA banters.~
+END
 
 
 

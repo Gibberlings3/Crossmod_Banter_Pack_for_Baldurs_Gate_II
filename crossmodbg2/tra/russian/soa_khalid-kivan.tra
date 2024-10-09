@@ -1,0 +1,48 @@
+// soa_khalid-kivan.d
+
+@0    = ~It's g-good to have you and your k-keen eyes, especially now, when we n-need t-to stay twice as... careful and vigilant.~
+@1    = ~... Especially if we do not want to lose anyone else.~
+@2    = ~I am sorry you have to go through all this, Khalid.~
+@3    = ~Mhm. I... I must admit... it's n-not... easy.~
+@4    = ~I know. There are these kinds of feelings that can break a man. What you are going through is the experience. The feeling. I remember it well.~
+@5    = ~Argh... B-blast!~
+@6    = ~Something's wrong, Khalid? What is it?~
+@7    = ~It's n-nothing. I just scratched my armor. I should b-be more careful.~
+@8    = ~Haven't slept too well, I presume?~
+@9    = ~Sometimes, it's... hard. I suppose we should use that, though, and... p-perhaps I should take double shifts. It's n-not like I will get much sleep anyway.~
+@10   = ~You need sleep, Khalid. How else will you hold that shield? And we need both that cover and the one that always wants to keep us safe.~
+@11   = ~Thank you, K-Kivan. I wouldn't want t-to... disappoint you.~
+@12   = ~Eh, all I want is for you to take care of yourself, friend.~
+@13   = ~This group needs you healthy, so just tell me if you need anything.~
+
+// soa_khalid-kivan.tph
+
+@14 = ~It is not just Dynaheir's and our Harper friend's deaths... Not just Imoen's kidnapping... It is something deeper, something at the very core of my heart.~
+
+@15 = ~I'm sure that Imoen can find a way out on her own. What I truly want is to avenge Khalid and our Harper friend.~
+@16 = ~I still cannot come to terms with our Harper friend's and Dynaheir's deaths. We had been through tight places before and managed to emerge victorious.~
+@17 = ~Alas, Kivan, they are dead. At least our Harper friend is. I've seen what was left of him in the dungeon.~
+@18 = ~If they wished to live... Our friend's body was mutilated almost beyond recognition, Kivan.~
+@19 = ~I have seen such things in Irenicus' dungeon... Our Harper friend was among the lucky ones. There were jars full of still living... parts of people who offended the mage somehow. One just happened to enter the wrong room. There were clones of a woman driven mad by whatever Irenicus did to them. There were dryads held as concubines...~
+@20 = ~I had to leave, <CHARNAME>. Surely, you do not blame me for all that had come to pass? The imprisonment, the tortures, our friends' deaths... (shakes his head sadly).~
+@21 = ~It seems that way; the imprisonment, the torture rack, our friends' deaths... (shakes his head sadly) It should not have happened to any of you. Do you know the fate of our other companions?~
+@22 = ~Is your loyalty to your people stronger than the bond of our friendship? Are you refusing to help me avenge our friends and kill a vile man just because he is an elf?~
+@23 = ~Are you trying to tell me that your loyalty to your people is stronger than the bond of our friendship? Are you refusing to help me avenge our friends and kill a vile man just because he is an elf?!~
+@24 = ~Don't worry, if I turn into the Slayer again, I'm likely to wake even our dead friends, let alone our bunch of light sleepers.~
+
+@25 = ~I would like to say a prayer where our Harper friend and Dynaheir fell.~
+@26 = ~Dynaheir and our Harper friend, too. Not even a stone marks their graves. ~
+@27 = ~Yes, our friends lay under rubble. But they did not die unmourned, unloved, unavenged. That is what is important.~
+
+@28 = ~I shall join in. To Dynaheir! None could summon a fireball with such a grace! To our Harper friend, who won each battle with due humility!~
+@29 = ~To the fallen friends who shall be remembered!~
+@30 = ~You were friends with-~
+@31 = ~Yes. We were.~
+@32 = ~Mhm... I think I took some of our frineds for granted... I looked at them and thought we *deserve* to have people like them by our side.~
+@33 = ~You were a young girl and judged by appearances. It is not the greatest sin, Imoen. The main thing was that you had never said a bitter word to them. You were always kind, even when you teased them.~
+@34 = ~Yeah, I know, but I didn't know just how brave they were to be there, fight by our side. Kivan, the things I saw Irenicus do to our Harper friend in my presence... I would have begged for mercy. In fact, I did... I could not watch what he did... I... I...~
+@35 = ~Our friend is beyond the reach of pain now. It is a poor consolation, Imoen, but it is all I can offer.~
+@36 = ~I... I know, Kivan. I can still remember the horrors, how... he would... torture our friend, he would... I can even speak about it, even though it's been weeks... there was so much blood...~
+@37 = ~But he did change something inside me. I feel broken sometimes. I feel like... I've shifted into someone else, I see things differently, I say things differently...~
+@38 = ~Sometimes we do not chose to change. Sometimes it's forced upon us, Imoen.~
+@39 = ~I know, but there is a part of me that-~
