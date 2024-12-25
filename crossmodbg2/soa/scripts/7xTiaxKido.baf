@@ -1,0 +1,9 @@
+IF
+!StateCheck("7XTIAX",CD_STATE_NOTVALID)InParty("7XTIAX")InParty("MWKido")!StateCheck("MWKido",CD_STATE_NOTVALID)!InParty("CLFHSFNX")
+CombatCounter(0)
+  Global("TiaxKido","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("7XTIAX",Interact("MWKido"))
+END

@@ -1,0 +1,15 @@
+IF
+	Global("EilistraeeBeginning","GLOBAL",1)
+	Exists("ESxSola")  // Solaufein from Eilistraee's Song
+	OR(4)
+		Exists("C#Solaufein")  // Solaufein from Solaufein's Rescue is present
+		Global("C#SolauRettung","GLOBAL",1)
+		Global("C#SolauRettung","GLOBAL",2)
+		Global("C#SolauRettung","GLOBAL",3)// my Solaufein is still in the drider chambers
+	Global("C#Solau_ESCompatibility","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("ESxSola",DestroySelf())
+		SetGlobal("C#Solau_ESCompatibility","GLOBAL",1)
+		Continue()
+END

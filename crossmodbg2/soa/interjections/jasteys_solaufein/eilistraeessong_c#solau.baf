@@ -1,0 +1,29 @@
+/* after Joining in Underdark exit: Solaufein will talk about Eilistraee's Clearing */
+
+/* Dialogue activation */
+
+IF
+	OR(2) InParty(Myself) Global("C#SolauJoined","GLOBAL",2)
+	InMyArea(Player1)
+	CombatCounter(0) 
+	!See([ENEMY])
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	Global("C#Solau_ESCompatibility","GLOBAL",1)
+	Global("EilistraeeBeginning","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C#Solau_ESCompatibility","GLOBAL",2)
+END
+
+/* Dialogue triggering */
+IF
+	OR(2) InParty(Myself) Global("C#SolauJoined","GLOBAL",2)
+	InMyArea(Player1)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	Global("C#Solau_ESCompatibility","GLOBAL",2)	
+THEN
+	RESPONSE #100
+		StartDialog("c#solau",Player1)
+END

@@ -1,0 +1,3 @@
+INTERJECT_COPY_TRANS BEDWIN %WilsonCoran1% 7xWilsonCoranEdwin
+== B7XCoran IF ~InParty("7XCORAN") InMyArea("7XCORAN") !StateCheck("7XCORAN",CD_STATE_NOTVALID)~ THEN @0
+END
