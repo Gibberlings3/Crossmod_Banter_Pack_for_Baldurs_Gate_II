@@ -1,0 +1,17 @@
+EXTEND_BOTTOM ~m#amber.bcs~ ~crossmodbg2/files/amber_keto/m#amber.baf~
+EXTEND_BOTTOM ~fwketo.bcs~  ~crossmodbg2/files/amber_keto/fwketo.baf~
+
+COPY_EXISTING ~bearbl.cre~   ~override~
+              ~bearbl01.cre~ ~override~
+              ~bearbr.cre~   ~override~
+              ~bearbr01.cre~ ~override~
+              ~beargr.cre~   ~override~
+  WRITE_ASCIIE 0x280 ~%SOURCE_RES%~ #32 // death variable
+  BUT_ONLY
+  
+// interjections
+OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
+OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
+
+COMPILE EVALUATE_BUFFER  ~crossmodbg2/files/amber_keto/soa_interjections.d~
+EXTEND_TOP ~fwketo.bcs~  ~crossmodbg2/files/amber_keto/interject_fwketo.baf~ 

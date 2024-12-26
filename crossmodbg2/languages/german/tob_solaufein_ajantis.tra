@@ -1,0 +1,18 @@
+// original jasteysolaufein_jasteyajantis_banters.tra split into soa_solaufein_ajantis.tra and tob_solaufein_ajantis.tra
+
+// tob banters
+@31   = ~Ajantis, Ihr teilt Wesen in gute und böse. Die guten gilt es zu schützen, und die bösen darf man töten. Das stimmt doch so in etwa, oder?~
+@32   = ~Nun, ganz so eindeutig ist es nicht, aber ja, von einem Dämon würde ich nicht erwarten, dass er gutes tut. Ich würde ihn bekämpfen, wenn ich ihn sehe.~
+@33   = ~Weil er das Böse im Blut hat?~
+@34   = ~... Sozusagen, ja.~
+@35   = ~Nun... <CHARNAME> ist ein Kind des Bhaal. Wenn ich es richtig verstanden habe, hat <PRO_HIMHER> Blut ein Portal zur Hölle geöffnet. Das Böse ist in <CHARNAME>s Blut, Ajantis. Warum tötet Ihr <PRO_HESHE> nicht?~
+@36   = ~Ihr wollt mich provozieren mit Euren theoretischen Fragen! Genau hier kommen wir zu dem, was ich bereits angedeutet habe: ganz so eindeutig ist es eben nicht! Und glaubt mir, ich verbringe jede wache Minute damit, abzuwägen, wen oder was ich bekämpfen, und wen oder was ich in Ruhe lassen soll.~
+@37   = ~Auch bei <CHARNAME>?~
+@38   = ~...Ja, auch bei <CHARNAME>.~
+@39   = ~Auch bei mir?~
+@40   = ~Natürlich!~
+@41   = ~Das beruhigt mich. Ich fühle mich Euch seltsam verbunden mit Eurer immerwährenden Wachsamkeit. Es ist schön zu sehen, dass Ihr daran arbeitet, noch etwas länger am Leben zu bleiben. Und bevor Ihr jetzt fragt: das war keine Drohung.~
+@42   = ~Ajantis, verstehe ich das richtig, dass Ihr <CHARNAME>s Höllenenklave äußerst verstörend findet?~
+@43   = ~Ich schäme mich nicht, das zuzugeben. Ist sie das für Euch nicht?~
+@44   = ~Nun, diese sich immer verändernde, wirbelnde Decke verwirrt mich nicht wirklich mehr als es ein wolkiger, von Wind bewegter Himmel tun würde. Was es nicht unbedingt besser macht... Aber ich bin insofern in Vorteil, als dass mir das Gefühl, von dicken Gesteinswänden umgeben zu sein, nichts ausmacht.~
+@45   = ~Aber ich kann Euch versichern, dass mich dieser Ort nicht im mindesten kalt lässt. Dieser grünliche, wabernde Himmel - selbst *ich* spüre, dass er nicht echt ist, und die Beklemmung, die er in mir auslöst, ist einem Ort in der Hölle wohl nur angemessen.~

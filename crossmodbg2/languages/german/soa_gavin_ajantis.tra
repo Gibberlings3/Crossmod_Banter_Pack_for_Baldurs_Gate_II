@@ -1,0 +1,20 @@
+// original gavin_jasteyajantis_banters.tra slit into soa_gavin_ajantis.tra and tob_gavin_ajantis.tra
+
+// soa banter
+@0    = ~Gavin, Ihr seid damals gegangen, um nach Eurer Tochter und... ihrer Mutter zu suchen. Gehe ich richtig in der Annahme, dass Eure Suche erfolgreich war?~
+@1    = ~Ja, ich habe sie beide gefunden, leider... Äh, ich wollte damit sagen, dass es mit Miranda nicht so gut gelaufen ist. Ich kümmere mich nun alleine um Lanie.~
+@2    = ~Ich verstehe... Und wo befindet sie sich jetzt?~
+@3    = ~Sie ist bei den Priestern des Oghma, die sie in ihren magischen Fähigkeiten schulen.~
+@4    = ~Ihr habt Eure Tochter bei den Priestern des Oghma zurückgelassen? Ich hatte bereits zu bedenken gegeben, dass es für ein Kind am besten ist, mit seinen Eltern aufzuwachsen, Gavin! Damals an der Schwertküste war sie zumindest mit ihrer Mutter zusammen. Dies ist nun nicht mehr der Fall... aber Ihr verbleibt noch immer an <CHARNAME>s Seite!~
+@5    = ~Ajantis, ich muss Gold für ihre Lebenskosten beschaffen. Das hat sich seitdem nicht verändert - es ist eher noch schlimmer geworden, durch die nötige Ausbildung ihrer magischen Fähigkeiten. Werft Ihr mir - wieder, wenn ich das betonen darf - vor, dass ich versuche, mich um meine Tochter zu kümmern?~
+@6    = ~Nein, ich kritisiere - wieder - die Art und Weise, wie Ihr es tut!~
+@7    = ~Ajantis, ich führe kein Abenteurerleben, weil ich vom Schlafen neben staubigen Straßen und dem Getrenntsein von Lanie so begeistert bin, sondern weil es die einzige Möglichkeit ist, wie ich genug Gold für ihre Ausbildung gewinnen kann.~
+@8    = ~Ich bin es nicht, den Ihr von Euren Motiven überzeugen müsst, Gavin. Ich hoffe für Euch, dass Lanie es eines Tages verstehen wird.~
+@9    = ~Das hoffe ich auch...~
+@10   = ~Gavin, ich... die vorwurfsvollen Worte, die ich zu Euch sprach, tun mir Leid. Ihr seid ein alleinerziehender Vater, und Ihr tut alles in Eurer Macht stehende, um Eure Tochter gut aufwachsen zu lassen.~
+@11   = ~Ich danke Euch, Ajantis.~
+@12   = ~Trotzdem sollte es möglich sein, durch eine einfache Anstellung in der Stadt oder bei einem der Tempel genug Geld für Lanies Ausbildung zu verdienen, wenn Ihr bereit seid, Euren Lebenstil etwas einzuschränken. Ein beträchtlicher Teil des Goldes, das wir durch unser Abenteurerleben verdienen, geben wir direkt für Unterkunft und unsere Ausrüstung wieder aus. Ihr solltet mit sehr viel weniger auskommen können, wenn Ihr Euch irgendwo niederlasst - und Lanie würde ihren Vater sehr viel häufiger sehen.~
+@13   = ~tch hätte mir denken können, dass das Thema für Euch noch nicht erledigt ist. Eventuell habt Ihr Recht, aber das Leben eines Abenteurers ist das, was ich kann und gut drin bin, und ich kenne niemanden hier in Amn - und damals in Beregost habe ich definitiv nicht genug verdient. Vielleicht wäre es mir sogar nach längerem Suchen und mit viel Glück möglich, hier eine Anstellung zu finden und ein kleines Quartier für mich und Lanie...~
+@14   = ~Aber ich fühle mich nunmal durchaus auch <CHARNAME> gegenüber verpflichtet, Ajantis, und <PRO_HISHER>em Ziel. Warum soll es falsch sein, wenn ich einfach das mache, was ich am besten kann und versuche, das beste aus der Situation zu machen?~
+@15   = ~Wie ich bereits sagte, es ist Lanie, die das verstehen muss.~
+@16   = ~Das weiß ich, Ajantis. Das weiß ich wohl.~

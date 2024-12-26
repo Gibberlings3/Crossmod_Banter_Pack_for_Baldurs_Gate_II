@@ -1,0 +1,51 @@
+
+
+IF
+CombatCounter(0)InParty("Yasraena")HPPercentLT("Yasraena",75)InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)
+!StateCheck("Yasraena",CD_STATE_NOTVALID)!See([ENEMY])Global("BranYasraenaHurt","GLOBAL",0)
+
+THEN 
+  RESPONSE #100
+SetGlobal("BranYasraenaHurt","GLOBAL",1)
+ActionOverride("7XBRAN",Interact("Yasraena"))
+
+END
+
+
+
+
+IF
+
+InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Yasraena")!StateCheck("Yasraena",CD_STATE_NOTVALID)!See([ENEMY])
+AreaCheck("AR0701")
+  Global("BranYasAR0701","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+  SetGlobal("BranYasAR0701","GLOBAL",1)
+ActionOverride("7XBRAN",Interact("Yasraena"))
+END
+
+IF
+
+InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Yasraena")!StateCheck("Yasraena",CD_STATE_NOTVALID)!See([ENEMY])
+AreaCheck("AR2100")
+  Global("BranYasAR2100","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+  SetGlobal("BranYasAR2100","GLOBAL",1)
+ActionOverride("Yasraena",Interact("7XBRAN"))
+END
+
+IF
+
+InParty("7XBRAN")!StateCheck("7XBRAN",CD_STATE_NOTVALID)InParty("Yasraena")!StateCheck("Yasraena",CD_STATE_NOTVALID)!See([ENEMY])
+AreaCheck("AR2200")
+  Global("BranYasAR2200","GLOBAL",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+  SetGlobal("BranYasAR2200","GLOBAL",1)
+ActionOverride("Yasraena",Interact("7XBRAN"))
+END

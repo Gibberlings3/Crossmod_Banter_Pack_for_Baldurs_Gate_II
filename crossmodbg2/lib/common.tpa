@@ -1,0 +1,202 @@
+// inline file needed for component checks
+<<<<<<<<./%MOD_FOLDER%/inline/tp2_check.tpa
+ACTION_IF MOD_IS_INSTALLED ~%primary_params_3%~ ~%component%~ BEGIN
+  OUTER_SET check = 1
+END
+>>>>>>>>
+
+<<<<<<<<./inline/log.txt
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Crossmod Installation log                        \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+/////                                                  \\\\\
+///// System Info                                      \\\\\
+/////                                                  \\\\\
+
+ == WeiDU thinks that this is Component %COMPONENT_NUMBER%
+ == Author: %TP2_AUTHOR%
+ == Language = %LANGUAGE%
+ == Architecture = %WEIDU_ARCH%
+ == Operating System = %WEIDU_OS%
+ == User Directory = %USER_DIRECTORY%
+ == Running .exe = %WEIDU_EXECUTABLE%
+ == Mod name (as seen by WeiDU) = %TP2_FILE_NAME%
+ == Interactive Installation? %INTERACTIVE% (1 is interactive, 0 is being invoked by another process)
+
+/////                                                  \\\\\
+///// Mods that were not detected                      \\\\\
+/////                                                  \\\\\
+>>>>>>>>
+
+OUTER_SPRINT prime_found          @1
+OUTER_SPRINT prime_not_found      @2
+OUTER_SPRINT secondary_banter     @3
+OUTER_SPRINT secondary_code       @4
+OUTER_SPRINT lang_strict_denied   @7
+
+ACTION_IF !exp_check BEGIN // base game
+  OUTER_SPRINT prefix ~%basegame%~
+END ELSE BEGIN  
+  OUTER_SPRINT prefix ~%exp_game%~
+END
+
+ACTION_IF conflict_check BEGIN
+  OUTER_SPRINT prefix ~rc_%prefix%~
+END  
+
+OUTER_SET index = 1
+OUTER_WHILE (index > 0) BEGIN
+
+  ACTION_IF FILE_EXISTS ~weidu_external/%MOD_FOLDER%/logs/%prefix%_log_%index%.txt~ BEGIN
+    OUTER_SET index = index + 1
+  END ELSE BEGIN  
+    OUTER_SPRINT logfile ~weidu_external/%MOD_FOLDER%/logs/%prefix%_log_%index%.txt~ 
+    COPY + ~./inline/log.txt~ ~%logfile%~ EVALUATE_BUFFER
+    OUTER_SET index = 0
+  END
+
+END
+
+ACTION_CLEAR_ARRAY mod_array_working
+ACTION_DEFINE_ASSOCIATIVE_ARRAY ~mod_array_working~ BEGIN END
+
+INCLUDE ~%MOD_FOLDER%/lib/mod_array.tpa~
+ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/lib/%prefix%_prep.tpa~ BEGIN
+  INCLUDE ~%MOD_FOLDER%/lib/%prefix%_prep.tpa~ // game-specific fixes/changes/alterations needed before we process content
+END  
+
+// build 'working' array from mods actually present
+ACTION_PHP_EACH mod_array AS primary_params => primary_check BEGIN
+
+  OUTER_SPRINT file      ~%primary_params_4%~
+  OUTER_SPRINT component ~%primary_params_5%~
+  ACTION_IF exp_check BEGIN // 4/5 are columns for base game (bg, bg2, or iwd), use 6/7 for expansions (sod, tob, how)
+  
+    OUTER_SPRINT file      ~%primary_params_6%~
+    OUTER_SPRINT component ~%primary_params_7%~
+  
+  END 
+
+  OUTER_SET check = 0 
+  ACTION_IF (IS_AN_INT "%component%") BEGIN // component specified, check tp2
+  
+    // have to do weird external tpa routine since MOD_IS_INSTALLED won't take variables directly
+    COPY ~./%MOD_FOLDER%/inline/tp2_check.tpa~ ~weidu_external/%MOD_FOLDER%/tp2_check.tpa~ EVALUATE_BUFFER
+    REINCLUDE ~weidu_external/%MOD_FOLDER%/tp2_check.tpa~
+    
+  END ELSE BEGIN
+  
+    ACTION_IF (("%file%" STRING_COMPARE_CASE "") AND (FILE_EXISTS_IN_GAME ~%file%~)) BEGIN // much simpler check if file specified
+    
+      OUTER_SET check = 1  
+      
+    END
+    
+  END    
+  
+  // now push back into array if present, otherwise log as not installed
+  ACTION_IF check BEGIN
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY ~mod_array_working~ BEGIN ~%primary_params_0%~, ~%primary_params_1%~, ~%primary_params_2%~, ~%primary_params_8%~, ~%primary_params_9%~ => ~%check%~ END 
+  END ELSE BEGIN 
+    APPEND_OUTER + ~%logfile%~ ~ == %primary_params_0% (%primary_params_1%)%prime_not_found%~ KEEP_CRLF
+  END  
+
+END
+
+APPEND_OUTER + ~%logfile%~ ~%WNL%
+/////                                                  \\\\\
+///// Mod detected, checking for crossmod              \\\\\
+/////                                                  \\\\\~ KEEP_CRLF
+
+// now we iterate looking for crossmod
+ACTION_PHP_EACH mod_array_working AS primary_params => primary_check BEGIN
+    
+  APPEND_OUTER + ~%logfile%~ ~%WNL% == %primary_params_0% (%primary_params_1%)%prime_found%~ KEEP_CRLF
+  
+  // now we reload the array to check the current array entry against all other entries
+  ACTION_PHP_EACH mod_array_working AS secondary_params => secondary_check BEGIN
+                     
+    OUTER_SPRINT filename ~%primary_params_2%_%secondary_params_2%~       
+             
+    // always check for tpa whether we're in banter or conflict mode         
+    ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%filename%.tpa~ BEGIN // if mod-mod code file detected, execute it
+    
+      ACTION_IF ((!strict_language_enforcement)                                     OR    // strict language enforcement is disabled OR
+                 (!FILE_EXISTS ~%tra_location%/english/%prefix%_%filename%.tra~)    OR    // there's no english tra file OR
+                 (FILE_EXISTS ~%tra_location%/%LANGUAGE%/%prefix%_%filename%.tra~)) BEGIN // the non-english tra file exists
+  
+        APPEND_OUTER + ~%logfile%~ ~%secondary_code%%secondary_params_0% (%secondary_params_1%)~ KEEP_CRLF // log the find
+     
+        WITH_TRA ~%tra_location%/english/%prefix%_%filename%.tra~ ~%tra_location%/%LANGUAGE%/%prefix%_%filename%.tra~ BEGIN
+          INCLUDE ~%MOD_FOLDER%/files/%filename%/%prefix%_%filename%.tpa~ 
+        END  
+        
+      END ELSE BEGIN // if crossmod found, but denied due to strict language settings
+  
+        APPEND_OUTER + ~%logfile%~ ~%lang_strict_denied%%secondary_params_0% (%secondary_params_1%)~ KEEP_CRLF // log the find
+        
+      END
+
+    END // closing tpa check
+      
+    // now check for banter file      
+    ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%filename%.d~ BEGIN // if npc-npc bg banter file detected, compile it
+    
+      ACTION_IF ((!strict_language_enforcement)                                     OR    // strict language enforcement is disabled OR
+                 (!FILE_EXISTS ~%tra_location%/english/%prefix%_%filename%.tra~)    OR    // there's no english tra file OR
+                 (FILE_EXISTS ~%tra_location%/%LANGUAGE%/%prefix%_%filename%.tra~)) BEGIN // the non-english tra file exists
+  
+        APPEND_OUTER + ~%logfile%~ ~%secondary_banter%%secondary_params_0% (%secondary_params_1%)~ KEEP_CRLF // log the find
+     
+        COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/files/%filename%/%prefix%_%filename%.d~ USING ~%tra_location%/english/%prefix%_%filename%.tra~ ~%tra_location%/%LANGUAGE%/%prefix%_%filename%.tra~ 
+        
+      END ELSE BEGIN // if crossmod found, but denied due to strict language settings
+  
+        APPEND_OUTER + ~%logfile%~ ~%lang_strict_denied%%secondary_params_0% (%secondary_params_1%)~ KEEP_CRLF // log the find
+      
+      END        
+      
+    END // closing banter check 
+    
+    // the following is just for conflicts checks
+    ACTION_IF ((conflict_check) AND // if we're in conflict check mode
+               ((FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%secondary_params_3%.baf~) OR // and at least one of the scripts exist
+                (FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%secondary_params_4%.baf~))) BEGIN 
+                 
+      ACTION_IF !exp_check BEGIN
+        OUTER_SPRINT target ~%secondary_params_3%~
+      END ELSE BEGIN
+        OUTER_SPRINT target ~%secondary_params_4%~  
+      END  
+    
+      ACTION_IF ((FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%secondary_params_3%.baf~) AND
+                 (FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%secondary_params_4%.baf~)) BEGIN // use apporpriate script if both exist
+        OUTER_SPRINT extend ~%prefix%_%target%~     
+      END ELSE BEGIN        
+        ACTION_IF (FILE_EXISTS ~%MOD_FOLDER%/files/%filename%/%prefix%_%secondary_params_3%.baf~) BEGIN // use soa script for tob extension if no tob script
+          OUTER_SPRINT extend ~%prefix%_%secondary_params_3%~     
+        END ELSE BEGIN                                                                                  // and vice versa
+          OUTER_SPRINT extend ~%prefix%_%secondary_params_4%~  
+        END
+      END        
+      
+      APPEND_OUTER + ~%logfile%~ ~%WNL% == %primary_params_0% (%primary_params_1%)%conflict_found%~ KEEP_CRLF 
+      
+      WITH_TRA ~%tra_location%/english/%extend%.tra~ ~%tra_location%/%LANGUAGE%/%extend%.tra~ BEGIN
+        EXTEND_TOP ~%target%.bcs~ ~%MOD_FOLDER%/files/%filename%/%extend%.baf~
+      END  
+      
+    END  
+
+  END // closing PHP_EACH of secondary NPC
+
+END // closing PHP_EACH of primary NPC
+
+
+
+  

@@ -1,0 +1,5 @@
+COPY ~crossmodbg2/files/sharteel_hubelpot/g#xbcin.itm~ ~override~
+  SAY NAME1 @9
+  SAY NAME2 @9
+  SAY UNIDENTIFIED_DESC @10
+  SAY DESC @10

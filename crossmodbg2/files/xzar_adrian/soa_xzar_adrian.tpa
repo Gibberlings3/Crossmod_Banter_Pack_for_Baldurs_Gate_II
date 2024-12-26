@@ -1,0 +1,6 @@
+COMPILE ~crossmodbg2/files/xzar_adrian/rh#cutxa.baf~
+COMPILE ~crossmodbg2/files/xzar_adrian/rh#cutxb.baf~
+COMPILE ~crossmodbg2/files/xzar_adrian/rh#cutxc.baf~
+EXTEND_BOTTOM ~rh#adr.bcs~ ~crossmodbg2/files/xzar_adrian/adrian-smilingimpxzar_rh#adr.baf~
+EXTEND_BOTTOM ~7xxzar.bcs~ ~crossmodbg2/files/xzar_adrian/adrian-smilingimpxzar_7xxzar.baf~
+EXTEND_BOTTOM ~7xmont.bcs~ ~crossmodbg2/files/xzar_adrian/adrian-smilingimpxzar_7xmont.baf~
