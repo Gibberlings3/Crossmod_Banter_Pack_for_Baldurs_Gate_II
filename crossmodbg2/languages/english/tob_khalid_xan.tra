@@ -1,0 +1,18 @@
+@0 = ~I saw that one elf in Suldanessellar. G-gods, she... looked like a younger J-Jaheira, and for a while... my heartbeat got faster.~
+@1 = ~It must have felt as if you saw a ghost. A pale reflection of your past joy.~
+@2 = ~I was happy, I wanted to talk to her, b-but... I know how silly it sounds. I wish it was m-my wife, but it was... someone else.~
+@3 = ~I felt too embarrassed to mention that to anyone else. Especially <CHARNAME>. I talked to <PRO_HIMHER> about J-Jaheira so many times already.~
+@4 = ~I don't think anyone is surprised that you're still thinking about her, Khalid. And I'm afraid it may never stop. Even after you get used to her absence, it won't be entirely gone.~
+@5 = ~Hmm, I don't think acceptance m-must always be associated with instant relief or letting some of your thoughts fall into oblivion, or... anything like that. Achieving p-peace of mind doesn't require the ability t-to forget, but to face your emotions, whatever they are.~
+
+// for khalid_xan.tpa, originally from xankhalidupdate.tra
+@6  = ~(sigh) Do you remember Dynaheir? And your other dead friends? Some wounds never heal...~
+@7  = ~I am. He paid for what he did to me, Imoen and our other friends.~
+@8  = ~Minsc is puzzled. How can this evil slaver bear our friend's name?~
+@9  = ~I will never lose you. We won't end up like them, I swear.~
+@10 = ~There is so much we cannot change. Irenicus, every single senseless death, destruction in Suldanessellar... It was not in our power. Although had I known, I would have taken you to Evereska - and to the Abyss with the consequences.~
+@11 = ~Cherry blossoms. When spring gives way to summer, it rains white all over the valley. Mirtul... remember the flowering in Baldur's Gate, near the Hall of Wonders? We went there together. Both our Harper friends were alive... I wish we saw more of them together. I never knew...~
+@12 = ~...One for our fallen Harper friends. And Dynaheir, a proud witch of Rashemen. And others.~
+
+
+

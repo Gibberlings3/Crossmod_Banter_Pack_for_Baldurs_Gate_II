@@ -1,0 +1,18 @@
+// original jasteysolaufein_jasteyajantis_banters.tra split into soa_solaufein_ajantis.tra and tob_solaufein_ajantis.tra
+
+// tob banters
+@31 = ~Ajantis, you designate creatures as good and evil. The good ones are to be protected, and the evil ones may be killed. Am I right?~
+@32 = ~Well, it is not quite as simple as that, but yes, I would not stop and parley with a demon but start fighting it, instead.~
+@33 = ~Because of the evil in its blood?~
+@34 = ~... In a way, yes.~
+@35 = ~Well... <CHARNAME> is a child of Bhaal. If I understood it correctly, <PRO_HISHER> blood opened a portal to a hellish dimension. The evil is in <CHARNAME>'s blood, Ajantis. Why aren't you fighting <PRO_HIMHER>?~
+@36 = ~You are trying to provoke me with your theoretical questions! This is exactly what I said earlier, that it is not that simple. Believe me, I am vigilant every wake hour, weighing whom I should have to fight.~
+@37 = ~Does this apply to <CHARNAME>, too?~
+@38 = ~...Yes, even <CHARNAME>.~
+@39 = ~And to me?~
+@40 = ~Of course!~
+@41 = ~Then I am reassured. I do sympathize with you and your everlasting vigilance. I like to see that you are working on staying alive a little longer. And to set your mind at ease: You don't have to ask whether this was a hidden threat. It was not.~
+@42 = ~Ajantis, I understand <CHARNAME>'s hellish enclave is most disturbing to you?~
+@43 = ~I am not ashamed to admit it. Is it not to all of us?~
+@44 = ~Well, the changing, twirling sky does not confuse me more than the clouded, wind-driven sky of your surface world would. I am not sure if that makes it better, though... But maybe I am at an advantage, because I do not mind the presence of thick layers of solid rock around us.~
+@45 = ~But be assured, the place does unsettle me, and considerably so. I said I am not afraid, but this greenish, shifting sky - even *I* can tell it is not real, and it is giving me a certain unease. Which fits hell perfectly, come to think of it.~

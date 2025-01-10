@@ -1,0 +1,46 @@
+// original jasteysolaufein_gavin_banters.tra split into soa_solaufein_gavin.tra and tob_solaufein_gavin.tra
+
+// soa banters
+@0  = ~Gavin, traversing the Underdark must have been quite the challenge for you, surely. I've been restraining myself for a while now from making a remark about you, spiders, and me, the drow...~ 
+@1  = ~Be my guest, although I can't imagine that there's a joke I haven't heard already.~
+/* @2   */
+@3  = ~'Imagine if you were a drow! Think of all the spiders! Ha! Ha! Ha!' I think I know them all by now.~ 
+@4  = ~I had never conceived that one could think of the Underdark and imagine the *spiders* to be its gravest threat... It is an intriguing thought, though.~
+@5  = ~Oh! That one was new.~ 
+@6  = ~Solaufein, is there such a thing as... Ah, I'm sure I'll regret this question...~
+@7  = ~*Is* there such a thing as a drow afraid of spiders? I mean, there have to be some, by all laws of probability.~
+@8  = ~Is it possible? It surely is. Life is infinite in its creations and abominations. *Are* there any? I would doubt it. They wouldn't last long enough...~ 
+@9  = ~I see your point.~
+@10 = ~Gavin, a drow or even a priestess of Lolth afraid of spiders would be a remarkable thing - apart from the fact that it would be blasphemy against Lolth, of course.~ 
+@11 = ~Most likely she or he would be sent down into the spider pit all the more often - to the others' great disport, naturally.~
+@12 = ~I sincerely regret having asked that question.~
+@13 = ~Solaufein - also, *please* refrain from making remarks about driders!~ 
+@14 = ~Driders! I hadn't thought of those, yet. To be merged with the body of what you fear the most...~
+@15 = ~Ack!~ 
+@16 = ~There I can understand your horror. Being turned into a drider is... my worst nightmare.~
+@17 = ~Thank you. I guess I should give you credit for admitting that.~
+@18 = ~Although my fear does not result from the fact that it's a spider they put into the cocoon with you.~
+@19 = ~(moan)~ 
+@20 = ~You are doing this on purpose, aren't you?~
+@21 = ~Gavin, I do talk with purpose, usually. However, I did not choose my words with the intention of fanning your fears. I had time enough to experience you in our many fights, and to get a small glimps of your life. You are a brave and honest man. It's not my intention to... make you uneasy. I simply have difficulties understanding how the mere mention of spiders can elicit such a reaction from you.~ 
+@22 = ~Well, not the mere mention. I have no problem if someone talks about spiders. Or to talk about them myself: Spiders, spiders, spiders. See? No problem.~ 
+@23 = ~Just... try not to put too vivid a picture into my head...~
+@24 = ~I see. I left the Spider Queen, the Underdark, and my people with their love for spiders behind me. I have no intention to talk of it any further. Although I could tell a *lot* of stories about them, of course.~ 
+@25 = ~That's one of the things I believe without proof, thank you.~
+
+/* gavin misses one finger (Gavin romance) */
+@26 = ~Gavin, you are missing one finger. As far as I understood, you took it off to get rid of the sign of another woman? For <CHARNAME>?~
+@27 = ~That is true, yes, although the other woman was my sister, not my lover.~
+@28 = ~I am surprised to hear about such a deed.~
+@29 = ~From a surfacer, you mean.~
+@30 = ~From a surfacer, indeed. Were you drow, my question would be 'Why only one finger?'~
+@31 = ~Gavin, I made a decision. I made you uneasy with my extensive description of what you fear the most. So, I won't even mention them to you ever again.~
+@32 = ~Mention what?~
+@33 = ~Well... them. The one animal you are afraid of the most... It's hard to keep a promise of not mentioning something to someone when he does not understand... wait, did your lips just twitch? Oh well, I guess I passed the first test, then?~
+@34 = ~You did. And thank you.~
+@35 = ~So, Gavin, tell me. What animals *do* you like?~
+@36 = ~Oh, it takes more than a word or two to answer that. See, it all depends on where I ecounter them, what they are doing, whether it's night or day - sometimes animals do things that are rather profane or even brutal, but seeing them in the right light makes it a beautiful sight, nontheless. If you are really interested in that question, I could show you one of my drawings - if we have time.~
+@37 = ~I see - this is a surprisingly flexible approach to the question. Might this even work for spi... (coughs) spices?~
+@38 = ~'Spices'? That's not an animal, as far as I recall.~
+@39 = ~I am aware, but it's the only word starting with 'spi' I could think of on the fly.~
+@40 = ~(smiles) You passed test two as well, it seems. But to answer the actual question: No, spiders are the only animals I *really* can't look at closely enough to see them in a beautiful scene, much less draw them... Brrrrr. Let's take you up on your promise and not mention them again.~
