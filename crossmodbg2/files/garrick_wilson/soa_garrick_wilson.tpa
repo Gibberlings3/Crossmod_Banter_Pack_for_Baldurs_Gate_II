@@ -1,1 +1,5 @@
-OUTER_SET WilsonGarrick1 = STATE_WHICH_SAYS 104 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BHAERDA~
+ACTION_IF enhanced_edition BEGIN 
+  OUTER_SET WilsonGarrick1 = STATE_WHICH_SAYS 104 IN ~WilsonChronicles/tra/%s/fl#utf8_bwilson.tra~ FROM ~BHAERDA~
+END ELSE BEGIN
+  OUTER_SET WilsonGarrick1 = STATE_WHICH_SAYS 104 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BHAERDA~
+END

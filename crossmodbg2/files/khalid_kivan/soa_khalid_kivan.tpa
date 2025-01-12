@@ -1,80 +1,116 @@
+ACTION_IF enhanced_edition BEGIN 
 
-// bp#kiv.tra:
+  WITH_TRA ~weidu_external/kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
+    OUTER_SET strref42 = RESOLVE_STR_REF(@42)
+  END
 
-WITH_TRA ~kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
-  OUTER_SET strref42 = RESOLVE_STR_REF(@42)
+
+  WITH_TRA ~weidu_external/kivan/tra/%s/p#kinew.tra~ BEGIN // p#kinew.tra:
+    OUTER_SET strref85   = RESOLVE_STR_REF(@85)
+    OUTER_SET strref93   = RESOLVE_STR_REF(@93)
+    OUTER_SET strref95   = RESOLVE_STR_REF(@95)
+    OUTER_SET strref104  = RESOLVE_STR_REF(@104)
+    OUTER_SET strref110  = RESOLVE_STR_REF(@110)
+    OUTER_SET strref169  = RESOLVE_STR_REF(@169)
+    OUTER_SET strref174  = RESOLVE_STR_REF(@174)
+    OUTER_SET strref325  = RESOLVE_STR_REF(@325)
+    OUTER_SET strref330  = RESOLVE_STR_REF(@330)
+    OUTER_SET strref1154 = RESOLVE_STR_REF(@1154)
+  END
+
+  WITH_TRA ~weidu_external/kivan/tra/%s/p#kipid.tra~ BEGIN // p#kipid.tra:
+    OUTER_SET strref118 = RESOLVE_STR_REF(@118)
+    OUTER_SET strref407 = RESOLVE_STR_REF(@407)
+    OUTER_SET strref415 = RESOLVE_STR_REF(@415)
+  END
+
+
+  WITH_TRA ~weidu_external/kivan/tra/%s/p#kivsoa.tra~ BEGIN // p#kivsoa.tra:
+    OUTER_SET strref69  = RESOLVE_STR_REF(@69)
+    OUTER_SET strref72  = RESOLVE_STR_REF(@72)
+    OUTER_SET strref440 = RESOLVE_STR_REF(@440)
+    OUTER_SET strref441 = RESOLVE_STR_REF(@441)
+    OUTER_SET strref442 = RESOLVE_STR_REF(@442)
+    OUTER_SET strref443 = RESOLVE_STR_REF(@443)
+    OUTER_SET strref444 = RESOLVE_STR_REF(@444)
+    OUTER_SET strref445 = RESOLVE_STR_REF(@445)
+    OUTER_SET strref446 = RESOLVE_STR_REF(@446)
+    OUTER_SET strref448 = RESOLVE_STR_REF(@448)
+    OUTER_SET strref449 = RESOLVE_STR_REF(@449)
+    OUTER_SET strref450 = RESOLVE_STR_REF(@450)
+  END
+
+END ELSE BEGIN
+
+  WITH_TRA ~kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
+    OUTER_SET strref42 = RESOLVE_STR_REF(@42)
+  END
+
+
+  WITH_TRA ~kivan/tra/%s/p#kinew.tra~ BEGIN // p#kinew.tra:
+    OUTER_SET strref85   = RESOLVE_STR_REF(@85)
+    OUTER_SET strref93   = RESOLVE_STR_REF(@93)
+    OUTER_SET strref95   = RESOLVE_STR_REF(@95)
+    OUTER_SET strref104  = RESOLVE_STR_REF(@104)
+    OUTER_SET strref110  = RESOLVE_STR_REF(@110)
+    OUTER_SET strref169  = RESOLVE_STR_REF(@169)
+    OUTER_SET strref174  = RESOLVE_STR_REF(@174)
+    OUTER_SET strref325  = RESOLVE_STR_REF(@325)
+    OUTER_SET strref330  = RESOLVE_STR_REF(@330)
+    OUTER_SET strref1154 = RESOLVE_STR_REF(@1154)
+  END
+
+  WITH_TRA ~kivan/tra/%s/p#kipid.tra~ BEGIN // p#kipid.tra:
+    OUTER_SET strref118 = RESOLVE_STR_REF(@118)
+    OUTER_SET strref407 = RESOLVE_STR_REF(@407)
+    OUTER_SET strref415 = RESOLVE_STR_REF(@415)
+  END
+
+
+  WITH_TRA ~kivan/tra/%s/p#kivsoa.tra~ BEGIN // p#kivsoa.tra:
+    OUTER_SET strref69  = RESOLVE_STR_REF(@69)
+    OUTER_SET strref72  = RESOLVE_STR_REF(@72)
+    OUTER_SET strref440 = RESOLVE_STR_REF(@440)
+    OUTER_SET strref441 = RESOLVE_STR_REF(@441)
+    OUTER_SET strref442 = RESOLVE_STR_REF(@442)
+    OUTER_SET strref443 = RESOLVE_STR_REF(@443)
+    OUTER_SET strref444 = RESOLVE_STR_REF(@444)
+    OUTER_SET strref445 = RESOLVE_STR_REF(@445)
+    OUTER_SET strref446 = RESOLVE_STR_REF(@446)
+    OUTER_SET strref448 = RESOLVE_STR_REF(@448)
+    OUTER_SET strref449 = RESOLVE_STR_REF(@449)
+    OUTER_SET strref450 = RESOLVE_STR_REF(@450)
+  END
+
 END
 
-STRING_SET_EVALUATE strref42 @14
 
-//p#kinew:
-
-WITH_TRA ~kivan/tra/%s/p#kinew.tra~ BEGIN
-  OUTER_SET strref85   = RESOLVE_STR_REF(@85)
-  OUTER_SET strref93   = RESOLVE_STR_REF(@93)
-  OUTER_SET strref95   = RESOLVE_STR_REF(@95)
-  OUTER_SET strref104  = RESOLVE_STR_REF(@104)
-  OUTER_SET strref110  = RESOLVE_STR_REF(@110)
-  OUTER_SET strref169  = RESOLVE_STR_REF(@169)
-  OUTER_SET strref174  = RESOLVE_STR_REF(@174)
-  OUTER_SET strref325  = RESOLVE_STR_REF(@325)
-  OUTER_SET strref330  = RESOLVE_STR_REF(@330)
-  OUTER_SET strref1154 = RESOLVE_STR_REF(@1154)
-END
-
-STRING_SET_EVALUATE strref85   @15
-STRING_SET_EVALUATE strref93   @16
-STRING_SET_EVALUATE strref95   @17
-STRING_SET_EVALUATE strref104  @18
-STRING_SET_EVALUATE strref110  @19
-STRING_SET_EVALUATE strref169  @20
-STRING_SET_EVALUATE strref174  @21
-STRING_SET_EVALUATE strref325  @22
-STRING_SET_EVALUATE strref330  @23
-STRING_SET_EVALUATE strref1154 @24
-
-//p#kipid:
-
-WITH_TRA ~kivan/tra/%s/p#kipid.tra~ BEGIN
-  OUTER_SET strref118 = RESOLVE_STR_REF(@118)
-  OUTER_SET strref407 = RESOLVE_STR_REF(@407)
-  OUTER_SET strref415 = RESOLVE_STR_REF(@415)
-END
-
-STRING_SET_EVALUATE strref118 @25
-STRING_SET_EVALUATE strref407 @26
-STRING_SET_EVALUATE strref415 @27
-
-//p#kinew:
-
-WITH_TRA ~kivan/tra/%s/p#kivsoa.tra~ BEGIN
-  OUTER_SET strref69  = RESOLVE_STR_REF(@69)
-  OUTER_SET strref72  = RESOLVE_STR_REF(@72)
-  OUTER_SET strref440 = RESOLVE_STR_REF(@440)
-  OUTER_SET strref441 = RESOLVE_STR_REF(@441)
-  OUTER_SET strref442 = RESOLVE_STR_REF(@442)
-  OUTER_SET strref443 = RESOLVE_STR_REF(@443)
-  OUTER_SET strref444 = RESOLVE_STR_REF(@444)
-  OUTER_SET strref445 = RESOLVE_STR_REF(@445)
-  OUTER_SET strref446 = RESOLVE_STR_REF(@446)
-  OUTER_SET strref448 = RESOLVE_STR_REF(@448)
-  OUTER_SET strref449 = RESOLVE_STR_REF(@449)
-  OUTER_SET strref450 = RESOLVE_STR_REF(@450)
-END
-
-STRING_SET_EVALUATE strref69  @28
-STRING_SET_EVALUATE strref72  @29
-STRING_SET_EVALUATE strref440 @30
-STRING_SET_EVALUATE strref441 @31
-STRING_SET_EVALUATE strref442 @32
-STRING_SET_EVALUATE strref443 @33
-STRING_SET_EVALUATE strref444 @34
-STRING_SET_EVALUATE strref445 @35
-STRING_SET_EVALUATE strref446 @36
-STRING_SET_EVALUATE strref448 @37
-STRING_SET_EVALUATE strref449 @38
-STRING_SET_EVALUATE strref450 @39
-
+STRING_SET_EVALUATE strref42   @14 // bp#kiv.tra
+STRING_SET_EVALUATE strref69   @28 // p#kivsoa.tra
+STRING_SET_EVALUATE strref72   @29 // p#kivsoa.tra
+STRING_SET_EVALUATE strref85   @15 // p#kinew.tra
+STRING_SET_EVALUATE strref93   @16 // p#kinew.tra
+STRING_SET_EVALUATE strref95   @17 // p#kinew.tra
+STRING_SET_EVALUATE strref104  @18 // p#kinew.tra
+STRING_SET_EVALUATE strref110  @19 // p#kinew.tra
+STRING_SET_EVALUATE strref118  @25 // p#kipid.tra
+STRING_SET_EVALUATE strref169  @20 // p#kinew.tra
+STRING_SET_EVALUATE strref174  @21 // p#kinew.tra
+STRING_SET_EVALUATE strref325  @22 // p#kinew.tra
+STRING_SET_EVALUATE strref330  @23 // p#kinew.tra
+STRING_SET_EVALUATE strref407  @26 // p#kipid.tra
+STRING_SET_EVALUATE strref415  @27 // p#kipid.tra
+STRING_SET_EVALUATE strref440  @30 // p#kivsoa.tra
+STRING_SET_EVALUATE strref441  @31 // p#kivsoa.tra
+STRING_SET_EVALUATE strref442  @32 // p#kivsoa.tra
+STRING_SET_EVALUATE strref443  @33 // p#kivsoa.tra
+STRING_SET_EVALUATE strref444  @34 // p#kivsoa.tra
+STRING_SET_EVALUATE strref445  @35 // p#kivsoa.tra
+STRING_SET_EVALUATE strref446  @36 // p#kivsoa.tra
+STRING_SET_EVALUATE strref448  @37 // p#kivsoa.tra
+STRING_SET_EVALUATE strref449  @38 // p#kivsoa.tra
+STRING_SET_EVALUATE strref450  @39 // p#kivsoa.tra
+STRING_SET_EVALUATE strref1154 @24 // p#kinew.tra
 
 /*
 

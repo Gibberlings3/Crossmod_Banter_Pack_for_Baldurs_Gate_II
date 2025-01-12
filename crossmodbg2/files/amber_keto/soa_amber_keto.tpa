@@ -10,8 +10,13 @@ COPY_EXISTING ~bearbl.cre~   ~override~
   BUT_ONLY
   
 // interjections
-OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
-OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
+ACTION_IF enhanced_edition BEGIN 
+  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/fl#utf8_dialogs.tra~ FROM ~m#amber~)
+  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/fl#utf8_dialogs.tra~ FROM ~m#ambern~)
+END ELSE BEGIN
+  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
+  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
+END
 
 COMPILE EVALUATE_BUFFER  ~crossmodbg2/files/amber_keto/soa_interjections.d~
 EXTEND_TOP ~fwketo.bcs~  ~crossmodbg2/files/amber_keto/interject_fwketo.baf~ 

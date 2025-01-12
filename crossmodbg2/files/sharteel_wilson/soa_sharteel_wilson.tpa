@@ -1,2 +1,7 @@
-OUTER_SET WilsonShar1 = STATE_WHICH_SAYS  78 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BEDWIN~
-OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles\tra\%s\bwilson.tra~ FROM ~BKELDOR~
+ACTION_IF enhanced_edition BEGIN 
+  OUTER_SET WilsonShar1 = STATE_WHICH_SAYS  78 IN ~WilsonChronicles/tra/%s/fl#utf8_bwilson.tra~ FROM ~BEDWIN~
+  OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles/tra/%s/fl#utf8_bwilson.tra~ FROM ~BKELDOR~
+END ELSE BEGIN
+  OUTER_SET WilsonShar1 = STATE_WHICH_SAYS  78 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BEDWIN~
+  OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BKELDOR~
+END

@@ -105,5 +105,24 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY ~mod_array~ BEGIN
   ~Tales of the Deep Gardens~, ~Lava~, ~totdg~, ~~, ~0x1dg.bcs.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
   ~Tortured Souls~, ~Vlad~, ~ts-sime~, ~~, ~sime.bcs~, ~~, ~sime25.bcs~, ~~, ~sime~, ~sime25~ => ~-1~ // 
   ~Tsujatha~, ~Sillara~, ~tsujatha~, ~~, ~btsujat.dlg~, ~~, ~btsuja25.dlg~, ~~, ~tsujath~, ~tsujat25~ => ~-1~ // 
+  ~Tsuki~, ~theacefes~, ~tsuki~, ~~, ~l7tsukib.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Tyris Flare~, ~Grim Squeaker~, ~tyris-flare~, ~~, ~g#tyris.bcs~, ~~, ~g#tyrs25.bcs~, ~~, ~g#tyris~, ~g#tyrs25~ => ~-1~ // 
+  ~Valen~, ~Wes Weimer~, ~valen~, ~~, ~valenj.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Varshoon~, ~Lava~, ~varshoon~, ~~, ~vxvarb.dlg~, ~~, ~vxvar25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Verr’Sza~, ~Lava~, ~verrsza~, ~~, ~l#2verrb.dlg~, ~~, ~l#2ve25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Walahnan~, ~Lava~, ~walahnan~, ~~, ~l#2whb.dlg~, ~~, ~l#2wh25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Wikaede~, ~Moongaze~, ~wikaede~, ~~, ~bmgwika.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Will~, ~Lava~, ~will~, ~~, ~l0willb.dlg~, ~~, ~l0wil25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Willie Bruce~, ~nethrin~, ~williebruce~, ~~, ~bwillyb.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Wilson Chronicles~, ~Lava~, ~wilson~, ~~, ~l#wilwis.cre~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Xan~, ~Kulyok~, ~xan~, ~~, ~o#xan.dlg~, ~~, ~o#xan25.dlg~, ~~, ~o#xans~, ~o#xan25s~ => ~-1~ // 
+  ~Xulaye~, ~K'aeloree, Riviera, Bookwyrme~, ~xulaye~, ~~, ~blk#xul.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Xzar~, ~Smiling Imp~, ~xzar~, ~~, ~~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Xzele~, ~Lava~, ~xzele~, ~~, ~l#xzeb.dlg~, ~~, ~l#xze25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Yasraena~, ~Sillara~, ~yasraena~, ~~, ~byasraen.dlg~, ~~, ~byasra25.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Yeslick~, ~Smiling Imp~, ~yeslick~, ~~, ~~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Yoshimo’s Remorse~, ~jmaeq, Lava~, ~yoshimo-remorse~, ~~, ~~, ~~, ~yyosh25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
+  ~Yoshimo Romance~, ~Lava~, ~yoshimo-romance~, ~yoshimoromance/yoshimoromance.tp2~, ~~, ~0~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Yvette~, ~Lava~, ~yvette~, ~~, ~yxyveb.dlg~, ~~, ~yxyv25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
 
 END

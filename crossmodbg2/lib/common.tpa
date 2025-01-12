@@ -97,12 +97,12 @@ ACTION_PHP_EACH mod_array AS primary_params => primary_check BEGIN
       
     END
     
-  END    
+  END   
   
   // now push back into array if present, otherwise log as not installed
   ACTION_IF check BEGIN
-    ACTION_DEFINE_ASSOCIATIVE_ARRAY ~mod_array_working~ BEGIN ~%primary_params_0%~, ~%primary_params_1%~, ~%primary_params_2%~, ~%primary_params_8%~, ~%primary_params_9%~ => ~%check%~ END 
-  END ELSE BEGIN 
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY ~mod_array_working~ BEGIN ~%primary_params_0%~, ~%primary_params_1%~, ~%primary_params_2%~, ~%primary_params_8%~, ~%primary_params_9%~ => ~%check%~ END
+  END ELSE BEGIN
     APPEND_OUTER + ~%logfile%~ ~ == %primary_params_0% (%primary_params_1%)%prime_not_found%~ KEEP_CRLF
   END  
 

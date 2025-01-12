@@ -1,9 +1,23 @@
-WITH_TRA ~isra_bg2/translations/%s/rh#isrj.tra~ BEGIN
-  OUTER_SET strref1 = RESOLVE_STR_REF(@1)
-  OUTER_SET strref5 = RESOLVE_STR_REF(@5)
-  OUTER_SET strref6 = RESOLVE_STR_REF(@6)
-  OUTER_SET strref7 = RESOLVE_STR_REF(@7)
-  OUTER_SET strref8 = RESOLVE_STR_REF(@8)
+ACTION_IF enhanced_edition BEGIN 
+
+  WITH_TRA ~isra/translations/%s/fl#utf8_rh#isrj.tra~ BEGIN
+    OUTER_SET strref1 = RESOLVE_STR_REF(@1)
+    OUTER_SET strref5 = RESOLVE_STR_REF(@5)
+    OUTER_SET strref6 = RESOLVE_STR_REF(@6)
+    OUTER_SET strref7 = RESOLVE_STR_REF(@7)
+    OUTER_SET strref8 = RESOLVE_STR_REF(@8)
+  END
+  
+END ELSE BEGIN
+
+  WITH_TRA ~isra/translations/%s/rh#isrj.tra~ BEGIN
+    OUTER_SET strref1 = RESOLVE_STR_REF(@1)
+    OUTER_SET strref5 = RESOLVE_STR_REF(@5)
+    OUTER_SET strref6 = RESOLVE_STR_REF(@6)
+    OUTER_SET strref7 = RESOLVE_STR_REF(@7)
+    OUTER_SET strref8 = RESOLVE_STR_REF(@8)
+  END
+
 END
 
 STRING_SET_EVALUATE strref1 @15

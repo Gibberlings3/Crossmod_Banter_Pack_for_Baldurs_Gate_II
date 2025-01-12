@@ -1,14 +1,26 @@
+ACTION_IF enhanced_edition BEGIN 
+  // Get state for O#LLKIMM %O#LLKIMM_145% @145 (Sellswords.d)
+  /* ~I know Jarlaxle. Everyone who expects his demise becomes bitterly disappointed at some point or another. And he is ruthless to those who betray him.~ */
+  OUTER_SET O#LLKIMM_145 = STATE_WHICH_SAYS 145 IN ~sellswords/%s/fl#utf8_Sellswords.tra~ FROM ~O#LLKIMM~
 
-// Get state for O#LLKIMM %O#LLKIMM_145% @145 (Sellswords.d)
-/* ~I know Jarlaxle. Everyone who expects his demise becomes bitterly disappointed at some point or another. And he is ruthless to those who betray him.~ */
-OUTER_SET O#LLKIMM_145 = STATE_WHICH_SAYS 145 IN ~Sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+  // Get state for O#LLKIMM %O#LLKIMM_@152% @152 (Sellswords.d)
+  /* ~She employs surface mercenaries from time to time, but a Child of Bhaal would be a gift beyond her wildest dreams.~ */
+  OUTER_SET O#LLKIMM_152 = STATE_WHICH_SAYS 152 IN ~sellswords/%s/fl#utf8_Sellswords.tra~ FROM ~O#LLKIMM~
+  // Get state for O#LLKIMM %O#LLKIMM_@153% @153 (Sellswords.d)
+  /* ~You have a drow in your party. That is of no consequence. An exile or not, she is just another of your companions. Everyone's eyes will be on you, especially those of the Matron Mother.~ */
+  OUTER_SET O#LLKIMM_153 = STATE_WHICH_SAYS 153 IN ~sellswords/%s/fl#utf8_Sellswords.tra~ FROM ~O#LLKIMM~
+END ELSE BEGIN
+  // Get state for O#LLKIMM %O#LLKIMM_145% @145 (Sellswords.d)
+  /* ~I know Jarlaxle. Everyone who expects his demise becomes bitterly disappointed at some point or another. And he is ruthless to those who betray him.~ */
+  OUTER_SET O#LLKIMM_145 = STATE_WHICH_SAYS 145 IN ~sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
 
-// Get state for O#LLKIMM %O#LLKIMM_@152% @152 (Sellswords.d)
-/* ~She employs surface mercenaries from time to time, but a Child of Bhaal would be a gift beyond her wildest dreams.~ */
-OUTER_SET O#LLKIMM_152 = STATE_WHICH_SAYS 152 IN ~Sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
-// Get state for O#LLKIMM %O#LLKIMM_@153% @153 (Sellswords.d)
-/* ~You have a drow in your party. That is of no consequence. An exile or not, she is just another of your companions. Everyone's eyes will be on you, especially those of the Matron Mother.~ */
-OUTER_SET O#LLKIMM_153 = STATE_WHICH_SAYS 153 IN ~Sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+  // Get state for O#LLKIMM %O#LLKIMM_@152% @152 (Sellswords.d)
+  /* ~She employs surface mercenaries from time to time, but a Child of Bhaal would be a gift beyond her wildest dreams.~ */
+  OUTER_SET O#LLKIMM_152 = STATE_WHICH_SAYS 152 IN ~sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+  // Get state for O#LLKIMM %O#LLKIMM_@153% @153 (Sellswords.d)
+  /* ~You have a drow in your party. That is of no consequence. An exile or not, she is just another of your companions. Everyone's eyes will be on you, especially those of the Matron Mother.~ */
+  OUTER_SET O#LLKIMM_153 = STATE_WHICH_SAYS 153 IN ~sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
+END
 
 COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/interjections/jasteys_solaufein/jasteys_solaufein_sellswords_crossmod.d~
 	END

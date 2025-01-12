@@ -1,2 +1,7 @@
-OUTER_SET brega_state_853 = STATE_WHICH_SAYS 853 IN ~alternatives/%s/DIALOGUE.tra~ FROM ~HABREGA.dlg~
-OUTER_SET brega_state_893 = STATE_WHICH_SAYS 893 IN ~alternatives/%s/DIALOGUE.tra~ FROM ~HABREGA.dlg~
+ACTION_IF enhanced_edition BEGIN 
+  OUTER_SET brega_state_853 = STATE_WHICH_SAYS 853 IN ~alternatives/%s/fl#utf8_DIALOGUE.tra~ FROM ~HABREGA.dlg~
+  OUTER_SET brega_state_893 = STATE_WHICH_SAYS 893 IN ~alternatives/%s/fl#utf8_DIALOGUE.tra~ FROM ~HABREGA.dlg~
+END ELSE BEGIN
+  OUTER_SET brega_state_853 = STATE_WHICH_SAYS 853 IN ~alternatives/%s/DIALOGUE.tra~ FROM ~HABREGA.dlg~
+  OUTER_SET brega_state_893 = STATE_WHICH_SAYS 893 IN ~alternatives/%s/DIALOGUE.tra~ FROM ~HABREGA.dlg~
+END
