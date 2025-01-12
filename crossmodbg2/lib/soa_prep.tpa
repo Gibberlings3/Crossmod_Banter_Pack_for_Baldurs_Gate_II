@@ -1,0 +1,36 @@
+// Giving Solaufein a banter file
+ACTION_IF FILE_EXISTS_IN_GAME ~sola.dlg~ THEN BEGIN
+	APPEND ~interdia.2da~ ~SOLA BSOLA~              UNLESS ~SOLA~      UNLESS ~25FILE~
+	APPEND ~interdia.2da~ ~SOLAUFEIN BSOLA~	        UNLESS ~SOLAUFEIN~ UNLESS ~25FILE~
+	APPEND ~interdia.2da~ ~SOLA BSOLA BSOLA25~      UNLESS ~SOLA~      IF ~25FILE~		
+	APPEND ~interdia.2da~ ~SOLAUFEIN BSOLA BSOLA25~ UNLESS ~SOLAUFEIN~ IF ~25FILE~
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~sola.dlg~ AND NOT FILE_EXISTS_IN_GAME ~bsola.dlg~ THEN BEGIN
+
+<<<<<<<< CrossmodBG2/Inlined/BSOLA.d
+BEGIN BSOLA
+>>>>>>>>
+
+  COMPILE ~CrossmodBG2/Inlined/BSOLA.d~
+
+END
+
+// Giving Wikaede an SoA Override Script
+ACTION_IF FILE_EXISTS_IN_GAME ~MGWIKA.cre~ AND NOT FILE_EXISTS_IN_GAME ~MGWIKA.bcs~ THEN BEGIN
+  
+  COPY_EXISTING ~MGWIKA.cre~ ~override/MGWIKA.cre~
+    WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~MGWIKA~ #8
+
+<<<<<<<< CrossmodBG2/Inlined/MGWIKA.baf
+// Start of Wikaede's override script
+>>>>>>>>
+
+  COMPILE ~CrossmodBG2/Inlined/MGWIKA.baf~
+
+END
+
+COPY_EXISTING ~pdialog.2da~  ~override~
+              ~interdia.2da~ ~override~
+	PRETTY_PRINT_2DA
+  BUT_ONLY

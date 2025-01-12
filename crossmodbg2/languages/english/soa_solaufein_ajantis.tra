@@ -1,0 +1,34 @@
+// original jasteysolaufein_jasteyajantis_banters.tra split into soa_solaufein_ajantis.tra and tob_solaufein_ajantis.tra
+
+// soa banters
+@0  = ~Sir Ajantis, I could have told you that this belt was made of adamantine as well.~ 
+@1  = ~You... you overheard my coversation with Master Cromwell?!~
+@2  = ~His reply, yes - as could anyone in the room with good hearing, I guess.~ 
+@3  = ~(groan) ... But why would I ask your opinion on such a topic, drow?~
+@4  = ~Well... simply because I am a drow and know a lot about drow culture. You could have profited from my knowledge. Is it not your duty as a paladin to gain as much information as possible?~ 
+@5  = ~Yes, but... my life did not depend on this information, Solaufein, nor someone else's.~
+@6  = ~But your feeling of comfort.~
+@7  = ~(reddens slightly) A paladin has to bear his lot without complaint.~ 
+@8  = ~Hm. I heard that saying a lot from the handmaidens... very well. But <CHARNAME>'s wellbeing was affected too, was it not?...~
+@9  = ~How do you... Solaufein! That... that is really not a topic I would discuss with you! Our conversation ends here.~ 
+@10 = ~Solaufein, you seem to be intelligent and thorough, and you are calling Eilistraee your goddess. I am yet unsure what to think of you, though.~
+@11 = ~Solaufein, I still cannot tell whether you were playing a role back in the Underdark - or even now, while travelling with <CHARNAME>.~
+@12 = ~Solaufein, I was not content with the 'role' I had to play in the Underdark while fighting alongside <CHARNAME>. I did it for Lady Adalon, and to protect what is good.~ 
+@13 = ~Then keep on watching me, Sir Ajantis. That is what I tell <CHARNAME>, too, when <PRO_HESHE> voices doubts.~
+@14 = ~So, you admit to being a risk?~ 
+@15 = ~I am drow, Sir Ajantis. That is always a risk. I thought that this is what your god tells you with his dogma of everlasting vigilance?~
+@16 = ~That he does, yes.~
+@17 = ~I am not praying to your god, and I guess no other drow does, either. But to be always vigilant, that is something a drow is very good at. - No, we needn't discuss that you are doing it to protect others and drow only do it for their own benefit, Sir Ajantis. I didn't mean to tread on your toes with my comparison.~
+@18 = ~Aren't we all playing a role? Don't we all try to come to terms with the cards we are dealt?~ 
+@19 = ~What is the meaning of your answer? Are you trying to make me suspicious?~
+@20 = ~More than you already are? I hadn't thought that possible.~ 
+@21 = ~No, my question is of philosophical nature, only. Believe me or not, but when you met me in the Underdark, my heart was already turned far away from what my people teach and expect.~ 
+@22 = ~This was not noticeable.~
+@23 = ~Well... if it were, I wouldn't have lasted for long. But so you say, and yet you were playing a role yourself, too - and it wasn't noticeable, either.~ 
+@24 = ~Do not dwell on it, Sir Ajantis. You served what is good indeed. And backed up by the illusion of a silver dragon it is easy to keep up a deception without being detected.~
+@25 = ~No, I suppose I am the better deceiver, because I didn't have the magic of a dragon to aid me. I didn't need it, though. Centuries of indoctrination were enough to train me in how to deal with other drow. You should make use of it, you know. If you have questions regarding drow and their culture, let me know. I could give you a lot of information about this topic.~
+@26 = ~Solaufein, I do appreciate you as a source of information, indeed - for the drow-related things we encounter.~
+@27 = ~Oh yes, there exist quite a variety of rather... intimate things you surfacers surely do not know as much about yet. Drow culture is full of remarkable techniques...~
+@28 = ~Solaufein, I am not interested in any of your 'techniques'!~
+@29 = ~You aren't? What a pity. I would have liked to spar swords with you a little.~
+@30 = ~Swords?... You were jesting with me! Yes, to share *fighting* techniques I am indeed ready.~

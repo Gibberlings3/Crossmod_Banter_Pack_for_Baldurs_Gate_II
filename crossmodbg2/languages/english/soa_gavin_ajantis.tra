@@ -1,0 +1,20 @@
+// original gavin_jasteyajantis_banters.tra slit into soa_gavin_ajantis.tra and tob_gavin_ajantis.tra
+
+// soa banter
+@0    = ~Gavin, you left in search for your daughter and... her mother. I believe you succeeded in finding her?~
+@1    = ~Yes... Both of them, unfortunately. Er, I meant it didn't work out well with Miranda. Lanie is in my care now.~
+@2    = ~I see... Where is she, then?~
+@3    = ~She is with the priests of Oghma, studying her magic abilities.~
+@4    = ~You left your daughter to study with the priests of Oghma? I already stated that it is best for a child to be with her parents, Gavin! Back at the Sword Coast, she was with her mother, at least. Now, however, her mother is no longer there to care for her... Still, you remain at <CHARNAME>'s side!~
+@5    = ~Ajantis, I need to earn gold for her upbringing. This did not change - it got worse, actually, because of her magic abilities that need tutoring. Are you addressing reproaches to me - again, if I might add - because I try to take care of my daughter?~
+@6    = ~No, I am criticizing - again - the way you are doing it!~
+@7    = ~Ajantis, I am not going adventuring because I enjoy sleeping on dusty roads or being away from Lanie. I am here because adventuring is the only way for me to earn enough for Lanie's tutoring.~
+@8    = ~It is not me you have to convince about your motives, Gavin. I hope for you that Lanie will understand, some day.~
+@9    = ~As do I...~
+@10   = ~Gavin, I... I apologize for my reproachful words earlier. You are a single father, and you are doing everything you can to raise your daughter properly.~
+@11   = ~Thank you, Ajantis.~
+@12   = ~Still, with a simple position in the city or at one of the temples I am sure you could earn enough gold if you would be ready to restrict yourself. A lot of the gold we make by adventuring is spend for our gear and lodging, so you would need a lot less if settling down - and your daughter would see her father more often.~
+@13   = ~I should have guessed the topic is not done for you. Maybe you are right, but adventuring is what I know how to do, and I have no connections here in Amn - and I know I didn't make enough gold as a priest at the Morning Temple in Beregost. Maybe I would be able to find such a position, and some small quarters for me and Lanie if I search long enough and am lucky...~
+@14   = ~But I also feel oblieged to <CHARNAME>, Ajantis, and <PRO_HISHER> cause. Is it wrong if I just do what I can do best and make the best of the current situation?~
+@15   = ~As I said, it is Lanie who will have to understand.~
+@16   = ~I know, Ajantis. I know that very well.~

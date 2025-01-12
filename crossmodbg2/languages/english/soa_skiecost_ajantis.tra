@@ -1,0 +1,42 @@
+// original skiecostsoul_jasteyajantis.tra split into soa_skiecost_ajantis.tra and tob_skiecost_ajantis.tra
+
+// for soa banters
+@0    = ~My lady Skie, I am happy and relieved to see you alive and well. One's soul being trapped inside a soul taker dagger... it is an unbelievable evil.~
+@1    = ~Not just evil. It was stupid and mean. I guess only some kind of freak like Irenicus could do such a thing, right? But... I feel better now. Way better. Thanks, Ajantis.~
+@2    = ~I am more than pleased to see you so well. I was afraid that being exposed to ill powers for more than a while could... harm you.~
+@3    = ~I kinda get tired easier but... hey, it could be worse, right?~
+@4    = ~Yes, it definitely could. My lady, promise me - if you feel ill... or have the impression that something is wrong, let me know immediately. Only the gods know what kind of consequences there might follow still.~
+@5    = ~Uhm, okay, but don't scare me. What kind of consequences? Nevermind. I don't want to know. I guess it's better not to know, sometimes.~
+@6    = ~I did not mean to scare you, my lady, but it was such vile magic. Be assured that I will be here, ready to assist you.~
+@7    = ~My lady Skie, now I see you travelling these lands, so far away from the Sword Coast.~
+@8    = ~I am surprised your father had no objections to your far travels. Surely he has a great interest in seeing his only daughter safe and well?~
+@9    = ~Daddy would... well, he should be happy to see me learn things and travelling is the best way to learn, right?~
+@10   = ~My lady Skie! Are you implying your father does not *know*?!~
+@11   = ~I am shocked a noble daughter would travel so far without biding her father a proper good-bye at least! My lady, what were you thinking?~
+@12   = ~That it's MY decision to do what I want, Ajantis, noble birth or not. You should be able to relate to that, no?~
+@13   = ~My cause was given to me by my god, my lady. My family never objected to my call.~
+@14   = ~And if they had, would it make any change?~
+@15   = ~What? No, of course not! I would... Ah, I see what you are implying. But my lady Skie, do you compare your actions to the call and duty of a paladin?~
+@16   = ~(sigh) Well, indeed, I do. But my lady, are you implying that your journey to these far away lands - on your own! - are comparable with the path I am walking as a paladin of the Order, trained in fight?~
+@17   = ~No, I'm just saying that we all have our reasons for the things we do. And by the way, won't you protect me from evil and all that stuff?~
+@18   = ~I... well, yes, I will of course, my lady.~
+@19   = ~So the problem is solved. And in return, I'll try to make sure you won't walk into some traps. I suppose that's a fair deal.~
+@20   = ~My lady Skie... I am somewhat displeased to see you *still* following that profession you turned to.~
+@21   = ~Scared I'll steal your shaving mirror someday, Ajantis?~
+@22   = ~It is not my mirror I am worried about, nor any other of my possessions. It is the mere fact that such a noble and... fragile lady as you would belittle herself by following the dark path of a rogue.~
+@23   = ~Dark path? It's not that bad. It's exciting. And FAR from boring. Besides, you should NEVER call me fragile, okay? I just hate it when people see me as some... doll. I can do great stuff!~
+@24   = ~To speak openly, my lady, I think you're much more delicate than the foes we have to fight.~
+@25   = ~I'm not some... stupid girl who must be taken care of because those we fight are a bit bigger than me! That's kinda insulting, you know?~
+@26   = ~The bigger they are, you know, the harder they hit the groud.~
+@27   = ~Your bravery, lady Skie, is remarkable, but it does not change the fact that I believe you should be more careful and less interested in... other people's pockets.~
+@28   = ~Okay, now I'm starting to think that you simply don't trust me, Ajantis.~
+@29   = ~I do, lady Skie... and I am not implying you are not *capable* of being a thief or help us.~
+@30   = ~Seeing you following this profession is what makes me uneasy, my lady.~
+@31   = ~But while I'm here you don't mind me doing the useful things you can't?~
+@32   = ~Well... yes. And I see there is nothing I can add to this discussion, as you will have the last word. Very well, my lady, let us move on - carefully, not to trigger any traps.~
+
+// for soa interjections
+@40    = ~The cost is another soul?! My lady, do not talk about this as if it's just some pieces of gold we would have to ask for!~
+@41    = ~Talking this man into giving his soul is evil, <CHARNAME>. Do not pressure this further.~
+@42    = ~Talking this man into giving his soul is evil, <CHARNAME>. There are other ways this man could raise the gold for his son, and you can't take a parent from a child.~
+@43    = ~This is joyous news, indeed! Thank you, my lady, for travelling this far to deliver it.~

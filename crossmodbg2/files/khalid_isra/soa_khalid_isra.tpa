@@ -1,0 +1,32 @@
+WITH_TRA ~isra_bg2/translations/%s/rh#isrj.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@1)
+  OUTER_SET strref5 = RESOLVE_STR_REF(@5)
+  OUTER_SET strref6 = RESOLVE_STR_REF(@6)
+  OUTER_SET strref7 = RESOLVE_STR_REF(@7)
+  OUTER_SET strref8 = RESOLVE_STR_REF(@8)
+END
+
+STRING_SET_EVALUATE strref1 @15
+STRING_SET_EVALUATE strref5 @16
+STRING_SET_EVALUATE strref6 @17
+STRING_SET_EVALUATE strref7 @18
+STRING_SET_EVALUATE strref8 @19
+
+/*
+ALL IN rh#isrj:
+
+@1    = ~The bastard who killed Khalid and Dynaheir? Yes, that's his name.~
+NEW    = ~The bastard who killed Dynaheir... and our dear Harper friend? Yes, that's his name.~
+
+@5    = ~Aye, I had not forgotten that. Khalid and Dynaheir--~
+NEW    = ~Aye, I had not forgotten that. Dynaheir and--~
+
+@6    = ~Aye, and the cost... Khalid and Dynaheir--~
+NEW    = ~Aye, and the cost... Dynaheir and--~
+
+@7    = ~I can believe it. Khalid and Dynaheir--~
+NEW    = ~I can believe it. Dynaheir and... I--~
+
+@8    = ~I do not blame you for that, though I find myself thinking about little else these days. Khalid and Dynaheir--~
+NEW    = ~I do not blame you for that, though I find myself thinking about little else these days. Dynaheir and--~
+*/

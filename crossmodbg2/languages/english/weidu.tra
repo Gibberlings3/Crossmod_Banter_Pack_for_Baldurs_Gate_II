@@ -1,0 +1,21 @@
+// strings for the log: banter installation
+@1    = ~: Mod detected, checking for crossmod content.~
+@2    = ~: Mod not detected, moving to next mod.~
+@3    = ~     -- Compiling crossmod banter for ~
+@4    = ~     -- Executing crossmod code for ~
+// strings for the log: conflict installation
+@5    = ~: Mod detected, installing romance conflicts for ~
+@6    = ~: Mod not detected, skipping romance conflicts for ~
+// language enforcement
+@7    = ~     -- Crossmod content found but skipping due to language settings: ~
+
+// installer messages
+@100  = ~This mod is only available for BG2, BG2EE, or the conversions BGT or EET.~
+@101  = ~You must have Throne of Bhaal installed to install this component.~
+
+// component names
+@1000 = ~Crossmod Banter Pack for Shadows of Amn Content~
+@2000 = ~Crossmod Banter Pack for Throne of Bhaal Content~
+@3000 = ~Crossmod Romance Conflicts~
+
+// several hundred lines of very repetitive feedback removed
