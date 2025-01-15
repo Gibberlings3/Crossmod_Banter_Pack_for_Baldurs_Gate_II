@@ -1,6 +1,6 @@
 CHAIN IF ~InParty("L#2Walah")
 See("L#2Walah")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("L#2Walah",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.L#KHAL#2Walah","GLOBAL",0)~ THEN L#KHAB L#2WalahG#XB.L#KHA1
@@ -14,7 +14,7 @@ EXIT
 
 CHAIN IF ~InParty("L#2Walah")
 See("L#2Walah")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("L#2Walah",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.L#KHAL#2Walah","GLOBAL",1)~ THEN L#KHAB L#2WalahG#XB.L#KHA2

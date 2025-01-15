@@ -1,6 +1,6 @@
 CHAIN IF ~InParty("L#FHA")
 See("L#FHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("L#FHA",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.KhalidL#FHA25","GLOBAL",0)~ THEN L#KHA25B L#FHAG#XB.Khalidtob.1

@@ -3,9 +3,9 @@
 CHAIN IF ~Global("G#XB.FaldornL#KHATOB","GLOBAL",0)
 CombatCounter(0)
 !StateCheck("L#FALD",CD_STATE_NOTVALID)
-InParty("L#KHA")
-See("L#KHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)~
+InParty("L#KHALID")
+See("L#KHALID")
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)~
 THEN L#FAL25B L#KHAFaldornToB_01
 @0
 DO ~SetGlobal("G#XB.FaldornL#KHATOB","GLOBAL",1)~
@@ -19,9 +19,9 @@ EXIT
 CHAIN IF ~Global("G#XB.FaldornL#KHATOB","GLOBAL",1)
 CombatCounter(0)
 !StateCheck("L#FALD",CD_STATE_NOTVALID)
-InParty("L#KHA")
-See("L#KHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)~
+InParty("L#KHALID")
+See("L#KHALID")
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)~
 THEN L#FAL25B L#KHAFaldornToB_02
 @6
 DO ~SetGlobal("G#XB.FaldornL#KHATOB","GLOBAL",2)~

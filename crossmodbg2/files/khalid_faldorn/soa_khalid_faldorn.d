@@ -1,9 +1,9 @@
 ////KHALID - FALDORN SOA
 
-CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
+CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
 !StateCheck("L#FALD",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.FaldornL#KHA","GLOBAL",0)~ THEN L#FALB L#KHAG#XB.Faldorn1
 @0
@@ -15,10 +15,10 @@ DO ~SetGlobal("G#XB.FaldornL#KHA","GLOBAL",1)~
 ==L#FALB @5
 EXIT
 
-CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
+CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
 !StateCheck("L#FALD",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.FaldornL#KHA","GLOBAL",1)~ THEN L#FALB L#KHAG#XB.Faldorn2
 @6

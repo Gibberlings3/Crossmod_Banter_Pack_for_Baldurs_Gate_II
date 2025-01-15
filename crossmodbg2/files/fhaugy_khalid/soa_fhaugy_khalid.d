@@ -1,6 +1,6 @@
 CHAIN IF ~InParty("L#FHA")
 See("L#FHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("L#FHA",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.KhalidL#FHA","GLOBAL",0)~ THEN L#KHAB L#FHAG#XB.Khalid1
@@ -16,7 +16,7 @@ EXIT
 
 CHAIN IF ~InParty("L#FHA")
 See("L#FHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("L#FHA",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("L#FhaugyRomanceActive","GLOBAL",2)

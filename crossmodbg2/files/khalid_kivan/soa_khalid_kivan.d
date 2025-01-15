@@ -1,7 +1,7 @@
 CHAIN IF WEIGHT #70 ~InParty("P#KIVAN")
 See("P#KIVAN")
 !StateCheck("P#KIVAN",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.KivanL#KHA","GLOBAL",0)~ THEN L#KHAB L#KHAG#XB.Kivan1
 @0
@@ -15,7 +15,7 @@ EXIT
 CHAIN IF WEIGHT #70 ~InParty("P#KIVAN")
 See("P#KIVAN")
 !StateCheck("P#KIVAN",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.KivanL#KHA","GLOBAL",1)~ THEN L#KHAB L#KHAG#XB.Kivan2
 @5

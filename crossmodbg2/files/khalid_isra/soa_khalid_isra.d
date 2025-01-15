@@ -1,6 +1,6 @@
- CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+ CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("rh#Isra2",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])
@@ -15,9 +15,9 @@ DO ~SetGlobal("G#XB.IsraKhalidBanter1","GLOBAL",1)~
 == BRH#ISR @6
 EXIT
 
-CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 !StateCheck("rh#Isra2",CD_STATE_NOTVALID)
 CombatCounter(0)
 !See([ENEMY])

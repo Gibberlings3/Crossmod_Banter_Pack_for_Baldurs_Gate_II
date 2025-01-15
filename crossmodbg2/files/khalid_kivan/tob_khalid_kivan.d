@@ -1,7 +1,7 @@
 CHAIN IF WEIGHT #70 ~InParty("P#KIVAN")
 See("P#KIVAN")
 !StateCheck("P#KIVAN",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.KivanL#KHATOB","GLOBAL",0)~ THEN L#KHA25B L#KHAG#XB.Kivan.TOB.1
 @0

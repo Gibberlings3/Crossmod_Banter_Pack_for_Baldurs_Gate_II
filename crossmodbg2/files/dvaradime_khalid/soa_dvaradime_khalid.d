@@ -1,7 +1,7 @@
-CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
+CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
 !StateCheck("L#DVA",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("G#XB.Dvaradime.Khalid","GLOBAL",0)~ THEN L#DVAB G#XB.Dvaradime.Khalid.1
 @0
@@ -12,10 +12,10 @@ DO ~SetGlobal("G#XB.Dvaradime.Khalid","GLOBAL",1)~
 ==L#KHAB @4
 EXIT
 
-CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
+CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
 !StateCheck("L#DVA",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
 GlobalGT("L#DvaradimeQuest","GLOBAL",34)
 Global("G#XB.Dvaradime.Khalid","GLOBAL",1)~ THEN L#DVAB G#XB.Dvaradime.Khalid.2

@@ -1,11 +1,11 @@
-CHAIN IF ~InParty("L#KHA")
-See("L#KHA")
+CHAIN IF ~InParty("L#KHALID")
+See("L#KHALID")
 !StateCheck("L#XZE",CD_STATE_NOTVALID)
-!StateCheck("L#KHA",CD_STATE_NOTVALID)
+!StateCheck("L#KHALID",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("G#XB.XzeleL#KHA25","GLOBAL",0)~ THEN L#XZE25B L#KHAG#XB.Xzele.tob.1
+Global("G#XB.XzeleL#KHALID25","GLOBAL",0)~ THEN L#XZE25B L#KHAG#XB.Xzele.tob.1
 @0
-DO ~SetGlobal("G#XB.XzeleL#KHA25","GLOBAL",1)~
+DO ~SetGlobal("G#XB.XzeleL#KHALID25","GLOBAL",1)~
 ==L#KHA25B @1
 ==L#XZE25B @2
 ==L#KHA25B @3
