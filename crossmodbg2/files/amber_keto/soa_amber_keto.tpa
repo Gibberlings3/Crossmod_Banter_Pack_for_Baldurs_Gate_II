@@ -11,8 +11,8 @@ COPY_EXISTING ~bearbl.cre~   ~override~
   
 // interjections
 ACTION_IF enhanced_edition BEGIN 
-  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/fl#utf8_dialogs.tra~ FROM ~m#amber~)
-  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/fl#utf8_dialogs.tra~ FROM ~m#ambern~)
+  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~weidu_external/amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
+  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~weidu_external/amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
 END ELSE BEGIN
   OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
   OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)

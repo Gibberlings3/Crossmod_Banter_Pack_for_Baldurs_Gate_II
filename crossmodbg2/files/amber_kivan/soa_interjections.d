@@ -1,6 +1,6 @@
 // AMBER JOINING
 
-I_C_T M#AMBER %actual_joining_state% GI#XB.KoSOnAmberJoining
+I_C_T M#AMBER ~%actual_joining_state%~ GI#XB.KoSOnAmberJoining
 == P#KIVJ IF ~InParty("P#Kivan")
 !StateCheck("P#Kivan",CD_STATE_NOTVALID)~ THEN @60 /* Setting a bound spirit free is a good deed, <CHARNAME>, but there is definitely something amiss with this one.  */
 END
@@ -9,7 +9,7 @@ END
 
 EXTEND_BOTTOM M#KCUT 1 2 3 4
 IF ~InParty("P#Kivan")
-!StateCheck("P#Kivan",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("G#XB.KoSKidnapResponse","GLOBAL",1)~ EXTERN M#AMBERN %actual_kidnapping_state%
+!StateCheck("P#Kivan",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("G#XB.KoSKidnapResponse","GLOBAL",1)~ EXTERN M#AMBERN ~%actual_kidnapping_state%~
 END
 
 CHAIN IF WEIGHT #-1 ~Global("M#AmberKidnap","GLOBAL",4)
