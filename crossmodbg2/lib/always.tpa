@@ -63,6 +63,8 @@ ACTION_IF game_is_bg2ee OR game_is_eet BEGIN
     tob_verrsza_foundling tob_verrsza_gahesh tob_walahnan_afuzuuvi tob_walahnan_khalid tob_walahnan_quayle tob_will_foundling tob_will_petsy tob_will_quayle 
     tob_xzele_afuzuuvi tob_xzele_ajantis tob_xzele_eddard tob_xzele_fhaugy tob_xzele_foundling tob_xzele_isra tob_xzele_khalid tob_xzele_skiecost tob_xzele_walahnan 
     tob_xzele_will tob_xzele_yoshimo-remorse tob_xzele_yvette 
+    // added in v25
+    soa_faldorn-imp_wilson soa_faldorn-imp_beaurin-legacy soa_faldorn-imp_beaurin-legacy-hidden
 
   END
   LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 

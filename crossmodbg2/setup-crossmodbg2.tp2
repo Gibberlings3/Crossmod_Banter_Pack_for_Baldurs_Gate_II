@@ -20,15 +20,15 @@ README ~crossmodbg2/readme-crossmodbg2.html~
 
 AUTO_TRA ~%tra_location%/%s~
 
-LANGUAGE ~English~ ~english~ ~crossmodbg2/languages/english/weidu.tra~
-LANGUAGE ~German~  ~german~ ~crossmodbg2/languages/english/weidu.tra~
-                            ~crossmodbg2/languages/german/weidu.tra~
-//LANGUAGE ~Russian~ ~russian~ ~crossmodbg2/languages/english/weidu.tra~
-//                             ~crossmodbg2/languages/russian/weidu.tra~
-//LANGUAGE ~Italian~ ~italian~ ~crossmodbg2/languages/english/weidu.tra~
-//                             ~crossmodbg2/languages/italian/weidu.tra~
-//LANGUAGE ~Simplified Chinese~ ~schinese~ ~crossmodbg2/languages/english/weidu.tra~
-//                                         ~crossmodbg2/languages/schinese/weidu.tra~
+LANGUAGE ~English~ ~english~             ~crossmodbg2/languages/english/weidu.tra~
+LANGUAGE ~German~  ~german~              ~crossmodbg2/languages/english/weidu.tra~
+                                         ~crossmodbg2/languages/german/weidu.tra~
+LANGUAGE ~Russian~ ~russian~             ~crossmodbg2/languages/english/weidu.tra~
+                                         ~crossmodbg2/languages/russian/weidu.tra~
+LANGUAGE ~Italian~ ~italian~             ~crossmodbg2/languages/english/weidu.tra~
+                                         ~crossmodbg2/languages/italian/weidu.tra~
+LANGUAGE ~Simplified Chinese~ ~schinese~ ~crossmodbg2/languages/english/weidu.tra~
+                                         ~crossmodbg2/languages/schinese/weidu.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
