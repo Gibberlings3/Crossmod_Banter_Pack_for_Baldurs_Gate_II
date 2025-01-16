@@ -35,5 +35,3 @@ END
 EXTEND_BOTTOM ~C#SOLAU.bcs~   ~crossmodbg2/files/eilistraee_solaufein/eilistraeessong_c#solau.baf~ EVALUATE_BUFFER
 /* remove extra Solaufein from ES (my Solaufein will take over quest start) */
 EXTEND_TOP ~AR2401.bcs~ ~crossmodbg2/files/eilistraee_solaufein/eilistraeessong_ar2401.baf~
-
-COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/interjections/jasteys_solaufein/jasteys_solaufein_eilistraeessong_crossmod.d~
