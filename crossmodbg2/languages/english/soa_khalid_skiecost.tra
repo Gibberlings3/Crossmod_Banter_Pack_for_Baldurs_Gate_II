@@ -1,6 +1,12 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS UTF-8             \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0 = ~I m-must admit it's g-good to see you safe. Alive. When I heard you were k-killed and <CHARNAME> was accused of b-being your murder... It all felt... surreal. And confusing.~
 @1 = ~Even n-now, it feels strange.~
-@2 = ~Mhm, well, it was sorta strange and... when I saw… I'm not even sure who I saw... I only remember that a few seconds I got completely disoriented... As if someone tore me out of a picture.~
+@2 = ~Mhm, well, it was sorta strange and... when I saw... I'm not even sure who I saw... I only remember that a few seconds I got completely disoriented... As if someone tore me out of a picture.~
 @3 = ~We were all happy and victorious, I played my role in all of this, and suddenly... there was just this pain. But I know <CHARNAME> was tricked, and we kinda all were.~
 @4 = ~Me too. For a m-moment I was afraid that... on some level, it could be true. Even though I d-didn't want it to be.~
 @5 = ~But I'm back! And the scar is really small, so I suppose I can live with it. Or maybe one day I'll meet a cleric who can cast some... Banish Scar spell or something.~
@@ -12,12 +18,12 @@
 @11 = ~Don't get me wrong, Skie, I am... g-glad you're here. I just think your father is going to miss you. Quite a lot, p-probably.~
 @12 = ~Yes, that's... probably true. And I suppose I'll miss him too, b-but I just couldn't stay there.~
 @13 = ~I want to be a hero. I want to be known for many things, not just as "the girl who had her soul sucked into a dagger." Seriously.~
-@14 = ~...what I m-mean, Skie, is that you really surprised me with how you've ch-changed lately. I still remember how you were—I mean... you've learned s-so much.~
-@15 = ~Thank you, Khalid. I suppose I did. I mean—I know I did!~
+@14 = ~...what I m-mean, Skie, is that you really surprised me with how you've ch-changed lately. I still remember how you were–I mean... you've learned s-so much.~
+@15 = ~Thank you, Khalid. I suppose I did. I mean–I know I did!~
 @16 = ~Jaheira was usually the one to admire s-someone's effort, and I think she would appreciate yours. You've come a long way.~
 @17 = ~So have you, and... I'm really... sorry that she's not here, you know. She could be scary sometimes, and I'd get goosebumps when she would turn into a wolf or something, but... I kinda miss her.~
 @18 = ~I... know the feeling.~
-@19 = ~No. I mean... I guess this thing you're experiencing is much bigger. And... it must be scary to have this overwhelming emotion inside making you feel smaller and—I think that's how you may be feeling right now.~
+@19 = ~No. I mean... I guess this thing you're experiencing is much bigger. And... it must be scary to have this overwhelming emotion inside making you feel smaller and–I think that's how you may be feeling right now.~
 @20 = ~I d-do, and I'm surprised you could describe it so accurately.~
 @21 = ~I've seen it before and... I know many think I'm just a brat. And some are simply envious of how much I know about fashion and perfumes, but... I recognize fear when I see it. And this... big sadness.~
 @22 = ~...~
@@ -47,9 +53,9 @@
 @46 = ~Uh, I still have corns on both sides of my feet... I thought it would be all easier...~
 @47 = ~I... I'm sorry. I'll understand if you want to find a b-better t-teacher, Skie.~
 @48 = ~I... I don't know. I don't want to give up so easily, but...~
-@49 = ~I realize I need to train and get better, and just get over the corns because—I don't want to get hurt again. Be surprised and end up tricked, wounded or stabbed, but... I guess I may need more time. So... I'm not giving up just yet, but I may need you to be patient. And... I could use some aloe vera or something.~
+@49 = ~I realize I need to train and get better, and just get over the corns because–I don't want to get hurt again. Be surprised and end up tricked, wounded or stabbed, but... I guess I may need more time. So... I'm not giving up just yet, but I may need you to be patient. And... I could use some aloe vera or something.~
 @50 = ~I'll try t-to be a b-better teacher, Skie. I'm sorry.~
-@51 = ~You d-did so much better, Skie. This maneuver—you can do it quite well now. Just a little bit of p-polishing, and you'll be able t-to use it in practice. I m-mean... in battle.~
+@51 = ~You d-did so much better, Skie. This maneuver–you can do it quite well now. Just a little bit of p-polishing, and you'll be able t-to use it in practice. I m-mean... in battle.~
 @52 = ~Really? Eh, I wish I could be better at it. I can handle a lock and sneak past enemies, but maneuvers...~
 @53 = ~You're doing really w-well.~
 @54 = ~You're just trying to make me feel better. Ugh, I think I need a nice long bath and... I need to get rid of these corns...~
@@ -59,13 +65,13 @@
 @58 = ~You know what? I think you're WAY better than that old teacher Daddy would hire. You're so much more patient and nicer, and you treat me well. So... thank you.~
 @59 = ~I suppose I owe you something. Hmm, maybe a cute scarf? Oh! Or a nice pair of shoes!~
 @60 = ~It's f-fine, Skie, I d-don't want anything in return. Really. It was a pleasure.~
-@61 = ~Wow. Just—wow. You're just too kind, Khalid! You should teach more people! Or start your own school or something!~
+@61 = ~Wow. Just–wow. You're just too kind, Khalid! You should teach more people! Or start your own school or something!~
 @62 = ~Well... I think I'll stick t-to teaching my friends. But thank you. I', g-glad I could help.~
 @63 = ~I wanted t-to thank you, Skie.~
 @64 = ~Oh, you're welcome! But... what did I do?~
 @65 = ~You helped me t-take my mind off... d-death. And... other things that happen. I think that teaching you made me feel a b-bit better.~
 @66 = ~Hmm... I... I know what you mean.~
-@67 = ~People think I only care about myself, but I've seen people die or do nasty things, or—or I've seen nasty things done to people. Especially during our fight with the crusade or when all those refugees came to Baldur's Gate.~
+@67 = ~People think I only care about myself, but I've seen people die or do nasty things, or–or I've seen nasty things done to people. Especially during our fight with the crusade or when all those refugees came to Baldur's Gate.~
 @68 = ~We could all use a distraction every now and then! A book. Or... or going to a fashion show. Or... helping a friend learn something. Right?~
 @69 = ~Right. So... thank you, Skie.~
 @70 = ~No problem! Well, I had to spend an entire hour peeling off those corns, but... it was worth it. I think.~

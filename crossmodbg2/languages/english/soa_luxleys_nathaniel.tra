@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~There's something on my mind at the moment, <CHARNAME>, and I'd like to talk to you about it.~
 @1    = ~It's Sebastian. You seem to be acting very...affectionately towards him lately, and it's been bothering me. Could you...?~
 @2    = ~Things have been very difficult for him, Nathaniel. Can you blame me for wanting to help him?~

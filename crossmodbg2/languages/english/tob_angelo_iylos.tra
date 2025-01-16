@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~You've been glaring at me for the past hour. Was there something you wanted, or...~
 @1    = ~No. I am trying to discern your intentions, mercenery. Never trust those you have no knowledge of.~
 @2    = ~Don't tell me you haven't heard of me? You've heard of pretty much everyone else <CHARNAME> travels with!~

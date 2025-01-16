@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~I take it that you've known <CHARNAME> for some time now.~
 @1    = ~If you hope to hear about <PRO_HISHER> adventures in the north, know that they were no less desperate than <PRO_HISHER> current quest. How we survived at all, I shall never know.~
 @2    = ~Not as such, no. We met briefly when <PRO_HESHE> freed me from captivity in Nashkel, but we were never formally introduced. I suspect that I shall regret changing that.~

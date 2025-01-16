@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS UTF-8             \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~So... you died?~
 @1    = ~Yes, a long time ago. I was a part of the Visionhive until <CHARNAME> met me. I suppose it must be hard to understand-~
 @2    = ~You were a prisoner then. Am I correct in saying that?~

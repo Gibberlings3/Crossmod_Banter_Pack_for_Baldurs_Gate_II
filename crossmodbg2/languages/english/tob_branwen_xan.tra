@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~Are you going to go back to the isles after all this?~ [O#XAN000]
 @1    = ~Nah, I think I'll stay. Free food, <CHARNAME>'s company, good weapons - what could be better?~
 @2    = ~Besides, I like proving you wrong.~

@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~Are you a warrior?~
 @1    = ~Yes. Why do you ask?~
 @2    = ~Because you wear no armour. I thought most warriors wear armour. Aren't you afraid that you might be mortally wounded?~

@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 @0    = ~I'd like to send Gavin back to the mainland.~
 @1    = ~I've changed my mind. I don't want to send Gavin back, after all.~
 @2    = ~I'll take Gavin back.~

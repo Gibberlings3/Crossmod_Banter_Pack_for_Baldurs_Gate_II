@@ -1,3 +1,9 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS UTF-8             \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
 // strings for the log: banter installation
 @1    = ~: Mod detected, checking for crossmod content.~
 @2    = ~: Mod not detected, moving to next mod.~
