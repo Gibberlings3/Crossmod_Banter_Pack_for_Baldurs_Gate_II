@@ -6,7 +6,7 @@ call "%~dp0..\ModPackaging\utilities\ie_games.bat"
 
 REM /* MODIFY: set the values of the 3 variables below to reflect the current mod version */
 set "mod_name=Crossmod Banter Pack for BG2"
-set mod_version=v24.1
+set mod_version=v25
 set mod_folder=crossmodbg2
 
 REM /* MODIFY: list here which IE games the mod is compatible with, from this list of possibilities: */
@@ -20,9 +20,9 @@ REM /* the tispack_folder is the root directory that contains the win32, osx, an
 REM /* the iconv_folder is where your iconv.exe utility is stored (leave alone if you are not converting charsets for BGEE) */
 REM /* the mod_readme link should point to the online readme and work fine as-is if the mod uses the standard G3 naming scheme */
 set ico_folder=%mod_folder%\style
-set audio_folder=%mod_folder%
+set audio_folder=%mod_folder%\audio
 set tispack_folder=%mod_folder%\tiz
-set iconv_folder=%mod_folder%\tra\iconv
+set iconv_folder=%mod_folder%\languages\iconv
 set mod_readme=http://www.gibberlings3.net/readmes/readme-%mod_folder%.html
 
 REM /* MODIFY: if you don't need to build a specific package, you can disable it by setting the appropriate variable below to 0 */
