@@ -1,6 +1,6 @@
 ACTION_IF enhanced_edition BEGIN 
 
-  WITH_TRA ~AjantisBG2/tra/autotra/fl#utf8_ajantis_friendshippath.tra~ BEGIN
+  WITH_TRA ~AjantisBG2/tra/autotra/%s/fl#utf8_ajantis_friendshippath.tra~ BEGIN
     OUTER_SET strref1 = RESOLVE_STR_REF(@20)
     /* Irenicus had us imprisoned in a tunnel system beneath Athkatla. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we caught up with him again, he overpowered me and stole my divine soul. */
 
@@ -16,7 +16,7 @@ ACTION_IF enhanced_edition BEGIN
   
 END ELSE BEGIN 
 
-  WITH_TRA ~AjantisBG2/tra/autotra/ajantis_friendshippath.tra~ BEGIN
+  WITH_TRA ~AjantisBG2/tra/autotra/%s/ajantis_friendshippath.tra~ BEGIN
     OUTER_SET strref1 = RESOLVE_STR_REF(@20)
     /* Irenicus had us imprisoned in a tunnel system beneath Athkatla. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we caught up with him again, he overpowered me and stole my divine soul. */
 
