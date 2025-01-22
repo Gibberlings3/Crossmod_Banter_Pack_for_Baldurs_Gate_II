@@ -1,3 +1,0 @@
-soa_sharteel_hubelpot
-  needs @9, @10 translated
-    
