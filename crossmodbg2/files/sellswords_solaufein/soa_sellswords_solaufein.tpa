@@ -22,5 +22,3 @@ END ELSE BEGIN
   OUTER_SET O#LLKIMM_153 = STATE_WHICH_SAYS 153 IN ~sellswords/%s/Sellswords.tra~ FROM ~O#LLKIMM~
 END
 
-COMPILE EVALUATE_BUFFER ~crossmodbg2/soa/interjections/jasteys_solaufein/jasteys_solaufein_sellswords_crossmod.d~
-	END
