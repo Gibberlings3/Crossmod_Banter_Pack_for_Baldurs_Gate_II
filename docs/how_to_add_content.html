@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Using the New Crossmod Framework</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../crossmodbg2/style/g3readme_cam_022916.css" type="text/css" />
+<link href="../crossmodbg2/style/g3icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<div id="container">
+  <div class="ribbon_menu">
+    <ul>
+      <li><a href="#Features">Features</a></li>
+      <li><a href="#Using">Using</a></li>
+      <li><a href="#Content">Adding Content</a></li>
+      <li><a href="#Notes">Other Notes</a></li>
+      <li><a href="#Example">Example</a></li>
+      <li><a href="#Help">Need Help?</a></li>
+    </ul>
+    <span><img src="style/g3_logo_2018.gif" width="237" height="83" alt="G3" /></span> </div>
+  <div class="ribbon_bubble">
+    <div class="ribbon_rectangle">
+      <h1>Using the New Crossmod Framework</h1>
+    </div>
+    <div class="ribbon_triangle-l"></div>
+    <div class="ribbon_triangle-r"></div>
+    <div class="section">
+      <p>A new framework has been developed for the various Crossmod packs for BG. BG2, and IWD to make it substantially easier for modders to add content. The basic idea is that, once you've registered your mod, all you have to do is drop properly-named files into the correct folders and Crossmod will do the rest. For example, if jastey and Lava got together and wrote some BG2 banters between jastey's Ajantis and Lava's Foundling, all they would have to do is drop soa_ajantis_foundling.d and tob_ajantis_foundling.d in the files/ajantis_foundling folder and add soa_ajantis_foundling.tra and tob_ajantis_foundling.tra to the languages/english folder. The new framework will detect and compile these dialogue files if it detects that Ajantis and Foundling are installed without needing to alter the tp2, main tra file, or anything else. Logging would also be handled automatically. </p>
+      <p>This guide is intended to help modders add their content to the various Crossmod mods. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Features" name="Features"></a>
+      <h2>Features of the new framework</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The primary goal is to make it easier for modders to contribute content. As mentioned in the preamble, this is accomplished mainly by enforcing a naming convention, but a great deal of flexibility has been built into the framework. For example, Crossmod will also check for and automatically include a tpa file to allow for the  execution of tp2 code. This can be used for anything--for the most part it's generally used for <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/files/kivan_xan/soa_kivan_xan.tpa">extending scripts</a>, but it's also used to <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/files/keto_xan/soa_keto_xan.tpa">add audio</a> (Xan), update <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/files/khalid_branwen/soa_khalid_branwen.tpa">lines in other mods</a> (Khalid), or even <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/files/skie_petsy/soa_skie_petsy.tpa">add items</a> (Petsy). </p>
+      <p>While Crossmod has generally been viewed as a way for mod NPCs to banter with one another, this  ability to include these tpa files allows for a broader application of Crossmod. The BG2 Crossmod is already being used for mod NPCs to interject into quest mods like Tales of the Deep Gardens and The Longer Road, and the new framework makes this process even easier. (While conceivably it could  be used to resolve install order differences between any number of mods,  this is not what I want--I want to keep the Crossmod's focus on content, not on trying to resolve install order conflicts.)</p>
+      <p>Under the hood, the logging and feedback mechanisms have been simplified. The current version of BG2 Crossmod has just under 1000 strings in the setup file, almost all of which only serve to provide feedback and logging. This has been scrapped and the feedback/logging strings and now automatically generated from about six template strings.</p>
+      <p>Faster installation is also a goal. The previous versions of Crossmod would check for every bit of crossmod content in isolation, which could mean repeatedly checking for an installed mod even though it had already been checked. The new framework makes a list of registered mods installed and then looks for interactions between them. The drawback is that new framework's flexibility means that it checks for every installed mod against every other installed mod, not just the interactions on a static list. In general the new framework should be faster for most users, but may be slower for massively modded installs. </p>
+      <p>For non-English users, Crossmod would install content in their language where it was available (only a few banters), and then the rest in English. I've <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/setup-crossmodbg2.tp2#L8">added an option</a> to <strong>only</strong> install content available in their language, though it's disabled by default to match current behavior. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Using" name="Using"></a>
+      <h2>Using the new framework</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The first step is registering your mod. I've included a spreadsheet where you give basic info about your mod. (The spreadsheet was created by the free <a href="https://www.libreoffice.org/">LibreOffice</a>; I believe the format is supported by OpenOffice and Excel, but let me know if it's not and I can try a different format.) In the master_input tab, enter your information on the first blank row. Note that 'expansion' means Siege of Dragonspear for Baldur's Gate (not Tales of the Sword Coast), Throne of Bhaal for BG2, and Heart of Winter for IWD. 'Base game' means the game without these expansions installed. </p>
+      <ul>
+        <li><strong>[required] Mod Name and Author:</strong> Used for logging and feedback. </li>
+        <li><strong>[required] Short Name:</strong> This is used internally by Crossmod as your mod's name. <em>Keep it unique and lowercase. </em></li>
+        <li><strong>tp2: </strong>Your mod's tp2 filename for use in a MOD_IS_INSTALLED check. </li>
+        <li><strong>Base file and Base comp#:</strong> This is used to detect your mod in the base game, e.g. in BG2 this is to identify the SoA part of your mod. You can either provide a component number (to be used with the <strong>tp2</strong> field in a MOD_IS_INSTALLED check) or an override file unique to the mod to check for installation. This field can be left blank, e.g. leave the SoA fields blank if your mod only has ToB content, or vice versa. You only need to fill in one  (component number or file) for detection and can leave the other field blank. </li>
+        <li><strong>Exp file and Exp comp#: </strong>Same as above, but now for the expansion. </li>
+        <li><strong>RC Base and RC Exp:</strong> For NPCs, these should be your base and expansion override scripts for your NPC. This is used to automatically extend your NPC scripts with romance conflict scripting, if the player choooses to install it. </li>
+      </ul>
+      <p>After this information is entered, you can copy the contents of the for_mod_array tab into the mod's <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/mod_array.tpa">working array</a>. Once registered, you never have to do this step again except if you want to update information. </p>
+      <p>Mods that are  in the existing Crossmod packs have already been registered. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Content" name="Content"></a>
+      <h2>The mod is registered, let's add some content</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The new framework installs in one of two modes, normal or romance conflicts. The former is what you would normally expect, e.g. banters between NPCs, interjections, etc. The latter is mainly to handle romance conflicts. Depending on the mode the framework will INCLUDE or COMPILE certain files automatically. The installer will also either work on the base game or expansion, and expect files to be prefixed appropriately:</p>
+      <ul>
+        <li> bg - Baldur's Gate </li>
+        <li>sod - Siege of Dragonspear</li>
+        <li>soa - Shadows of Amn</li>
+        <li>tob - Throne of Bhaal</li>
+        <li>iwd - Icewind Dale</li>
+        <li>how - Heart of Winter</li>
+      </ul>
+      <p>When working in romance conflict mode, it will add rc_ in front of the game prefix, so romance conflicts for Throne of Bhaal should start with rc_tob_ whereas normal content for Throne of Bhaal should start with tob_. If you want to install crossmod content for two mods,  create a folder in files using the two mod's short names: shortname1_shortname2. </p>
+      <p>When the installer runs, it will check if a mod on its list is installed, and then check for all possible variations of Crossmod content between them and execute the following steps automatically (from above, note that prefix will be something like 'soa' or 'rc_tob)':</p>
+      <ul>
+        <li>It will <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/common.tpa#L136">locate and INCLUDE</a> files/shortname1_shortname2/prefix_shortname1_shortname2.tpa. This is done <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/common.tpa#L135">while wrapped in WITH_TRA</a>, so it'll automatically use the matching tra files. If you need to get tra references from a different file, WITH_TRA does work inside another WITH_TRA and is <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/files/khalid_branwen/soa_khalid_branwen.tpa">used already</a> in a few places. Note that this is also executed first so you can use it to <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/files/alternatives_ajantis/soa_alternatives_ajantis.tpa">set needed variables</a> for your dialogue file. </li>
+        <li>It will <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/common.tpa#L156">locate and COMPILE</a> (with EVALUATE_BUFFER enabled) files/shortname1_shortname2/prefix_shortname1_shortname2.d. Like the INCLUDE, it will automatically use the matching tra files. </li>
+        <li><em>If it's in romance conflict mode</em>, it will also <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/common.tpa#L191C13-L191C13">attempt to EXTEND_TOP</a> the NPC's override script. This one is a little more complicated--it will look for a baf named after the NPC's override script (as set in registration) with the expected prefix. However, it will also use the base game script for the expansion, and vice versa, since most of the existing romance conflicts only provided one baf file. For example, the Corthala Romantique will <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/tree/v25_dev/crossmodbg2/files/corthala-romantique_corthala-romantique">get this script applied</a> to both valygar.bcs (when installed for SoA) and valy25.bcs (when installed for ToB), as these two override scripts were specified in the registration. </li>
+      </ul>
+      <p>In the last one, note that you can use shortname_shortname to designate code or banters to run if just your mod is identified; Artisan's Minerva uses this trick in IWD to install a cooking banter, but for the most part it's generally used for romance conflict scripting. </p>
+      <p>If your mod is EE-only, you're welcome to provide UTF-8 encoded tra files, otherwise please keep them in ANSI. If they are UTF-8 you'll need to add them to the <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/always.tpa#L32">mod's no-convert array</a> so that they won't get wrecked by the conversion process. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Notes" name="Notes"></a>
+      <h2>Some other notes</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>Before checking for crossmod content, the framework will check for a 'prep' file like <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/soa_prep.tpa">this one for SoA</a> or <a href="https://github.com/Gibberlings3/Crossmod_Banter_Pack_for_Baldurs_Gate_II/blob/v25_dev/crossmodbg2/lib/tob_prep.tpa">this one for ToB</a>. These files are meant to catch anything that may trip up the installer or otherwise hinder the new content, such as missing dialogue files, missing 2da entries, or other minor fixes that are needed. Note that these use the same prefix that's expected for other automatic files. </p>
+      <p>In the BG version of Crossmod, the CPM libraries are loaded in the ALWAYS block. All of the normal CPM variables you expect will be available. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Example" name="Example"></a>
+      <h2>An example with a theoretical new mod</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>Let's say I create new NPC mod for BG2 and work on some crossmod with other authors and want to include it in the BG2 Crossmod pack. I register the mod with the following information</p>
+      <ul>
+        <li><strong>[required] Mod Name and Author:</strong> &quot;Melicamp for BG2&quot; by &quot;CamDawg&quot;</li>
+        <li><strong>[required] Short Name:</strong> melicamp<em> </em></li>
+        <li><strong>tp2: </strong>I leave this blank, as I'm just going to use an item in the next step:</li>
+        <li><strong>Base file and Base comp#:</strong> I use 'bcdmeli.dlg', as it is his SoA banter file. </li>
+        <li><strong>Exp file and Exp comp#: </strong>I use 'bcdmel25.dlg', as it is his ToB banter file. </li>
+        <li><strong>RC Base and RC Exp:</strong> I list his override scripts as cdmeli.bcs and cdmeli25.bcs. </li>
+      </ul>
+      <p>Since <em>of course</em> Melicamp is romanceable, I add a romance conflict script to files/melicamp_melicamp/rc_soa_cdmeli.baf. This will be automatically applied to both his SoA and ToB override scripts if the player installs romance conflicts. </p>
+      <p>I write some SoA banters with Lava with his Eddard and Hephernaan NPCs. I just drop these into files/melicamp_eddard/soa_melicamp_eddard.d and  files/melicamp_hephernaan/soa_melicamp_hephernaan.d. (Note that the order is agnostic, e.g. the Eddard banters can also be files/eddard_melicamp/soa_eddard_melicamp.d.) I add matching tra files to languages/english. </p>
+      <p>I write both SoA and ToB banters with jastey for her Ajantis mod. These go into files/melicamp_ajantis/soa_melicamp_ajantis.d and files/melicamp_ajantis/tob_melicamp_ajantis.d, and add matching tra files to languages/english. I also record some audio for the SoA banters, so I add the audio to files/melicamp_ajantis and then add files/melicamp_ajantis/soa_melicamp_ajantis.tpa with some code to install the audio files. </p>
+      <p>Finally, I want Melicamp to comment on various events during Tales of the Deep Gardens. I use files/melicamp_totdg/soa_melicamp_totdg.tpa to set some variables and then add interjections in files/melicamp_totdg/soa_melicamp_totdg.d. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Help" name="Help"></a>
+      <h2>Need help?</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>While meant to streamline the process for modders to add content, this is a substantial change from the current versions of these mods. Feel free to ask any questions or suggest improvements to the process!</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
