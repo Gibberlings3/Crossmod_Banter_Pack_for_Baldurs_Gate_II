@@ -1,35 +1,15 @@
-ACTION_IF enhanced_edition BEGIN 
+WITH_TRA ~AjantisBG2/tra/autotra/%s/ajantis_friendshippath.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@20)
+  /* Irenicus had us imprisoned in a tunnel system beneath Athkatla. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we caught up with him again, he overpowered me and stole my divine soul. */
 
-  WITH_TRA ~AjantisBG2/tra/autotra/%s/fl#utf8_ajantis_friendshippath.tra~ BEGIN
-    OUTER_SET strref1 = RESOLVE_STR_REF(@20)
-    /* Irenicus had us imprisoned in a tunnel system beneath Athkatla. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we caught up with him again, he overpowered me and stole my divine soul. */
+  OUTER_SET strref2 = RESOLVE_STR_REF(@21)
+  /* Dynaheir and Khalid are dead... And my soul has been stolen. My search for this Irenicus is quite personal, and I have much to repay him! */
 
-    OUTER_SET strref2 = RESOLVE_STR_REF(@21)
-    /* Dynaheir and Khalid are dead... And my soul has been stolen. My search for this Irenicus is quite personal, and I have much to repay him! */
+  OUTER_SET strref3 = RESOLVE_STR_REF(@24)
+  /* Irenicus kept us imprisoned beneath Athkatla in a tunnel system. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we started fighting him, he and Imoen were captured by the Cowled Wizards. */
 
-    OUTER_SET strref3 = RESOLVE_STR_REF(@24)
-    /* Irenicus kept us imprisoned beneath Athkatla in a tunnel system. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we started fighting him, he and Imoen were captured by the Cowled Wizards. */
-
-    OUTER_SET strref4 = RESOLVE_STR_REF(@25)
-    /* Dynaheir and Khalid are dead... and he tortured me. My search for this Irenicus is very personal, and I will repay him! */
-  END
-  
-END ELSE BEGIN 
-
-  WITH_TRA ~AjantisBG2/tra/autotra/%s/ajantis_friendshippath.tra~ BEGIN
-    OUTER_SET strref1 = RESOLVE_STR_REF(@20)
-    /* Irenicus had us imprisoned in a tunnel system beneath Athkatla. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we caught up with him again, he overpowered me and stole my divine soul. */
-
-    OUTER_SET strref2 = RESOLVE_STR_REF(@21)
-    /* Dynaheir and Khalid are dead... And my soul has been stolen. My search for this Irenicus is quite personal, and I have much to repay him! */
-
-    OUTER_SET strref3 = RESOLVE_STR_REF(@24)
-    /* Irenicus kept us imprisoned beneath Athkatla in a tunnel system. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we started fighting him, he and Imoen were captured by the Cowled Wizards. */
-
-    OUTER_SET strref4 = RESOLVE_STR_REF(@25)
-    /* Dynaheir and Khalid are dead... and he tortured me. My search for this Irenicus is very personal, and I will repay him! */
-  END
-  
+  OUTER_SET strref4 = RESOLVE_STR_REF(@25)
+  /* Dynaheir and Khalid are dead... and he tortured me. My search for this Irenicus is very personal, and I will repay him! */
 END
 
 STRING_SET_EVALUATE strref1 @15
