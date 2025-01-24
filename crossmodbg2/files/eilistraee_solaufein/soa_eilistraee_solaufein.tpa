@@ -11,25 +11,15 @@ COPY_EXISTING ~AR2401.BCS~ ~override~
 	END
   BUT_ONLY
   
-ACTION_IF enhanced_edition BEGIN 
-    
-  // Get state for C#SOLAU %dazu_04% @156 (c#solau.d)
-  /* ~(snort) So much for my noble approach. But I understand your answer - I would have done the same, in your place. I will follow you discretely then.~ */
-  OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/%s/fl#utf8_c#solatra.tra~ FROM ~c#solau~
-  // Get state for C#SOLAU %dazu_05% @2703 (c#solau.d)
-  /* ~Search for me outside of the elven camp.~ */
-  OUTER_SET dazu_05 = STATE_WHICH_SAYS 2703 IN ~C#Solaufein/Translations/%s/fl#utf8_c#solatra.tra~ FROM ~c#solau~
+// Get state for C#SOLAU %dazu_04% @156 (c#solau.d)
+/* ~(snort) So much for my noble approach. But I understand your answer - I would have done the same, in your place. I will follow you discretely then.~ */
+OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/autotra/%s/c#solatra.tra~ FROM ~c#solau~
 
-END ELSE BEGIN
-    
-  // Get state for C#SOLAU %dazu_04% @156 (c#solau.d)
-  /* ~(snort) So much for my noble approach. But I understand your answer - I would have done the same, in your place. I will follow you discretely then.~ */
-  OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/%s/c#solatra.tra~ FROM ~c#solau~
-  // Get state for C#SOLAU %dazu_05% @2703 (c#solau.d)
-  /* ~Search for me outside of the elven camp.~ */
-  OUTER_SET dazu_05 = STATE_WHICH_SAYS 2703 IN ~C#Solaufein/Translations/%s/c#solatra.tra~ FROM ~c#solau~
-  
-END
+// Get state for C#SOLAU %dazu_05% @2703 (c#solau.d)
+/* ~Search for me outside of the elven camp.~ */
+OUTER_SET dazu_05 = STATE_WHICH_SAYS 2703 IN ~C#Solaufein/Translations/autotra/%s/c#solatra.tra~ FROM ~c#solau~
+
+COMPILE EVALUATE_BUFFER ~crossmodbg2/files/eilistraee_solaufein/soa_eilistraee_solaufein.d~
 
 /* my Solaufein will talk about Eilistraee's Clearing if he joins at Underdark exit */
 EXTEND_BOTTOM ~C#SOLAU.bcs~   ~crossmodbg2/files/eilistraee_solaufein/eilistraeessong_c#solau.baf~ EVALUATE_BUFFER
