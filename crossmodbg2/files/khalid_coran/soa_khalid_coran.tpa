@@ -1,23 +1,9 @@
-ACTION_IF enhanced_edition BEGIN 
-
-  WITH_TRA ~coran/%s/fl#utf8_o#coranj.tra~ BEGIN
-    OUTER_SET strref1 = RESOLVE_STR_REF(@117)
-    /* I only wish Khalid and Dynaheir had the same blessing. */
-    
-    OUTER_SET strref2 = RESOLVE_STR_REF(@125)
-    /* Ah, yes... It is truly a waste how death grasps at youth and beauty. Dynaheir had both, and Khalid was a fine companion. */
-  END
+WITH_TRA ~coran/%s/o#coranj.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@117)
+  /* I only wish Khalid and Dynaheir had the same blessing. */
   
-END ELSE BEGIN
-
-  WITH_TRA ~coran/%s/o#coranj.tra~ BEGIN
-    OUTER_SET strref1 = RESOLVE_STR_REF(@117)
-    /* I only wish Khalid and Dynaheir had the same blessing. */
-    
-    OUTER_SET strref2 = RESOLVE_STR_REF(@125)
-    /* Ah, yes... It is truly a waste how death grasps at youth and beauty. Dynaheir had both, and Khalid was a fine companion. */
-  END
-
+  OUTER_SET strref2 = RESOLVE_STR_REF(@125)
+  /* Ah, yes... It is truly a waste how death grasps at youth and beauty. Dynaheir had both, and Khalid was a fine companion. */
 END
 
 STRING_SET_EVALUATE strref1 @10

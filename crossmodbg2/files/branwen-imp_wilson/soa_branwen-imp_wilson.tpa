@@ -1,5 +1,1 @@
-ACTION_IF enhanced_edition BEGIN 
-  OUTER_SET WilsonBranwen1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles/tra/%s/fl#utf8_bwilson.tra~ FROM ~BNALIA~
-END ELSE BEGIN
-  OUTER_SET WilsonBranwen1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BNALIA~
-END
+OUTER_SET WilsonBranwen1 = STATE_WHICH_SAYS 206 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BNALIA~

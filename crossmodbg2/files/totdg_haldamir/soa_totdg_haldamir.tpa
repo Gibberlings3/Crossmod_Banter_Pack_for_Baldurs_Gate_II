@@ -1,9 +1,4 @@
-ACTION_IF enhanced_edition BEGIN 
-  OUTER_SET actual_interject_state_1 = (STATE_WHICH_SAYS 39 IN ~TotDG/Translations/%s/fl#utf8_0xWIZDG.tra~ FROM ~0xWIZDG~)
-  OUTER_SET actual_interject_state_2 = (STATE_WHICH_SAYS 37 IN ~TotDG/Translations/%s/fl#utf8_0xWIZDG.tra~ FROM ~0xWIZDG~)
-END ELSE BEGIN
-  OUTER_SET actual_interject_state_1 = (STATE_WHICH_SAYS 39 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
-  OUTER_SET actual_interject_state_2 = (STATE_WHICH_SAYS 37 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
-END
+OUTER_SET actual_interject_state_1 = (STATE_WHICH_SAYS 39 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
+OUTER_SET actual_interject_state_2 = (STATE_WHICH_SAYS 37 IN ~TotDG/Translations/%s/0xWIZDG.tra~ FROM ~0xWIZDG~)
 
 EXTEND_TOP ~b!hals.bcs~ ~crossmodbg2/files/totdg_haldamir/b!hals.baf~

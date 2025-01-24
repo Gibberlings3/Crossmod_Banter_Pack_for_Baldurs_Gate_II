@@ -1,87 +1,41 @@
-ACTION_IF enhanced_edition BEGIN 
-
-  WITH_TRA ~weidu_external/kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
-    OUTER_SET strref42 = RESOLVE_STR_REF(@42)
-  END
+WITH_TRA ~kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
+  OUTER_SET strref42 = RESOLVE_STR_REF(@42)
+END
 
 
-  WITH_TRA ~weidu_external/kivan/tra/%s/p#kinew.tra~ BEGIN // p#kinew.tra:
-    OUTER_SET strref85   = RESOLVE_STR_REF(@85)
-    OUTER_SET strref93   = RESOLVE_STR_REF(@93)
-    OUTER_SET strref95   = RESOLVE_STR_REF(@95)
-    OUTER_SET strref104  = RESOLVE_STR_REF(@104)
-    OUTER_SET strref110  = RESOLVE_STR_REF(@110)
-    OUTER_SET strref169  = RESOLVE_STR_REF(@169)
-    OUTER_SET strref174  = RESOLVE_STR_REF(@174)
-    OUTER_SET strref325  = RESOLVE_STR_REF(@325)
-    OUTER_SET strref330  = RESOLVE_STR_REF(@330)
-    OUTER_SET strref1154 = RESOLVE_STR_REF(@1154)
-  END
+WITH_TRA ~kivan/tra/%s/p#kinew.tra~ BEGIN // p#kinew.tra:
+  OUTER_SET strref85   = RESOLVE_STR_REF(@85)
+  OUTER_SET strref93   = RESOLVE_STR_REF(@93)
+  OUTER_SET strref95   = RESOLVE_STR_REF(@95)
+  OUTER_SET strref104  = RESOLVE_STR_REF(@104)
+  OUTER_SET strref110  = RESOLVE_STR_REF(@110)
+  OUTER_SET strref169  = RESOLVE_STR_REF(@169)
+  OUTER_SET strref174  = RESOLVE_STR_REF(@174)
+  OUTER_SET strref325  = RESOLVE_STR_REF(@325)
+  OUTER_SET strref330  = RESOLVE_STR_REF(@330)
+  OUTER_SET strref1154 = RESOLVE_STR_REF(@1154)
+END
 
-  WITH_TRA ~weidu_external/kivan/tra/%s/p#kipid.tra~ BEGIN // p#kipid.tra:
-    OUTER_SET strref118 = RESOLVE_STR_REF(@118)
-    OUTER_SET strref407 = RESOLVE_STR_REF(@407)
-    OUTER_SET strref415 = RESOLVE_STR_REF(@415)
-  END
-
-
-  WITH_TRA ~weidu_external/kivan/tra/%s/p#kivsoa.tra~ BEGIN // p#kivsoa.tra:
-    OUTER_SET strref69  = RESOLVE_STR_REF(@69)
-    OUTER_SET strref72  = RESOLVE_STR_REF(@72)
-    OUTER_SET strref440 = RESOLVE_STR_REF(@440)
-    OUTER_SET strref441 = RESOLVE_STR_REF(@441)
-    OUTER_SET strref442 = RESOLVE_STR_REF(@442)
-    OUTER_SET strref443 = RESOLVE_STR_REF(@443)
-    OUTER_SET strref444 = RESOLVE_STR_REF(@444)
-    OUTER_SET strref445 = RESOLVE_STR_REF(@445)
-    OUTER_SET strref446 = RESOLVE_STR_REF(@446)
-    OUTER_SET strref448 = RESOLVE_STR_REF(@448)
-    OUTER_SET strref449 = RESOLVE_STR_REF(@449)
-    OUTER_SET strref450 = RESOLVE_STR_REF(@450)
-  END
-
-END ELSE BEGIN
-
-  WITH_TRA ~kivan/tra/%s/bp#kiv.tra~ BEGIN // bp#kiv.tra:
-    OUTER_SET strref42 = RESOLVE_STR_REF(@42)
-  END
+WITH_TRA ~kivan/tra/%s/p#kipid.tra~ BEGIN // p#kipid.tra:
+  OUTER_SET strref118 = RESOLVE_STR_REF(@118)
+  OUTER_SET strref407 = RESOLVE_STR_REF(@407)
+  OUTER_SET strref415 = RESOLVE_STR_REF(@415)
+END
 
 
-  WITH_TRA ~kivan/tra/%s/p#kinew.tra~ BEGIN // p#kinew.tra:
-    OUTER_SET strref85   = RESOLVE_STR_REF(@85)
-    OUTER_SET strref93   = RESOLVE_STR_REF(@93)
-    OUTER_SET strref95   = RESOLVE_STR_REF(@95)
-    OUTER_SET strref104  = RESOLVE_STR_REF(@104)
-    OUTER_SET strref110  = RESOLVE_STR_REF(@110)
-    OUTER_SET strref169  = RESOLVE_STR_REF(@169)
-    OUTER_SET strref174  = RESOLVE_STR_REF(@174)
-    OUTER_SET strref325  = RESOLVE_STR_REF(@325)
-    OUTER_SET strref330  = RESOLVE_STR_REF(@330)
-    OUTER_SET strref1154 = RESOLVE_STR_REF(@1154)
-  END
-
-  WITH_TRA ~kivan/tra/%s/p#kipid.tra~ BEGIN // p#kipid.tra:
-    OUTER_SET strref118 = RESOLVE_STR_REF(@118)
-    OUTER_SET strref407 = RESOLVE_STR_REF(@407)
-    OUTER_SET strref415 = RESOLVE_STR_REF(@415)
-  END
-
-
-  WITH_TRA ~kivan/tra/%s/p#kivsoa.tra~ BEGIN // p#kivsoa.tra:
-    OUTER_SET strref69  = RESOLVE_STR_REF(@69)
-    OUTER_SET strref72  = RESOLVE_STR_REF(@72)
-    OUTER_SET strref440 = RESOLVE_STR_REF(@440)
-    OUTER_SET strref441 = RESOLVE_STR_REF(@441)
-    OUTER_SET strref442 = RESOLVE_STR_REF(@442)
-    OUTER_SET strref443 = RESOLVE_STR_REF(@443)
-    OUTER_SET strref444 = RESOLVE_STR_REF(@444)
-    OUTER_SET strref445 = RESOLVE_STR_REF(@445)
-    OUTER_SET strref446 = RESOLVE_STR_REF(@446)
-    OUTER_SET strref448 = RESOLVE_STR_REF(@448)
-    OUTER_SET strref449 = RESOLVE_STR_REF(@449)
-    OUTER_SET strref450 = RESOLVE_STR_REF(@450)
-  END
-
+WITH_TRA ~kivan/tra/%s/p#kivsoa.tra~ BEGIN // p#kivsoa.tra:
+  OUTER_SET strref69  = RESOLVE_STR_REF(@69)
+  OUTER_SET strref72  = RESOLVE_STR_REF(@72)
+  OUTER_SET strref440 = RESOLVE_STR_REF(@440)
+  OUTER_SET strref441 = RESOLVE_STR_REF(@441)
+  OUTER_SET strref442 = RESOLVE_STR_REF(@442)
+  OUTER_SET strref443 = RESOLVE_STR_REF(@443)
+  OUTER_SET strref444 = RESOLVE_STR_REF(@444)
+  OUTER_SET strref445 = RESOLVE_STR_REF(@445)
+  OUTER_SET strref446 = RESOLVE_STR_REF(@446)
+  OUTER_SET strref448 = RESOLVE_STR_REF(@448)
+  OUTER_SET strref449 = RESOLVE_STR_REF(@449)
+  OUTER_SET strref450 = RESOLVE_STR_REF(@450)
 END
 
 

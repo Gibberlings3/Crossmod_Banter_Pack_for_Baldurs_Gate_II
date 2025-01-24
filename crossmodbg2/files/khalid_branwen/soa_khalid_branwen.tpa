@@ -1,17 +1,6 @@
-ACTION_IF enhanced_edition BEGIN 
-
-  WITH_TRA ~Branwen/tra/%s/fl#utf8_o#branj.tra~ BEGIN
-    OUTER_SET strref1 = RESOLVE_STR_REF(@140)
-    /* Though I've heard Ajantis is somewhere around, and, of course, I know about Khalid and Dynaheir. */
-  END
-  
-END ELSE BEGIN
-
-  WITH_TRA ~Branwen/tra/%s/o#branj.tra~ BEGIN
-    OUTER_SET strref1 = RESOLVE_STR_REF(@140)
-    /* Though I've heard Ajantis is somewhere around, and, of course, I know about Khalid and Dynaheir. */
-  END
-  
+WITH_TRA ~Branwen/tra/%s/o#branj.tra~ BEGIN
+  OUTER_SET strref1 = RESOLVE_STR_REF(@140)
+  /* Though I've heard Ajantis is somewhere around, and, of course, I know about Khalid and Dynaheir. */
 END
 
 STRING_SET_EVALUATE strref1 @9
