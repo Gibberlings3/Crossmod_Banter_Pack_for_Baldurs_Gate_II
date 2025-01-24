@@ -19,8 +19,6 @@ OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/autotra/%s
 /* ~Search for me outside of the elven camp.~ */
 OUTER_SET dazu_05 = STATE_WHICH_SAYS 2703 IN ~C#Solaufein/Translations/autotra/%s/c#solatra.tra~ FROM ~c#solau~
 
-COMPILE EVALUATE_BUFFER ~crossmodbg2/files/eilistraee_solaufein/soa_eilistraee_solaufein.d~
-
 /* my Solaufein will talk about Eilistraee's Clearing if he joins at Underdark exit */
 EXTEND_BOTTOM ~C#SOLAU.bcs~   ~crossmodbg2/files/eilistraee_solaufein/eilistraeessong_c#solau.baf~ EVALUATE_BUFFER
 /* remove extra Solaufein from ES (my Solaufein will take over quest start) */
