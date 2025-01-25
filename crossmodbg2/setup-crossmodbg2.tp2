@@ -14,7 +14,7 @@ ALWAYS
   
 END
 
-VERSION ~v26~ //put version number here, not inside setup.tra
+VERSION ~v27~ //put version number here, not inside setup.tra
 
 README ~crossmodbg2/readme-crossmodbg2.html~
 
