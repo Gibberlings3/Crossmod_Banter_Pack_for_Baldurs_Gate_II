@@ -2,7 +2,7 @@
 /////////////////////O#XAN//////////////////////////////
 ////////////////////////////////////////////////////////
 
-WITH_TRA ~xan/%s/O#XAN.tra~ BEGIN
+WITH_TRA ~xan/%xan_lang%/O#XAN.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@74)
   /* Oh, very well. A mad mage killed Khalid and Dynaheir, tortured me and Imoen, kept Minsc and Jaheira in cages, and had no intention of letting us go. We escaped and found ourselves here, in Athkatla. */
 END
@@ -11,7 +11,7 @@ END
 /////////////////////BO#XAN/////////////////////////////
 ////////////////////////////////////////////////////////
 
-WITH_TRA ~xan/%s/BO#XAN.tra~ BEGIN
+WITH_TRA ~xan/%xan_lang%/BO#XAN.tra~ BEGIN
   OUTER_SET strref2 = RESOLVE_STR_REF(@0)
   /* Dynaheir... Khalid... Imoen... (sigh) I am sorry to hear of your past misfortunes. Do you have the slightest idea of what your captor wanted? */
 
@@ -32,7 +32,7 @@ END
 /////////////////////O#XANJ/////////////////////////////
 ////////////////////////////////////////////////////////
 
-WITH_TRA ~xan/%s/O#XANJ.tra~ BEGIN
+WITH_TRA ~xan/%xan_lang%/O#XANJ.tra~ BEGIN
   OUTER_SET strref13 = RESOLVE_STR_REF(@3283)
   /* It appears that things are more lasting than their owners. Poor Khalid and Dynaheir's fates show it quite well. */
 

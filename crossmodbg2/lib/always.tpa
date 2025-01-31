@@ -82,3 +82,136 @@ ACTION_IF game_is_bg2ee OR game_is_eet BEGIN
 END
 
 APPEND ~state.ids~ ~0x80101FEF CD_STATE_NOTVALID~	UNLESS ~CD_STATE_NOTVALID~
+
+/////                                                  \\\\\
+///// language handling                                \\\\\
+/////                                                  \\\\\
+
+// various crossmod bits rely on STATE_WHICH_SAYS to determine where to 
+// interject. The problem is that %s doesn't work with these very well so
+// we manually determine the installed language of these mods so we know 
+// which folder to do tra lookups in. 
+
+// default install languages for these mods (the mod's lang 0; will not be updated below if not installed)
+OUTER_SPRINT ajantis_lang      ~german~  // default lang 0
+OUTER_SPRINT alternatives_lang ~english~ // default lang 0
+OUTER_SPRINT amber_lang        ~english~ // default lang 0
+OUTER_SPRINT branwen_lang      ~english~ // default lang 0
+OUTER_SPRINT coran_lang        ~english~ // default lang 0
+OUTER_SPRINT isra_lang         ~english~ // default lang 0
+OUTER_SPRINT kivan_lang        ~english~ // default lang 0
+OUTER_SPRINT nehtaniel_lang    ~english~ // default lang 0
+OUTER_SPRINT sellswords_lang   ~english~ // default lang 0
+OUTER_SPRINT solaufein_lang    ~german~  // default lang 0
+OUTER_SPRINT totdg_lang        ~english~ // default lang 0
+OUTER_SPRINT wilson_lang       ~english~ // default lang 0
+OUTER_SPRINT xan_lang          ~english~ // default lang 0
+
+COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change something, no harm done
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+ajantisbg2\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT ajantis_lang ~english~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~  
+  REPLACE_EVALUATE "\(~.+alternatives\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT alternatives_lang ~russian~ END
+      2 BEGIN SPRINT alternatives_lang ~french~ END
+      3 BEGIN SPRINT alternatives_lang ~german~ END
+      4 BEGIN SPRINT alternatives_lang ~schinese~ END
+      5 BEGIN SPRINT alternatives_lang ~italian~ END
+      6 BEGIN SPRINT alternatives_lang ~polish~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~  
+  REPLACE_EVALUATE "\(~.+amber\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT amber_lang ~german~ END
+      2 BEGIN SPRINT amber_lang ~spanish~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~    
+  REPLACE_EVALUATE "\(~.+branwen\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT branwen_lang ~russian~ END
+      2 BEGIN SPRINT branwen_lang ~french~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+coran\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT coran_lang ~russian~ END
+      2 BEGIN SPRINT coran_lang ~schinese~ END
+      3 BEGIN SPRINT coran_lang ~german~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+isra\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT isra_lang ~russian~ END
+      2 BEGIN SPRINT isra_lang ~italian~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+kivan\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT kivan_lang ~russian~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~   
+  REPLACE_EVALUATE "\(~.+neh'taniel\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT nehtaniel_lang ~russian~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+sellswords\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT sellswords_lang ~russian~ END
+      2 BEGIN SPRINT sellswords_lang ~german~ END
+      3 BEGIN SPRINT sellswords_lang ~schinese~ END
+      4 BEGIN SPRINT sellswords_lang ~french~ END
+      5 BEGIN SPRINT sellswords_lang ~polish~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+c#solaufein\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT solaufein_lang ~english~ END
+      2 BEGIN SPRINT solaufein_lang ~russian~ END
+      3 BEGIN SPRINT solaufein_lang ~italian~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+totdg\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT totdg_lang ~german~ END
+      2 BEGIN SPRINT totdg_lang ~french~ END
+      3 BEGIN SPRINT totdg_lang ~polish~ END
+      4 BEGIN SPRINT totdg_lang ~italian~ END
+      5 BEGIN SPRINT totdg_lang ~spanish~ END
+      6 BEGIN SPRINT totdg_lang ~russian~ END
+      7 BEGIN SPRINT totdg_lang ~schinese~ END
+      8 BEGIN SPRINT totdg_lang ~korean~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  REPLACE_EVALUATE "\(~.+wilsonchronicles\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT wilson_lang ~Polish~ END
+      2 BEGIN SPRINT wilson_lang ~Russian~ END
+      3 BEGIN SPRINT wilson_lang ~Spanish~ END
+      4 BEGIN SPRINT wilson_lang ~schinese~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~  
+  REPLACE_EVALUATE "\(~.+xan\.tp2~ #\)\([0-9]+\)" BEGIN 
+    PATCH_MATCH MATCH2 WITH
+      1 BEGIN SPRINT xan_lang ~russian~ END
+      2 BEGIN SPRINT xan_lang ~polish~ END
+      3 BEGIN SPRINT xan_lang ~french~ END
+      DEFAULT 
+    END  
+  END ~%MATCH1%%MATCH2%~     
+  BUT_ONLY IF_EXISTS // lol

@@ -1,4 +1,4 @@
-WITH_TRA ~coran/%s/o#coranj.tra~ BEGIN
+WITH_TRA ~coran/%coran_lang%/o#coranj.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@117)
   /* I only wish Khalid and Dynaheir had the same blessing. */
   

@@ -2,11 +2,11 @@ EXTEND_BOTTOM ~m#amber.bcs~ ~crossmodbg2/files/amber_xan/m#amber.baf~ EVALUATE_B
   
 // interjections
 ACTION_IF enhanced_edition BEGIN 
-  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~weidu_external/amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
-  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~weidu_external/amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
+  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~weidu_external/amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#amber~)
+  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~weidu_external/amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#ambern~)
 END ELSE BEGIN
-  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#amber~)
-  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%s/dialogs.tra~ FROM ~m#ambern~)
+  OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#amber~)
+  OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#ambern~)
 END
 
 COMPILE EVALUATE_BUFFER  ~crossmodbg2/files/amber_xan/soa_interjections.d~

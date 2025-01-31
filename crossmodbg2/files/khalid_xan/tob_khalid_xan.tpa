@@ -1,4 +1,4 @@
-WITH_TRA ~xan/%s/O#XAN25J.tra~ BEGIN
+WITH_TRA ~xan/%xan_lang%/O#XAN25J.tra~ BEGIN
   OUTER_SET strref6 = RESOLVE_STR_REF(@207)
   /* (sigh) Do you remember Dynaheir? And Khalid? Some wounds never heal... */
   

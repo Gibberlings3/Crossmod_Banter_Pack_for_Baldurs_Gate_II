@@ -1,4 +1,4 @@
-WITH_TRA ~isra/translations/%s/rh#isrj.tra~ BEGIN
+WITH_TRA ~isra/translations/%isra_lang%/rh#isrj.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@1)
   OUTER_SET strref5 = RESOLVE_STR_REF(@5)
   OUTER_SET strref6 = RESOLVE_STR_REF(@6)

@@ -1,1 +1,1 @@
-OUTER_SET WilsonFaldorn1 = STATE_WHICH_SAYS 211 IN ~WilsonChronicles/tra/%s/wilsonj.tra~ FROM ~WILSONJ~
+OUTER_SET WilsonFaldorn1 = STATE_WHICH_SAYS 211 IN ~WilsonChronicles/tra/%wilson_lang%/wilsonj.tra~ FROM ~WILSONJ~

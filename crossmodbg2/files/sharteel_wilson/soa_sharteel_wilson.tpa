@@ -1,2 +1,2 @@
-OUTER_SET WilsonShar1 = STATE_WHICH_SAYS  78 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BEDWIN~
-OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles/tra/%s/bwilson.tra~ FROM ~BKELDOR~
+OUTER_SET WilsonShar1 = STATE_WHICH_SAYS  78 IN ~WilsonChronicles/tra/%wilson_lang%/bwilson.tra~ FROM ~BEDWIN~
+OUTER_SET WilsonShar2 = STATE_WHICH_SAYS 161 IN ~WilsonChronicles/tra/%wilson_lang%/bwilson.tra~ FROM ~BKELDOR~
