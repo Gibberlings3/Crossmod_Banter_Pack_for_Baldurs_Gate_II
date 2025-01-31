@@ -1,2 +1,7 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 OUTER_SET brega_state_853 = STATE_WHICH_SAYS 853 IN ~alternatives/%alternatives_lang%/DIALOGUE.tra~ FROM ~HABREGA.dlg~
 OUTER_SET brega_state_893 = STATE_WHICH_SAYS 893 IN ~alternatives/%alternatives_lang%/DIALOGUE.tra~ FROM ~HABREGA.dlg~
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 

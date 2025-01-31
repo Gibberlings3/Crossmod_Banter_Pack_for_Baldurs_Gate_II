@@ -1,4 +1,9 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 OUTER_SET actual_interject_state_1 = (STATE_WHICH_SAYS 39 IN ~TotDG/Translations/%totdg_lang%/0xWIZDG.tra~ FROM ~0xWIZDG~)
 OUTER_SET actual_interject_state_2 = (STATE_WHICH_SAYS 37 IN ~TotDG/Translations/%totdg_lang%/0xWIZDG.tra~ FROM ~0xWIZDG~)
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 EXTEND_TOP ~b!hals.bcs~ ~crossmodbg2/files/totdg_haldamir/b!hals.baf~

@@ -1,6 +1,11 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 WITH_TRA ~Branwen/tra/%branwen_lang%/o#branj.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@140)
   /* Though I've heard Ajantis is somewhere around, and, of course, I know about Khalid and Dynaheir. */
 END
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 STRING_SET_EVALUATE strref1 @9

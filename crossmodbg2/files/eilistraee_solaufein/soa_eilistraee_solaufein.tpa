@@ -11,6 +11,8 @@ COPY_EXISTING ~AR2401.BCS~ ~override~
 	END
   BUT_ONLY
   
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 // Get state for C#SOLAU %dazu_04% @156 (c#solau.d)
 /* ~(snort) So much for my noble approach. But I understand your answer - I would have done the same, in your place. I will follow you discretely then.~ */
 OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/autotra/%solaufein_lang%/c#solatra.tra~ FROM ~c#solau~
@@ -18,6 +20,9 @@ OUTER_SET dazu_04 = STATE_WHICH_SAYS 156 IN ~C#Solaufein/Translations/autotra/%s
 // Get state for C#SOLAU %dazu_05% @2703 (c#solau.d)
 /* ~Search for me outside of the elven camp.~ */
 OUTER_SET dazu_05 = STATE_WHICH_SAYS 2703 IN ~C#Solaufein/Translations/autotra/%solaufein_lang%/c#solatra.tra~ FROM ~c#solau~
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 /* my Solaufein will talk about Eilistraee's Clearing if he joins at Underdark exit */
 EXTEND_BOTTOM ~C#SOLAU.bcs~   ~crossmodbg2/files/eilistraee_solaufein/eilistraeessong_c#solau.baf~ EVALUATE_BUFFER

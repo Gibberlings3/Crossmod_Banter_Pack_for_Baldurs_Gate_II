@@ -1,3 +1,5 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 WITH_TRA ~kivan/tra/%kivan_lang%/bp#kiv.tra~ BEGIN // bp#kiv.tra:
   OUTER_SET strref42 = RESOLVE_STR_REF(@42)
 END
@@ -37,7 +39,9 @@ WITH_TRA ~kivan/tra/%kivan_lang%/p#kivsoa.tra~ BEGIN // p#kivsoa.tra:
   OUTER_SET strref449 = RESOLVE_STR_REF(@449)
   OUTER_SET strref450 = RESOLVE_STR_REF(@450)
 END
-
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 STRING_SET_EVALUATE strref42   @14 // bp#kiv.tra
 STRING_SET_EVALUATE strref69   @28 // p#kivsoa.tra

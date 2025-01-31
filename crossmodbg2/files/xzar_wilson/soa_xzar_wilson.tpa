@@ -1,1 +1,6 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 OUTER_SET WilsonXzar1 = STATE_WHICH_SAYS 218 IN ~WilsonChronicles/tra/%wilson_lang%/bwilson.tra~ FROM ~BVALYGA~
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 

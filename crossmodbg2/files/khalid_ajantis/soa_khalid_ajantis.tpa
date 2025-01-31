@@ -1,3 +1,5 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 WITH_TRA ~AjantisBG2/tra/autotra/%ajantis_lang%/ajantis_friendshippath.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@20)
   /* Irenicus had us imprisoned in a tunnel system beneath Athkatla. We were tortured... Dynaheir died during our abduction, and Khalid was killed at some point after. We freed ourselves, but after we caught up with him again, he overpowered me and stole my divine soul. */
@@ -11,6 +13,9 @@ WITH_TRA ~AjantisBG2/tra/autotra/%ajantis_lang%/ajantis_friendshippath.tra~ BEGI
   OUTER_SET strref4 = RESOLVE_STR_REF(@25)
   /* Dynaheir and Khalid are dead... and he tortured me. My search for this Irenicus is very personal, and I will repay him! */
 END
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 STRING_SET_EVALUATE strref1 @15
 STRING_SET_EVALUATE strref2 @16

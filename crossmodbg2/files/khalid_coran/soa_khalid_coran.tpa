@@ -1,3 +1,5 @@
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 WITH_TRA ~coran/%coran_lang%/o#coranj.tra~ BEGIN
   OUTER_SET strref1 = RESOLVE_STR_REF(@117)
   /* I only wish Khalid and Dynaheir had the same blessing. */
@@ -5,6 +7,9 @@ WITH_TRA ~coran/%coran_lang%/o#coranj.tra~ BEGIN
   OUTER_SET strref2 = RESOLVE_STR_REF(@125)
   /* Ah, yes... It is truly a waste how death grasps at youth and beauty. Dynaheir had both, and Khalid was a fine companion. */
 END
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 STRING_SET_EVALUATE strref1 @10
 STRING_SET_EVALUATE strref2 @11

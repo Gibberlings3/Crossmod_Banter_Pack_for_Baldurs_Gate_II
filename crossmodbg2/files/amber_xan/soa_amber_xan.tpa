@@ -1,5 +1,7 @@
 EXTEND_BOTTOM ~m#amber.bcs~ ~crossmodbg2/files/amber_xan/m#amber.baf~ EVALUATE_BUFFER
   
+// why the BS with inline files? the IN clause doesn't evaluate variables
+<<<<<<<<./inline/lang.tpa
 // interjections
 ACTION_IF enhanced_edition BEGIN 
   OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~weidu_external/amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#amber~)
@@ -8,6 +10,9 @@ END ELSE BEGIN
   OUTER_SET actual_joining_state    = (STATE_WHICH_SAYS 5023 IN ~amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#amber~)
   OUTER_SET actual_kidnapping_state = (STATE_WHICH_SAYS 5207 IN ~amber/tra/%amber_lang%/dialogs.tra~ FROM ~m#ambern~)
 END
+>>>>>>>>
+COPY ~./inline/lang.tpa~ ~weidu_external/crossmodbg2/lang.tpa~ EVALUATE_BUFFER
+REINCLUDE ~weidu_external/crossmodbg2/lang.tpa~ 
 
 COMPILE EVALUATE_BUFFER  ~crossmodbg2/files/amber_xan/soa_interjections.d~
 EXTEND_TOP ~o#xans.bcs~  ~crossmodbg2/files/amber_xan/o#xans.baf~ 
