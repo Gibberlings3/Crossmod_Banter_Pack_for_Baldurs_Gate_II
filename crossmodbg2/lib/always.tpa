@@ -114,7 +114,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~  
-  REPLACE_EVALUATE "\(~.+alternatives\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+alternatives\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT alternatives_lang ~russian~ END
       2 BEGIN SPRINT alternatives_lang ~french~ END
@@ -125,21 +125,21 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~  
-  REPLACE_EVALUATE "\(~.+amber\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+amber\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT amber_lang ~german~ END
       2 BEGIN SPRINT amber_lang ~spanish~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~    
-  REPLACE_EVALUATE "\(~.+branwen\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+branwen\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT branwen_lang ~russian~ END
       2 BEGIN SPRINT branwen_lang ~french~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+coran\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+coran\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT coran_lang ~russian~ END
       2 BEGIN SPRINT coran_lang ~schinese~ END
@@ -147,26 +147,26 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+isra\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+isra\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT isra_lang ~russian~ END
       2 BEGIN SPRINT isra_lang ~italian~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+kivan\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+kivan\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT kivan_lang ~russian~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~   
-  REPLACE_EVALUATE "\(~.+neh'taniel\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+neh'taniel\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT nehtaniel_lang ~russian~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+sellswords\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+sellswords\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT sellswords_lang ~russian~ END
       2 BEGIN SPRINT sellswords_lang ~german~ END
@@ -176,7 +176,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+c#solaufein\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+c#solaufein\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT solaufein_lang ~english~ END
       2 BEGIN SPRINT solaufein_lang ~russian~ END
@@ -184,7 +184,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+totdg\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+totdg\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT totdg_lang ~german~ END
       2 BEGIN SPRINT totdg_lang ~french~ END
@@ -197,7 +197,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
-  REPLACE_EVALUATE "\(~.+wilsonchronicles\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+wilsonchronicles\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT wilson_lang ~Polish~ END
       2 BEGIN SPRINT wilson_lang ~Russian~ END
@@ -206,7 +206,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~  
-  REPLACE_EVALUATE "\(~.+xan\.tp2~ #\)\([0-9]+\)" BEGIN 
+  REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+xan\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
       1 BEGIN SPRINT xan_lang ~russian~ END
       2 BEGIN SPRINT xan_lang ~polish~ END
