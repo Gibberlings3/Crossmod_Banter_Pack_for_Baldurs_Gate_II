@@ -1,8 +1,8 @@
-CHAIN IF ~InParty("7XMONT")!StateCheck("7XMONT",CD_STATE_NOTVALID)
+CHAIN IF ~InParty("7XXZAR")!StateCheck("7XXZAR",CD_STATE_NOTVALID)
 !StateCheck("QI#Ela",CD_STATE_NOTVALID)
-InParty("QI#Ela")Global("QI#ElaMontaron","GLOBAL",0)~ THEN 7XMONTB QI#ElaMontaron1
-@804
-DO ~SetGlobal("QI#ElaMontaron","GLOBAL",1)~
-== QI#MIB @805
-== 7XMONTB @806
+InParty("QI#Ela")Global("QI#ElaXzar","GLOBAL",0)~ THEN 7XXZARB QI#ElaXzar1
+@446
+DO ~SetGlobal("QI#ElaXzar","GLOBAL",1)~
+== QI#ELAB @447
+== 7XXZARB @448
 EXIT 
