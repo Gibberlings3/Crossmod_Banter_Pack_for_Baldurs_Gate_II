@@ -88,7 +88,7 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY ~mod_array~ BEGIN
   ~Safana~, ~Smiling Imp~, ~safana~, ~~, ~b7xsafa.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
   ~Sarah~, ~theacefes~, ~sarah~, ~~, ~k#sarah.dlg~, ~~, ~~, ~~, ~k#sarah~, ~k#sara25~ => ~-1~ // 
   ~Sellswords~, ~Kulyok~, ~sellswords~, ~~, ~o#llkimm.dlg ~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
-  ~Shar-Teel~, ~Smiling Imp~, ~sharteel~, ~~, ~b7xshar.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
+  ~Shar-Teel~, ~Smiling Imp~, ~sharteel~, ~~, ~b7xshar.dlg~, ~~, ~B7Xsh25~, ~~, ~~, ~~ => ~-1~ // 
   ~Silver Star~, ~Davide Carta and Seifer~, ~silverstar~, ~~, ~bsilver.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
   ~Sirene~, ~The Artisan~, ~sirene~, ~~, ~bc0siren.dlg~, ~~, ~~, ~~, ~~, ~~ => ~-1~ // 
   ~Skie~, ~Lava~, ~skie~, ~~, ~1xskieb.dlg~, ~~, ~1xski25b.dlg~, ~~, ~~, ~~ => ~-1~ // 
