@@ -1,0 +1,24 @@
+/////                                                  \\\\\
+///// THIS FILE SHOULD BE ENCODED AS ANSI              \\\\\
+/////                                                  \\\\\
+
+// original file begins
+
+@0    = ~[ARAN]被诅咒的精灵。~
+@1    = ~[KIVAN]什么？！~
+@2    = ~[ARAN]你们能活好几辈子就已经够糟了。~
+@3    = ~[KIVAN]我已经失去了将漫长生命视为恩赐的能力了，人类。~
+@4    = ~[ARAN]是啊，再加上所有那些忧郁的焦虑……~
+@5    = ~[KIVAN]怎——~
+@6    = ~[ARAN]见鬼，我们这些寿命短暂的家伙连追自己族里的女人都没机会，是吧？~
+@7    = ~[KIVAN]谁能理解那些人类呢？~
+@8    = ~[ARAN]科瑞隆的剑啊，试试看嘛，嗯？不然你可能得好好解释一番了。~
+@9    = ~[KIVAN]不，不……是“ah-MIN hi-RAE-tha”。~
+@10   = ~[ARAN]“ayahaMin hiRAYtah”。~
+@11   = ~[KIVAN]“ah-MIN hi-RAE-tha”。~
+@12   = ~[ARAN]“ayaha-MIN hi-RAYtah”。~
+@13   = ~[KIVAN]第一百遍了，你必须让音节有歌唱感。喉音的粗粝感，amin uuma merna ta。~
+@14   = ~[ARAN]该死的舌头。我活该，谁让我想学一门得花半个泽维尔亲过的世纪才能学会的语言。写起来可比说起来容易多了，是吧？~
+@15   = ~[KIVAN]也许就你的情况而言，那样最好不过。~
+@16   = ~[ARAN]是啊。实际上我哪有啥机会用精灵语说“对不起”呢，或者说任何其他语言。嘿……“带我去你的寝宫”怎么说？~
+@17   = ~[KIVAN]Shevarash, tua amin! Amin lava.~

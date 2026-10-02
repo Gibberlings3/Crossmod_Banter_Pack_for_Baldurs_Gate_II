@@ -4,4 +4,24 @@
 
 // original file begins
 
-// nothing here but us chickens
+// strings for the log: banter installation
+@1    = ~: Mod detected, checking for crossmod content.~
+@2    = ~: Mod not detected, moving to next mod.~
+@3    = ~     -- Compiling crossmod banter for ~
+@4    = ~     -- Executing crossmod code for ~
+// strings for the log: conflict installation
+@5    = ~: Mod detected, installing romance conflicts for ~
+@6    = ~: Mod not detected, skipping romance conflicts for ~
+// language enforcement
+@7    = ~     ——已找到Crossmod内容，但由于语言设置跳过：~
+
+// installer messages
+@100  = ~此模组仅适用于BG2、BG2EE或BGT、EET。~
+@101  = ~需要安装ToB才能安装此组件。~
+
+// component names
+@1000 = ~SoA跨模组队友插话包组件~
+@2000 = ~ToB跨模组队友插话包组件~
+@3000 = ~跨模组队友恋爱冲突~
+
+// several hundred lines of very repetitive feedback removed
